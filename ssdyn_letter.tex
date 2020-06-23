@@ -23,7 +23,7 @@
 %%
 %%
 %% using aastex version 6.3
-\documentclass{aastex63}
+\documentclass[preprint2]{aastex63}
 
 %% The default is a single spaced, 10 point font, single spaced article.
 %% There are 5 other style options available via an optional argument. They
@@ -146,8 +146,8 @@
 %%
 %% If you wish, you may supply running head information, although
 %% this information may be modified by the editorial offices.
-\shorttitle{Sample article}
-\shortauthors{Schwarz et al.}
+\shorttitle{Small-scale dynamo in the ISM}
+\shortauthors{Gent et al.}
 %%
 %% You can add a light gray and diagonal water-mark to the first page 
 %% with this command:
@@ -164,8 +164,7 @@
 
 \begin{document}
 
-\title{Template \aastex Article with Examples: 
-v6.3\footnote{Released on June, 10th, 2019}}
+\title{Small-scale dynamo in supernova driven ISM turbulence}
 
 %% LaTeX will automatically break titles if they run longer than
 %% one line. However, you may use \\ to force a line break if
@@ -216,42 +215,43 @@ v6.3\footnote{Released on June, 10th, 2019}}
 %% automatically put the author and affiliation information from the manuscript
 %% and save the corresponding author the trouble of entering it by hand.
 
-\correspondingauthor{August Muench}
-\email{greg.schwarz@aas.org, gus.muench@aas.org}
+\correspondingauthor{Frederick Gent}
+\email{frederick.gent@aalto.fi}
 
-\author[0000-0002-0786-7307]{Greg J. Schwarz}
-\affiliation{American Astronomical Society \\
-1667 K Street NW, Suite 800 \\
-Washington, DC 20006, USA}
+\author[0000-0002-1331-2260]{Frederick A. Gent}
+\affiliation{
+Astroinformatics, Department of Computer Science, Aalto University, PO Box 15400, FI-00076 Aalto, Finland
+ }
+\affiliation{
+    School of Mathematics, Statistics and Physics,
+      Newcastle University, NE1 7RU, UK 
+ }
 
-\author{August Muench}
-\affiliation{American Astronomical Society \\
-1667 K Street NW, Suite 800 \\
-Washington, DC 20006, USA}
+\author[0000-0003-0064-4060]{Mordecai-Mark {Mac Low}}
+\affiliation{
+American Museum of Natural History, 79th Street at Central Park West, New York, NY 10024, USA
+}
+\affiliation{
+{Center for Computational Astrophysics, Flatiron Institute, New York,
+NY 10010, USA} 
+}
 
-\collaboration{1}{(AAS Journals Data Scientists collaboration)}
+\author[0000-0002-9614-2200]{Maarit J. K\"apyl\"a}
+\affiliation{
+Astroinformatics, Department of Computer Science, Aalto University, PO Box 15400, FI-00076 Aalto, Finland
+}
+\affiliation{
+Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G\"ottingen, Germany
+}
+\affiliation{
+    Nordic Institute for Theoretical Physics,
+      Roslagstullsbacken 23, 106 91 Stockholm, Sweden 
+}
 
-\author{Butler Burton}
-\affiliation{Leiden University}
-\affiliation{AAS Journals Associate Editor-in-Chief}
-\nocollaboration{1}
-
-\author{Amy Hendrickson}
-\altaffiliation{AASTeX v6+ programmer}
-\affiliation{TeXnology Inc.}
-
-\collaboration{1}{(LaTeX collaboration)}
-
-\author{Julie Steffen}
-\affiliation{AAS Director of Publishing}
-\affiliation{American Astronomical Society \\
-1667 K Street NW, Suite 800 \\
-Washington, DC 20006, USA}
-
-\author{Scott Chernoff}
-\affiliation{IOP Publishing, Washington, DC 20005}
-
-\nocollaboration{2}
+\author{Nishant Singh}
+\affiliation{
+Inter-University Centre for Astronomy \& Astrophysics, Pune 411 007, India
+}
 
 %% Note that the \and command from previous versions of AASTeX is now
 %% depreciated in this version as it is no longer necessary. AASTeX 
@@ -268,21 +268,23 @@ Washington, DC 20006, USA}
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
 
-This example manuscript is intended to serve as a tutorial and template for
-authors to use when writing their own AAS Journal articles. The manuscript
-includes a history of \aastex\ and documents the new features in the
-previous versions as well as the new features in version 6.3. This
-manuscript includes many figure and table examples to illustrate these new
-features.  Information on features not explicitly mentioned in the article
-can be viewed in the manuscript comments or more extensive online
-documentation. Authors are welcome replace the text, tables, figures, and
-bibliography with their own and submit the resulting manuscript to the AAS
-Journals peer review system.  The first lesson in the tutorial is to remind
+%This example manuscript is intended to serve as a tutorial and template for
+%authors to use when writing their own AAS Journal articles. The manuscript
+%includes a history of \aastex\ and documents the new features in the
+%previous versions as well as the new features in version 6.3. This
+%manuscript includes many figure and table examples to illustrate these new
+%features.  Information on features not explicitly mentioned in the article
+%can be viewed in the manuscript comments or more extensive online
+%documentation. Authors are welcome replace the text, tables, figures, and
+%bibliography with their own and submit the resulting manuscript to the AAS
+%Journals peer review system.
+  The first lesson in the tutorial is to remind
 authors that the AAS Journals, the Astrophysical Journal (ApJ), the
 Astrophysical Journal Letters (ApJL), and Astronomical Journal (AJ), all
-have a 250 word limit for the abstract\footnote{Note that manuscripts 
-submitted to the new Research Notes of the American Astronomical Society 
-(RNAAS) do \textbf{not} have abstracts.}.  If you exceed this length the
+have a 250 word limit for the abstract%\footnote{Note that manuscripts 
+%submitted to the new Research Notes of the American Astronomical Society 
+%(RNAAS) do \textbf{not} have abstracts.}.
+  If you exceed this length the
 Editorial office will ask you to shorten it. This abstract has 180 words.
 
 \end{abstract}
@@ -290,8 +292,7 @@ Editorial office will ask you to shorten it. This abstract has 180 words.
 %% Keywords should appear after the \end{abstract} command. 
 %% See the online documentation for the full list of available subject
 %% keywords and the rules for their use.
-\keywords{editorials, notices --- 
-miscellaneous --- catalogs --- surveys}
+\keywords{tba ---}
 
 %% From the front matter, we move on to the body of the paper.
 %% Sections are demarcated by \section and \subsection, respectively.
