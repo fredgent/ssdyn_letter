@@ -731,7 +731,8 @@ with varying resolution.
 %% The "ht!" tells LaTeX to put the figure "here" first, at the "top" next
 %% and to override the normal way of calculating a float position
 \begin{figure}[ht!]
-\plotone{figs/eB-res.png}
+\plotone{figs/eB-res-4eta.png}
+\plotone{figs/eB-res-3eta.png}
 \caption{The subscription (squares) and author publication (asterisks) 
 costs from 1991 to 2013. Subscription cost are on the left Y axis while
 the author costs are on the right Y axis. All numbers in US dollars and
@@ -801,14 +802,35 @@ figure constructed with six individual EPS files using the
 {\tt\string\gridline} option.
 
 \begin{figure*}
-\gridline{\fig{figs/pb05pcPm0e-4_02.png}{0.3\textwidth}{(a)}
-          \fig{figs/pb1pcPm0e-4_00.png}{0.3\textwidth}{(b)}
-          \fig{figs/pb2pcPm0e-4_00.png}{0.3\textwidth}{(c)}
+\gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.5\textwidth}{(a)}
+          \fig{figs/1pcPm0e-4_0Bpower.png}{0.5\textwidth}{(b)}
           }
-\gridline{\fig{figs/tt05pcPm0e-4_02.png}{0.3\textwidth}{(d)}
-          \fig{figs/tt1pcPm0e-4_00.png}{0.3\textwidth}{(e)}
+\gridline{\fig{figs/2pcPm0e-4_0Bpower.png}{0.5\textwidth}{(c)}
+          \fig{figs/4pcPm0e-4_0Bpower.png}{0.5\textwidth}{(d)}
           }
-\gridline{\fig{figs/tt2pcPm0e-4_00.png}{0.3\textwidth}{(f)}}
+\gridline{\fig{figs/0_5pcPm0e-4_0kpower.png}{0.5\textwidth}{(e)}
+          \fig{figs/1pcPm0e-4_0kpower.png}{0.5\textwidth}{(f)}
+          }
+\gridline{\fig{figs/2pcPm0e-4_0kpower.png}{0.5\textwidth}{(g)}
+          \fig{figs/4pcPm0e-4_0kpower.png}{0.5\textwidth}{(h)}
+          }
+\caption{Inverted pyramid figure of six individual files.
+\label{fig:pyramid}}
+\end{figure*}
+
+\begin{figure*}
+\gridline{\fig{figs/0_5pcPm0e-3_0Bpower.png}{0.5\textwidth}{(a)}
+          \fig{figs/1pcPm0e-3_0Bpower.png}{0.5\textwidth}{(b)}
+          }
+\gridline{\fig{figs/2pcPm0e-3_0Bpower.png}{0.5\textwidth}{(c)}
+          \fig{figs/4pcPm0e-3_0Bpower.png}{0.5\textwidth}{(d)}
+          }
+\gridline{\fig{figs/0_5pcPm0e-3_0kpower.png}{0.5\textwidth}{(e)}
+          \fig{figs/1pcPm0e-3_0kpower.png}{0.5\textwidth}{(f)}
+          }
+\gridline{\fig{figs/2pcPm0e-3_0kpower.png}{0.5\textwidth}{(g)}
+          \fig{figs/4pcPm0e-3_0kpower.png}{0.5\textwidth}{(h)}
+          }
 \caption{Inverted pyramid figure of six individual files.
 \label{fig:pyramid}}
 \end{figure*}
