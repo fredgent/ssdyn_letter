@@ -730,9 +730,8 @@ with varying resolution.
 
 %% The "ht!" tells LaTeX to put the figure "here" first, at the "top" next
 %% and to override the normal way of calculating a float position
-\begin{figure}[ht!]
-\plotone{figs/eB-res-4eta.png}
-\plotone{figs/eB-res-3eta.png}
+\begin{figure*}[ht!]
+\plottwo{figs/eB-res-4eta.png}{figs/eB-res-3eta.png}
 \caption{
 The volume averaged magnetic energy density for models with resolution
 between 0.5\,pc and 4\,pc are plotted over time.
@@ -741,7 +740,7 @@ viscosity apply for numerical stability.
 Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\bf(a)} and $10^{-3}$
 {\bf(b)}, is also included.
 \label{fig:eb-res}}
-\end{figure}
+\end{figure*}
 
 
 \begin{figure*}
@@ -749,9 +748,10 @@ Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\bf(a)} and $10^{-3}$
           \fig{figs/1pc-eB-nu4.png}{0.45\textwidth}{(b)}
           }
 \gridline{\fig{figs/2pc-eB-nu3.png}{0.45\textwidth}{(c)}
-          \fig{figs/2pc-eB-nu6.png}{0.45\textwidth}{(d)}
+          \fig{figs/4pc-eB-nu3.png}{0.45\textwidth}{(d)}
           }
-\gridline{\fig{figs/4pc-eB-nu3.png}{0.45\textwidth}{(e)}
+\gridline{
+          \fig{figs/2pc-eB-nu6.png}{0.45\textwidth}{(e)}
           \fig{figs/4pc-eB-nu0.png}{0.45\textwidth}{(f)}
           }
 \caption{
@@ -828,14 +828,8 @@ figure constructed with six individual EPS files using the
 \gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.4\textwidth}{(a)}
           \fig{figs/0_5pcPm0e-4_0kpower.png}{0.4\textwidth}{(b)}
           }
-\gridline{\fig{figs/1pcPm0e-4_0Bpower.png}{0.4\textwidth}{(c)}
-          \fig{figs/1pcPm0e-4_0kpower.png}{0.4\textwidth}{(d)}
-          }
-\gridline{\fig{figs/2pcPm0e-4_0Bpower.png}{0.4\textwidth}{(e)}
-          \fig{figs/2pcPm0e-4_0kpower.png}{0.4\textwidth}{(f)}
-          }
-\gridline{\fig{figs/4pcPm0e-4_0Bpower.png}{0.4\textwidth}{(g)}
-          \fig{figs/4pcPm0e-4_0kpower.png}{0.4\textwidth}{(h)}
+\gridline{\fig{figs/0_5pcPm0e-3_0Bpower.png}{0.4\textwidth}{(c)}
+          \fig{figs/0_5pcPm0e-3_0kpower.png}{0.4\textwidth}{(d)}
           }
 \caption{
 Magentic (left) and kinetic (right) energy spectra for each model resolution
@@ -844,17 +838,17 @@ with a super critical dynamo Rm ($\eta=10^{-4}$).
 \end{figure*}
 
 \begin{figure*}
-\gridline{\fig{figs/0_5pcPm0e-3_0Bpower.png}{0.4\textwidth}{(a)}
-          \fig{figs/0_5pcPm0e-3_0kpower.png}{0.4\textwidth}{(b)}
+\gridline{\fig{figs/nu0_Bpower.png}{0.4\textwidth}{(a)}
+          \fig{figs/nu0_kpower.png}{0.4\textwidth}{(b)}
           }
-\gridline{\fig{figs/1pcPm0e-3_0Bpower.png}{0.4\textwidth}{(c)}
-          \fig{figs/1pcPm0e-3_0kpower.png}{0.4\textwidth}{(d)}
+\gridline{\fig{figs/nu10_Bpower.png}{0.4\textwidth}{(c)}
+          \fig{figs/nu10_kpower.png}{0.4\textwidth}{(d)}
           }
-\gridline{\fig{figs/2pcPm0e-3_0Bpower.png}{0.4\textwidth}{(e)}
-          \fig{figs/2pcPm0e-3_0kpower.png}{0.4\textwidth}{(f)}
+\gridline{\fig{figs/nu1_Bpower.png}{0.4\textwidth}{(e)}
+          \fig{figs/nu1_kpower.png}{0.4\textwidth}{(f)}
           }
-\gridline{\fig{figs/4pcPm0e-3_0Bpower.png}{0.4\textwidth}{(g)}
-          \fig{figs/4pcPm0e-3_0kpower.png}{0.4\textwidth}{(h)}
+\gridline{\fig{figs/SN_Bpower.png}{0.4\textwidth}{(g)}
+          \fig{figs/SN_kpower.png}{0.4\textwidth}{(h)}
           }
 \caption{
 Magentic (left) and kinetic (right) energy spectra for each model resolution
