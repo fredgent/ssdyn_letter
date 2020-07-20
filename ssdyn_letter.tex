@@ -731,7 +731,9 @@ with varying resolution.
 %% The "ht!" tells LaTeX to put the figure "here" first, at the "top" next
 %% and to override the normal way of calculating a float position
 \begin{figure*}[ht!]
-\plottwo{figs/eB-res-4eta.png}{figs/eB-res-3eta.png}
+\gridline{\fig{figs/eB-res-4eta.png}{0.43\textwidth}{(a)}
+          \fig{figs/eB-res-3eta.png}{0.43\textwidth}{(b)}
+          }
 \caption{
 The volume averaged magnetic energy density for models with resolution
 between 0.5\,pc and 4\,pc are plotted over time.
@@ -744,15 +746,15 @@ Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\bf(a)} and $10^{-3}$
 
 
 \begin{figure*}
-\gridline{\fig{figs/0_5pc-eB-nu4.png}{0.45\textwidth}{(a)}
-          \fig{figs/1pc-eB-nu4.png}{0.45\textwidth}{(b)}
+\gridline{\fig{figs/0_5pc-eB-nu4.png}{0.43\textwidth}{(a)}
+          \fig{figs/1pc-eB-nu4.png}{0.43\textwidth}{(b)}
           }
-\gridline{\fig{figs/2pc-eB-nu3.png}{0.45\textwidth}{(c)}
-          \fig{figs/4pc-eB-nu3.png}{0.45\textwidth}{(d)}
+\gridline{\fig{figs/2pc-eB-nu4.png}{0.43\textwidth}{(c)}
+          \fig{figs/4pc-eB-nu4.png}{0.43\textwidth}{(d)}
           }
 \gridline{
-          \fig{figs/2pc-eB-nu6.png}{0.45\textwidth}{(e)}
-          \fig{figs/4pc-eB-nu0.png}{0.45\textwidth}{(f)}
+          \fig{figs/2pc-eB-nu5.png}{0.43\textwidth}{(e)}
+          \fig{figs/4pc-eB-nu6.png}{0.43\textwidth}{(f)}
           }
 \caption{
 For each resolution the effect of $\eta$ is compared, {\bf(a)} 0.5\,pc, {\bf(b)}
@@ -825,11 +827,11 @@ figure constructed with six individual EPS files using the
 {\tt\string\gridline} option.
 
 \begin{figure*}
-\gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.4\textwidth}{(a)}
-          \fig{figs/0_5pcPm0e-4_0kpower.png}{0.4\textwidth}{(b)}
+\gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.43\textwidth}{(a)}
+          \fig{figs/0_5pcPm0e-4_0kpower.png}{0.43\textwidth}{(b)}
           }
-\gridline{\fig{figs/0_5pcPm0e-3_0Bpower.png}{0.4\textwidth}{(c)}
-          \fig{figs/0_5pcPm0e-3_0kpower.png}{0.4\textwidth}{(d)}
+\gridline{\fig{figs/0_5pcPm0e-3_0Bpower.png}{0.43\textwidth}{(c)}
+          \fig{figs/0_5pcPm0e-3_0kpower.png}{0.43\textwidth}{(d)}
           }
 \caption{
 Magentic (a) and kinetic (b) energy spectra evolving over time
@@ -841,22 +843,22 @@ with Rm sub critical or marginal for dynamo ($\eta=10^{-3}$).
 \end{figure*}
 
 \begin{figure*}
-\gridline{\fig{figs/nu0_Bpower.png}{0.4\textwidth}{(a)}
-          \fig{figs/nu0_kpower.png}{0.4\textwidth}{(b)}
+\gridline{\fig{figs/nu0_Bpower.png}{0.43\textwidth}{(a)}
+          \fig{figs/nu0_kpower.png}{0.43\textwidth}{(b)}
           }
-\gridline{\fig{figs/nu10_Bpower.png}{0.4\textwidth}{(c)}
-          \fig{figs/nu10_kpower.png}{0.4\textwidth}{(d)}
+\gridline{\fig{figs/nu10_Bpower.png}{0.43\textwidth}{(c)}
+          \fig{figs/nu10_kpower.png}{0.43\textwidth}{(d)}
           }
-\gridline{\fig{figs/nu1_Bpower.png}{0.4\textwidth}{(e)}
-          \fig{figs/nu1_kpower.png}{0.4\textwidth}{(f)}
+\gridline{\fig{figs/nu1_Bpower.png}{0.43\textwidth}{(e)}
+          \fig{figs/nu1_kpower.png}{0.43\textwidth}{(f)}
           }
-\gridline{\fig{figs/SN_Bpower.png}{0.4\textwidth}{(g)}
-          \fig{figs/SN_kpower.png}{0.4\textwidth}{(h)}
+\gridline{\fig{figs/SN_Bpower.png}{0.43\textwidth}{(g)}
+          \fig{figs/SN_kpower.png}{0.43\textwidth}{(h)}
           }
 \caption{
 Magentic (left) and kinetic (right) energy spectra at dynamo 
 saturation (or late time) for each resolution with
-$eta=0,\,10^{-4}$ and $10^{-3}$ panel pairs (a,b), (c,d) and
+$\eta=0,\,10^{-4}$ and $10^{-3}$ panel pairs (a,b), (c,d) and
 (e,f), respectively.
 Comparison of supernova rate at 2\,pc resolution, in panels (g,h),
  $\sigma=0.2\sigma_{\rm SN}$
