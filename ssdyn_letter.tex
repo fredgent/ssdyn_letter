@@ -737,10 +737,28 @@ with varying resolution.
 \caption{
 The volume averaged magnetic energy density for models with resolution
 between 0.5\,pc and 4\,pc are plotted over time.
-Resolution dependant hyper-resistivity, hyper-viscosity and shock-capturing
-viscosity apply for numerical stability.
-Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\bf(a)} and $10^{-3}$
-{\bf(b)}, is also included.
+The right axis indicates the magnetic energy density in terms of the
+ time-averaged statistical-steady kinetic energy density.
+%Resolution dependant hyper-resistivity, hyper-viscosity and shock-capturing
+%viscosity apply for numerical stability.
+Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\rm(a)} and $10^{-3}$
+{\rm(b)}, is applied.
+\label{fig:eb-res}}
+\end{figure*}
+
+\begin{figure*}[ht!]
+\gridline{\fig{figs/eB-res-4etab.png}{0.43\textwidth}{(a)}
+          \fig{figs/eB-res-3etab.png}{0.43\textwidth}{(b)}
+          }
+\caption{
+The volume averaged magnetic energy density for models with resolution
+between 0.5\,pc and 4\,pc are plotted over time.
+The right axis indicates the magnetic energy density in terms of the
+ time-averaged statistical-steady kinetic energy density.
+%Resolution dependant hyper-resistivity, hyper-viscosity and shock-capturing
+%viscosity apply for numerical stability.
+Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\rm(a)} and $10^{-3}$
+{\rm(b)}, is applied.
 \label{fig:eb-res}}
 \end{figure*}
 
@@ -756,13 +774,25 @@ Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\bf(a)} and $10^{-3}$
           \fig{figs/2pc-eB-nu5.png}{0.43\textwidth}{(e)}
           \fig{figs/4pc-eB-nu6.png}{0.43\textwidth}{(f)}
           }
+  \begin{picture}(0,0)(0,0)
+    \put(130,488){\begin{scriptsize}{\sf{$\delta x=0.5$pc}}\end{scriptsize}}
+    \put(390,488){\begin{scriptsize}{\sf{$\delta x=1.0$pc}}\end{scriptsize}}
+    \put(130,320){\begin{scriptsize}{\sf{$\delta x=2.0$pc}}\end{scriptsize}}
+    \put(390,320){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
+    \put(130,152){\begin{scriptsize}{\sf{$\delta x=2.0$pc}}\end{scriptsize}}
+    \put(390,152){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
+  \end{picture}
 \caption{
-For each resolution the effect of $\eta$ is compared, {\bf(a)} 0.5\,pc, {\bf(b)}
-1\,pc, {\bf(c)} and {\bf(d)} 2\,pc, and {\bf(e)} and {\bf(f)} 4\,pc.
-All models have supernova rate $0.2\sigma_{\rm SN}$, except {\bf(d)} and
-{\bf(f)}, which have $\sigma_{\rm SN}$.
+For each resolution, {\rm(a)} 0.5\,pc, {\rm(b)}
+1\,pc, {\rm(c)} and {\rm(e)} 2\,pc, and {\rm(d)} and {\rm(f)} 4\,pc the effect
+ of resistivity $\eta$ is compared.
+All models have supernova rate $\sigma=0.2\sigma_{\rm SN}$, except {\rm(e)} and
+{\rm(f)}, which have $\sigma=\sigma_{\rm SN}$, where
 $\sigma_{\rm SN}\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood
 equivalent random SN frequency.
+At 4\,pc resolution the models with $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ are 
+continued until the dynamo has saturated, for comparison with the higher 
+resolution saturation levels.
 \label{fig:eb-nu}}
 \end{figure*}
 Authors can include a wide number of different graphics with their articles
@@ -834,35 +864,41 @@ figure constructed with six individual EPS files using the
           \fig{figs/0_5pcPm0e-3_0kpower.png}{0.43\textwidth}{(d)}
           }
 \caption{
-Magentic (a) and kinetic (b) energy spectra evolving over time
+Magentic (a) and kinetic (b) compensated energy spectra evolving over time
 for 0.5\,pc resolution
 with Rm super critical for dynamo($\eta=10^{-4}$) and 
 (c) and (d) respective energy spectra
 with Rm sub critical or marginal for dynamo ($\eta=10^{-3}$).
+Magnetic energy spectra are compensated for Kazentsev $k^{3/2}$ and kinetic
+for Kolmogorov $k^{-5/3}$ theoretical profiles, each represented by the 
+horizontal black dashed lines.
 \label{fig:4power}}
 \end{figure*}
 
 \begin{figure*}
-\gridline{\fig{figs/nu0_Bpower.png}{0.43\textwidth}{(a)}
-          \fig{figs/nu0_kpower.png}{0.43\textwidth}{(b)}
+\gridline{ \fig{figs/nu0_Bpower.png}{0.4\textwidth}{(a)}
+           \fig{figs/nu0_kpower.png}{0.4\textwidth}{(b)}
           }
-\gridline{\fig{figs/nu10_Bpower.png}{0.43\textwidth}{(c)}
-          \fig{figs/nu10_kpower.png}{0.43\textwidth}{(d)}
+\gridline{\fig{figs/nu10_Bpower.png}{0.4\textwidth}{(c)}
+          \fig{figs/nu10_kpower.png}{0.4\textwidth}{(d)}
           }
-\gridline{\fig{figs/nu1_Bpower.png}{0.43\textwidth}{(e)}
-          \fig{figs/nu1_kpower.png}{0.43\textwidth}{(f)}
+\gridline{ \fig{figs/nu1_Bpower.png}{0.4\textwidth}{(e)}
+           \fig{figs/nu1_kpower.png}{0.4\textwidth}{(f)}
           }
-\gridline{\fig{figs/SN_Bpower.png}{0.43\textwidth}{(g)}
-          \fig{figs/SN_kpower.png}{0.43\textwidth}{(h)}
+\gridline{  \fig{figs/SN_Bpower.png}{0.4\textwidth}{(g)}
+            \fig{figs/SN_kpower.png}{0.4\textwidth}{(h)}
           }
 \caption{
-Magentic (left) and kinetic (right) energy spectra at dynamo 
+Magentic (left) and kinetic (right) compensated energy spectra at dynamo 
 saturation (or late time) for each resolution with
 $\eta=0,\,10^{-4}$ and $10^{-3}$ panel pairs (a,b), (c,d) and
 (e,f), respectively.
-Comparison of supernova rate at 2\,pc resolution, in panels (g,h),
+Magnetic energy spectra are compensated for Kazentsev $k^{3/2}$ and kinetic
+for Kolmogorov $k^{-5/3}$ theoretical profiles, each represented by the 
+horizontal black dashed lines.
+Comparison of supernova rate at 2\,pc resolution at 200\,Myr, in panels (g,h),
  $\sigma=0.2\sigma_{\rm SN}$
-and $\sigma_{\rm SN}$ for $\eta=10^{-3}$ and $10^{-3}$.
+and $\sigma=\sigma_{\rm SN}$ for $\eta=10^{-4}$ and $10^{-3}$.
 \label{fig:3power}}
 \end{figure*}
 
