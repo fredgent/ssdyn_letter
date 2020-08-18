@@ -407,6 +407,30 @@ They refute the earlier dynamo solutions of \citet{BKMM04}
 
 \section{Model design} \label{sec:model}
 
+\begin{figure*}
+\gridline{\hspace{-1cm} \fig{figs/ssd-tang-brms.png}{0.36\textwidth}{(a)}
+                            \fig{figs/ssdBpower.png}{0.36\textwidth}{(b)}
+                       \fig{figs/tanglingBpower.png}{0.36\textwidth}{(c)}
+          }
+\caption{
+Comparison of simulations, one with tangling and the other with dynamo
+amplification of magnetic field, from non-helical random forcing.
+For the model with SSD $R_{\rm m}=148$ and $P_{\rm m}=50$.
+The model with only tangling has $R_{\rm m}=7.4$ and $P_{\rm m}=2.5$ (TBC).
+Panel (a) displays $B_{\rm rms}$ as a proportion of $\overline{B_{\rm Eq}}$,
+where $\overline{B_{\rm Eq}}=\overline{u_{\rm rms}}/\sqrt{2}$ is the 
+time-averaged equipartion field and $\overline{u_{\rm rms}}$ is the 
+time-averaged $u_{\rm rms}$ during the kinematic phase.
+Time is scaled with $k_f\,u_{\rm rms}$. 
+Power spectra are displayed for SSD magnetic energy (b) and tangling (c).
+The forcing scale, $k_f=8$,
+ is indicated by the vertical dotted line and the black dashed
+line indicates the gradient $k^{3/2}$.
+$k_1=L/(2\pi)$, where $L$ is the largest length scale in the simulation domain.
+\label{fig:tangling}}
+\end{figure*}
+
+
 The numerical implementation uses the {\sc Pencil Code}\footnote{
 \url{https://github.com/pencil-code}}.
 To exclude any large scale magnetic field dynamics, the computational domain
@@ -897,26 +921,6 @@ In panels (g,h) for 2\,pc resolution at 200\,Myr effect of supernova rate
 $\sigma=0.2\sigma_{\rm SN}$ or $\sigma_{\rm SN}$ with
 $\eta=10^{-4}$ or $10^{-3}$ as listed in the captions are displayed.
 \label{fig:3power}}
-\end{figure*}
-
-
-\begin{figure*}
-\gridline{\hspace{-1cm} \fig{figs/ssd-tang-brms.png}{0.36\textwidth}{(a)}
-                            \fig{figs/ssdBpower.png}{0.36\textwidth}{(b)}
-                       \fig{figs/tanglingBpower.png}{0.36\textwidth}{(c)}
-          }
-\caption{
-Comparison of simulations with tangling and dynamo amplification of magnetic field properties
-from non-helical random forcing.
-Panel (a) displays $B_{\rm rms}$ for SSD (log-scale axis, left) and 
-tangling (linear axis, right).
-Power spectra are displayed for SSD magnetic energy (b) and tangling (c).
-The forcing scale, $k_f=8$,
- is indicated by the vertical dotted line and the black dashed
-line indicates the gradient $k^{3/2}$.
-$k_1=L/(2\pi)$, where L is the largest length scale in the simulation domain.
-$R_{\rm m}=148\,(4)$ and $P_{\rm m}=50\,(10)$ for SSD\,(Tangling). 
-\label{fig:tangling}}
 \end{figure*}
 
 \begin{table*}
