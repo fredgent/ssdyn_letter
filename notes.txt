@@ -1,0 +1,13 @@
+Figure 1 include right axis - normalised time averaged kinetic energy density
+All figures with magnetic energy density include normalised value
+Figure 2 - add dx in the plots (latex) top left - replace eB axes with common values
+run 4pc 1sigmaSN to saturation and add note to caption not common time axes
+use myr for time axes
+same y axes for fig 3 and 4
+
+18/08
+Panel a fig 5 single y-axis, clearer caption, log time axis to show linear growth of tangling
+check whether high Pm number is covered in Haugen et al
+Panels b and c time in caption.
+urms bar to be defined in caption.
+repeat c with high resolution as b
