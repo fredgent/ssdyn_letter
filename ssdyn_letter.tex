@@ -91,6 +91,8 @@
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
 \newcommand\latex{La\TeX}
+\newcommand\Rm{{\rm Rm} }
+\newcommand\SNr{\sigma_{\rm SN}}
 
 %% Reintroduced the \received and \accepted commands from AASTeX v5.2
 \received{June 1, 2019}
@@ -267,25 +269,22 @@ Inter-University Centre for Astronomy \& Astrophysics, Pune 411 007, India
 
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
-
-%This example manuscript is intended to serve as a tutorial and template for
-%authors to use when writing their own AAS Journal articles. The manuscript
-%includes a history of \aastex\ and documents the new features in the
-%previous versions as well as the new features in version 6.3. This
-%manuscript includes many figure and table examples to illustrate these new
-%features.  Information on features not explicitly mentioned in the article
-%can be viewed in the manuscript comments or more extensive online
-%documentation. Authors are welcome replace the text, tables, figures, and
-%bibliography with their own and submit the resulting manuscript to the AAS
-%Journals peer review system.
-  The first lesson in the tutorial is to remind
-authors that the AAS Journals, the Astrophysical Journal (ApJ), the
-Astrophysical Journal Letters (ApJL), and Astronomical Journal (AJ), all
-have a 250 word limit for the abstract%\footnote{Note that manuscripts 
-%submitted to the new Research Notes of the American Astronomical Society 
-%(RNAAS) do \textbf{not} have abstracts.}.
-  If you exceed this length the
-Editorial office will ask you to shorten it. This abstract has 180 words.
+We present a numerical resolution study over a range of magnetic Reynolds
+number (Rm) to identify characteristics of the small-scale dynamo (SSD) under
+supernova-driven turbulence of the interstellar medium (ISM).
+We confirm that conditions in the ISM are likely highly conducive to 
+SSD in the diffuse hot and warm turbulent ISM, given Rm in the real ISM is 
+orders of magnitude higher than we model at our highest resolution and modest
+SN explosion frequency ($\SNr$), 20\% that of the solar neighbourhood.
+This is despite the negative impact on SSD expected from the highly compressible
+nature of the flow.
+We find convergence in the growth rate of the SSD with resolution for a given 
+$\SNr$ approaching 
+sub-parsec scale and a trend towards the exclusion of SSD for resolution
+more coarse than 4 parsecs.
+Across the modelled range of 0.5 to 4 parsec resolution we find the SSD 
+saturates consistently at about 5\% of the energy equipartion level, independent
+of the growth rate.
 
 \end{abstract}
 
@@ -294,22 +293,10 @@ Editorial office will ask you to shorten it. This abstract has 180 words.
 %% keywords and the rules for their use.
 \keywords{tba ---}
 
-%% From the front matter, we move on to the body of the paper.
-%% Sections are demarcated by \section and \subsection, respectively.
-%% Observe the use of the LaTeX \label
-%% command after the \subsection to give a symbolic KEY to the
-%% subsection for cross-referencing in a \ref command.
-%% You can use LaTeX's \ref and \label commands to keep track of
-%% cross-references to sections, equations, tables, and figures.
-%% That way, if you change the order of any elements, LaTeX will
-%% automatically renumber them.
-%%
-%% We recommend that authors also use the natbib \citep
-%% and \citet commands to identify citations.  The citations are
-%% tied to the reference list via symbolic KEYs. The KEY corresponds
-%% to the KEY in the \bibitem in the reference list below. 
-
 \section{Introduction} \label{sec:intro}
+
+
+
 
 This letter addresses the recent results of \citet{GE20}, which asserts the 
 absence of a small scale (fluctuation) dynamo (SSD) in the interstellar medium
