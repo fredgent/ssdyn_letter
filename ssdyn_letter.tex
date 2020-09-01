@@ -70,6 +70,11 @@
 \newcommand\Rm{{\rm Rm} }
 \newcommand\kf{k_{\rm f} }
 \newcommand\SNr{\sigma_{\rm SN}}
+\definecolor{midblue}{rgb}{0.0,0.4,0.7}
+\definecolor{midgreen}{rgb}{0.0,0.8,0.3}
+\definecolor{mypurple}{rgb}{0.8,0.2,0.8}
+\newcommand{\fg}[1]{\textcolor{midblue}{#1}}
+\newcommand{\fag}[1]{\textcolor{midgreen}{FAG: #1}}
 
 %% Reintroduced the \received and \accepted commands from AASTeX v5.2
 \received{June 1, 2019}
@@ -263,7 +268,7 @@ of the growth rate.
 \section{Introduction} \label{sec:intro}
 
 
-
+To be revised \ldots
 
 This letter addresses the recent results of \citet{GE20}, which asserts the 
 absence of a small scale (fluctuation) dynamo (SSD) in the interstellar medium
@@ -271,9 +276,7 @@ absence of a small scale (fluctuation) dynamo (SSD) in the interstellar medium
 applicable to the solar neighbourhood. 
 They refute the earlier dynamo solutions of \citet{BKMM04}
 
-\section{Model design} \label{sec:model}
-
-
+\section{Disentangling the dynamo} \label{sec:ssd-tang}
 
 \begin{figure*}
 \gridline{\hspace{-1cm} \fig{figs/ssd-tang-brms.png}{0.36\textwidth}{(a)}
@@ -300,6 +303,64 @@ with the largest wavenumber $k/k_1=128$.
 \label{fig:tangling}}
 \end{figure*}
 
+In many simulations of supernova driven turbulence with realistic vertical 
+stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the mechaniisms
+for inducing large scale magnetic fields are absent, such as rotation and shear.
+To examine the effect of strong ordered magnetic fields these models then rely
+on imposition a background or initial magnetic field, typically uniform,
+which is then perturbed by supernova explosions.
+The amplification of the magnetic field in these cases may include a small
+scale dynamo in case of sufficently high magnetic Reynolds numbers, but any
+amplification of the large scale field is limited to linear growth through
+tangling of the imposed field.
+Any initial large scale field would diffuse leaving only the random field. 
+If an imposed field is sufficiently close to equipartition its characteristics
+would dominate any MHD results.
+
+More commonly models of supernova driven dynamo in the ISM have ignored the 
+large scale effects and examined the small scale dynamo or the effect of the
+turbulent magnetic field on the properties of the ISM
+\citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}.
+A seed or imposed field for such models could be uniform or random, but if the
+simulated field results from tangling rather than dynamo, then any conclusions
+about the ISM depend on the veracity of the chosen field rather than the 
+nature of the MHD turbulence.
+
+To illustrate some differences between tangling and small scale dynamo we adopt
+a toy model with non-helical random forcing with wavenumber $\kf=8$ applied to
+isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
+A uniform field $\sqrt2\cdot10^{-11}B_{\rm Eq}$ is imposed, where $B_{\rm Eq}$
+is the strength of the equipartion magnetic field.
+The two simulations are distinguished only by use of $\eta=10^{-4}$, exciting a 
+small scale dynamo models, and $\eta=2\cdot10^{-3}$ subcritical for dynamo.
+
+We plot some of the diagnostics from the results of these two simulations in 
+Figure\,\ref{fig:tangling}. Panel (a) illustrates that the small scale dynamo 
+is characterised by exponential growth \fag{Nishant, please add some relevant citation to this expected behaviour}, growing over 10 orders of magnitude in 
+just over 400 turnover times. Tangling results only in linear amplification
+early on (see inset) saturating to about 2.5 times the original field strength.
+In panel (b) we plot for the SSD model some power spectra for the magnetic
+energy, evolving over time alongside a kinetic energy spectrum at late stage.
+In panel (c) see we show similar for the tangling model.
+The forcing scale $\kf=8$ is evident in the kinetic spectra and highlighted by 
+a vertical dotted line.
+The SSD magnetic spectrum (b) evolves near self-similarly, with a peak
+wavenumber above 20 at early times reducing to below 20 upon saturation of the
+dynamo.
+The forcing scale has negligible effect on the magnetic spectra.
+However, for the tangling case (c) the peak wavenumber for the magnetic energy
+spectrum is strongly identified with the forcing scale.
+A dashed black line indicates the Kazentsev \fag{Anyone, a suitable reference
+for this expected behaviour?} $3/2$ power law.
+This corresponds to the gradient at wavenumbers around $\kf$ in the SSD case,
+but at lower wavenumbers only in the case of tangling.
+
+
+\section{Model design} \label{sec:model}
+
+
+Alternatively, some large scale models do include the large scale dynamo 
+ 
 
 The numerical implementation uses the {\sc Pencil Code}\footnote{
 \url{https://github.com/pencil-code}}.
@@ -411,6 +472,5 @@ $\eta=10^{-4}$ or $10^{-3}$ as listed in the captions are displayed.
 %% Include this line if you are using the \added, \replaced, \deleted
 %% commands to see a summary list of all changes at the end of the article.
 %\listofchanges
-
 \end{document}
 
