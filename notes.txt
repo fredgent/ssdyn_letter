@@ -24,3 +24,5 @@ Fig 2 and 3 include 0.1 in y-axis
 
 Fig 4 remove extra y-axis  get tick marks inwards on all four sides
 
+Resolve 02/09
+Check local helicity relation to dynamo

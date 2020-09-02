@@ -279,28 +279,47 @@ They refute the earlier dynamo solutions of \citet{BKMM04}
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
 
 \begin{figure*}
-\gridline{\hspace{-1cm} \fig{figs/ssd-tang-brms.png}{0.36\textwidth}{(a)}
-                            \fig{figs/ssdBpower.png}{0.36\textwidth}{(b)}
-                       \fig{figs/tanglingBpower.png}{0.36\textwidth}{(c)}
+\gridline{ \fig{figs/ssd-tang-brms.png}{0.5\textwidth}{(a)}
+          }
+\gridline{     \fig{figs/ssdBpower.png}{0.5\textwidth}{(b)}
+          \fig{figs/tanglingBpower.png}{0.5\textwidth}{(c)}
           }
 \caption{
-Comparison of simulations, one with tangling and the other with dynamo
-amplification of magnetic field, from non-helical random forcing.
-For the SSD model, $R_{\rm m}=148$ and $P_{\rm m}=50.0$, while the tangling
-model has the dynamo suppressed by choosing $R_{\rm m}=7.40$ and $P_{\rm m}=2.50$.
-Panel (a) displays $B_{\rm rms}$ as a proportion of $\overline{B_{\rm Eq}}$,
-% mm where $\overline{B_{\rm Eq}}=\overline{u_{\rm rms}}/\sqrt{2}$ is
-the time-averaged equipartion field. 
-% mm and $\overline{u_{\rm rms}}$ is the  time-averaged $u_{\rm rms}$ during the kinematic phase.
+%fag
+% Comparison of simulations, one with tangling and the other with dynamo
+%-amplification of magnetic field, from non-helical random forcing.
+%-For the SSD model, $R_{\rm m}=148$ and $P_{\rm m}=50.0$, while the tangling
+%-model has the dynamo suppressed by choosing $R_{\rm m}=7.40$ and $P_{\rm m}=2.50$.
+%-Panel (a) displays $B_{\rm rms}$ as a proportion of $\overline{B_{\rm Eq}}$,
+%
+%% mm where $\overline{B_{\rm Eq}}=\overline{u_{\rm rms}}/\sqrt{2}$ is
+%the time-averaged equipartion field. 
+%% mm and $\overline{u_{\rm rms}}$ is the  time-averaged $u_{\rm rms}$ during the kinematic phase.
+Simulation results for non-helical random forcing. 
+The simulation with $R_{\rm m}=148$ and $P_{\rm m}=50.0$ supports dynamo 
+amplification of magnetic field
+With $R_{\rm m}=7.4$ and $P_{\rm m}=2.50$ dynamo is suppressed and 
+amplification is limited to tangling of the magnetic field.
+Panel (a) displays mean magnetic energy density, $e_B$, evolving as a
+proportion of time-averaged kinetic energy density, $\overline{e_K}$.
 The inset shows a zoom-in of the early linear growth of the tangled field.
-Time is scaled with $\kf \overline{u_{\rm rms}}$, the eddy turnover
-time at the forcing scale.
-Power spectra are displayed for magnetic energy of the SSD (b) and
-tangled model (c).  The legend shows the scaled
+%fag
+%Time is scaled with $\kf \overline{u_{\rm rms}}$, the eddy turnover
+%time at the forcing scale.
+Time is normalised by the inverse eddy turnover time at the forcing scale,
+$\kf \overline{u_{\rm rms}}$.
+%fag
+%Power spectra are displayed for magnetic energy of the SSD (b) and
+%tangled model (c).  The legend shows the scaled
+Compensated power spectra are displayed of magnetic energy for the model with
+SSD (b) and with tangling (c).
+%fag
+%The legend shows the scaled 
+The legend shows the normalised  
 times for each spectrum.
-The forcing scale, $\kf=8$,
- is indicated by the vertical dotted line and the black dashed
-line indicates the gradient $k^{3/2}$.
+%fag
+%The forcing scale, $\kf=8$, is indicated by the vertical dotted line and the black dashed
+The forcing scale, $\kf=8$, is indicated by the vertical dotted line.
 $k_1=L/(2\pi)$, where $L$ is the largest length scale in the simulation domain,
 with the largest wavenumber $k/k_1=128$.
 \label{fig:tangling}}
@@ -371,7 +390,6 @@ To exclude any large scale magnetic field dynamics, the computational domain
 occupies a cube of length 120 pc, with periodic boundaries on all sides and
 with varying resolution.
 
-\section{Model design} \label{sec:model}
 
 \begin{figure*}[ht!]
 \gridline{\fig{figs/eB-res-4eta.png}{0.43\textwidth}{(a)}
