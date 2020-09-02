@@ -11,3 +11,16 @@ check whether high Pm number is covered in Haugen et al
 Panels b and c time in caption.
 urms bar to be defined in caption.
 repeat c with high resolution as b
+
+01/09
+define B_Eq in text
+Fig 1 b and c use compensated spectra
+reduce inset to 30--50 time units
+replot fig 1a, fig 2 and 3 e_B/bar e_k
+
+false convergence Fig 2b 2 and 4 vs 1 and 0.5
+Fricksel false convergence
+Fig 2 and 3 include 0.1 in y-axis
+
+Fig 4 remove extra y-axis  get tick marks inwards on all four sides
+
