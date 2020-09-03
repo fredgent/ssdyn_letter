@@ -65,6 +65,7 @@
 %% the \begin{document} command.
 %%
 \usepackage{xfrac}
+\usepackage{amsmath}
 
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
@@ -429,8 +430,10 @@ on galaxy dynamics.
 
 To exclude any large scale magnetic field dynamics in these simulations, the
 computational domain occupies a cube of length 120 pc, with periodic boundaries
-on all sides and with varying resolution.
-
+on all sides. 
+We solve the system of non-ideal compressible MHD equations, including 
+mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
+induction Eq\,\eqref{eq:ind}:
 %----------------------------------------------------------------------------
   \begin{eqnarray}
   \label{eq:mass}
@@ -460,6 +463,8 @@ on all sides and with varying resolution.
       + \eta\vect\nabla^2\vect{A}
        +\eta_3\vect\nabla^6\vect{A},
   \end{eqnarray}
+completing the system with the equation of state for an ideal gas.
+ 
 
 \begin{figure*}[ht!]
 \gridline{\fig{figs/eB-res-4eta.png}{0.5\textwidth}{(a)}
