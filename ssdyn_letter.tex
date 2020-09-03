@@ -64,12 +64,17 @@
 %% using \newcommand. Your macros should appear before
 %% the \begin{document} command.
 %%
+\usepackage{xfrac}
+
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
 \newcommand\latex{La\TeX}
 \newcommand\Rm{{\rm Rm} }
 \newcommand\kf{k_{\rm f} }
 \newcommand\SNr{\sigma_{\rm SN}}
+\newcommand{\vect}[1]{{{\mbox{\boldmath $#1$}}}}%also makes bold Greek letters
+\newcommand{\mathbfss}[1]{\textbf{\textsf{#1}}}
+
 \definecolor{midblue}{rgb}{0.0,0.4,0.7}
 \definecolor{midgreen}{rgb}{0.0,0.8,0.3}
 \definecolor{mypurple}{rgb}{0.8,0.2,0.8}
@@ -355,41 +360,106 @@ A uniform field $\sqrt2\cdot10^{-11}B_{\rm Eq}$ is imposed, where $B_{\rm Eq}$
 is the strength of the equipartion magnetic field.
 The two simulations are distinguished only by use of $\eta=10^{-4}$, exciting a 
 small scale dynamo models, and $\eta=2\cdot10^{-3}$ subcritical for dynamo.
+Our numerical implementations use the {\sc Pencil Code}\footnote{
+\url{https://github.com/pencil-code}}.
 
 We plot some of the diagnostics from the results of these two simulations in 
-Figure\,\ref{fig:tangling}. Panel (a) illustrates that the small scale dynamo 
+Figure\,\ref{fig:tangling}.
+Panel (a) illustrates that the small scale dynamo 
 is characterised by exponential growth \fag{Nishant, please add some relevant citation to this expected behaviour}, growing over 10 orders of magnitude in 
-just over 400 turnover times. Tangling results only in linear amplification
-early on (see inset) saturating to about 2.5 times the original field strength.
+just over 400 eddy turnover times.
+Tangling results only in linear amplification
+early on (see inset), saturating within 100 eddy turnover times at below 5 times
+the imposed field energy density.
+
 In panel (b) we plot for the SSD model some power spectra for the magnetic
 energy, evolving over time alongside a kinetic energy spectrum at late stage.
+The magnetic energy spectra are compensated by $k^{-3/2}$ and kinetic by
+$k^{5/3}$.
+A profile becoming horizontal, therefore, corresponds to the Kazentsev 
+\fag{Anyone, a suitable reference for this expected behaviour?} $3/2$ inverse
+cascade power law or Kolmogorov turbulent energy cascade.
 In panel (c) see we show similar for the tangling model.
 The forcing scale $\kf=8$ is evident in the kinetic spectra and highlighted by 
 a vertical dotted line.
-The SSD magnetic spectrum (b) evolves near self-similarly, with a peak
+The SSD magnetic spectrum (b) evolves near self-similarly, with an 
+uncompensated peak
 wavenumber above 20 at early times reducing to below 20 upon saturation of the
 dynamo.
 The forcing scale has negligible effect on the magnetic spectra.
 However, for the tangling case (c) the peak wavenumber for the magnetic energy
 spectrum is strongly identified with the forcing scale.
-A dashed black line indicates the Kazentsev \fag{Anyone, a suitable reference
-for this expected behaviour?} $3/2$ power law.
-This corresponds to the gradient at wavenumbers around $\kf$ in the SSD case,
-but at lower wavenumbers only in the case of tangling.
+The Kazentsev range of the spectrum extends to wavenumbers larger than the 
+forcing scale for SSD, while confined to larger scales for the field with
+tangling only. 
+
+Given the high magnetic Prandtl numbers, the magnetic spectra retain more energy
+at smaller scales than the kinetic spectra.
+Although the kinetic parameters are identical and are subject to the same 
+viscous cutoff, the SSD extends the kinetic energy into the larger scales
+due to the feedback from the Lorentz force.
+With SSD there is a short inertial range for $10\leq k/k_1\lesssim 15$.
+Thus, in the dynamo kinetic energy deposited along the Kolmogorov range to
+smaller scales transfers energy to the magnetic field at these scales
+inducing an inverse Kazentsev range begining at scales below the forcing
+scale, while with tangling the energy tranfers to the magnetic field
+only at scales between the forcing scale and scale of the imposed field.
+There is only dissipation of the field at scales smaller than the Kazentsev 
+range.
 
 
-\section{Model design} \label{sec:model}
+\section{SN turbulence model design} \label{sec:model}
+
+While in the SN experiments considered in this letter are restricted to
+SSD, some large scale models do include the large scale dynamo
+\citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,GE20}.
+Most of these do not include a small scale dynamo.
+\citet{Gent:2013b,EGSFB16} do include SSD, but without a clear understanding of
+the characteristics of this SSD it is difficult to explore the effect this has
+on the large scale dynamo (LSD) and the properties of the ISM.
+In this letter we explore the SSD in realistic simulations of SN driven 
+turbulence.
+The resolution and parameter study is intended to identify the critical ranges
+for excitation of SSD and understand dynamo growth rates and saturation 
+conditions.
+This will also identify the prerequisites for including or excluding SSD in the
+LSD models and subsequently establish the importance of SSD-LSD interactions 
+on galaxy dynamics. 
 
 
-Alternatively, some large scale models do include the large scale dynamo 
- 
+To exclude any large scale magnetic field dynamics in these simulations, the
+computational domain occupies a cube of length 120 pc, with periodic boundaries
+on all sides and with varying resolution.
 
-The numerical implementation uses the {\sc Pencil Code}\footnote{
-\url{https://github.com/pencil-code}}.
-To exclude any large scale magnetic field dynamics, the computational domain
-occupies a cube of length 120 pc, with periodic boundaries on all sides and
-with varying resolution.
-
+%----------------------------------------------------------------------------
+  \begin{eqnarray}
+  \label{eq:mass}
+  \frac{D\rho}{Dt} &=& - \vect\nabla \cdot (\rho \vect{u}) + \vect\nabla \cdot\zeta_D\vect\nabla\rho,\\
+%----------------------------------------------------------------------------
+  \label{eq:mom}
+  \frac{D\vect{u}}{Dt} &=&
+    -c_{\rm s}^2\vect\nabla\left({s}/{c_{\rm p}}+\ln\rho\right)
+    +\rho^{-1}\vect{j}\times\vect{B}\nonumber\\
+    &+&\rho^{-1}\vect\nabla\cdot \left(2\rho\nu{\mathbfss W}\right)+
+       \zeta_{\nu}\left(\vect\nabla\vect\nabla \cdot \vect{u} \right)\nonumber\\
+    & 
+     +&
+       \rho^{-1}\vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),\\
+%----------------------------------------------------------------------------
+  \label{eq:ent}
+  \rho T\frac{D s}{Dt} &=& \dot{\SNr} +\rho\Gamma -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
+     +2 \rho \nu\left|{\mathbfss W}\right|^{2}
+   \nonumber\\
+  &+&\vect\nabla\cdot\left(\zeta_\chi\rho T\vect\nabla s\right)
+  + 
+  \rho T\chi_3\vect\nabla^6 s,\\
+%----------------------------------------------------------------------------
+  \label{eq:ind}
+    \frac{\partial \vect{A}}{\partial t} &=&
+        \vect{u}\times\vect{B}
+      + \eta\vect\nabla^2\vect{A}
+       +\eta_3\vect\nabla^6\vect{A},
+  \end{eqnarray}
 
 \begin{figure*}[ht!]
 \gridline{\fig{figs/eB-res-4eta.png}{0.5\textwidth}{(a)}
