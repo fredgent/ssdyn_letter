@@ -73,6 +73,9 @@
 \newcommand\Rm{{\rm Rm} }
 \newcommand\kf{k_{\rm f} }
 \newcommand\SNr{\sigma_{\rm SN}}
+\newcommand\ESK{E_{\rm kin}}
+\newcommand\EST{E_{\rm th}}
+\newcommand\ESN{E_{\rm SN}}
 \newcommand{\vect}[1]{{{\mbox{\boldmath $#1$}}}}%also makes bold Greek letters
 \newcommand{\mathbfss}[1]{\textbf{\textsf{#1}}}
 
@@ -433,24 +436,24 @@ computational domain occupies a cube of length 120 pc, with periodic boundaries
 on all sides. 
 We solve the system of non-ideal compressible MHD equations, including 
 mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
-induction Eq\,\eqref{eq:ind}:
+induction Eq.\,\eqref{eq:ind}:
 %----------------------------------------------------------------------------
   \begin{eqnarray}
   \label{eq:mass}
   \frac{D\rho}{Dt} &=& - \vect\nabla \cdot (\rho \vect{u}) + \vect\nabla \cdot\zeta_D\vect\nabla\rho,\\
 %----------------------------------------------------------------------------
   \label{eq:mom}
-  \frac{D\vect{u}}{Dt} &=&
-    -c_{\rm s}^2\vect\nabla\left({s}/{c_{\rm p}}+\ln\rho\right)
-    +\rho^{-1}\vect{j}\times\vect{B}\nonumber\\
-    &+&\rho^{-1}\vect\nabla\cdot \left(2\rho\nu{\mathbfss W}\right)+
-       \zeta_{\nu}\left(\vect\nabla\vect\nabla \cdot \vect{u} \right)\nonumber\\
+  \rho\frac{D\vect{u}}{Dt} &=& \vect\nabla{\ESK}
+    -\rho c_{\rm s}^2\vect\nabla\left({s}/{c_{\rm p}}+\ln\rho\right)
+    +\vect{j}\times\vect{B}\nonumber\\
+    &+&\vect\nabla\cdot \left(2\rho\nu{\mathbfss W}\right)+
+       \rho\,\zeta_{\nu}\left(\vect\nabla\vect\nabla \cdot \vect{u} \right)\nonumber\\
     & 
      +&
-       \rho^{-1}\vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),\\
+       \vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),\\
 %----------------------------------------------------------------------------
   \label{eq:ent}
-  \rho T\frac{D s}{Dt} &=& \dot{\SNr} +\rho\Gamma -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
+  \rho T\frac{D s}{Dt} &=& \dot{\EST} +\rho\Gamma -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
      +2 \rho \nu\left|{\mathbfss W}\right|^{2}
    \nonumber\\
   &+&\vect\nabla\cdot\left(\zeta_\chi\rho T\vect\nabla s\right)
@@ -464,9 +467,40 @@ induction Eq\,\eqref{eq:ind}:
        +\eta_3\vect\nabla^6\vect{A},
   \end{eqnarray}
 completing the system with the equation of state for an ideal gas.
-Symbols have their usual meanings, but a table is included in the appendix for 
-clarity.
-The terms ... have meaning ... 
+Many symbols have their usual meaning, and a table is included in the appendix
+for clarity.
+In particular, terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ are the
+application of artificial diffusion acting proportional to shocks in 
+Eqs.\,\eqref{eq:mass},\,\eqref{eq:mom} and \eqref{eq:ent}, respectively.
+This machinery is described in detail in \citet{GMKSH20}, which is included to
+resolve shock discontinuities.
+Shock diffusion is not applied to Eq.\,\eqref{eq:ind}, where it would result in 
+unphysical dissipation of the magnetic field in the shock fronts, when in fact 
+here it is highly enhanced by compression.
+In Eqs.\,\eqref{eq:mom} -- \eqref{eq:ind}, expressions containing 
+$\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion applying primarily
+at the grid scale to resolve small-scale instabilities.
+\fag{add reference re hyper3}
+
+The supernovae are injected randomly uniform in 3D space and as a
+Poisson process proportional to the solar neigbourhood rate in the Milky Way,
+ $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$. 
+Each explosion injects energy $\ESN=10^{51}$\,erg as thermal energy, $\EST$, but in 
+dense media a small proportion may be in kinetic energy, $\ESK$.
+This is described in detail by \citet{GMKSH20}.
+Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
+following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in 
+\citet{Gent:2013a}. 
+
+In the subset of experiments presented in this letter we set viscosity, $\nu=0$,
+with $\nu_3$ applying optimally for each resolution to ensure the flow is 
+well resolved.
+We establish a benchmark for the magnetic field evolution setting $\eta=0$, with
+numerical resistivity acting via the optimal setting for $\eta_3$.
+We then vary $\eta\geq10^{-6}$ to identify minimal range for which the physical
+resistivity is dynamically dominating the numerical resistivity, and examine the
+dependence of the dynamo on $\nu$ and grid resolution. 
+
 
 \begin{figure*}[ht!]
 \gridline{\fig{figs/eB-res-4eta.png}{0.5\textwidth}{(a)}
