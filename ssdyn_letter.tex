@@ -66,13 +66,14 @@
 %%
 \usepackage{xfrac}
 \usepackage{amsmath}
+\usepackage{upgreek}
 
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
 \newcommand\latex{La\TeX}
 \newcommand\Rm{{\rm Rm} }
 \newcommand\kf{k_{\rm f} }
-\newcommand\SNr{\sigma_{\rm SN}}
+\newcommand\SNr{\dot\sigma_{\rm SN}}
 \newcommand\ESK{E_{\rm kin}}
 \newcommand\EST{E_{\rm th}}
 \newcommand\ESN{E_{\rm SN}}
@@ -360,8 +361,7 @@ nature of the MHD turbulence.
 To illustrate some differences between tangling and small scale dynamo we adopt
 a toy model with non-helical random forcing with wavenumber $\kf=8$ applied to
 isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
-A uniform field $\sqrt2\cdot10^{-11}B_{\rm Eq}$ is imposed, where $B_{\rm Eq}$
-is the strength of the equipartion magnetic field.
+A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
 The two simulations are distinguished only by use of $\eta=10^{-4}$, exciting a 
 small scale dynamo models, and $\eta=2\cdot10^{-3}$ subcritical for dynamo.
 Our numerical implementations use the {\sc Pencil Code}\footnote{
@@ -443,7 +443,7 @@ induction Eq.\,\eqref{eq:ind}:
   \frac{D\rho}{Dt} &=& - \vect\nabla \cdot (\rho \vect{u}) + \vect\nabla \cdot\zeta_D\vect\nabla\rho,\\
 %----------------------------------------------------------------------------
   \label{eq:mom}
-  \rho\frac{D\vect{u}}{Dt} &=& \vect\nabla{\ESK}
+  \rho\frac{D\vect{u}}{Dt} &=& \vect\nabla{\ESK\sigma}
     -\rho c_{\rm s}^2\vect\nabla\left({s}/{c_{\rm p}}+\ln\rho\right)
     +\vect{j}\times\vect{B}\nonumber\\
     &+&\vect\nabla\cdot \left(2\rho\nu{\mathbfss W}\right)+
@@ -453,7 +453,7 @@ induction Eq.\,\eqref{eq:ind}:
        \vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),\\
 %----------------------------------------------------------------------------
   \label{eq:ent}
-  \rho T\frac{D s}{Dt} &=& \dot{\EST} +\rho\Gamma -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
+  \rho T\frac{D s}{Dt} &=& \EST\dot\sigma +\rho\Gamma -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
      +2 \rho \nu\left|{\mathbfss W}\right|^{2}
    \nonumber\\
   &+&\vect\nabla\cdot\left(\zeta_\chi\rho T\vect\nabla s\right)
@@ -500,7 +500,12 @@ numerical resistivity acting via the optimal setting for $\eta_3$.
 We then vary $\eta\geq10^{-6}$ to identify minimal range for which the physical
 resistivity is dynamically dominating the numerical resistivity, and examine the
 dependence of the dynamo on $\nu$ and grid resolution. 
-
+In contrast to our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
+we do not include thermal diffusivity, $\chi$, in these experiments as 
+the artificial diffusivities are adequate to ensure numerical stability and
+the physical effects of thermal conductivity can be expected to relevant only
+at time and spatial scales much shorter than considered here.
+\fag{Mordecai, could you suggest some appropriate reference?}
 
 \begin{figure*}[ht!]
 \gridline{\fig{figs/eB-res-4eta.png}{0.5\textwidth}{(a)}
@@ -592,6 +597,85 @@ $\eta=10^{-4}$ or $10^{-3}$ as listed in the captions are displayed.
 \bibliography{refs}{}
 \bibliographystyle{aasjournal}
 
+\appendix
+
+\section{Notation}
+
+\begin{deluxetable*}{ccl}
+\tablenum{1}
+\tablecaption{Symbol Notation\label{tab:notation}}
+\tablewidth{0pt}
+\tablehead{
+\colhead{Messier} & \colhead{NGC/IC} & \nocolhead{Common} 
+\\
+\colhead{Number} & \colhead{Number} & \nocolhead{Name} 
+}
+\decimalcolnumbers
+\startdata
+$\dfrac{D}{Dt}$ & material derivative & $\dfrac{\partial }{\partial t}+\vect{u}\cdot \vect\nabla$ \\
+$\vect\nabla$ & gradient vector & e.g.,$\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}$ \\
+$\rho$ & gas density & [g cm$^{-3}$]  \\
+$\vect u$ & gas velocity & [km s$^{-1}$] \\
+$t$ & time & [Myr] \\
+$s$ & specific entropy & [erg g$^{-1}$ K$^{-1}$] \\
+$T$ & gas temperature & [K] \\
+$\vect A$ & magnetic vector potential & [$\upmu$G cm] \\
+$\vect B$ & magnetic field & [$\upmu$G] \\
+$\vect j$ & current density & [Bi cm$^{-2}$] \\
+$\mathbfss W$ & traceless rate of strain tensor &
+  ${\mathsf W}_{ij} = \dfrac{1}{2}\left(\dfrac{\partial u_i}{\partial x_j}
+                 + \dfrac{\partial u_j}{\partial x_i}
+                 -\dfrac{2}{3} \delta_{ij}\vect\nabla\cdot \vect u\right)$ \\
+$\mathbfss W^{(3)}$ & 6th order rate of strain tensor &
+  ${\mathsf W}_{ij}^{(3)} = \dfrac{1}{2}\left(\dfrac{\partial^5 u_j}{\partial x_i^5}
+                 + \dfrac{\partial^4}{\partial x_i^4}\left(\dfrac{\partial u_i}{\partial x_j}\right)
+                 -\dfrac{1}{3}\dfrac{\partial^4}{\partial x_i^4}\left(\vect\nabla\cdot \vect u\right)\right)$ \\
+$\zeta_{D},\zeta_{\nu},\zeta_{\chi}$ & shock diffusion coefficient& $\propto \left|\vect\nabla\cdot\vect u\right|_{<0}$\\
+$\nu,\eta$ & viscosity, resistivity coefficient& [kpc km s$^{-1}$]\\
+$\nu_3,\chi_3,\eta_3$ & hyperdiffusion coefficient& [kpc$^{5}$ km s$^{-1}$]\\
+$\Gamma$ & UV-heating& [erg g$^{-1}$ s$^{-1}$]\\
+$\Lambda$ & radiative cooling& [erg cm$^{3}$ g$^{-2}$ s$^{-1}$]\\
+$\ESK+\EST$ & SN explosion energy& [10$^{51}$erg]\\
+$\dot\sigma$ & SN explosion rate & [kpc Myr$^{-1}$]\\
+$c_{\rm s}$ & sound speed & [km s$^{-1}$]\\
+$c_{\rm p}$ & specific heat at constant pressure & [erg g$^{-1}$ K$^{-1}$]\\
+\enddata
+\tablecomments{\fag{to be continued \ldots}
+This table ``hides'' the third column in the \latex\ when compiled.
+The Distance is also centered on the decimals.  Note that when using decimal
+alignment you need to include the {\tt\string\decimals} command before
+{\tt\string\startdata} and all of the values in that column have to have a
+space before the next ampersand.}
+\end{deluxetable*}
+%\begin{deluxetable*}{cchlDlc}
+%\tablenum{1}
+%\tablecaption{Fun facts about the first 10 messier objects\label{tab:messier}}
+%\tablewidth{0pt}
+%\tablehead{
+%\colhead{Messier} & \colhead{NGC/IC} & \nocolhead{Common} & \colhead{Object} &
+%\multicolumn2c{Distance} & \colhead{} & \colhead{V} \\
+%\colhead{Number} & \colhead{Number} & \nocolhead{Name} & \colhead{Type} &
+%\multicolumn2c{(kpc)} & \colhead{Constellation} & \colhead{(mag)}
+%}
+%\decimalcolnumbers
+%\startdata
+%M1 & NGC 1952 & Crab Nebula & Supernova remnant & 2 & Taurus & 8.4 \\
+%M2 & NGC 7089 & Messier 2 & Cluster, globular & 11.5 & Aquarius & 6.3 \\
+%M3 & NGC 5272 & Messier 3 & Cluster, globular & 10.4 & Canes Venatici &  6.2 \\
+%M4 & NGC 6121 & Messier 4 & Cluster, globular & 2.2 & Scorpius & 5.9 \\
+%M5 & NGC 5904 & Messier 5 & Cluster, globular & 24.5 & Serpens & 5.9 \\
+%M6 & NGC 6405 & Butterfly Cluster & Cluster, open & 0.31 & Scorpius & 4.2 \\
+%M7 & NGC 6475 & Ptolemy Cluster & Cluster, open & 0.3 & Scorpius & 3.3 \\
+%M8 & NGC 6523 & Lagoon Nebula & Nebula with cluster & 1.25 & Sagittarius & 6.0 \\
+%M9 & NGC 6333 & Messier 9 & Cluster, globular & 7.91 & Ophiuchus & 8.4 \\
+%M10 & NGC 6254 & Messier 10 & Cluster, globular & 4.42 & Ophiuchus & 6.4 \\
+%\enddata
+%\tablecomments{This table ``hides'' the third column in the \latex\ when compiled.
+%The Distance is also centered on the decimals.  Note that when using decimal
+%alignment you need to include the {\tt\string\decimals} command before
+%{\tt\string\startdata} and all of the values in that column have to have a
+%space before the next ampersand.}
+%\end{deluxetable*}
 %% This command is needed to show the entire author+affiliation list when
 %% the collaboration and author truncation commands are used.  It has to
 %% go at the end of the manuscript.
