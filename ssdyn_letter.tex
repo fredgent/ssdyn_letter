@@ -73,12 +73,16 @@
 \newcommand\latex{La\TeX}
 \newcommand\Rm{{\rm Rm} }
 \newcommand\kf{k_{\rm f} }
-\newcommand\SNr{\dot\sigma_{\rm SN}}
+\newcommand\SNr{\dot\sigma_{\rm sn}}
 \newcommand\ESK{E_{\rm kin}}
 \newcommand\EST{E_{\rm th}}
-\newcommand\ESN{E_{\rm SN}}
+\newcommand\ESN{E_{\sigma}}
 \newcommand{\vect}[1]{{{\mbox{\boldmath $#1$}}}}%also makes bold Greek letters
 \newcommand{\mathbfss}[1]{\textbf{\textsf{#1}}}
+\newcommand\kpc{~ {\rm kpc}}
+\newcommand\Myr{~ {\rm Myr}}
+\newcommand\erg{~ {\rm erg}}
+\newcommand\kms{~ {\rm km~ s}^{-1}}
 
 \definecolor{midblue}{rgb}{0.0,0.4,0.7}
 \definecolor{midgreen}{rgb}{0.0,0.8,0.3}
@@ -306,9 +310,9 @@ They refute the earlier dynamo solutions of \citet{BKMM04}
 %the time-averaged equipartion field. 
 %% mm and $\overline{u_{\rm rms}}$ is the  time-averaged $u_{\rm rms}$ during the kinematic phase.
 Simulation results for non-helical random forcing. 
-The simulation with $R_{\rm m}=148$ and $P_{\rm m}=50.0$ supports dynamo 
+The simulation with $R_{\rm m}=148.0$ and $P_{\rm m}=50.0$ supports dynamo 
 amplification of magnetic field
-With $R_{\rm m}=7.4$ and $P_{\rm m}=2.50$ dynamo is suppressed and 
+With $R_{\rm m}=7.4$ and $P_{\rm m}=2.5$ dynamo is suppressed and 
 amplification is limited to tangling of the magnetic field.
 Panel (a) displays mean magnetic energy density, $e_B$, evolving as a
 proportion of time-averaged kinetic energy density, $\overline{e_K}$.
@@ -440,31 +444,37 @@ induction Eq.\,\eqref{eq:ind}:
 %----------------------------------------------------------------------------
   \begin{eqnarray}
   \label{eq:mass}
-  \frac{D\rho}{Dt} &=& - \vect\nabla \cdot (\rho \vect{u}) + \vect\nabla \cdot\zeta_D\vect\nabla\rho,\\
+    \frac{D\rho}{Dt} &=& 
+    -\vect\nabla \cdot (\rho \vect{u})
+    +\vect\nabla \cdot\zeta_D\vect\nabla\rho,\\
 %----------------------------------------------------------------------------
   \label{eq:mom}
-  \rho\frac{D\vect{u}}{Dt} &=& \vect\nabla{\ESK\sigma}
+    \rho\frac{D\vect{u}}{Dt} &=& 
+    \vect\nabla{\ESK\sigma}
     -\rho c_{\rm s}^2\vect\nabla\left({s}/{c_{\rm p}}+\ln\rho\right)
-    +\vect{j}\times\vect{B}\nonumber\\
-    &+&\vect\nabla\cdot \left(2\rho\nu{\mathbfss W}\right)+
-       \rho\,\zeta_{\nu}\left(\vect\nabla\vect\nabla \cdot \vect{u} \right)\nonumber\\
-    & 
-     +&
-       \vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),\\
+    +\vect{j}\times\vect{B}
+    \nonumber\\
+    &+&\vect\nabla\cdot \left(2\rho\nu{\mathbfss W}\right)
+    +\rho\,\vect\nabla\left(\zeta_{\nu}\vect\nabla \cdot \vect{u} \right)
+    \nonumber\\
+    &+&\vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),\\
 %----------------------------------------------------------------------------
   \label{eq:ent}
-  \rho T\frac{D s}{Dt} &=& \EST\dot\sigma +\rho\Gamma -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
-     +2 \rho \nu\left|{\mathbfss W}\right|^{2}
-   \nonumber\\
-  &+&\vect\nabla\cdot\left(\zeta_\chi\rho T\vect\nabla s\right)
-  + 
-  \rho T\chi_3\vect\nabla^6 s,\\
+    \rho T\frac{D s}{Dt} &=&
+     \EST\dot\sigma +\rho\Gamma
+    -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
+    \nonumber\\
+    &+&2 \rho \nu\left|{\mathbfss W}\right|^{2}
+    +\rho\,\zeta_{\nu}\left(\vect\nabla \cdot \vect{u} \right)^2
+    \nonumber\\
+    &+&\vect\nabla\cdot\left(\zeta_\chi\rho T\vect\nabla s\right)
+    +\rho T\chi_3\vect\nabla^6 s,\\
 %----------------------------------------------------------------------------
   \label{eq:ind}
     \frac{\partial \vect{A}}{\partial t} &=&
-        \vect{u}\times\vect{B}
-      + \eta\vect\nabla^2\vect{A}
-       +\eta_3\vect\nabla^6\vect{A},
+    \vect{u}\times\vect{B}
+    +\eta\vect\nabla^2\vect{A}
+    +\eta_3\vect\nabla^6\vect{A},
   \end{eqnarray}
 completing the system with the equation of state for an ideal gas.
 Many symbols have their usual meaning, and a table is included in the appendix
@@ -482,10 +492,24 @@ $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion applying primaril
 at the grid scale to resolve small-scale instabilities.
 \fag{add reference re hyper3}
 
+\begin{figure*}[ht!]
+\gridline{\fig{figs/eB-res-4eta.png}{0.5\textwidth}{(a)}
+          \fig{figs/eB-res-3eta.png}{0.5\textwidth}{(b)}
+          }
+\caption{
+The volume averaged magnetic energy density for models with resolution
+between 0.5\,pc and 4\,pc are plotted over time.
+These are scaled by reference to their
+ time-averaged statistical-steady kinetic energy density.
+Resistivity, $\eta=10^{-4}\kpc\kms$ in panel {\rm(a)} and $10^{-3}$
+{\rm(b)}, is applied.
+\label{fig:eb-res}}
+\end{figure*}
+
 The supernovae are injected randomly uniform in 3D space and as a
 Poisson process proportional to the solar neigbourhood rate in the Milky Way,
- $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$. 
-Each explosion injects energy $\ESN=10^{51}$\,erg as thermal energy, $\EST$, but in 
+ $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$. 
+Each explosion injects $10^{51}\erg$ as thermal energy, $\EST$, but in 
 dense media a small proportion may be in kinetic energy, $\ESK$.
 This is described in detail by \citet{GMKSH20}.
 Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
@@ -506,21 +530,6 @@ the artificial diffusivities are adequate to ensure numerical stability and
 the physical effects of thermal conductivity can be expected to be relevant only
 at time and spatial scales much shorter than considered here.
 \fag{Mordecai, could you suggest some appropriate reference?}
-
-\begin{figure*}[ht!]
-\gridline{\fig{figs/eB-res-4eta.png}{0.5\textwidth}{(a)}
-          \fig{figs/eB-res-3eta.png}{0.5\textwidth}{(b)}
-          }
-\caption{
-The volume averaged magnetic energy density for models with resolution
-between 0.5\,pc and 4\,pc are plotted over time.
-These are scaled by reference to their
- time-averaged statistical-steady kinetic energy density.
-Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\rm(a)} and $10^{-3}$
-{\rm(b)}, is applied.
-\label{fig:eb-res}}
-\end{figure*}
-
 
 \begin{figure*}
 \gridline{\fig{figs/0_5pc-eB-nu4.png}{0.5\textwidth}{(a)}
@@ -543,14 +552,40 @@ Resistivity, $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ in panel {\rm(a)} and $10^{-3}$
   \end{picture}
 \caption{
 The effect of resistivity $\eta$ is compared at each resolution, {\rm(a)} --
- {\rm(d)} for supernova rate $\sigma=0.2\sigma_{\rm SN}$ and {\rm(e)} -- {\rm(f)} for $\sigma=\sigma_{\rm SN}$ at lower resolution, 
-where $\sigma_{\rm SN}\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent random SN frequency.
+ {\rm(d)} for supernova rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
+$\dot\sigma=\SNr$ at lower resolution, 
+where $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent random SN frequency.
 The time axes vary between plots sufficient to reach saturation of the dynamo.
 At 4\,pc resolution the models with $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ are 
 continued until the dynamo has saturated, for comparison with the higher 
 resolution saturation levels.
 \label{fig:eb-nu}}
 \end{figure*}
+
+
+\section{Dynamo dependence on resolution and resistivity} \label{sec:results}
+
+In Figure\,\ref{fig:eb-res} the response of the magnetic energy density 
+$e_B/\overline{e_K}$ to resolution is shown
+for resistivity $\eta=10^{-4}\kpc\kms$, panel\,(a) and
+$\eta=10^{-3}$, panel\,(b).
+The time in Myr is plotted on a log scale to better present the differences in 
+the higher resolution runs, which saturate much faster then the 4 pc resolution 
+run.
+Whilst for $\eta=10^{-4}$ the dynamo growth rates are very slow at 4\,pc
+resolution, the growth rate shows some convergence near 0.5\,pc resolution and 
+the saturation level of above 5\% of $\overline{e_K}$ is independent of
+resolution. 
+At $\eta=10^{-3}$, there is a \emph{false convergence} \fag{reference tba}
+between 2 and 4\,pc resolution,
+with the magnetic energy decaying at similar rates, howver at higher resolution
+we see that the results converge around an alternative solution, with a dynamo
+amplification of the field occurring between 400 and 600\,Myr.
+
+In Figure\,\ref{fig:eb-nu} we show how at each resolution $e_B/\overline{e_K}$
+evolves for various values of $\eta$.
+
+
 
 \begin{figure*}
 \gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.5\textwidth}{(a)}
@@ -560,7 +595,7 @@ resolution saturation levels.
           \fig{figs/0_5pcPm0e-3_0kpower.png}{0.5\textwidth}{(d)}
           }
 \caption{
-Compensated energy spectra at times in Myr given in the captions for 
+Compensated energy spectra at times in Myr given in the legends for 
 0.5\,pc resolution.
 Rm is super critical for dynamo applying $\eta=10^{-4}$ in
 panels (a) and (b) and sub critical or marginal for dynamo applying
@@ -588,9 +623,9 @@ Resistivity $\eta=0,\,10^{-4}$ and $10^{-3}$ in panel pairs (a,b), (c,d) and
 Energy spectra are compensated against theoretical profiles of Kazentsev
 $k^{3/2}$, left panels, and Kolmogorov $k^{-5/3}$, right, 
 each represented by the horizontal black dashed lines.
-In panels (g,h) for 2\,pc resolution at 200\,Myr effect of supernova rate
-$\sigma=0.2\sigma_{\rm SN}$ or $\sigma_{\rm SN}$ with
-$\eta=10^{-4}$ or $10^{-3}$ as listed in the captions are displayed.
+Panels (g,h) for 2\,pc resolution at 200\,Myr show the effect of supernova rate
+$\dot\sigma=0.2\SNr$ or $\SNr$ for
+$\eta=10^{-4}$ or $10^{-3}$ as listed in the legends.
 \label{fig:3power}}
 \end{figure*}
 
@@ -606,12 +641,11 @@ $\eta=10^{-4}$ or $10^{-3}$ as listed in the captions are displayed.
 \tablecaption{Symbol Notation\label{tab:notation}}
 \tablewidth{0pt}
 \tablehead{
-\colhead{Messier} & \colhead{NGC/IC} & \nocolhead{Common} 
+\colhead{Notation} & \colhead{Meaning} & \colhead{Units/Definition} 
 \\
-\colhead{Number} & \colhead{Number} & \nocolhead{Name} 
 }
-\decimalcolnumbers
-\startdata
+%\decimalcolnumbers
+\startdata\\
 $\dfrac{D}{Dt}$ & material derivative & $\dfrac{\partial }{\partial t}+\vect{u}\cdot \vect\nabla$ \\
 $\vect\nabla$ & gradient vector & e.g.,$\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}$ \\
 $\rho$ & gas density & [g cm$^{-3}$]  \\
@@ -626,11 +660,13 @@ $\mathbfss W$ & traceless rate of strain tensor &
   ${\mathsf W}_{ij} = \dfrac{1}{2}\left(\dfrac{\partial u_i}{\partial x_j}
                  + \dfrac{\partial u_j}{\partial x_i}
                  -\dfrac{2}{3} \delta_{ij}\vect\nabla\cdot \vect u\right)$ \\
+$|\mathbfss W|^2$ & contracted rate of strain tensor &
+  $|\mathbfss W|^2={\mathsf W}_{ij}{\mathsf W}_{ij}$\\
 $\mathbfss W^{(3)}$ & 6th order rate of strain tensor &
   ${\mathsf W}_{ij}^{(3)} = \dfrac{1}{2}\left(\dfrac{\partial^5 u_j}{\partial x_i^5}
                  + \dfrac{\partial^4}{\partial x_i^4}\left(\dfrac{\partial u_i}{\partial x_j}\right)
                  -\dfrac{1}{3}\dfrac{\partial^4}{\partial x_i^4}\left(\vect\nabla\cdot \vect u\right)\right)$ \\
-$\zeta_{D},\zeta_{\nu},\zeta_{\chi}$ & shock diffusion coefficient& $\propto \left|\vect\nabla\cdot\vect u\right|_{<0}$\\
+$\zeta_{D},\zeta_{\nu},\zeta_{\chi}$ & shock diffusion coefficient& $\propto \left(-\vect\nabla\cdot\vect u\right)_+$\\
 $\nu,\eta$ & viscosity, resistivity coefficient& [kpc km s$^{-1}$]\\
 $\nu_3,\chi_3,\eta_3$ & hyperdiffusion coefficient& [kpc$^{5}$ km s$^{-1}$]\\
 $\Gamma$ & UV-heating& [erg g$^{-1}$ s$^{-1}$]\\
@@ -639,13 +675,16 @@ $\ESK+\EST$ & SN explosion energy& [10$^{51}$erg]\\
 $\dot\sigma$ & SN explosion rate & [kpc Myr$^{-1}$]\\
 $c_{\rm s}$ & sound speed & [km s$^{-1}$]\\
 $c_{\rm p}$ & specific heat at constant pressure & [erg g$^{-1}$ K$^{-1}$]\\
+$e_B$ & magnetic energy density & [erg cm$^{-3}$]\\
+$\overline{e_K}$ & time-averaged kinetic energy density & [erg cm$^{-3}$]\\
+\\
 \enddata
-\tablecomments{\fag{to be continued \ldots}
-This table ``hides'' the third column in the \latex\ when compiled.
-The Distance is also centered on the decimals.  Note that when using decimal
-alignment you need to include the {\tt\string\decimals} command before
-{\tt\string\startdata} and all of the values in that column have to have a
-space before the next ampersand.}
+%\tablecomments{\fag{to be continued \ldots}
+%This table ``hides'' the third column in the \latex\ when compiled.
+%The Distance is also centered on the decimals.  Note that when using decimal
+%alignment you need to include the {\tt\string\decimals} command before
+%{\tt\string\startdata} and all of the values in that column have to have a
+%space before the next ampersand.}
 \end{deluxetable*}
 %\begin{deluxetable*}{cchlDlc}
 %\tablenum{1}
