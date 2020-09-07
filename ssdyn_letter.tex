@@ -293,10 +293,10 @@ They refute the earlier dynamo solutions of \citet{BKMM04}
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
 
 \begin{figure*}
-\gridline{ \fig{figs/ssd-tang-brms.png}{0.5\textwidth}{(a)}
+\gridline{ \fig{figs/ssd-tang-brms.png}{0.45\textwidth}{(a)}
           }
-\gridline{     \fig{figs/ssdBpower.png}{0.5\textwidth}{(b)}
-          \fig{figs/tanglingBpower.png}{0.5\textwidth}{(c)}
+\gridline{     \fig{figs/ssdBpower.png}{0.45\textwidth}{(b)}
+          \fig{figs/tanglingBpower.png}{0.45\textwidth}{(c)}
           }
 \caption{
 %fag
@@ -492,9 +492,9 @@ $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion applying primaril
 at the grid scale to resolve small-scale instabilities.
 \fag{add reference re hyper3}
 
-\begin{figure*}[ht!]
-\gridline{\fig{figs/eB-res-4eta.png}{0.5\textwidth}{(a)}
-          \fig{figs/eB-res-3eta.png}{0.5\textwidth}{(b)}
+\begin{figure*}
+\gridline{\fig{figs/eB-res-4eta.png}{0.45\textwidth}{(a)}
+          \fig{figs/eB-res-3eta.png}{0.45\textwidth}{(b)}
           }
 \caption{
 The volume averaged magnetic energy density for models with resolution
@@ -531,39 +531,7 @@ the physical effects of thermal conductivity can be expected to be relevant only
 at time and spatial scales much shorter than considered here.
 \fag{Mordecai, could you suggest some appropriate reference?}
 
-\begin{figure*}
-\gridline{\fig{figs/0_5pc-eB-nu4.png}{0.5\textwidth}{(a)}
-            \fig{figs/1pc-eB-nu4.png}{0.5\textwidth}{(b)}
-          }
-\gridline{  \fig{figs/2pc-eB-nu4.png}{0.5\textwidth}{(c)}
-            \fig{figs/4pc-eB-nu4.png}{0.5\textwidth}{(d)}
-          }
-\gridline{
-            \fig{figs/2pc-eB-nu5.png}{0.5\textwidth}{(e)}
-            \fig{figs/4pc-eB-nu6.png}{0.5\textwidth}{(f)}
-          }
-  \begin{picture}(0,0)(0,0)
-    \put( 56,468){\begin{scriptsize}{\sf{$\delta x=0.5$pc}}\end{scriptsize}}
-    \put(457,468){\begin{scriptsize}{\sf{$\delta x=1.0$pc}}\end{scriptsize}}
-    \put( 56,277){\begin{scriptsize}{\sf{$\delta x=2.0$pc}}\end{scriptsize}}
-    \put(457,277){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
-    \put( 56, 85){\begin{scriptsize}{\sf{$\delta x=2.0$pc}}\end{scriptsize}}
-    \put(457, 85){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
-  \end{picture}
-\caption{
-The effect of resistivity $\eta$ is compared at each resolution, {\rm(a)} --
- {\rm(d)} for supernova rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
-$\dot\sigma=\SNr$ at lower resolution, 
-where $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent random SN frequency.
-The time axes vary between plots sufficient to reach saturation of the dynamo.
-At 4\,pc resolution the models with $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ are 
-continued until the dynamo has saturated, for comparison with the higher 
-resolution saturation levels.
-\label{fig:eb-nu}}
-\end{figure*}
-
-
-\section{Dynamo dependence on resolution and resistivity} \label{sec:results}
+\section{Resolution and resistivity} \label{sec:results}
 
 In Figure\,\ref{fig:eb-res} the response of the magnetic energy density 
 $e_B/\overline{e_K}$ to resolution is shown
@@ -586,13 +554,44 @@ In Figure\,\ref{fig:eb-nu} we show how at each resolution $e_B/\overline{e_K}$
 evolves for various values of $\eta$.
 
 
+\begin{figure*}
+\gridline{\fig{figs/0_5pc-eB-nu4.png}{0.45\textwidth}{(a)}
+            \fig{figs/1pc-eB-nu4.png}{0.45\textwidth}{(b)}
+          }
+\gridline{  \fig{figs/2pc-eB-nu4.png}{0.45\textwidth}{(c)}
+            \fig{figs/4pc-eB-nu4.png}{0.45\textwidth}{(d)}
+          }
+\gridline{
+            \fig{figs/2pc-eB-nu5.png}{0.45\textwidth}{(e)}
+            \fig{figs/4pc-eB-nu6.png}{0.45\textwidth}{(f)}
+          }
+  \begin{picture}(0,0)(0,0)
+    \put( 56,458){\begin{scriptsize}{\sf{$\delta x=0.5$pc}}\end{scriptsize}}
+    \put(450,458){\begin{scriptsize}{\sf{$\delta x=1.0$pc}}\end{scriptsize}}
+    \put( 56,271){\begin{scriptsize}{\sf{$\delta x=2.0$pc}}\end{scriptsize}}
+    \put(450,271){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
+    \put( 56, 83){\begin{scriptsize}{\sf{$\delta x=2.0$pc}}\end{scriptsize}}
+    \put(450, 83){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
+  \end{picture}
+\caption{
+The effect of resistivity $\eta$ is compared at each resolution, {\rm(a)} --
+ {\rm(d)} for supernova rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
+$\dot\sigma=\SNr$ at lower resolution, 
+where $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent random SN frequency.
+The time axes vary between plots sufficient to reach saturation of the dynamo.
+At 4\,pc resolution the models with $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ are 
+continued until the dynamo has saturated, for comparison with the higher 
+resolution saturation levels.
+\label{fig:eb-nu}}
+\end{figure*}
+
 
 \begin{figure*}
-\gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.5\textwidth}{(a)}
-          \fig{figs/0_5pcPm0e-4_0kpower.png}{0.5\textwidth}{(b)}
+\gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.45\textwidth}{(a)}
+          \fig{figs/0_5pcPm0e-4_0kpower.png}{0.45\textwidth}{(b)}
           }
-\gridline{\fig{figs/0_5pcPm0e-3_0Bpower.png}{0.5\textwidth}{(c)}
-          \fig{figs/0_5pcPm0e-3_0kpower.png}{0.5\textwidth}{(d)}
+\gridline{\fig{figs/0_5pcPm0e-3_0Bpower.png}{0.45\textwidth}{(c)}
+          \fig{figs/0_5pcPm0e-3_0kpower.png}{0.45\textwidth}{(d)}
           }
 \caption{
 Compensated energy spectra at times in Myr given in the legends for 
@@ -607,14 +606,14 @@ each represented by the horizontal black dashed lines.
 \end{figure*}
 
 \begin{figure*}
-\gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.png}{0.5\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
-          \vspace{-0.7cm} \fig{figs/nu0_kpower.png}{0.5\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
-\gridline{\vspace{-0.7cm}\fig{figs/nu10_Bpower.png}{0.5\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
-          \vspace{-0.7cm}\fig{figs/nu10_kpower.png}{0.5\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
-\gridline{\vspace{-0.7cm} \fig{figs/nu1_Bpower.png}{0.5\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
-          \vspace{-0.7cm} \fig{figs/nu1_kpower.png}{0.5\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
-\gridline{\vspace{-0.3cm}  \fig{figs/SN_Bpower.png}{0.5\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
-          \vspace{-0.3cm}  \fig{figs/SN_kpower.png}{0.5\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
+\gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
+          \vspace{-0.7cm} \fig{figs/nu0_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
+\gridline{\vspace{-0.7cm}\fig{figs/nu10_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
+          \vspace{-0.7cm}\fig{figs/nu10_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
+\gridline{\vspace{-0.7cm} \fig{figs/nu1_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
+          \vspace{-0.7cm} \fig{figs/nu1_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
+\gridline{\vspace{-0.3cm}  \fig{figs/SN_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
+          \vspace{-0.3cm}  \fig{figs/SN_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
 \caption{
 Compensated energy spectra at dynamo saturation (or late time) for each
 resolution.
@@ -679,42 +678,17 @@ $e_B$ & magnetic energy density & [erg cm$^{-3}$]\\
 $\overline{e_K}$ & time-averaged kinetic energy density & [erg cm$^{-3}$]\\
 \\
 \enddata
-%\tablecomments{\fag{to be continued \ldots}
-%This table ``hides'' the third column in the \latex\ when compiled.
-%The Distance is also centered on the decimals.  Note that when using decimal
-%alignment you need to include the {\tt\string\decimals} command before
-%{\tt\string\startdata} and all of the values in that column have to have a
-%space before the next ampersand.}
-\end{deluxetable*}
-%\begin{deluxetable*}{cchlDlc}
-%\tablenum{1}
-%\tablecaption{Fun facts about the first 10 messier objects\label{tab:messier}}
-%\tablewidth{0pt}
-%\tablehead{
-%\colhead{Messier} & \colhead{NGC/IC} & \nocolhead{Common} & \colhead{Object} &
-%\multicolumn2c{Distance} & \colhead{} & \colhead{V} \\
-%\colhead{Number} & \colhead{Number} & \nocolhead{Name} & \colhead{Type} &
-%\multicolumn2c{(kpc)} & \colhead{Constellation} & \colhead{(mag)}
-%}
-%\decimalcolnumbers
-%\startdata
-%M1 & NGC 1952 & Crab Nebula & Supernova remnant & 2 & Taurus & 8.4 \\
-%M2 & NGC 7089 & Messier 2 & Cluster, globular & 11.5 & Aquarius & 6.3 \\
-%M3 & NGC 5272 & Messier 3 & Cluster, globular & 10.4 & Canes Venatici &  6.2 \\
-%M4 & NGC 6121 & Messier 4 & Cluster, globular & 2.2 & Scorpius & 5.9 \\
-%M5 & NGC 5904 & Messier 5 & Cluster, globular & 24.5 & Serpens & 5.9 \\
-%M6 & NGC 6405 & Butterfly Cluster & Cluster, open & 0.31 & Scorpius & 4.2 \\
-%M7 & NGC 6475 & Ptolemy Cluster & Cluster, open & 0.3 & Scorpius & 3.3 \\
-%M8 & NGC 6523 & Lagoon Nebula & Nebula with cluster & 1.25 & Sagittarius & 6.0 \\
-%M9 & NGC 6333 & Messier 9 & Cluster, globular & 7.91 & Ophiuchus & 8.4 \\
-%M10 & NGC 6254 & Messier 10 & Cluster, globular & 4.42 & Ophiuchus & 6.4 \\
-%\enddata
-%\tablecomments{This table ``hides'' the third column in the \latex\ when compiled.
-%The Distance is also centered on the decimals.  Note that when using decimal
-%alignment you need to include the {\tt\string\decimals} command before
-%{\tt\string\startdata} and all of the values in that column have to have a
-%space before the next ampersand.}
+%\tablecomments{
+%Summary of notation used in the text.}
 %\end{deluxetable*}
+\tablecomments{\fag{to be continued \ldots}
+This table ``hides'' the third column in the \latex\ when compiled.
+The Distance is also centered on the decimals.  Note that when using decimal
+alignment you need to include the {\tt\string\decimals} command before
+{\tt\string\startdata} and all of the values in that column have to have a
+space before the next ampersand.}
+\end{deluxetable*}
+
 %% This command is needed to show the entire author+affiliation list when
 %% the collaboration and author truncation commands are used.  It has to
 %% go at the end of the manuscript.
