@@ -340,7 +340,7 @@ with the largest wavenumber $k/k_1=128$.
 \end{figure*}
 
 In many simulations of supernova driven turbulence with realistic vertical 
-stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the mechaniisms
+stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the mechanisms
 for inducing large scale magnetic fields are absent, such as rotation and shear.
 To examine the effect of strong ordered magnetic fields these models then rely
 on imposition a background or initial magnetic field, typically uniform,
@@ -365,7 +365,8 @@ nature of the MHD turbulence.
 To illustrate some differences between tangling and small scale dynamo we adopt
 a toy model with non-helical random forcing with wavenumber $\kf=8$ applied to
 isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
-A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
+A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is
+imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
 The two simulations are distinguished only by use of $\eta=10^{-4}$, exciting a 
 small scale dynamo models, and $\eta=2\cdot10^{-3}$ subcritical for dynamo.
 Our numerical implementations use the {\sc Pencil Code}\footnote{
@@ -420,7 +421,7 @@ range.
 
 While in the SN experiments considered in this letter are restricted to
 SSD, some large scale models do include the large scale dynamo
-\citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,GE20}.
+\citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,SBADMN19,SDLMBP20,GE20}.
 Most of these do not include a small scale dynamo.
 \citet{Gent:2013b,EGSFB16} do include SSD, but without a clear understanding of
 the characteristics of this SSD it is difficult to explore the effect this has
@@ -533,27 +534,6 @@ at time and spatial scales much shorter than considered here.
 
 \section{Resolution and resistivity} \label{sec:results}
 
-In Figure\,\ref{fig:eb-res} the response of the magnetic energy density 
-$e_B/\overline{e_K}$ to resolution is shown
-for resistivity $\eta=10^{-4}\kpc\kms$, panel\,(a) and
-$\eta=10^{-3}$, panel\,(b).
-The time in Myr is plotted on a log scale to better present the differences in 
-the higher resolution runs, which saturate much faster then the 4 pc resolution 
-run.
-Whilst for $\eta=10^{-4}$ the dynamo growth rates are very slow at 4\,pc
-resolution, the growth rate shows some convergence near 0.5\,pc resolution and 
-the saturation level of above 5\% of $\overline{e_K}$ is independent of
-resolution. 
-At $\eta=10^{-3}$, there is a \emph{false convergence} \fag{reference tba}
-between 2 and 4\,pc resolution,
-with the magnetic energy decaying at similar rates, howver at higher resolution
-we see that the results converge around an alternative solution, with a dynamo
-amplification of the field occurring between 400 and 600\,Myr.
-
-In Figure\,\ref{fig:eb-nu} we show how at each resolution $e_B/\overline{e_K}$
-evolves for various values of $\eta$.
-
-
 \begin{figure*}
 \gridline{\fig{figs/0_5pc-eB-nu4.png}{0.45\textwidth}{(a)}
             \fig{figs/1pc-eB-nu4.png}{0.45\textwidth}{(b)}
@@ -585,7 +565,98 @@ resolution saturation levels.
 \label{fig:eb-nu}}
 \end{figure*}
 
+In Figure\,\ref{fig:eb-res} the response of the magnetic energy density 
+$e_B/\overline{e_K}$ to resolution is shown
+for resistivity $\eta=10^{-4}\kpc\kms$, panel\,(a) and
+$\eta=10^{-3}$, panel\,(b).
+The time in Myr is plotted on a log scale to better present the differences in 
+the higher resolution runs, which saturate much faster then the 4 pc resolution 
+run.
+Whilst for $\eta=10^{-4}$ the dynamo growth rates are very slow at 4\,pc
+resolution, the growth rate shows some convergence near 0.5\,pc resolution and 
+the saturation level of above 5\% of $\overline{e_K}$ is independent of
+resolution. 
+At $\eta=10^{-3}$, there is a \emph{false convergence} \citep{FMA91}
+between 2 and 4\,pc resolution,
+with the magnetic energy decaying at similar rates, however at higher resolution
+we see that the results converge around an alternative solution, with a dynamo
+amplification of the field occurring between 400 and 600\,Myr.
 
+In Figure\,\ref{fig:eb-nu} we show how at each resolution $e_B/\overline{e_K}$
+evolves for various values of $\eta$.
+We note that at 0.5, panel (a), and 1\,pc resolution, panel (b), the profile
+at $\eta=10^{-5}$ is indistinguishable from $\eta=0$, and so numerical
+resistivity continues to control the dynamics.
+At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, such that physical resistivity
+is dynamically dominant, at least for some of the domain and Rm is unevenly
+defined by combination of physical and numerical resistivity.
+At all resolutions $\eta=10^{-3}$ is clearly well resolved and dynamics and
+Rm well defined by the physical application of resistivity.
+To reduce statistical noise, at all resolution and $\eta$ the supernova are
+scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$, panels (a) -- (d), and for $\dot\sigma=\SNr$, panels (e) -- (f).
+For low resolution the timestep is longer, such that the actual timing and 
+environment of the explosions can differ between models, so the statistical
+noise is more evident, particularly in panels (e) and (f). 
+
+The evolution is complicated by the impact \emph{thermal runaway}
+\citep[see e.g.,][]{LOCBN15}, combination of multiple SN into superbubbles
+resulting in persistent hot regions.
+We shall report analysis of these results in depth in future work, but an 
+initial observation of the growth profiles could lead to the conclusion that
+growth rates for high resistivity (low Rm) can exceed comparable rates for high
+Rm, in contradiction to dynamo theory and previous experimental results.
+Closer inspection of each plot, zooming in on specific intervals, however,
+confirms that growth rates are higher as expected for higher Rm.
+For example between 8 and 15 Myr there is weak growth or decay in panels (a)
+and (b) with critical $\eta$ for dynamo between $10^{-4}$ and $10^{-3}$.
+Rm and corresponding growth at low $\eta$ is higher in the 0.5\,pc simulation
+with lower numerical resistivity, but 
+converge for $\eta=10^{-3}$, where the physical resistivity is most resolved.
+Between 15 and 20\,Myr there is a fast dynamo driven in the hot gas, in which
+growth rates are related to the level of resistivity.
+The high Rm models at 0.5\,pc already saturate by 20\,Myr, but for 1\,pc there
+is another slow dynamo driven in the warm gas up to 40\,Myr and then a
+subsequent 'hot' dynamo resulting in saturation for all models within 60\,Myr,
+including for $\eta=10^{-3}$.
+
+At low resolution, with $\dot\sigma=0.2\SNr$ panels (c) and (d), $\eta=10^{-4}$
+is not distinct from numerical resistivity, and there is no hot dynamo at all
+for 4\,pc resolution with the well resolved $\eta=10^{-3}$.
+At 100\,Myr there is a hot dynamo at 2\,pc resolution, but this is not
+sustained and for $\eta=10^{-3}$ susbequently diffuses away.
+At $\dot\sigma=\SNr$, panels (e) and (f), the increased Rm due to the 
+higher forcing rate is sufficient to produce a dynamo at $\eta\geq10^{-3}$, but
+not for $\eta=5\cdot10^{-3}$.
+Given the increased statistical noise we cannot confirm that $\eta\leq10^{-4}$
+applies beyond the numerical resistivity.
+However, at 2\,pc resolution, $\eta=5\cdot10^{-4}$ is resolved and at 4\,pc
+resolution $\eta=2\cdot10^{-4}$ is near the resolved limit, both plotted as
+magenta lines.
+In panel (e) we see two hot dynamo phases at 90  and 110\,Myr, which are not 
+present in panel (f).
+There is a reduced susceptibility to thermal runaway at low resolution, 
+and only lower Rm can be resolved, both an effect of more diffusive numerics.
+Hence, as the resolution becomes more coarse it is likely that the small-scale 
+dynamo will be suppressed in simulations of the ISM.
+Higher supernova rates driving increased velocities may permit coarse models 
+to attain the critical Rm for SSD, but it is likely that models with 
+resolution much above 4\,pc will suppress the dynamo. 
+
+To attain a truly convergent numerical regime simulations should apply 
+resolution better than 2\,pc.
+In the ISM with Rm much higher than we can resolve, our results confirm that a
+SSD is very easy to excite by SN, and may even be present in galaxies with
+low SN rates.
+As shown in panels (a) and (b), properties of the hot gas cannot exclude 
+SSD even with high resistivity in galaxies that produce sustained regions of
+hot turbulence.
+We shall examine the nature of this fast dynamo in a later report.
+To exclude SSD in SN driven turbulence simulations will require
+$\eta\gtrsim10^{-3}$ or supernova implementation which avoids thermal runaway.
+In \citet{Gressel:2008,GE20}, the resolution is 8.3 and 6.7\,pc, respectively
+and $\eta\simeq6\cdot10^{-3}\kpc\kms$, which excludes SSD,
+while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with 4\,pc
+resolution, which would support SSD, even without thermal runaway.
 \begin{figure*}
 \gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.45\textwidth}{(a)}
           \fig{figs/0_5pcPm0e-4_0kpower.png}{0.45\textwidth}{(b)}
