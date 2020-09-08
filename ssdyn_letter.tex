@@ -81,6 +81,8 @@
 \newcommand{\vect}[1]{{{\mbox{\boldmath $#1$}}}}%also makes bold Greek letters
 \newcommand{\mathbfss}[1]{\textbf{\textsf{#1}}}
 \newcommand\kpc{~ {\rm kpc}}
+\newcommand\pc{~ {\rm pc}}
+\newcommand\dx{~ {\delta x}}
 \newcommand\Myr{~ {\rm Myr}}
 \newcommand\erg{~ {\rm erg}}
 \newcommand\kms{~ {\rm km~ s}^{-1}}
@@ -438,8 +440,9 @@ on galaxy dynamics.
 
 
 To exclude any large scale magnetic field dynamics in these simulations, the
-computational domain occupies a cube of length 120 pc, with periodic boundaries
-on all sides. 
+computational domain occupies a cube of length 120 parsec (pc), with periodic boundaries
+on all sides.
+Grid size $\delta x=0.5$, 1, 2 and 4\c  along each side are considered.
 We solve the system of non-ideal compressible MHD equations, including 
 mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
 induction Eq.\,\eqref{eq:ind}:
@@ -499,8 +502,8 @@ at the grid scale to resolve small-scale instabilities.
           \fig{figs/eB-res-3eta.png}{0.45\textwidth}{(b)}
           }
 \caption{
-The volume averaged magnetic energy density for models with resolution
-between 0.5\,pc and 4\,pc are plotted over time.
+The volume averaged magnetic energy density for models with $\dx$
+between 0.5\pc and 4\pc are plotted over time.
 These are scaled by reference to their
  time-averaged statistical-steady kinetic energy density.
 Resistivity, $\eta=10^{-4}\kpc\kms$ in panel {\rm(a)} and $10^{-3}$
@@ -519,7 +522,7 @@ following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in
 \citet{Gent:2013a}. 
 
 In the subset of experiments presented in this letter we set viscosity, $\nu=0$,
-with $\nu_3$ applying optimally for each resolution to ensure the flow is 
+with $\nu_3$ applying optimally for each $\dx$ to ensure the flow is 
 well resolved.
 We establish a benchmark for the magnetic field evolution setting $\eta=0$, with
 numerical resistivity acting via the optimal setting for $\eta_3$.
@@ -555,12 +558,12 @@ at time and spatial scales much shorter than considered here.
     \put(440, 78){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
   \end{picture}
 \caption{
-The effect of resistivity $\eta$ is compared at each resolution, {\rm(a)} --
+The effect of resistivity $\eta$ is compared at each $\dx$, {\rm(a)} --
  {\rm(d)} for supernova rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
 $\dot\sigma=\SNr$ at lower resolution, 
 where $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent random SN frequency.
 The time axes vary between plots sufficient to reach saturation of the dynamo.
-At 4\,pc resolution the models with $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ are 
+At $\dx=4pc$ the models with $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ are 
 continued until the dynamo has saturated, for comparison with the higher 
 resolution saturation levels.
 \label{fig:eb-nu}}
@@ -571,30 +574,31 @@ $e_B/\overline{e_K}$ to resolution is shown
 for resistivity $\eta=10^{-4}\kpc\kms$, panel\,(a) and
 $\eta=10^{-3}$, panel\,(b).
 The time in Myr is plotted on a log scale to better present the differences in 
-the higher resolution runs, which saturate much faster then the 4 pc resolution 
+the higher resolution runs, which saturate much faster then the $\dx=4\pc$ 
 run.
-Whilst for $\eta=10^{-4}$ the dynamo growth rates are very slow at 4\,pc
-resolution, the growth rate shows some convergence near 0.5\,pc resolution and 
+Whilst for $\eta=10^{-4}$ the dynamo growth rates are very slow at $\dx=4\pc$,
+the growth rate shows some convergence near $\dx=0.5\pc$ and 
 the saturation level of above 5\% of $\overline{e_K}$ is independent of
 resolution. 
 At $\eta=10^{-3}$, there is a \emph{false convergence} \citep{FMA91}
-between 2 and 4\,pc resolution,
+between $\dx=2$ and $4\pc$,
 with the magnetic energy decaying at similar rates, however at higher resolution
 we see that the results converge around an alternative solution, with a dynamo
 amplification of the field occurring between 400 and 600\,Myr.
 
 In Figure\,\ref{fig:eb-nu} we show how at each resolution $e_B/\overline{e_K}$
 evolves for various values of $\eta$.
-We note that at 0.5, panel (a), and 1\,pc resolution, panel (b), the profile
+We note that at $\dx=0.5$, panel (a), and $1\pc$, panel (b), the profile
 at $\eta=10^{-5}$ is indistinguishable from $\eta=0$, and so numerical
 resistivity continues to control the dynamics.
 At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, such that physical resistivity
 is dynamically dominant, at least for some of the domain and Rm is unevenly
 defined by combination of physical and numerical resistivity.
-At all resolutions $\eta=10^{-3}$ is clearly well resolved and dynamics and
+At all $\dx$ $\eta=10^{-3}$ is clearly well resolved and dynamics and
 Rm well defined by the physical application of resistivity.
-To reduce statistical noise, at all resolution and $\eta$ the supernova are
-scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$, panels (a) -- (d), and for $\dot\sigma=\SNr$, panels (e) -- (f).
+To reduce statistical noise, at all $\dx$ and $\eta$ the supernova are
+scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$,
+panels (a) -- (d), and for $\dot\sigma=\SNr$, panels (e) -- (f).
 For low resolution the timestep is longer, such that the actual timing and 
 environment of the explosions can differ between models, so the statistical
 noise is more evident, particularly in panels (e) and (f). 
@@ -622,15 +626,15 @@ including for $\eta=10^{-3}$.
 
 At low resolution, with $\dot\sigma=0.2\SNr$ panels (c) and (d), $\eta=10^{-4}$
 is not distinct from numerical resistivity, and there is no hot dynamo at all
-for 4\,pc resolution with the well resolved $\eta=10^{-3}$.
-At 100\,Myr there is a hot dynamo at 2\,pc resolution, but this is not
+for $\dx=4\pc$ with the well resolved $\eta=10^{-3}$.
+At 100\,Myr there is a hot dynamo at $\dx=2\pc$, but this is not
 sustained and for $\eta=10^{-3}$ susbequently diffuses away.
 At $\dot\sigma=\SNr$, panels (e) and (f), the increased Rm due to the 
 higher forcing rate is sufficient to produce a dynamo at $\eta\geq10^{-3}$, but
 not for $\eta=5\cdot10^{-3}$.
 Given the increased statistical noise we cannot confirm that $\eta\leq10^{-4}$
 applies beyond the numerical resistivity.
-However, at 2\,pc resolution, $\eta=5\cdot10^{-4}$ is resolved and at 4\,pc
+However, at $\dx=2\pc$, $\eta=5\cdot10^{-4}$ is resolved and at 4\,pc
 resolution $\eta=2\cdot10^{-4}$ is near the resolved limit, both plotted as
 magenta lines.
 In panel (e) we see two hot dynamo phases at 90  and 110\,Myr, which are not 
@@ -732,8 +736,11 @@ $\eta=10^{-4}$ or $10^{-3}$ as listed in the legends.
 
 In Figure\,\ref{fig:3power} panels (a) -- (f) the effect of resolution on the
 compensated energy spectra is shown for $\eta=0$, $10^{-4}$ and $10^{-3}$.
-The hydrodynamic parameters are fixed for each resolution.
-For 0.5 and 1\,pc resolution the spectra are consistent between 
+The hydrodynamic parameters are fixed for each resolution and are 
+consistent between panels (b), (d) and (f).
+For $\delta x=0.5$ and 1\,pc the bottleneck is evident, but for 2 and 4\,pc it
+is absent, perhaps relevant to the false convergence at low resolution 
+referred to from Figure\,\ref{fig:eb-res}\,(b).
 
 \bibliography{refs}{}
 \bibliographystyle{aasjournal}
