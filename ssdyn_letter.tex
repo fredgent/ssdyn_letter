@@ -74,6 +74,7 @@
 \newcommand\Rm{{\rm Rm} }
 \newcommand\kf{k_{\rm f} }
 \newcommand\SNr{\dot\sigma_{\rm sn}}
+\newcommand\OSN{\Omega_{\rm sn}}
 \newcommand\ESK{E_{\rm kin}}
 \newcommand\EST{E_{\rm th}}
 \newcommand\ESN{E_{\sigma}}
@@ -654,9 +655,17 @@ We shall examine the nature of this fast dynamo in a later report.
 To exclude SSD in SN driven turbulence simulations will require
 $\eta\gtrsim10^{-3}$ or supernova implementation which avoids thermal runaway.
 In \citet{Gressel:2008,GE20}, the resolution is 8.3 and 6.7\,pc, respectively
-and $\eta\simeq6\cdot10^{-3}\kpc\kms$, which excludes SSD,
+and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which excludes SSD,
 while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with 4\,pc
 resolution, which would support SSD, even without thermal runaway.
+The latter obtain a large scale dynamo with a $\Omega=\OSN$, where 
+$\OSN=25\kms\kpc^{-1}$ is the galactic angular momentum in the solar
+neighbourhood, while the
+former require $\Omega\geq4\OSN$ to excite LSD.
+Rm applying at the largest scales would be 7.5 times higher for the latter 
+model, so alone is sufficient to explain the LSD.
+How the SSD affects the galactic dynamo requires further study. 
+
 \begin{figure*}
 \gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.45\textwidth}{(a)}
           \fig{figs/0_5pcPm0e-4_0kpower.png}{0.45\textwidth}{(b)}
@@ -675,6 +684,28 @@ $k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d),
 each represented by the horizontal black dashed lines.
 \label{fig:4power}}
 \end{figure*}
+
+In contrast to the toy model in Section\,\ref{sec:ssd-tang}, SN driven
+turbulence does not have a well-defined forcing scale, due to the heterogeneous
+temperature and density of the ISM and random clustering of explosions.
+In our simulations the forcing scale will range between 10 and 50\,pc,
+or $k\in(3,16)$.
+In Figure\,\ref{fig:4power} we show the evolving compensated spectra for the
+high resolution kinetic energy in the kinematic phase (b) for $\eta=10^{-4}$
+and during decay (d) for $\eta=10^{-3}$.
+The spectra magnitude show the same fluctuations over time, except at 32\,Myr,
+when the dynamo saturates and reduces slightlye of the energy in (b) compared
+to (d). 
+Many of the spectra display a \emph{bottleneck} effect \fag{reference tba} with
+a peak at $k\simeq50$.
+The compensated magnetic energy spectra in panels (a) and (c) have ranges 
+conforming to the Kazentsev inverse cascade in the SSD case (a) extending to
+$k\gtrsim 20$, consistent with the SSD behaviour of the toy model in
+Figure\,\ref{fig:tangling}\,(b).
+In panel (c) of Figure\,\ref{fig:4power} the Kazentsev range in similar fashion
+to Figure\,\ref{fig:tangling}\,(c) is in the range $K\lesssim10$ except
+for 22\,Myr, which corresponds to a short growth spurt in
+Figure\,\ref{fig:eb-res}\,(b) and consistent with the presence of SSD.
 
 \begin{figure*}
 \gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
@@ -698,6 +729,11 @@ $\dot\sigma=0.2\SNr$ or $\SNr$ for
 $\eta=10^{-4}$ or $10^{-3}$ as listed in the legends.
 \label{fig:3power}}
 \end{figure*}
+
+In Figure\,\ref{fig:3power} panels (a) -- (f) the effect of resolution on the
+compensated energy spectra is shown for $\eta=0$, $10^{-4}$ and $10^{-3}$.
+The hydrodynamic parameters are fixed for each resolution.
+For 0.5 and 1\,pc resolution the spectra are consistent between 
 
 \bibliography{refs}{}
 \bibliographystyle{aasjournal}
