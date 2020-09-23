@@ -346,6 +346,46 @@ absence of a small scale (fluctuation) dynamo (SSD) in the interstellar medium
 applicable to the solar neighbourhood. 
 They refute the earlier dynamo solutions of \citet{BKMM04}
 
+In many simulations of supernova driven turbulence with realistic vertical 
+stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the mechanisms
+for inducing large scale magnetic fields are absent, such as rotation and shear.
+To examine the effect of strong ordered magnetic fields these models then rely
+on imposition a background or initial magnetic field, typically uniform,
+which is then perturbed by supernova explosions.
+The amplification of the magnetic field in these cases may include a small
+scale dynamo in case of sufficently high magnetic Reynolds numbers, but any
+amplification of the large scale field is limited to linear growth through
+tangling of the imposed field.
+Any initial large scale field would diffuse leaving only the random field. 
+If an imposed field is sufficiently close to equipartition its characteristics
+would dominate any MHD results.
+
+More commonly models of supernova driven dynamo in the ISM have ignored the 
+large scale effects and examined the small scale dynamo or the effect of the
+turbulent magnetic field on the properties of the ISM
+\citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}.
+A seed or imposed field for such models could be uniform or random, but if the
+simulated field results from tangling rather than dynamo, then any conclusions
+about the ISM depend on the veracity of the chosen field rather than the 
+nature of the MHD turbulence.
+
+%MJK Part of this belongs to the introduction (first para, at least). Here we should only summarize the model used here, and differences and similarities to earlier work and our previous models. 
+While in the SN experiments considered in this letter are restricted to
+SSD, some large scale models do include the large scale dynamo
+\citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,SBADMN19,SDLMBP20,GE20}.
+Most of these do not include a small scale dynamo.
+\citet{Gent:2013b,EGSFB16} do include SSD, but without a clear understanding of
+the characteristics of this SSD it is difficult to explore the effect this has
+on the large scale dynamo (LSD) and the properties of the ISM.
+\citet{SBADMN19,SDLMBP20} also suspect they have SSD.
+In this letter we explore the SSD in realistic simulations of SN driven 
+turbulence.
+The resolution and parameter study is intended to identify the critical ranges
+for excitation of SSD and understand dynamo growth rates and saturation 
+conditions.
+This will also identify the prerequisites for including or excluding SSD in the
+LSD models and subsequently establish the importance of SSD-LSD interactions 
+on galaxy dynamics. 
 %MJK The two first paragraphs should go into the intro in some form. 
 %MJK This section should basically only contain the toy model results. Toy model is also a bit degrading...
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
@@ -433,7 +473,7 @@ about the ISM depend on the veracity of the chosen field rather than the
 nature of the MHD turbulence.
 
 To illustrate some differences between tangling and small scale dynamo we adopt
-a toy model with non-helical random forcing with wavenumber $\kf=8$ applied to
+a simplified model with non-helical random forcing with wavenumber $\kf=8$ applied to
 isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
 A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is
 imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
@@ -498,23 +538,6 @@ range.
 
 \section{SN turbulence model design} \label{sec:model}
 
-%MJK Part of this belongs to the introduction (first para, at least). Here we should only summarize the model used here, and differences and similarities to earlier work and our previous models. 
-While in the SN experiments considered in this letter are restricted to
-SSD, some large scale models do include the large scale dynamo
-\citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,SBADMN19,SDLMBP20,GE20}.
-Most of these do not include a small scale dynamo.
-\citet{Gent:2013b,EGSFB16} do include SSD, but without a clear understanding of
-the characteristics of this SSD it is difficult to explore the effect this has
-on the large scale dynamo (LSD) and the properties of the ISM.
-\citet{SBADMN19,SDLMBP20} also suspect they have SSD.
-In this letter we explore the SSD in realistic simulations of SN driven 
-turbulence.
-The resolution and parameter study is intended to identify the critical ranges
-for excitation of SSD and understand dynamo growth rates and saturation 
-conditions.
-This will also identify the prerequisites for including or excluding SSD in the
-LSD models and subsequently establish the importance of SSD-LSD interactions 
-on galaxy dynamics. 
 
 %MJK We should mention that the domain is not subject to rotation, shear, nor stratification. And also in most cases no imposed field, I guess? 
 To exclude any large scale magnetic field dynamics in these simulations, the
@@ -777,7 +800,7 @@ each represented by the horizontal black dashed lines.
 \label{fig:4power}}
 \end{figure*}
 
-In contrast to the toy model in Section\,\ref{sec:ssd-tang}, SN driven
+In contrast to the simplified model in Section\,\ref{sec:ssd-tang}, SN driven
 turbulence does not have a well-defined forcing scale, due to the heterogeneous
 temperature and density of the ISM and random clustering of explosions.
 In our simulations the forcing scale will range between 10 and $50\pc$,
