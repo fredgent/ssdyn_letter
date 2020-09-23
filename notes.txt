@@ -26,3 +26,6 @@ Fig 4 remove extra y-axis  get tick marks inwards on all four sides
 
 Resolve 02/09
 Check local helicity relation to dynamo
+
+Table contents:
+model snap_time log(Rm).mean, log(Rm).median, log(Ms).mean, log(Ms).median, urms.mean(), 

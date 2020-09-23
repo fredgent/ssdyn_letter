@@ -258,20 +258,46 @@ Inter-University Centre for Astronomy \& Astrophysics, Pune 411 007, India
 
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
-We present a numerical resolution study over a range of magnetic Reynolds
-number (Rm) to identify characteristics of the small-scale dynamo (SSD) under
+
+%We present a numerical resolution study over a range of magnetic Reynolds
+%number (Rm) to identify characteristics of the small-scale dynamo (SSD) under
+%FAG: Reynolds -> resistivity
+%MJK Currently Rms are not given, not listed, nor any results
+%MJK presented as function of Rm, hence this statement cannot
+%MJK remain, unless such analysis is added.
+We present a numerical resolution study over a range of magnetic resistivity
+(and by implication magnetic Reynolds number, Rm) 
+to identify characteristics of the small-scale dynamo (SSD) under
 supernova-driven turbulence of the interstellar medium (ISM).
 We confirm that conditions in the ISM are likely highly conducive to 
 SSD in the diffuse hot and warm turbulent ISM, given Rm in the real ISM is 
 orders of magnitude higher than we model at our highest resolution and modest
 SN explosion frequency ($\SNr$), 20\% that of the solar neighbourhood.
 This is despite the negative impact on SSD expected from the highly compressible
-nature of the flow.
+%MJK So we have varying SN rates; do these have a higher Ma? What I am after is whether we can quantify that statement? 
+%MJK The other aspect is that we have LOW or unity for Pm, while the ISM
+%MJK has high Pm. SSD should be easier for higher Pm flows.
+%FAG: we see from Fig 5 panel (h) that the flow is not significantly
+%FAG: altered by higher SN, but the growth rate of B appears higher
+%FAG: due to the higher temperature
+%nature of the flow.
+%FAG: added
+nature of the flow and low magnetic Prandtl number of our experiments.
+%
 We find convergence in the growth rate of the SSD with resolution for a given 
 $\SNr$ approaching 
-sub-parsec scale and a trend towards the exclusion of SSD for resolution
-more coarse than 4 parsecs.
-Across the modelled range of 0.5 to 4 parsec resolution we find the SSD 
+%sub-parsec scale and a trend towards the exclusion of SSD for resolution
+%more coarse than 4 parsecs.
+%FAG: exclusion -> suppression
+%MJK Exclusion I do not understand... Even 2pc and 4pc system grow mgf. Why do we think this is not SSD?
+sub-parsec scale and a trend towards the suppression of SSD for resolution
+more coarse than 4 parsecs, where higher resistivity is required to resolve
+the magnetic field.
+%MJK Also the following statement is not in line with the previous one with exclusion.
+%Across the modelled range of 0.5 to 4 parsec resolution we find the SSD 
+%FAG: added low resistivity
+Across the modelled range of 0.5 to 4 parsec resolution we find with sufficiently low 
+resistivity the SSD 
 saturates consistently at about 5\% of the energy equipartion level, independent
 of the growth rate.
 
@@ -287,12 +313,70 @@ of the growth rate.
 
 To be revised \ldots
 
+%MJK The landscape to me seems to be the following:
+%MJK GE20 do not explicitely state that they do not have SSD, but do go forward with QKTFM, which assumes that no magnetic background turbulence is present, hence they make an implicit claim of having no SSD.
+%MJK Balsara04 clearly had a SSD, as LSD was not allowed for, but had an imposed
+%MJK field, and the role of that is unclear.
+%MJK Fred+gang claim LSD and SSD, but it is unclear whether this is true, as
+%MJK separating SSD and LSD is difficult.
+%MJK Steinwandel et al. have recently claimed that a SSD is present in a
+%MJK galactic-scale simulation, but no LSD, and that SSD "dies" off at later
+%MJK stages, when Kazantsev scaling is not observed.
+%MJK So, our study now tries to address at which resolution a fully healthy
+%MJK SSD can be expected in a full ISM simulation, and helps to interpret
+%MJK the mess descripbed above.
+%MJK Now we DO not have imposed field, and can confirm the conclusions of Balsara04
+%MJK without it.
+%MJK It would be interesting if a critical Rm could be nailed down, but I doubt we
+%MJK can, and must resort to what is listed above.
 This letter addresses the recent results of \citet{GE20}, which asserts the 
 absence of a small scale (fluctuation) dynamo (SSD) in the interstellar medium
 (ISM) subject to supernova induced turbulence and multi-phase structure
 applicable to the solar neighbourhood. 
 They refute the earlier dynamo solutions of \citet{BKMM04}
 
+In many simulations of supernova driven turbulence with realistic vertical 
+stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the mechanisms
+for inducing large scale magnetic fields are absent, such as rotation and shear.
+To examine the effect of strong ordered magnetic fields these models then rely
+on imposition a background or initial magnetic field, typically uniform,
+which is then perturbed by supernova explosions.
+The amplification of the magnetic field in these cases may include a small
+scale dynamo in case of sufficently high magnetic Reynolds numbers, but any
+amplification of the large scale field is limited to linear growth through
+tangling of the imposed field.
+Any initial large scale field would diffuse leaving only the random field. 
+If an imposed field is sufficiently close to equipartition its characteristics
+would dominate any MHD results.
+
+More commonly models of supernova driven dynamo in the ISM have ignored the 
+large scale effects and examined the small scale dynamo or the effect of the
+turbulent magnetic field on the properties of the ISM
+\citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}.
+A seed or imposed field for such models could be uniform or random, but if the
+simulated field results from tangling rather than dynamo, then any conclusions
+about the ISM depend on the veracity of the chosen field rather than the 
+nature of the MHD turbulence.
+
+%MJK Part of this belongs to the introduction (first para, at least). Here we should only summarize the model used here, and differences and similarities to earlier work and our previous models. 
+While in the SN experiments considered in this letter are restricted to
+SSD, some large scale models do include the large scale dynamo
+\citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,SBADMN19,SDLMBP20,GE20}.
+Most of these do not include a small scale dynamo.
+\citet{Gent:2013b,EGSFB16} do include SSD, but without a clear understanding of
+the characteristics of this SSD it is difficult to explore the effect this has
+on the large scale dynamo (LSD) and the properties of the ISM.
+\citet{SBADMN19,SDLMBP20} also suspect they have SSD.
+In this letter we explore the SSD in realistic simulations of SN driven 
+turbulence.
+The resolution and parameter study is intended to identify the critical ranges
+for excitation of SSD and understand dynamo growth rates and saturation 
+conditions.
+This will also identify the prerequisites for including or excluding SSD in the
+LSD models and subsequently establish the importance of SSD-LSD interactions 
+on galaxy dynamics. 
+%MJK The two first paragraphs should go into the intro in some form. 
+%MJK This section should basically only contain the toy model results. Toy model is also a bit degrading...
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
 
 \begin{figure*}
@@ -342,43 +426,21 @@ with the largest wavenumber $k/k_1=128$.
 \label{fig:tangling}}
 \end{figure*}
 
-In many simulations of supernova driven turbulence with realistic vertical 
-stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the mechanisms
-for inducing large scale magnetic fields are absent, such as rotation and shear.
-To examine the effect of strong ordered magnetic fields these models then rely
-on imposition a background or initial magnetic field, typically uniform,
-which is then perturbed by supernova explosions.
-The amplification of the magnetic field in these cases may include a small
-scale dynamo in case of sufficently high magnetic Reynolds numbers, but any
-amplification of the large scale field is limited to linear growth through
-tangling of the imposed field.
-Any initial large scale field would diffuse leaving only the random field. 
-If an imposed field is sufficiently close to equipartition its characteristics
-would dominate any MHD results.
-
-More commonly models of supernova driven dynamo in the ISM have ignored the 
-large scale effects and examined the small scale dynamo or the effect of the
-turbulent magnetic field on the properties of the ISM
-\citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}.
-A seed or imposed field for such models could be uniform or random, but if the
-simulated field results from tangling rather than dynamo, then any conclusions
-about the ISM depend on the veracity of the chosen field rather than the 
-nature of the MHD turbulence.
-
 To illustrate some differences between tangling and small scale dynamo we adopt
-a toy model with non-helical random forcing with wavenumber $\kf=8$ applied to
+a simplified model with non-helical random forcing with wavenumber $\kf=8$ applied to
 isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
 A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is
 imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
-The two simulations are distinguished only by use of $\eta=10^{-4}$, exciting a 
+The two simulations are distinguished only by use of dimensionless 
+$\eta=10^{-4}$, exciting a 
 small scale dynamo models, and $\eta=2\cdot10^{-3}$ subcritical for dynamo.
 Our numerical implementations use the {\sc Pencil Code}\footnote{
-\url{https://github.com/pencil-code}}.
+\href{https://github.com/pencil-code}{https://github.com/pencil-code}}.
 
 We plot some of the diagnostics from the results of these two simulations in 
 Figure\,\ref{fig:tangling}.
 Panel (a) illustrates that the small scale dynamo 
-is characterised by exponential growth \fag{Nishant, please add some relevant citation to this expected behaviour}, growing over 10 orders of magnitude in 
+is characterised by exponential growth \fag{Nishant, please add some relevant citation to this expected behaviour. MJK: I do not think we need a ref. to the expectation that the dynamo is growing exponentially, but perhaps to the expected powerlaw, where the old Kazantsev paper 1968 should be cited.}, growing over 10 orders of magnitude in 
 just over 400 eddy turnover times.
 Tangling results only in linear amplification
 early on (see inset), saturating within 100 eddy turnover times at below 5 times
@@ -422,25 +484,10 @@ range.
 
 \section{SN turbulence model design} \label{sec:model}
 
-While in the SN experiments considered in this letter are restricted to
-SSD, some large scale models do include the large scale dynamo
-\citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,SBADMN19,SDLMBP20,GE20}.
-Most of these do not include a small scale dynamo.
-\citet{Gent:2013b,EGSFB16} do include SSD, but without a clear understanding of
-the characteristics of this SSD it is difficult to explore the effect this has
-on the large scale dynamo (LSD) and the properties of the ISM.
-In this letter we explore the SSD in realistic simulations of SN driven 
-turbulence.
-The resolution and parameter study is intended to identify the critical ranges
-for excitation of SSD and understand dynamo growth rates and saturation 
-conditions.
-This will also identify the prerequisites for including or excluding SSD in the
-LSD models and subsequently establish the importance of SSD-LSD interactions 
-on galaxy dynamics. 
 
-
+%MJK We should mention that the domain is not subject to rotation, shear, nor stratification. And also in most cases no imposed field, I guess? 
 To exclude any large scale magnetic field dynamics in these simulations, the
-computational domain occupies a cube of length 120 parsec (pc), with periodic boundaries
+computational domain occupies a cube of length 120 pc, with periodic boundaries
 on all sides.
 Grid size $\delta x=0.5$, 1, 2 and 4$\pc$  along each side are considered.
 We solve the system of non-ideal compressible MHD equations, including 
@@ -482,7 +529,7 @@ induction Eq.\,\eqref{eq:ind}:
     +\eta_3\vect\nabla^6\vect{A},
   \end{eqnarray}
 completing the system with the equation of state for an ideal gas.
-Many symbols have their usual meaning, and a table is included in the appendix
+Many symbols have their usual meaning, and a table (\ref{sec:table}) is included in the appendix
 for clarity.
 In particular, terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ are the
 application of artificial diffusion acting proportional to shocks in 
@@ -503,7 +550,7 @@ at the grid scale to resolve small-scale instabilities.
           }
 \caption{
 The volume averaged magnetic energy density for models with $\dx$
-between 0.5\pc and 4\pc are plotted over time.
+between $0.5\pc$ and $4\pc$ are plotted over time.
 These are scaled by reference to their
  time-averaged statistical-steady kinetic energy density.
 Resistivity, $\eta=10^{-4}\kpc\kms$ in panel {\rm(a)} and $10^{-3}$
@@ -521,14 +568,16 @@ Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
 following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in 
 \citet{Gent:2013a}. 
 
+%MJK Somewhere we should point out that this strategy, in effect, results in us considering low Pm flows only. This is not ideal for the ISM, of course, but maybe our excuse here is that this regime is known to be more difficult for the SSD in any case, as then the eta cut off is places in the inertial range of the kinetic turbulence, hence most of our conclusions should definitely hold for the ISM.
 In the subset of experiments presented in this letter we set viscosity, $\nu=0$,
 with $\nu_3$ applying optimally for each $\dx$ to ensure the flow is 
 well resolved.
 We establish a benchmark for the magnetic field evolution setting $\eta=0$, with
 numerical resistivity acting via the optimal setting for $\eta_3$.
-We then vary $\eta\geq10^{-6}$ to identify minimal range for which the physical
+We then vary $\eta\geq10^{-6}\kpc\kms$ to identify minimal range for which the physical
 resistivity is dynamically dominating the numerical resistivity, and examine the
-dependence of the dynamo on $\nu$ and grid resolution. 
+dependence of the dynamo on $\nu$ and grid resolution.
+Henceforth, where $\eta$ is specified for the SN simulations it has units of $\kpc\kms$. 
 In contrast to our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
 we do not include thermal diffusivity, $\chi$, in these experiments as 
 the artificial diffusivities are adequate to ensure numerical stability and
@@ -563,7 +612,7 @@ The effect of resistivity $\eta$ is compared at each $\dx$, {\rm(a)} --
 $\dot\sigma=\SNr$ at lower resolution, 
 where $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent random SN frequency.
 The time axes vary between plots sufficient to reach saturation of the dynamo.
-At $\dx=4pc$ the models with $\eta=10^{-4}$\,kpc\,km\,s$^{-1}$ are 
+At $\dx=4\pc$ the models with $\eta=10^{-4}$ are 
 continued until the dynamo has saturated, for comparison with the higher 
 resolution saturation levels.
 \label{fig:eb-nu}}
@@ -571,7 +620,7 @@ resolution saturation levels.
 
 In Figure\,\ref{fig:eb-res} the response of the magnetic energy density 
 $e_B/\overline{e_K}$ to resolution is shown
-for resistivity $\eta=10^{-4}\kpc\kms$, panel\,(a) and
+for resistivity $\eta=10^{-4}$, panel\,(a) and
 $\eta=10^{-3}$, panel\,(b).
 The time in Myr is plotted on a log scale to better present the differences in 
 the higher resolution runs, which saturate much faster then the $\dx=4\pc$ 
@@ -580,6 +629,7 @@ Whilst for $\eta=10^{-4}$ the dynamo growth rates are very slow at $\dx=4\pc$,
 the growth rate shows some convergence near $\dx=0.5\pc$ and 
 the saturation level of above 5\% of $\overline{e_K}$ is independent of
 resolution. 
+%MJK How do we know that we currently capture the correct one? 
 At $\eta=10^{-3}$, there is a \emph{false convergence} \citep{FMA91}
 between $\dx=2$ and $4\pc$,
 with the magnetic energy decaying at similar rates, however at higher resolution
@@ -595,7 +645,9 @@ At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, such that physical resistiv
 is dynamically dominant, at least for some of the domain and Rm is unevenly
 defined by combination of physical and numerical resistivity.
 At all $\dx$ $\eta=10^{-3}$ is clearly well resolved and dynamics and
+%MJK Has Rm been defined? I think we should try to make a connection to earlier studies by using the "standard" definition, and then the one directly computing from the code as a ratio of the relevant terms. 
 Rm well defined by the physical application of resistivity.
+%MJK This sounds like belonging to the simulation design, and not in the middle of results.
 To reduce statistical noise, at all $\dx$ and $\eta$ the supernova are
 scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$,
 panels (a) -- (d), and for $\dot\sigma=\SNr$, panels (e) -- (f).
@@ -603,6 +655,11 @@ For low resolution the timestep is longer, such that the actual timing and
 environment of the explosions can differ between models, so the statistical
 noise is more evident, particularly in panels (e) and (f). 
 
+%MJK Would help if it was not introduced as a complication, but explained first as behavior seen in the figure, then given an explanation, and then convincing the reader that what is seen now only in Figs 3 a,b as puzzling, we can easily explain in these terms.
+%MJK Overall remark of the figures: There are plenty of white space in between, and the figure captions are complicated. Use some of this white space to give more information in the title, for example:
+%MJK In Fig. 3: SN rate in the title, perhaps together with the delta x?
+%MJK Fig. 4: add a subplot to the kinetic energy spectra, showing the same in linear scale, to emphasize the bottleneck? Indicate eta values in the title of each plot? Times simply as smooth transition in color, without the multiple legends, extrema values and amount of increments in the caption?
+%MJK Fig. 5: eta values in the title of each plot ((a) - (f)); resolution (g)-(h)?
 The evolution is complicated by the impact \emph{thermal runaway}
 \citep[see e.g.,][]{LOCBN15}, combination of multiple SN into superbubbles
 resulting in persistent hot regions.
@@ -614,16 +671,17 @@ Closer inspection of each plot, zooming in on specific intervals, however,
 confirms that growth rates are higher as expected for higher Rm.
 For example between 8 and 15 Myr there is weak growth or decay in panels (a)
 and (b) with critical $\eta$ for dynamo between $10^{-4}$ and $10^{-3}$.
-Rm and corresponding growth at low $\eta$ is higher in the 0.5\,pc simulation
+Rm and corresponding growth at low $\eta$ is higher in the $0.5\pc$ simulation
 with lower numerical resistivity, but 
 converge for $\eta=10^{-3}$, where the physical resistivity is most resolved.
 Between 15 and 20\,Myr there is a fast dynamo driven in the hot gas, in which
 growth rates are related to the level of resistivity.
-The high Rm models at 0.5\,pc already saturate by 20\,Myr, but for 1\,pc there
+The high Rm models at $0.5\pc$ already saturate by 20\,Myr, but for $1\pc$ there
 is another slow dynamo driven in the warm gas up to 40\,Myr and then a
 subsequent 'hot' dynamo resulting in saturation for all models within 60\,Myr,
 including for $\eta=10^{-3}$.
 
+%MJK Now we have too many different names for this dynamo: hot, fast, and what not. Should choose one.
 At low resolution, with $\dot\sigma=0.2\SNr$ panels (c) and (d), $\eta=10^{-4}$
 is not distinct from numerical resistivity, and there is no hot dynamo at all
 for $\dx=4\pc$ with the well resolved $\eta=10^{-3}$.
@@ -634,9 +692,8 @@ higher forcing rate is sufficient to produce a dynamo at $\eta\geq10^{-3}$, but
 not for $\eta=5\cdot10^{-3}$.
 Given the increased statistical noise we cannot confirm that $\eta\leq10^{-4}$
 applies beyond the numerical resistivity.
-However, at $\dx=2\pc$, $\eta=5\cdot10^{-4}$ is resolved and at 4\,pc
-resolution $\eta=2\cdot10^{-4}$ is near the resolved limit, both plotted as
-magenta lines.
+However, at $\dx=2\pc$ $\eta=5\cdot10^{-4}$ (magenta, solid) is resolved and at $\dx=4\pc$
+ the resolved limit is $\eta\lesssim10^{-3}$ (cyan, dotted).
 In panel (e) we see two hot dynamo phases at 90  and 110\,Myr, which are not 
 present in panel (f).
 There is a reduced susceptibility to thermal runaway at low resolution, 
@@ -645,30 +702,30 @@ Hence, as the resolution becomes more coarse it is likely that the small-scale
 dynamo will be suppressed in simulations of the ISM.
 Higher supernova rates driving increased velocities may permit coarse models 
 to attain the critical Rm for SSD, but it is likely that models with 
-resolution much above 4\,pc will suppress the dynamo. 
+$\dx$ much above $4\pc$ will suppress the dynamo. 
 
 To attain a truly convergent numerical regime simulations should apply 
-resolution better than 2\,pc.
-In the ISM with Rm much higher than we can resolve, our results confirm that a
+resolution better than $2\pc$.
+In the ISM with Rm much higher than we can resolve, our results confirm that
 SSD is very easy to excite by SN, and may even be present in galaxies with
 low SN rates.
-As shown in panels (a) and (b), properties of the hot gas cannot exclude 
+As shown in panels (a) and (b), properties of the hot gas cannot exclude
 SSD even with high resistivity in galaxies that produce sustained regions of
 hot turbulence.
 We shall examine the nature of this fast dynamo in a later report.
 To exclude SSD in SN driven turbulence simulations will require
 $\eta\gtrsim10^{-3}$ or supernova implementation which avoids thermal runaway.
-In \citet{Gressel:2008,GE20}, the resolution is 8.3 and 6.7\,pc, respectively
+In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
 and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which excludes SSD,
-while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with 4\,pc
-resolution, which would support SSD, even without thermal runaway.
-The latter obtain a large scale dynamo with a $\Omega=\OSN$, where 
-$\OSN=25\kms\kpc^{-1}$ is the galactic angular momentum in the solar
-neighbourhood, while the
-former require $\Omega\geq4\OSN$ to excite LSD.
+while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
+which would support SSD, even without thermal runaway.
+The latter obtain a large scale dynamo with galactic angular momentum
+$\Omega=\OSN$, where $\OSN=25\kms\kpc^{-1}$ is the rate in the solar
+neighbourhood, while the former require $\Omega\geq4\OSN$ to excite LSD.
 Rm applying at the largest scales would be 7.5 times higher for the latter 
 model, so alone is sufficient to explain the LSD.
-How the SSD affects the galactic dynamo requires further study. 
+How the SSD affects the galactic dynamo requires further study.
+\fag{add discussion of Ulrich's results}
 
 \begin{figure*}
 \gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.45\textwidth}{(a)}
@@ -679,7 +736,7 @@ How the SSD affects the galactic dynamo requires further study.
           }
 \caption{
 Compensated energy spectra at times in Myr given in the legends for 
-0.5\,pc resolution.
+$0.5\pc$ resolution.
 Rm is super critical for dynamo applying $\eta=10^{-4}$ in
 panels (a) and (b) and sub critical or marginal for dynamo applying
 $\eta=10^{-3}$ in panels (c) and (d).
@@ -689,16 +746,16 @@ each represented by the horizontal black dashed lines.
 \label{fig:4power}}
 \end{figure*}
 
-In contrast to the toy model in Section\,\ref{sec:ssd-tang}, SN driven
+In contrast to the simplified model in Section\,\ref{sec:ssd-tang}, SN driven
 turbulence does not have a well-defined forcing scale, due to the heterogeneous
 temperature and density of the ISM and random clustering of explosions.
-In our simulations the forcing scale will range between 10 and 50\,pc,
+In our simulations the forcing scale will range between 10 and $50\pc$,
 or $k\in(3,16)$.
 In Figure\,\ref{fig:4power} we show the evolving compensated spectra for the
 high resolution kinetic energy in the kinematic phase (b) for $\eta=10^{-4}$
 and during decay (d) for $\eta=10^{-3}$.
 The spectra magnitude show the same fluctuations over time, except at 32\,Myr,
-when the dynamo saturates and reduces slightlye of the energy in (b) compared
+when the dynamo saturates and reduces slightly of the energy in (b) compared
 to (d). 
 Many of the spectra display a \emph{bottleneck} effect \fag{reference tba} with
 a peak at $k\simeq50$.
@@ -714,40 +771,59 @@ Figure\,\ref{fig:eb-res}\,(b) and consistent with the presence of SSD.
 \begin{figure*}
 \gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
           \vspace{-0.7cm} \fig{figs/nu0_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
-\gridline{\vspace{-0.7cm}\fig{figs/nu10_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
-          \vspace{-0.7cm}\fig{figs/nu10_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
-\gridline{\vspace{-0.7cm} \fig{figs/nu1_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
-          \vspace{-0.7cm} \fig{figs/nu1_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
+\gridline{\vspace{-0.7cm}\fig{figs/nu1_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
+          \vspace{-0.7cm}\fig{figs/nu1_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
+\gridline{\vspace{-0.7cm} \fig{figs/nu10_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
+          \vspace{-0.7cm} \fig{figs/nu10_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
 \gridline{\vspace{-0.3cm}  \fig{figs/SN_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
           \vspace{-0.3cm}  \fig{figs/SN_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
 \caption{
-Compensated energy spectra at dynamo saturation (or late time) for each
-resolution.
+(a) -- (f): compensated energy spectra at $t=19.5\Myr$ ($\dx=0.5\pc$ \& $1\pc$),
+$t=100\Myr$ ($\dx=2\pc$ \& $4\pc$).
 Resistivity $\eta=0,\,10^{-4}$ and $10^{-3}$ in panel pairs (a,b), (c,d) and
 (e,f), respectively.
+Panels (g,h) for $\dx=2\pc$ at 100\,Myr for $\dot\sigma=0.2\SNr$ and
+140\,Myr for $\dot\sigma=\SNr$ for
+$\eta=10^{-4}$ or $10^{-3}$ as listed in the legends show the effect of 
+supernova rate.
 Energy spectra are compensated against theoretical profiles of Kazentsev
-$k^{3/2}$, left panels, and Kolmogorov $k^{-5/3}$, right, 
-each represented by the horizontal black dashed lines.
-Panels (g,h) for 2\,pc resolution at 200\,Myr show the effect of supernova rate
-$\dot\sigma=0.2\SNr$ or $\SNr$ for
-$\eta=10^{-4}$ or $10^{-3}$ as listed in the legends.
+$k^{3/2}$, left panels, and Kolmogorov $k^{-5/3}$, right. 
 \label{fig:3power}}
 \end{figure*}
 
+%MJK The bottleneck in the kinetic energy spectra seems independent of Pm EXCEPT for the high SN rate case. Why should that be so different?
 In Figure\,\ref{fig:3power} panels (a) -- (f) the effect of resolution on the
-compensated energy spectra is shown for $\eta=0$, $10^{-4}$ and $10^{-3}$.
+compensated energy spectra is shown for $\eta=0$, $10^{-4}$ and $10^{-3}$
+with $\dot\sigma=0.2\SNr$.
+The time of the spectral snapshot for $\dx=0.5$ and $1\pc$ correspond to a
+common phase of rapid magnetic growth fastest in the hot gas, while for
+$\dx=2$ and $4\pc$ it corresponds to a period of hot-phase rapid growth at
+$2\pc$, which is absent in the $4\pc$ model with low $\dot\sigma$.
 The hydrodynamic parameters are fixed for each resolution and are 
 consistent between panels (b), (d) and (f).
-For $\delta x=0.5$ and 1\,pc the bottleneck is evident, but for 2 and 4\,pc it
-is absent, perhaps relevant to the false convergence at low resolution 
-referred to from Figure\,\ref{fig:eb-res}\,(b).
+We note that, there is convergence in the kinetic energy spectrum for
+$\dx=0.5\pc$ and $\dx=1\pc$, apart from the energy cutoff at higher $k$
+consistent with higher resolution.
+Also, the total kinetic energy is reduced with low resolution due to 
+increased viscous dissipation acting at lower $k$.
+To fully resolve the kinetic energetics for scales larger than $k=24$ corresponding to $\ell\simeq40\pc$ would therefore require $\dx\gtrsim1\pc$.
+The energy spectrum at $\dx=2\pc$ shares the same characterstics as the high
+resolution runs, but with some loss of energy.
+
+There is a bottleneck evident, an energy cascade less efficient than $k^{-5/3}$
+terminating at a peak, before rapid dissipation at high $k$.
+This bottleneck shifts to lower $k$ as $\dx$ increases, but always at higher
+$k$ than the Kazentsev range in the corresponding magnetic spectrum.
+
+
+\section{Conclusion and discussion}\label{sec:conc}
 
 \bibliography{refs}{}
 \bibliographystyle{aasjournal}
 
 \appendix
 
-\section{Notation}
+\section{Notation}\label{sec:table}
 
 \begin{table*}[h]
 %\begin{deluxetable*}{ccl}
