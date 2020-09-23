@@ -92,6 +92,7 @@
 \definecolor{mypurple}{rgb}{0.8,0.2,0.8}
 \newcommand{\fg}[1]{\textcolor{midblue}{#1}}
 \newcommand{\fag}[1]{\textcolor{midgreen}{FAG: #1}}
+\newcommand{\ns}[1]{\textcolor{orange}{NS: #1}}
 
 %% Reintroduced the \received and \accepted commands from AASTeX v5.2
 \received{June 1, 2019}
@@ -239,9 +240,12 @@ Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G
       Roslagstullsbacken 23, 106 91 Stockholm, Sweden 
 }
 
-\author{Nishant Singh}
+\author[0000-0001-6097-688X]{Nishant K. Singh}
 \affiliation{
-Inter-University Centre for Astronomy \& Astrophysics, Pune 411 007, India
+Inter-University Centre for Astronomy \& Astrophysics, Post Bag 4, Ganeshkhind, Pune 411 007, India
+}
+\affiliation{
+Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G\"ottingen, Germany
 }
 
 %% Note that the \and command from previous versions of AASTeX is now
@@ -282,6 +286,13 @@ This is despite the negative impact on SSD expected from the highly compressible
 %FAG: due to the higher temperature
 %nature of the flow.
 %FAG: added
+%NS: should we say "... in *some of* our experiments." in the line below?
+%NS: I thought there are also high Pm cases which might be included as more relevant here?
+%MJK No, unfortunately not. We have runs with nu=0, meaning nu_SGS only,
+%MJK and eta=0, and increasing from there. These are effectively low Pm 
+%MJK cases.
+%NS: Oh, ok. Then I will perhaps suppress high Pm citations from sec 2.
+%MJK Fred now has some higher Pm runs existing, but we do not have space to show a picture of them. We will just add a sentence somehwere that they show the expected behavior (with your ref) and then state that we see it too.
 nature of the flow and low magnetic Prandtl number of our experiments.
 %
 We find convergence in the growth rate of the SSD with resolution for a given 
@@ -394,8 +405,20 @@ on imposition a background or initial magnetic field, typically uniform,
 which is then perturbed by supernova explosions.
 The amplification of the magnetic field in these cases may include a small
 scale dynamo in case of sufficently high magnetic Reynolds numbers, but any
-amplification of the large scale field is limited to linear growth through
+amplification of the 
+%MJK
+%large scale 
+field is limited to linear growth through
 tangling of the imposed field.
+%\ns{The above sentence seems to suggest (linear) growth of large-scale field,
+%but one might argue that tangling produces fields preferably on %the forcing
+%scale, thus essentially leading to (linear) growth of fluctuating %field.
+%(Aside) Interestingly, I think, it is only the tangling produced %magnetic
+%noise (and not the SSD) which leads to quenching of large-scale %dynamo, as
+%$\alpha_M$ is sourced primarily by tangling.}
+%MJK see above; is it so easily solved, Nishant?
+%NS: Yes, agreed. I will keep the comments above for now as I can formulate
+%NS: a sentence on the Aside part which could be useful
 Any initial large scale field would diffuse leaving only the random field. 
 If an imposed field is sufficiently close to equipartition its characteristics
 would dominate any MHD results.
@@ -424,7 +447,8 @@ We plot some of the diagnostics from the results of these two simulations in
 Figure\,\ref{fig:tangling}.
 Panel (a) illustrates that the small scale dynamo 
 is characterised by exponential growth \fag{Nishant, please add some relevant citation to this expected behaviour. MJK: I do not think we need a ref. to the expectation that the dynamo is growing exponentially, but perhaps to the expected powerlaw, where the old Kazantsev paper 1968 should be cited.}, growing over 10 orders of magnitude in 
-just over 400 eddy turnover times.
+just over 400 eddy turnover times. \ns{OK, I will add a couple of references, or
+even the book by Zeldovich where $Rm^{\rm crit}$ is also discussed in detail.}
 Tangling results only in linear amplification
 early on (see inset), saturating within 100 eddy turnover times at below 5 times
 the imposed field energy density.
@@ -434,7 +458,9 @@ energy, evolving over time alongside a kinetic energy spectrum at late stage.
 The magnetic energy spectra are compensated by $k^{-3/2}$ and kinetic by
 $k^{5/3}$.
 A profile becoming horizontal, therefore, corresponds to the Kazentsev 
-\fag{Anyone, a suitable reference for this expected behaviour?} $3/2$ inverse
+\fag{Anyone, a suitable reference for this expected behaviour?}
+\ns{Schekochihin+2002 ApJ may be fine, or better, Bhat \& Subramanian 2014 where
+3/2 scaling is recovered even in case of finite correlation time} $3/2$ inverse
 cascade power law or Kolmogorov turbulent energy cascade.
 In panel (c) see we show similar for the tangling model.
 The forcing scale $\kf=8$ is evident in the kinetic spectra and highlighted by 
@@ -448,7 +474,12 @@ However, for the tangling case (c) the peak wavenumber for the magnetic energy
 spectrum is strongly identified with the forcing scale.
 The Kazentsev range of the spectrum extends to wavenumbers larger than the 
 forcing scale for SSD, while confined to larger scales for the field with
-tangling only. 
+tangling only.
+
+\ns{Added 5 new references in refs.bib to quote earlier works on Kazantsev, low/high
+Pm SSD; we can include those here as \citet{K68,KA92}; \cite{Sch02} (high Pm);
+\cite{Sch07} (low Pm); \cite{BS14} (finite correlation time). Please feel free
+to remove any from these that appear unsuitable here.}
 
 Given the high magnetic Prandtl numbers, the magnetic spectra retain more energy
 at smaller scales than the kinetic spectra.
