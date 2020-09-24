@@ -94,7 +94,8 @@
 \definecolor{mypurple}{rgb}{0.8,0.2,0.8}
 \newcommand{\fg}[1]{\textcolor{midblue}{#1}}
 \newcommand{\fag}[1]{\textcolor{midgreen}{FAG: #1}}
-\newcommand{\ns}[1]{\textcolor{orange}{NS: #1}}
+%\newcommand{\ns}[1]{\textcolor{orange}{NS: #1}}
+\newcommand{\ns}[1]{\textcolor{orange}{#1}}
 
 %% Reintroduced the \received and \accepted commands from AASTeX v5.2
 \received{June 1, 2019}
@@ -466,6 +467,10 @@ tangling of the imposed field.
 Any initial large scale field would diffuse leaving only the random field. 
 If an imposed field is sufficiently close to equipartition its characteristics
 would dominate any MHD results.
+%NS: added
+\ns{It is reasonable to expect that the tangling produced magnetic noise
+will grow exponentially if the system supports the large-scale dynamo instability}
+%NS.
 
 More commonly models of supernova driven dynamo in the ISM have ignored the 
 large scale effects and examined the small scale dynamo or the effect of the
