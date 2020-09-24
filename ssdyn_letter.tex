@@ -469,8 +469,10 @@ If an imposed field is sufficiently close to equipartition its characteristics
 would dominate any MHD results.
 %NS: added; pls feel free to decide whether it should be kept here or not
 \ns{It is reasonable to expect that the tangling produced magnetic noise
-will grow exponentially if the system supports the large-scale dynamo instability.
-In the nonlinear stage}
+will grow exponentially if the system supports the LSD instability.
+Such a noise plays an important role in quenching the LSD by contributing
+to the magnetic $\alpha$-effect $\alpha_M$ which leads to the saturation
+of large-scale fields in the nonlinear regime.}
 %NS.
 
 More commonly models of supernova driven dynamo in the ISM have ignored the 
@@ -496,9 +498,15 @@ Our numerical implementations use the {\sc Pencil Code}\footnote{
 We plot some of the diagnostics from the results of these two simulations in 
 Figure\,\ref{fig:tangling}.
 Panel (a) illustrates that the small scale dynamo 
-is characterised by exponential growth \fag{Nishant, please add some relevant citation to this expected behaviour. MJK: I do not think we need a ref. to the expectation that the dynamo is growing exponentially, but perhaps to the expected powerlaw, where the old Kazantsev paper 1968 should be cited.}, growing over 10 orders of magnitude in 
-just over 400 eddy turnover times. \ns{OK, I will add a couple of references, or
-even the book by Zeldovich where $Rm^{\rm crit}$ is also discussed in detail.}
+is characterised by exponential growth
+%\fag{Nishant, please add some relevant citation to this expected behaviour. MJK: I do not think we need a ref. to the expectation that the dynamo is growing exponentially, but perhaps to the expected powerlaw, where the old Kazantsev paper 1968 should be cited.}, growing over 10 orders of magnitude in 
+%NS: commented out the comments, above/below in this thread, and quoted ZRS83 book
+%just over 400 eddy turnover times.
+%NS: added
+just over 400 eddy turnover times\ns{; see \cite{ZRS83} for the properties and excitation
+conditions of SSD.}
+%\ns{OK, I will add a couple of references, or
+%even the book by Zeldovich where $Rm^{\rm crit}$ is also discussed in detail.}
 Tangling results only in linear amplification
 early on (see inset), saturating within 100 eddy turnover times at below 5 times
 the imposed field energy density.
