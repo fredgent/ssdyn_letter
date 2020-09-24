@@ -72,6 +72,8 @@
 \newcommand\aastex{AAS\TeX}
 \newcommand\latex{La\TeX}
 \newcommand\Rm{{\rm Rm} }
+\newcommand\Rey{{\rm Re} }
+\newcommand\Pm{{\rm Pm} }
 \newcommand\kf{k_{\rm f} }
 \newcommand\SNr{\dot\sigma_{\rm sn}}
 \newcommand\OSN{\Omega_{\rm sn}}
@@ -639,6 +641,34 @@ the artificial diffusivities are adequate to ensure numerical stability and
 the physical effects of thermal conductivity can be expected to be relevant only
 at time and spatial scales much shorter than considered here.
 \fag{Mordecai, could you suggest some appropriate reference?}
+
+An important consideration in dynamo theory is the magnetic Reynolds number, Rm,
+and the magnetic Prandtl number, $\Pm = \Rm/\Rey \simeq \nu/\eta$, where $\Rey$
+is the fluid Reynolds number.
+A commonly used definition is \[\Rm=\frac{\ell u_{\rm rms}}{\eta},\] where
+$\ell$ is the forcing scale.
+However, in these simulations of the ISM, given the Galilean invariance of the 
+turbulence, variation within hot and warm medium, and inclusion of
+hyperdiffusion, defining a single forcing scale from the SN explosions or 
+common rms velocity is unreliable.
+We, therefore, directly compute a field of Reynolds numbers from the equations,
+for example,
+\begin{eqnarray}
+  \Rm = \frac{\left|\vect{u}\times\vect{B}\right|}{
+    \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
+\end{eqnarray}
+Hence, for the high resolution runs at 20\,Myr we obtain linear 
+$\langle\Rm\rangle=4$ with standard deviation 5.6, whereas 
+$\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and $u_{\rm rms}=30\kms$ using
+the common formula.
+In this suite of experiments, with $\nu=0$ and $\nu_3=\eta_3$ sufficient to
+numerically resolve the grid scale, $\Pm<1$, which is an even more difficult
+regime in which to excite the small scale dynamo than in the high $\Pm$
+regime typical of the ISM.
+In separate experiments with high Pm, which we shall include in the more in
+depth future analysis, we do in fact see increased growth rates for higher
+Pm.
+
 
 \section{Resolution and resistivity} \label{sec:results}
 
