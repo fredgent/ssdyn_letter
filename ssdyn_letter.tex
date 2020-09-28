@@ -328,17 +328,6 @@ spacing much more than above 4\,pc.
 \keywords{Dynamo --- Magnetohydrodynmaical simulations --- Supernova dynamics --- Interstellar magnetic fields --- Turbulence}
 
 \section{Introduction} \label{sec:intro}
-\fag{
-\begin{itemize}
-\item
-    Abstract – no more than 250 words
-\item
-    Main Text – no more than 3500 words (not including appendices or other supplementary material)
-\item
-    Figures and Tables – no more than 5 combined figures (each limited to 9 panels) and tables, e.g. 3 figures and 2 tables.
-\item
-    References – no more than 50 references
-\end{itemize}}
 %==============================================================================
 \fag{Perhaps here, first a paragraph addressing the importance of MF in the ISM
 at all}
@@ -463,10 +452,7 @@ simulations \citep[such as][]{Gent:2013b,GE20,SDLMBP20}.
 %applicable to the solar neighbourhood. 
 %They refute the earlier dynamo solutions of \citet{BKMM04}
 
-
 %==============================================================================
-\section{Disentangling the dynamo} \label{sec:ssd-tang}
-
 \begin{figure*}
 \gridline{ \fig{figs/ssd-tang-brms.png}{0.45\textwidth}{(a)}
           }
@@ -476,7 +462,7 @@ simulations \citep[such as][]{Gent:2013b,GE20,SDLMBP20}.
 \caption{
 Simulation results for non-helical random forcing. 
 The simulation with $R_{\rm m}=148.0$ and $P_{\rm m}=50.0$ supports dynamo 
-amplification of magnetic field
+amplification of magnetic field.
 With $R_{\rm m}=7.4$ and $P_{\rm m}=2.5$ dynamo is suppressed and 
 amplification is limited to tangling of the magnetic field.
 Panel (a) displays mean magnetic energy density, $e_B$, evolving as a
@@ -486,13 +472,16 @@ Time is normalised by the inverse eddy turnover time at the forcing scale,
 $\kf \overline{u_{\rm rms}}$.
 Compensated power spectra are displayed of magnetic energy for the model with
 SSD (b) and with tangling (c).
-The legend shows the normalised  
-times for each spectrum.
+The legend shows the normalised times for each spectrum.
 The forcing scale, $\kf=8$, is indicated by the vertical dotted line.
 $k_1=L/(2\pi)$, where $L$ is the largest length scale in the simulation domain,
 with the largest wavenumber $k/k_1=128$.
 \label{fig:tangling}}
 \end{figure*}
+
+
+%==============================================================================
+\section{Disentangling the dynamo} \label{sec:ssd-tang}
 %==============================================================================
 
 To illustrate some differences between tangling and small scale dynamo we adopt
@@ -569,13 +558,15 @@ Grid size $\delta x=0.5$, 1, 2 and 4$\pc$  along each side are considered.
 We solve the system of non-ideal compressible MHD equations, including 
 mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
 induction Eq.\,\eqref{eq:ind}:
-%----------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
   \begin{eqnarray}
   \label{eq:mass}
     \frac{D\rho}{Dt} &=& 
     -\vect\nabla \cdot (\rho \vect{u})
-    +\vect\nabla \cdot\zeta_D\vect\nabla\rho,\\
-%----------------------------------------------------------------------------
+    +\vect\nabla \cdot\zeta_D\vect\nabla\rho,
+  \end{eqnarray}
+%-------------------------------------------------------------------------------
+  \begin{eqnarray}
   \label{eq:mom}
     \rho\frac{D\vect{u}}{Dt} &=& 
     \vect\nabla{\ESK\sigma}
@@ -585,8 +576,10 @@ induction Eq.\,\eqref{eq:ind}:
     &+&\vect\nabla\cdot \left(2\rho\nu{\mathbfss W}\right)
     +\rho\,\vect\nabla\left(\zeta_{\nu}\vect\nabla \cdot \vect{u} \right)
     \nonumber\\
-    &+&\vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),\\
-%----------------------------------------------------------------------------
+    &+&\vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),
+  \end{eqnarray}
+%-------------------------------------------------------------------------------
+  \begin{eqnarray}
   \label{eq:ent}
     \rho T\frac{D s}{Dt} &=&
      \EST\dot\sigma +\rho\Gamma
@@ -596,67 +589,76 @@ induction Eq.\,\eqref{eq:ind}:
     +\rho\,\zeta_{\nu}\left(\vect\nabla \cdot \vect{u} \right)^2
     \nonumber\\
     &+&\vect\nabla\cdot\left(\zeta_\chi\rho T\vect\nabla s\right)
-    +\rho T\chi_3\vect\nabla^6 s,\\
-%----------------------------------------------------------------------------
+    +\rho T\chi_3\vect\nabla^6 s,
+  \end{eqnarray}
+%-------------------------------------------------------------------------------
+  \begin{eqnarray}
   \label{eq:ind}
     \frac{\partial \vect{A}}{\partial t} &=&
     \vect{u}\times\vect{B}
     +\eta\vect\nabla^2\vect{A}
     +\eta_3\vect\nabla^6\vect{A},
   \end{eqnarray}
+%-------------------------------------------------------------------------------
 completing the system with the equation of state for an ideal gas.
-Many symbols have their usual meaning, and a table (\ref{sec:table}) is included in the appendix
-for clarity.
+Many symbols have their usual meaning, and a table (\ref{sec:table}) is
+included in the Appendix for clarity.
 In particular, terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ are the
 application of artificial diffusion acting proportional to shocks in 
 Eqs.\,\eqref{eq:mass},\,\eqref{eq:mom} and \eqref{eq:ent}, respectively.
 This machinery is described in detail in \citet{GMKSH20}, which is included to
 resolve shock discontinuities.
-Shock diffusion is not applied to Eq.\,\eqref{eq:ind}, where it would result in 
-unphysical dissipation of the magnetic field in the shock fronts, when in fact 
-here it is highly enhanced by compression.
+In contrast to \citet{Gent:2013b} shock diffusion is not applied to
+Eq.\,\eqref{eq:ind}, where it would result in unphysical dissipation of the
+magnetic field in the shock fronts, when in fact in the shocks it is highly
+enhanced by compression.
 In Eqs.\,\eqref{eq:mom} -- \eqref{eq:ind}, expressions containing 
-$\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion applying primarily
-at the grid scale to resolve small-scale instabilities \citep[see, e.g.,][]{ABGS02,HB04}.
+$\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion applying
+primarily at the grid scale to resolve small-scale instabilities
+\citep[see, e.g.,][]{ABGS02,HB04}.
 
+%-------------------------------------------------------------------------------
 \begin{figure*}
 \gridline{\fig{figs/eB-res-4eta.png}{0.45\textwidth}{(a)}
           \fig{figs/eB-res-3eta.png}{0.45\textwidth}{(b)}
           }
 \caption{
-The volume averaged magnetic energy density for models with $\dx$
-between $0.5\pc$ and $4\pc$ are plotted over time.
-These are scaled by reference to their
- time-averaged statistical-steady kinetic energy density.
-Resistivity, $\eta=10^{-4}\kpc\kms$ in panel {\rm(a)} and $10^{-3}$
-{\rm(b)}, is applied.
+The volume averaged magnetic energy density for models with $\dx$ between
+$0.5\pc$ and $4\pc$ are plotted over time.
+These are scaled by reference to their time-averaged statistical-steady kinetic
+energy density.
+Resistivity, $\eta=10^{-4}\kpc\kms$ in panel {\rm(a)} and $10^{-3}$ {\rm(b)}, is
+applied.
 \label{fig:eb-res}}
 \end{figure*}
+%-------------------------------------------------------------------------------
 
-The supernovae are injected randomly uniform in 3D space and as a
-Poisson process proportional to the solar neigbourhood rate in the Milky Way,
- $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$. 
-Each explosion injects $10^{51}\erg$ as thermal energy, $\EST$, but in 
-dense media a small proportion may be in kinetic energy, $\ESK$.
+The supernovae are injected randomly uniform in 3D space and as a Poisson
+process proportional to the solar neigbourhood rate in the Milky Way,
+ $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$.
+Each explosion injects $10^{51}\erg$ as thermal energy, $\EST$, but in dense
+media a small proportion may be in kinetic energy, $\ESK$.
 This is described in detail by \citet{GMKSH20}.
 Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
 following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in 
-\citet{Gent:2013a}. 
+\citet{Gent:2013a}.
 
 %MJK Somewhere we should point out that this strategy, in effect, results in us considering low Pm flows only. This is not ideal for the ISM, of course, but maybe our excuse here is that this regime is known to be more difficult for the SSD in any case, as then the eta cut off is places in the inertial range of the kinetic turbulence, hence most of our conclusions should definitely hold for the ISM.
+%FAG: added paragraph two below as response
 In the subset of experiments presented in this letter we set viscosity, $\nu=0$,
-with $\nu_3$ applying optimally for each $\dx$ to ensure the flow is 
-well resolved.
+with $\nu_3$ applying optimally for each $\dx$ to ensure the flow is well
+resolved.
 We establish a benchmark for the magnetic field evolution setting $\eta=0$, with
 numerical resistivity acting via the optimal setting for $\eta_3$.
-We then vary $\eta\geq10^{-6}\kpc\kms$ to identify minimal range for which the physical
-resistivity is dynamically dominating the numerical resistivity, and examine the
-dependence of the dynamo on $\nu$ and grid resolution.
-Henceforth, where $\eta$ is specified for the SN simulations it has units of $\kpc\kms$. 
+We then vary $\eta\geq10^{-6}\kpc\kms$ to identify minimal range for which the
+physical resistivity is dynamically dominating the numerical resistivity, and
+examine the dependence of the dynamo on $\nu$ and grid resolution.
+Henceforth, where $\eta$ is specified for the SN simulations it has units of
+$\kpc\kms$. 
 In contrast to our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
-we do not include thermal diffusivity, $\chi$, in these experiments as 
-the artificial diffusivities are adequate to ensure numerical stability and
-the physical effects of thermal conductivity can be expected to be relevant only
+we do not include thermal diffusivity, $\chi$, in these experiments as the
+artificial diffusivities are adequate to ensure numerical stability and the
+physical effects of thermal conductivity can be expected to be relevant only
 at time and spatial scales much shorter than considered here.
 \fag{Mordecai, could you suggest some appropriate reference?}
 
@@ -671,10 +673,12 @@ hyperdiffusion, defining a single forcing scale from the SN explosions or
 common rms velocity is unreliable.
 We, therefore, directly compute a field of Reynolds numbers from the equations,
 for example,
+%-------------------------------------------------------------------------------
 \begin{eqnarray}
   \Rm = \frac{\left|\vect{u}\times\vect{B}\right|}{
     \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
 \end{eqnarray}
+%-------------------------------------------------------------------------------
 Hence, for the high resolution runs at 20\,Myr we obtain linear 
 $\langle\Rm\rangle=4$ with standard deviation 5.6, whereas 
 $\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and $u_{\rm rms}=30\kms$ using
@@ -687,9 +691,11 @@ In separate experiments with high Pm, which we shall include in the more in
 depth future analysis, we do in fact see increased growth rates for higher
 Pm.
 
-
+%-------------------------------------------------------------------------------
 \section{Resolution and resistivity} \label{sec:results}
+%-------------------------------------------------------------------------------
 
+%-------------------------------------------------------------------------------
 \begin{figure*}
 \gridline{\fig{figs/0_5pc-eB-nu4.png}{0.45\textwidth}{(a)}
             \fig{figs/1pc-eB-nu4.png}{0.45\textwidth}{(b)}
@@ -720,6 +726,7 @@ continued until the dynamo has saturated, for comparison with the higher
 resolution saturation levels.
 \label{fig:eb-nu}}
 \end{figure*}
+%-------------------------------------------------------------------------------
 
 In Figure\,\ref{fig:eb-res} the response of the magnetic energy density 
 $e_B/\overline{e_K}$ to resolution is shown
@@ -933,6 +940,17 @@ $k$ than the Kazantsev range in the corresponding magnetic spectrum.
 \bibliographystyle{aasjournal}
 
 \appendix
+\fag{
+\begin{itemize}
+\item
+    Abstract – no more than 250 words
+\item
+    Main Text – no more than 3500 words (not including appendices or other supplementary material)
+\item
+    Figures and Tables – no more than 5 combined figures (each limited to 9 panels) and tables, e.g. 3 figures and 2 tables.
+\item
+    References – no more than 50 references
+\end{itemize}}
 
 \section{Notation}\label{sec:table}
 
