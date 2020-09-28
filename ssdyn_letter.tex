@@ -554,6 +554,12 @@ range.
 To exclude any large scale magnetic field dynamics in these simulations, the
 computational domain occupies a cube of length 120 pc, with periodic boundaries
 on all sides.
+%FAG: added
+In particular rotation, shear and stratification of the simulation domain are
+not included.
+There is no imposed field, in contrast to \citet{BKMM04}, so we can exclude
+tangling as a source of amplification of the sub-nG initial random seed field.
+%FAG
 Grid size $\delta x=0.5$, 1, 2 and 4$\pc$  along each side are considered.
 We solve the system of non-ideal compressible MHD equations, including 
 mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
@@ -639,6 +645,11 @@ process proportional to the solar neigbourhood rate in the Milky Way,
 Each explosion injects $10^{51}\erg$ as thermal energy, $\EST$, but in dense
 media a small proportion may be in kinetic energy, $\ESK$.
 This is described in detail by \citet{GMKSH20}.
+%FAG moved forward from below
+%MJK This sounds like belonging to the simulation design, and not in the middle of results.
+To reduce statistical noise, at all $\dx$ and $\eta$ the supernova are
+scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$ and for 
+correspondingly for $\dot\sigma=\SNr$.
 Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
 following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in 
 \citet{Gent:2013a}.
@@ -716,54 +727,61 @@ Pm.
     \put(440, 78){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
   \end{picture}
 \caption{
-The effect of resistivity $\eta$ is compared at each $\dx$, {\rm(a)} --
- {\rm(d)} for supernova rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
-$\dot\sigma=\SNr$ at lower resolution, 
-where $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent random SN frequency.
+The effect of resistivity $\eta$ is compared at each $\dx$, {\rm(a)} -- {\rm(d)}
+for supernova rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
+$\dot\sigma=\SNr$ at lower resolution, where
+$\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent
+random SN frequency.
 The time axes vary between plots sufficient to reach saturation of the dynamo.
-At $\dx=4\pc$ the models with $\eta=10^{-4}$ are 
-continued until the dynamo has saturated, for comparison with the higher 
-resolution saturation levels.
+At $\dx=4\pc$ the models with $\eta=10^{-4}$ are continued until the dynamo has
+saturated, for comparison with the higher resolution saturation levels.
 \label{fig:eb-nu}}
 \end{figure*}
 %-------------------------------------------------------------------------------
 
 In Figure\,\ref{fig:eb-res} the response of the magnetic energy density 
-$e_B/\overline{e_K}$ to resolution is shown
-for resistivity $\eta=10^{-4}$, panel\,(a) and
-$\eta=10^{-3}$, panel\,(b).
+$e_B/\overline{e_K}$ to resolution is shown for resistivity $\eta=10^{-4}$,
+panel\,(a) and $\eta=10^{-3}$, panel\,(b).
 The time in Myr is plotted on a log scale to better present the differences in 
-the higher resolution runs, which saturate much faster then the $\dx=4\pc$ 
-run.
+the higher resolution runs, which saturate much faster than at $\dx=4\pc$.
 Whilst for $\eta=10^{-4}$ the dynamo growth rates are very slow at $\dx=4\pc$,
-the growth rate shows some convergence near $\dx=0.5\pc$ and 
-the saturation level of above 5\% of $\overline{e_K}$ is independent of
-resolution. 
-%MJK How do we know that we currently capture the correct one? 
-At $\eta=10^{-3}$, there is a \emph{false convergence} \citep{FMA91}
-between $\dx=2$ and $4\pc$,
-with the magnetic energy decaying at similar rates, however at higher resolution
-we see that the results converge around an alternative solution, with a dynamo
-amplification of the field occurring between 400 and 600\,Myr.
+the growth rate shows some convergence near $\dx=0.5\pc$ and the saturation
+level of above 5\% of $\overline{e_K}$ is independent of resolution.
+%MJK How do we know that we currently capture the correct one?
+%FAG Not sure to what 'one' you refer?
+At $\eta=10^{-3}$, there is a \emph{false convergence} \citep{FMA91} between
+$\dx=2$ and $4\pc$, with the magnetic energy decaying at similar rates, however
+at higher resolution we see that the results converge around an alternative
+solution, with a dynamo amplification of the field occurring between 400 and
+600\,Myr.
 
 In Figure\,\ref{fig:eb-nu} we show how at each resolution $e_B/\overline{e_K}$
 evolves for various values of $\eta$.
-We note that at $\dx=0.5$, panel (a), and $1\pc$, panel (b), the profile
-at $\eta=10^{-5}$ is indistinguishable from $\eta=0$, and so numerical
-resistivity continues to control the dynamics.
-At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, such that physical resistivity
-is dynamically dominant, at least for some of the domain and Rm is unevenly
-defined by combination of physical and numerical resistivity.
+We note that at $\dx=0.5$, panel (a), and $1\pc$, panel (b), the profile at
+$\eta=10^{-5}$ is indistinguishable from $\eta=0$, and so numerical resistivity
+continues to control the dynamics.
+At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, such that physical
+resistivity is dynamically dominant, at least for some of the domain and Rm is
+unevenly defined by a combination of physical and numerical resistivity.
 At all $\dx$ $\eta=10^{-3}$ is clearly well resolved and dynamics and
-%MJK Has Rm been defined? I think we should try to make a connection to earlier studies by using the "standard" definition, and then the one directly computing from the code as a ratio of the relevant terms. 
-Rm well defined by the physical application of resistivity.
+%MJK Has Rm been defined? I think we should try to make a connection to earlier studies by using the "standard" definition, and then the one directly computing from the code as a ratio of the relevant terms.
+
+%Rm well defined by the physical application of resistivity.
+%FAG: added
+Rm well defined by the physical application of resistivity, varying locally with
+$3.8\lesssim\langle\Rm\rangle\lesssim6$, as discussed above from the induction
+equation of $\Rm=1500$ using the common definition. 
+%FAG moved to design
 %MJK This sounds like belonging to the simulation design, and not in the middle of results.
-To reduce statistical noise, at all $\dx$ and $\eta$ the supernova are
-scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$,
-panels (a) -- (d), and for $\dot\sigma=\SNr$, panels (e) -- (f).
-For low resolution the timestep is longer, such that the actual timing and 
+%To reduce statistical noise, at all $\dx$ and $\eta$ the supernova are
+%scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$,
+%panels (a) -- (d), and for $\dot\sigma=\SNr$, panels (e) -- (f).
+Although models with a the same SN rate have the same schedule and location of
+SN, at low resolution the timestep is longer, such that the actual timing and 
 environment of the explosions can differ between models, so the statistical
-noise is more evident, particularly in panels (e) and (f). 
+noise is more evident, particularly in panels (e) and (f).
+
+\fag{edits done to this point}
 
 %MJK Would help if it was not introduced as a complication, but explained first as behavior seen in the figure, then given an explanation, and then convincing the reader that what is seen now only in Figs 3 a,b as puzzling, we can easily explain in these terms.
 %MJK Overall remark of the figures: There are plenty of white space in between, and the figure captions are complicated. Use some of this white space to give more information in the title, for example:
@@ -837,6 +855,7 @@ model, so alone is sufficient to explain the LSD.
 How the SSD affects the galactic dynamo requires further study.
 \fag{add discussion of Ulrich's results}
 
+%-------------------------------------------------------------------------------
 \begin{figure*}
 \gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.45\textwidth}{(a)}
           \fig{figs/0_5pcPm0e-4_0kpower.png}{0.45\textwidth}{(b)}
@@ -855,6 +874,7 @@ $k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d),
 each represented by the horizontal black dashed lines.
 \label{fig:4power}}
 \end{figure*}
+%-------------------------------------------------------------------------------
 
 In contrast to the simplified model in Section\,\ref{sec:ssd-tang}, SN driven
 turbulence does not have a well-defined forcing scale, due to the heterogeneous
@@ -878,6 +898,7 @@ to Figure\,\ref{fig:tangling}\,(c) is in the range $K\lesssim10$ except
 for 22\,Myr, which corresponds to a short growth spurt in
 Figure\,\ref{fig:eb-res}\,(b) and consistent with the presence of SSD.
 
+%-------------------------------------------------------------------------------
 \begin{figure*}
 \gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
           \vspace{-0.7cm} \fig{figs/nu0_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
@@ -908,6 +929,7 @@ Energy spectra are compensated against theoretical profiles of Kazantsev
 $k^{3/2}$, left panels, and Kolmogorov $k^{-5/3}$, right. 
 \label{fig:3power}}
 \end{figure*}
+%-------------------------------------------------------------------------------
 
 %MJK The bottleneck in the kinetic energy spectra seems independent of Pm EXCEPT for the high SN rate case. Why should that be so different?
 In Figure\,\ref{fig:3power} panels (a) -- (f) the effect of resolution on the
