@@ -866,7 +866,6 @@ SN, at low resolution the timestep is longer, such that the actual timing and
 environment of the explosions can differ between models, so the statistical
 noise is more evident, particularly in panels (e) and (f).
 
-\fag{edits done to this point}
 
 %MJK Overall remark of the figures: There are plenty of white space in between, and the figure captions are complicated. Use some of this white space to give more information in the title, for example:
 %MJK In Fig. 3: SN rate in the title, perhaps together with the delta x?
@@ -878,33 +877,61 @@ noise is more evident, particularly in panels (e) and (f).
 
 %MJK Would help if it was not introduced as a complication, but explained first as behavior seen in the figure, then given an explanation, and then convincing the reader that what is seen now only in Figs 3 a,b as puzzling, we can easily explain in these terms.
 
-The evolution is complicated by the impact \emph{thermal runaway}
-\citep[see e.g.,][]{LOCBN15}, combination of multiple SN into superbubbles
-resulting in persistent hot regions.
+%FAG: added
+%The evolution is complicated by the impact \emph{thermal runaway}
+%\citep[see e.g.,][]{LOCBN15}, combination of multiple SN into superbubbles
+%resulting in persistent hot regions.
+Amongst the general suite of simulations in addition to those presented in this
+letter, some models exhibit the phenomenon of \emph{thermal runaway}
+\citep[see e.g.,][]{LOCBN15}.
+The hot gas fills a sufficient fractional volume, that the supernova remnants 
+form bubbles, which cannot cool rapidly and the domain becomes saturated 
+with hot gas.
+Simulations with high resolution are more easily perturbed into this regime, but
+also low resolution runs with higher $\dot\sigma$.
+We observe that during some phases of accelerated dynamo growth, the magnetic
+field is growing most rapidly in the hot gas, whilst during majority of the 
+duration of the runs magnetic fields grow most rapidly in the warm gas and the
+dynamo growth overall follows a lower exponential.
+This is one reason for the complication in characterising the turbulence in 
+these SSDs, with Rm, Pm and $u_{\rm rms}$ varying is space and over time.
+
 We shall report analysis of these results in depth in future work, but an 
 initial observation of the growth profiles could lead to the conclusion that
 growth rates for high resistivity (low Rm) can exceed comparable rates for high
 Rm, in contradiction to dynamo theory and previous experimental results.
 Closer inspection of each plot, zooming in on specific intervals, however,
-confirms that growth rates are higher as expected for higher Rm.
+%FAG :changed to eta, as table in paper suggest mean Rm cannot explain this
+%confirms that growth rates are higher as expected for higher Rm.
+confirms that growth rates are higher as expected for lower $\eta$.
 For example between 8 and 15 Myr there is weak growth or decay in panels (a)
 and (b) with critical $\eta$ for dynamo between $10^{-4}$ and $10^{-3}$.
 Rm and corresponding growth at low $\eta$ is higher in the $0.5\pc$ simulation
 with lower numerical resistivity, but 
 converge for $\eta=10^{-3}$, where the physical resistivity is most resolved.
-Between 15 and 20\,Myr there is a fast dynamo driven in the hot gas, in which
-growth rates are related to the level of resistivity.
+%FAG: fast replaced with acceleration, etc.
+%Between 15 and 20\,Myr there is a fast dynamo driven in the hot gas, in which
+Between 15 and 20\,Myr there is an acceleration in the dynamo driven in the hot
+gas, in which growth rates are related to the level of resistivity.
 The high Rm models at $0.5\pc$ already saturate by 20\,Myr, but for $1\pc$ there
-is another slow dynamo driven in the warm gas up to 40\,Myr and then a
-subsequent 'hot' dynamo resulting in saturation for all models within 60\,Myr,
-including for $\eta=10^{-3}$.
+%FAG: lower
+%is another slow dynamo driven in the warm gas up to 40\,Myr and then a
+%subsequent 'hot' dynamo resulting in saturation for all models within 60\,Myr,
+is another lower growth rate for the dynamo driven in the warm gas up to
+40\,Myr and then a subsequent accelerated dynamo resulting in saturation for
+all models within 60\,Myr, including for $\eta=10^{-3}$.
 
 %MJK Now we have too many different names for this dynamo: hot, fast, and what not. Should choose one.
+%FAG: using terms of accelerated growth and lower growth rate
 At low resolution, with $\dot\sigma=0.2\SNr$ panels (c) and (d), $\eta=10^{-4}$
-is not distinct from numerical resistivity, and there is no hot dynamo at all
-for $\dx=4\pc$ with the well resolved $\eta=10^{-3}$.
-At 100\,Myr there is a hot dynamo at $\dx=2\pc$, but this is not
-sustained and for $\eta=10^{-3}$ susbequently diffuses away.
+%FAG not hot
+%is not distinct from numerical resistivity, and there is no hot dynamo at all
+is not distinct from numerical resistivity, and there is no separate
+acceleration of the dynamo at all for $\dx=4\pc$ with the well resolved $\eta=10^{-3}$.
+%FAG not hot
+%At 100\,Myr there is a hot dynamo at $\dx=2\pc$, but this is not
+At 100\,Myr there is a period of accelerated dynamo at $\dx=2\pc$, but this is
+not sustained and for $\eta=10^{-3}$ susbequently diffuses away.
 At $\dot\sigma=\SNr$, panels (e) and (f), the increased Rm due to the 
 higher forcing rate is sufficient to produce a dynamo at $\eta\geq10^{-3}$, but
 not for $\eta=5\cdot10^{-3}$.
@@ -912,38 +939,46 @@ Given the increased statistical noise we cannot confirm that $\eta\leq10^{-4}$
 applies beyond the numerical resistivity.
 However, at $\dx=2\pc$ $\eta=5\cdot10^{-4}$ (magenta, solid) is resolved and at $\dx=4\pc$
  the resolved limit is $\eta\lesssim10^{-3}$ (cyan, dotted).
-In panel (e) we see two hot dynamo phases at 90  and 110\,Myr, which are not 
-present in panel (f).
-There is a reduced susceptibility to thermal runaway at low resolution, 
-and only lower Rm can be resolved, both an effect of more diffusive numerics.
-Hence, as the resolution becomes more coarse it is likely that the small-scale 
-dynamo will be suppressed in simulations of the ISM.
-Higher SN rates driving increased velocities may permit coarse models 
-to attain the critical Rm for SSD, but it is likely that models with 
-$\dx$ much above $4\pc$ will suppress the dynamo. 
+%FAG not hot
+%In panel (e) we see two hot dynamo phases at 90  and 110\,Myr, which are not 
+In panel (e) we see two phases of accelerated dynamo growth at 90  and
+110\,Myr, which are not  present in panel (f).
+%FAG: moved to summary
+%There is a reduced susceptibility to thermal runaway at low resolution, 
+%and only lower Rm can be resolved, both an effect of more diffusive numerics.
+%Hence, as the resolution becomes more coarse it is likely that the small-scale 
+%dynamo will be suppressed in simulations of the ISM.
+%Higher SN rates driving increased velocities may permit coarse models 
+%to attain the critical Rm for SSD, but it is likely that models with 
+%$\dx$ much above $4\pc$ will suppress the dynamo. 
+%
+%To attain a truly convergent numerical regime simulations should apply 
+%resolution better than $2\pc$.
+%In the ISM with Rm much higher than we can resolve, our results confirm that
+%SSD is very easy to excite by SN, and may even be present in galaxies with
+%low SN rates.
 
-To attain a truly convergent numerical regime simulations should apply 
-resolution better than $2\pc$.
-In the ISM with Rm much higher than we can resolve, our results confirm that
-SSD is very easy to excite by SN, and may even be present in galaxies with
-low SN rates.
-As shown in panels (a) and (b), properties of the hot gas cannot exclude
-SSD even with high resistivity in galaxies that produce sustained regions of
-hot turbulence.
-We shall examine the nature of this fast dynamo in a later report.
-To exclude SSD in SN driven turbulence simulations will require
-$\eta\gtrsim10^{-3}$ or SN implementation which avoids thermal runaway.
-In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
-and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which excludes SSD,
-while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
-which would support SSD, even without thermal runaway.
-The latter obtain a LSD with galactic angular momentum
-$\Omega=\OSN$, where $\OSN=25\kms\kpc^{-1}$ is the rate in the solar
-neighbourhood, while the former require $\Omega\geq4\OSN$ to excite LSD.
-Rm applying at the largest scales would be 7.5 times higher for the latter 
-model, so alone is sufficient to explain the LSD.
-How the SSD affects the galactic dynamo requires further study.
-\fag{add discussion of Ulrich's results}
+%%FAG para break
+%%FAG: moved to summary
+%As shown in panels (a) and (b), properties of the hot gas cannot exclude
+%SSD even with high resistivity in galaxies that produce sustained regions of
+%hot turbulence.
+%%FAG not fast
+%%We shall examine the nature of this fast dynamo in a later report.
+%We shall examine the nature of acceleration of the dynamo in a later report.
+%To exclude SSD in SN driven turbulence simulations will require
+%$\eta\gtrsim10^{-3}$ or SN implementation which avoids thermal runaway.
+%In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
+%and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which excludes SSD,
+%while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
+%which would support SSD, even without thermal runaway.
+%The latter obtain a LSD with galactic angular momentum
+%$\Omega=\OSN$, where $\OSN=25\kms\kpc^{-1}$ is the rate in the solar
+%neighbourhood, while the former require $\Omega\geq4\OSN$ to excite LSD.
+%Rm applying at the largest scales would be 7.5 times higher for the latter 
+%model, so alone is sufficient to explain the LSD.
+%How the SSD affects the galactic dynamo requires further study.
+%\fag{add discussion of Ulrich's results}
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
@@ -954,14 +989,21 @@ How the SSD affects the galactic dynamo requires further study.
           \fig{figs/0_5pcPm0e-3_0kpower.png}{0.45\textwidth}{(d)}
           }
 \caption{
-Compensated energy spectra at times in Myr given in the legends for 
-$0.5\pc$ resolution.
-Rm is super critical for dynamo applying $\eta=10^{-4}$ in
-panels (a) and (b) and sub critical or marginal for dynamo applying
-$\eta=10^{-3}$ in panels (c) and (d).
+%Compensated energy spectra at times in Myr given in the legends for 
+%$0.5\pc$ resolution.
+%Rm is super critical for dynamo applying $\eta=10^{-4}$ in
+%panels (a) and (b) and sub critical or marginal for dynamo applying
+%$\eta=10^{-3}$ in panels (c) and (d).
+%Energy spectra are compensated against theoretical profiles of Kazantsev
+%$k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d), 
+%each represented by the horizontal black dashed lines.
+%FAG: streamlining
+Compensated energy spectra for $\dx=0.5\pc$ at time in Myr listed in the
+legends.
+$\eta=10^{-4}$ (a), (b) is supercritical for SSD and $\eta=10^{-3}$ (c),(d) 
+is subcritical or marginal for SSD.
 Energy spectra are compensated against theoretical profiles of Kazantsev
-$k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d), 
-each represented by the horizontal black dashed lines.
+$k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d).
 \label{fig:4power}}
 \end{figure*}
 %-------------------------------------------------------------------------------
@@ -974,9 +1016,10 @@ or $k\in(3,16)$.
 In Figure\,\ref{fig:4power} we show the evolving compensated spectra for the
 high resolution kinetic energy in the kinematic phase (b) for $\eta=10^{-4}$
 and during decay (d) for $\eta=10^{-3}$.
-The spectra magnitude show the same fluctuations over time, except at 32\,Myr,
-when the dynamo saturates and reduces slightly of the energy in (b) compared
-to (d). 
+The spectra magnitude between the models show the same fluctuations over time,
+except at 32\,Myr, when saturation of the dynamo, (b), reduces
+the energy slightly, compared to (d). 
+\fag{edits done to this point}
 Many of the spectra display a \emph{bottleneck} effect \fag{reference tba} with
 a peak at $k\simeq50$.
 The compensated magnetic energy spectra in panels (a) and (c) have ranges 
@@ -1046,7 +1089,42 @@ This bottleneck shifts to lower $k$ as $\dx$ increases, but always at higher
 $k$ than the Kazantsev range in the corresponding magnetic spectrum.
 
 
-\section{Conclusion and discussion}\label{sec:conc}
+\section{Summary of results}\label{sec:conc}
+%FAG Moved from above
+There is a reduced susceptibility to thermal runaway at low resolution, 
+and only lower Rm can be resolved, both an effect of more diffusive numerics.
+Hence, as the resolution becomes more coarse it is likely that the small-scale 
+dynamo will be suppressed in simulations of the ISM.
+Higher SN rates driving increased velocities may permit coarse models 
+to attain the critical Rm for SSD, but it is likely that models with 
+$\dx$ much above $4\pc$ will suppress the dynamo. 
+
+To attain a truly convergent numerical regime simulations should apply 
+resolution better than $2\pc$.
+In the ISM with Rm much higher than we can resolve, our results confirm that
+SSD is very easy to excite by SN, and may even be present in galaxies with
+low SN rates.
+
+As shown in Figure\,\ref{fig:eb-nu}(a) and (b), properties of the hot gas cannot exclude
+SSD even with high resistivity in galaxies that produce sustained regions of
+hot turbulence.
+%FAG not fast
+%We shall examine the nature of this fast dynamo in a later report.
+We shall examine the nature of acceleration of the dynamo in a later report.
+To exclude SSD in SN driven turbulence simulations will require
+$\eta\gtrsim10^{-3}$ or SN implementation which avoids thermal runaway.
+In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
+and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which excludes SSD,
+while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
+which would support SSD, even without thermal runaway.
+The latter obtain a LSD with galactic angular momentum
+$\Omega=\OSN$, where $\OSN=25\kms\kpc^{-1}$ is the rate in the solar
+neighbourhood, while the former require $\Omega\geq4\OSN$ to excite LSD.
+Rm applying at the largest scales would be 7.5 times higher for the latter 
+model, so alone is sufficient to explain the LSD.
+How the SSD affects the galactic dynamo requires further study.
+\fag{add discussion of Ulrich's results}
+%FAG Moved from above
 
 \acknowledgments M-MML was partly supported by US NSF grant AST18-15461.
 
