@@ -287,7 +287,9 @@ rate to delineate the regime in which a SSD occurs.
 %diffuse hot and warm turbulent ISM, given Rm in the real ISM is
 %orders of magnitude higher than we model at our highest resolution and a modest SN
 %explosion frequency ($\SNr$), 20\% that of the solar neighbourhood.
+%FAG OK
 %mm [moved findings up]
+%FAG OK
 We find convergence in the growth rate of the SSD with resolution approaching 
 sub-parsec scale for a given supernova explosion frequency
 $\dot\sigma$. Across the modelled range of 0.5 to 4 parsec resolution we find that with
@@ -300,6 +302,7 @@ $\dot\sigma=0.2\SNr$, are greater despite higher Mach numbers.
 %mm [didn't understand how this fit into the sentence] explosion
 %frequency, $\dot\sigma$, at 20\% that of the solar neighbourhood
 %($\SNr$). 
+%FAG OK
 This is despite the negative impact on SSD expected from the highly compressible
 %MJK So we have varying SN rates; do these have a higher Ma? What I am after is whether we can quantify that statement?
 %FAG: yes in ssdyn_paper I now added tables for sigma=\SNr and mean Ms increases
@@ -329,9 +332,12 @@ nature of the flow and low magnetic Prandtl number of our experiments.
 %mm [this is kind of backwards] With higher resistivity required to resolve the magnetic field as resolution becomes
 %more coarse the trend suggests the small scale dynamo cannot be excited for grid
 %spacing much more than above 4\,pc.
+%FAG OK
 As the grid becomes coarser, the minimum physical resistivity that can
 be resolved increases as well. The trend suggests that an SSD cannot
-be excited for grid spacing exceeding 4~pc, as the numerical
+%FAG added much - haven't identified the hard limit yet
+%be excited for grid spacing exceeding 4~pc, as the numerical
+be excited for grid spacing much exceeding 4~pc, as the numerical
 resistivity suppresses it.
 
 
@@ -372,6 +378,7 @@ turbulence,
 %mm
    so it drives magnetic field growth at the corresponding short
    turnover times.
+%FAG OK
 There are large scales of separation between the fastest growing SSD
 instabilities and the large-scale dynamo (LSD) modes generating the magnetic
 field structures organised at the systemic scales of the galactic disk, spiral
@@ -383,7 +390,7 @@ alter the evolution and structure of the magnetic field.
 
 In many simulations of supernova (SN) driven turbulence with realistic vertical 
 stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the
-mechanisms for inducing large scale magnetic fields, such as rotation
+mechanisms for inducing large-scale magnetic fields, such as rotation
 and shear, are absent. To examine the effect of strong ordered magnetic fields these models then rely
 on imposition of a background or initial magnetic field, typically uniform,
 which is then perturbed by SN explosions.
@@ -391,9 +398,9 @@ The amplification of the magnetic field in these cases may include a
 SSD in case of sufficiently high magnetic Reynolds numbers, Rm, but
 any amplification of the 
 %MJK re-instating large scale; there seems to be some sort of hyphen issue throughout, which I cannot sort out. I feel like there should be a hyphen in large-scale field, Fred obviously does not, and I am not sure whether it should be single or double hyphenated.
-large--scale
-field is limited to linear growth through
-tangling of the imposed field.
+%FAG OK - I think it would be single and have applied throughout, also for small
+large-scale field is limited to linear growth through tangling of the imposed
+field.
 %MJK and adding this; trying to resolve the issue.
 The fluctuations can then undergo either linear/exponential growth dependending on the absence/presence of SSD.
 %MJK
@@ -409,10 +416,11 @@ The fluctuations can then undergo either linear/exponential growth dependending 
 %MJK see above; is it so easily solved, Nishant?
 %NS: Yes, agreed. I will keep the comments above for now as I can formulate
 %NS: a sentence on the Aside part which could be useful
-Any initial large scale field would diffuse leaving only the random field. 
+Any initial large-scale field would diffuse leaving only the random field. 
 If an imposed field is sufficiently close to equipartition its characteristics
 would dominate any MHD results.
 %NS: added; pls feel free to decide whether it should be kept here or not
+%FAG OK
 %mm It is reasonable to expect that the tangling produced magnetic
 %noise
      On the other hand, the magnetic noise produced by tangling
@@ -420,12 +428,14 @@ will grow exponentially if the system supports the LSD instability.
 Such a noise plays an important role in quenching the LSD by contributing
 to the magnetic $\alpha$-effect $\alpha_M$, which leads to the saturation
 of large-scale fields in the nonlinear regime.
+%FAG OK
 %NS.
 %MJK Is this paragraph now too complicated? Should we only try to highlight the aspects relevant here? I am not sure how much text we can have here in the first place...
+%FAG OK
 
 %MJK The previous para was about neglecting the LS effects, and this paragraph continues on the same topic. Is this really intended? I guess we could get a rid of this simply. I understand models referred to above have vertical stratification and those below not, but cannot we simply group them together? Btw, stratification alone and even boundary conditions that are inhomogeneous in the vertical, can of course drive some sort of a dynamo effect, but definitely not o
 More commonly, models of the SN-driven dynamo in the ISM have ignored the 
-large scale effects and examined the SSD or the effect of the
+large-scale effects and examined the SSD or the effect of the
 turbulent magnetic field on the properties of the ISM
 \citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}.
 A seed or imposed field for such models could be uniform or random, but if the
@@ -435,16 +445,18 @@ simulated field
 tangling rather than dynamo, then any conclusions
 about the ISM
 %mm [counterfactual]
+%FAG OK
     would
 depend on the veracity of the chosen field rather than the 
 nature of the MHD turbulence.
 
 %mm [where does Korpi:1999a fit into this taxonomy??]
 %MJK I guess it belongs to the class of "miserable early failures to produce any dynamo", which does not need to be listed.
+%FAG OK
 While the SN experiments considered in this letter are restricted to SSD, some
-large scale models do include the large scale dynamo
+large-scale models do include the LSD
 \citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,SBADMN19,SDLMBP20,GE20}.
-Most of these do not include a small scale dynamo.
+Most of these do not include a small-scale dynamo.
 %\citet{Gent:2013b,EGSFB16} do include SSD, but without a clear
 %FAG: added appear to
 \citet{Gent:2013b,EGSFB16} do appear to include SSD, but without a clear
@@ -458,10 +470,11 @@ At late stage the SSD ceases,
 %mm corresponding to
      as shown by
 the disappearance of Kazantsev scaling in the magnetic power spectra.
+%FAG OK
 %FAG: ended and new para
 
 %FAG: added
-Given the uncertainty over the presence of SSD in the large scale simulations
+Given the uncertainty over the presence of SSD in the large-scale simulations
 we seek to confirm how to identify, quantify and characterise SSD, so that we
 can adequately interpret its action in simulations of LSD.
 \citet{BKMM04} report SSD in ideal magnetohydrodynamics (MHD), but with only numerical diffusion and
@@ -501,22 +514,32 @@ simulations \citep[such as][]{Gent:2013b,GE20,SDLMBP20}.
           \fig{figs/tanglingBpower.png}{0.45\textwidth}{(c)}
           }
 \caption{
-Simulation results for non-helical random forcing. 
-The simulation with $R_{\rm m}=148.0$ and $P_{\rm m}=50.0$ supports dynamo 
-amplification of magnetic field.
-With $R_{\rm m}=7.4$ and $P_{\rm m}=2.5$ dynamo is suppressed and 
-amplification is limited to tangling of the magnetic field.
-Panel (a) displays mean magnetic energy density, $e_B$, evolving as a
-proportion of time-averaged kinetic energy density, $\overline{e_K}$.
+%Simulation results for non-helical random forcing. 
+%The simulation with $R_{\rm m}=148.0$ and $P_{\rm m}=50.0$ supports dynamo 
+%amplification of magnetic field.
+%With $R_{\rm m}=7.4$ and $P_{\rm m}=2.5$ dynamo is suppressed and 
+%amplification is limited to tangling of the magnetic field.
+%Panel (a) displays mean magnetic energy density, $e_B$, evolving as a
+%proportion of time-averaged kinetic energy density, $\overline{e_K}$.
+%The inset shows a zoom-in of the early linear growth of the tangled field.
+%Time is normalised by the inverse eddy turnover time at the forcing scale,
+%$\kf \overline{u_{\rm rms}}$.
+%Compensated power spectra are displayed of magnetic energy for the model with
+%SSD (b) and with tangling (c).
+%The legend shows the normalised times for each spectrum.
+%The forcing scale, $\kf=8$, is indicated by the vertical dotted line.
+%$k_1=L/(2\pi)$, where $L$ is the largest length scale in the simulation domain,
+%with the largest wavenumber $k/k_1=128$.
+%FAG streamlining
+Panel (a) displays mean magnetic energy density, $e_B$,
+evolving due to non-helical random forcing, scaled to time-averaged kinetic
+energy density, $\overline{e_K}$.
 The inset shows a zoom-in of the early linear growth of the tangled field.
 Time is normalised by the inverse eddy turnover time at the forcing scale,
 $\kf \overline{u_{\rm rms}}$.
-Compensated power spectra are displayed of magnetic energy for the model with
-SSD (b) and with tangling (c).
-The legend shows the normalised times for each spectrum.
+Sample compensated power spectra at times indicated in the legends are
+displayed for the model with SSD (b) and with tangling (c). 
 The forcing scale, $\kf=8$, is indicated by the vertical dotted line.
-$k_1=L/(2\pi)$, where $L$ is the largest length scale in the simulation domain,
-with the largest wavenumber $k/k_1=128$.
 \label{fig:tangling}}
 \end{figure*}
 
@@ -525,20 +548,29 @@ with the largest wavenumber $k/k_1=128$.
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
 %==============================================================================
 
-To illustrate some differences between tangling and small scale dynamo we adopt
+To illustrate some differences between tangling and small-scale dynamo we adopt
 a simplified model with non-helical random forcing with wavenumber $\kf=8$
 applied to isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
 A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is
 imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
 The two simulations are distinguished only by use of dimensionless
-$\eta=10^{-4}$, exciting a small scale dynamo, and $\eta=2\cdot10^{-3}$
+$\eta=10^{-4}$, exciting a SSD, and $\eta=2\cdot10^{-3}$
 subcritical for dynamo.
+%FAG: moved from caption
+%The simulation with $R_{\rm m}=148.0$ and $P_{\rm m}=50.0$ supports dynamo 
+%amplification of magnetic field.
+%With $R_{\rm m}=7.4$ and $P_{\rm m}=2.5$ dynamo is suppressed and 
+%amplification is limited to tangling of the magnetic field.
+These yield $R_{\rm m}=148.0$ with $P_{\rm m}=50.0$ for the SSD and
+$R_{\rm m}=7.4$ with $P_{\rm m}=2.5$ where the dynamo is suppressed and 
+amplification is limited to tangling of the imposed magnetic field.
+%
 Our numerical implementations use the {\sc Pencil Code}\footnote{
 \href{https://github.com/pencil-code}{https://github.com/pencil-code}}.
 
 We plot some of the diagnostics from the results of these two simulations in 
 Figure\,\ref{fig:tangling}.
-Panel (a) illustrates that the small scale dynamo is characterised by
+Panel (a) illustrates that the SSD is characterised by
 exponential growth just over 400 eddy turnover times; see \cite{ZRS83} for the
 properties and excitation conditions of SSD.
 Tangling results only in linear amplification early on (see inset), saturating
@@ -547,6 +579,10 @@ density.
 
 In panel (b) we plot for the SSD model some power spectra for the magnetic
 energy, evolving over time alongside a kinetic energy spectrum at late stage.
+%FAG: moved from caption
+$k$ is normalised by $k_1=L/(2\pi)$, where $L$ is the largest length scale in
+the simulation domain, with the largest wavenumber $k/k_1=128$.
+%
 The magnetic energy spectra are compensated by $k^{-3/2}$ and kinetic by
 $k^{5/3}$.
 A profile becoming horizontal, therefore, corresponds to the Kazantsev's
@@ -592,7 +628,7 @@ range.
 
 
 %MJK We should mention that the domain is not subject to rotation, shear, nor stratification. And also in most cases no imposed field, I guess? 
-To exclude any large scale magnetic field dynamics in these simulations, the
+To exclude any large-scale magnetic field dynamics in these simulations, the
 computational domain occupies a cube of length 120 pc, with periodic boundaries
 on all sides.
 %FAG: added
@@ -737,7 +773,7 @@ $\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and $u_{\rm rms}=30\kms$ using
 the common formula.
 In this suite of experiments, with $\nu=0$ and $\nu_3=\eta_3$ sufficient to
 numerically resolve the grid scale, $\Pm<1$, which is an even more difficult
-regime in which to excite the small scale dynamo than in the high $\Pm$
+regime in which to excite the SSD than in the high $\Pm$
 regime typical of the ISM.
 In separate experiments with high Pm, which we shall include in the more in
 depth future analysis, we do in fact see increased growth rates for higher
@@ -760,22 +796,30 @@ Pm.
             \fig{figs/4pc-eB-nu6.png}{0.45\textwidth}{(f)}
           }
   \begin{picture}(0,0)(0,0)
-    \put( 56,428){\begin{scriptsize}{\sf{$\delta x=0.5$pc}}\end{scriptsize}}
-    \put(440,428){\begin{scriptsize}{\sf{$\delta x=1.0$pc}}\end{scriptsize}}
-    \put( 56,256){\begin{scriptsize}{\sf{$\delta x=2.0$pc}}\end{scriptsize}}
-    \put(440,256){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
-    \put( 56, 78){\begin{scriptsize}{\sf{$\delta x=2.0$pc}}\end{scriptsize}}
-    \put(440, 78){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
+    \put( 56,428){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(445,438){\begin{scriptsize}{\sf{$\delta x=1.0$pc}}\end{scriptsize}}
+    \put(445,428){\begin{scriptsize}{\sf{$\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put( 56,256){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(445,266){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
+    \put(445,256){\begin{scriptsize}{\sf{$\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put( 56, 78){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\sigma=\SNr$}}\end{scriptsize}}
+    \put(405, 78){\begin{scriptsize}{\sf{$\delta x=4.0$pc, $\sigma=\SNr$}}\end{scriptsize}}
   \end{picture}
 \caption{
-The effect of resistivity $\eta$ is compared at each $\dx$, {\rm(a)} -- {\rm(d)}
-for SN rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
-$\dot\sigma=\SNr$ at lower resolution, where
+%The effect of resistivity $\eta$ is compared at each $\dx$, {\rm(a)} -- {\rm(d)}
+%for SN rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
+%$\dot\sigma=\SNr$ at lower resolution, where
+%$\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent
+%random SN frequency.
+%The time axes vary between plots sufficient to reach saturation of the dynamo.
+%At $\dx=4\pc$ the models with $\eta=10^{-4}$ are continued until the dynamo has
+%saturated, for comparison with the higher resolution saturation levels.
+%FAG: streamlining
+The effect of resistivity $\eta$ is compared for given $\dx$ and $\dot\sigma$.
 $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent
 random SN frequency.
-The time axes vary between plots sufficient to reach saturation of the dynamo.
-At $\dx=4\pc$ the models with $\eta=10^{-4}$ are continued until the dynamo has
-saturated, for comparison with the higher resolution saturation levels.
+The time axes vary sufficiently to attain SSD saturation at all $\dx$
+with $\eta=10^{-4}$ to allow comparison across resolution.
 \label{fig:eb-nu}}
 \end{figure*}
 %-------------------------------------------------------------------------------
@@ -824,11 +868,16 @@ noise is more evident, particularly in panels (e) and (f).
 
 \fag{edits done to this point}
 
-%MJK Would help if it was not introduced as a complication, but explained first as behavior seen in the figure, then given an explanation, and then convincing the reader that what is seen now only in Figs 3 a,b as puzzling, we can easily explain in these terms.
 %MJK Overall remark of the figures: There are plenty of white space in between, and the figure captions are complicated. Use some of this white space to give more information in the title, for example:
 %MJK In Fig. 3: SN rate in the title, perhaps together with the delta x?
+%FAG OK done
 %MJK Fig. 4: add a subplot to the kinetic energy spectra, showing the same in linear scale, to emphasize the bottleneck? Indicate eta values in the title of each plot? Times simply as smooth transition in color, without the multiple legends, extrema values and amount of increments in the caption?
+%FAG: not sure, giving the times made relating them to the time series plots easier. The bottleneck does not show well in linear scale
 %MJK Fig. 5: eta values in the title of each plot ((a) - (f)); resolution (g)-(h)?
+%FAG OK done
+
+%MJK Would help if it was not introduced as a complication, but explained first as behavior seen in the figure, then given an explanation, and then convincing the reader that what is seen now only in Figs 3 a,b as puzzling, we can easily explain in these terms.
+
 The evolution is complicated by the impact \emph{thermal runaway}
 \citep[see e.g.,][]{LOCBN15}, combination of multiple SN into superbubbles
 resulting in persistent hot regions.
@@ -888,7 +937,7 @@ In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
 and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which excludes SSD,
 while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
 which would support SSD, even without thermal runaway.
-The latter obtain a large scale dynamo with galactic angular momentum
+The latter obtain a LSD with galactic angular momentum
 $\Omega=\OSN$, where $\OSN=25\kms\kpc^{-1}$ is the rate in the solar
 neighbourhood, while the former require $\Omega\geq4\OSN$ to excite LSD.
 Rm applying at the largest scales would be 7.5 times higher for the latter 
