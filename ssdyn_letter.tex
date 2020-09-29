@@ -208,10 +208,8 @@
 %% and save the corresponding author the trouble of entering it by hand.
 
 \correspondingauthor{Frederick Gent}
-\email{frederick.gent@aalto.fi}
-\email{mordecai@amnh.org}
-\email{maarit.kapyla@aalto.fi}
-\email{nishant@iucaa.in}
+\email{Email: frederick.gent@aalto.fi, mordecai@amnh.org, \\
+  maarit.kapyla@aalto.fi, nishant@iucaa.in}
 
 \author[0000-0002-1331-2260]{Frederick A. Gent}
 \affiliation{
@@ -272,16 +270,36 @@ Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G
 %MJK Currently Rms are not given, not listed, nor any results
 %MJK presented as function of Rm, hence this statement cannot
 %MJK remain, unless such analysis is added.
-We present a numerical resolution study over a range of magnetic resistivity
-(and by implication magnetic Reynolds number, Rm) to identify characteristics
-of the small-scale dynamo (SSD) under supernova-driven turbulence of the
-interstellar medium (ISM).
-We confirm that conditions in the ISM are likely highly conducive to SSD in the
-diffuse hot and warm turbulent ISM, given Rm in the real ISM is orders of
-magnitude higher than we model at our highest resolution and a modest SN
+%mm [lead with science, not numerics] We present a numerical resolution study over a range of magnetic resistivity
+%(and by implication magnetic Reynolds number, Rm) to identify characteristics
+%of the small-scale dynamo (SSD) under supernova-driven turbulence of the
+%interstellar medium (ISM).
+Magnetic fields appear to grow quickly even at early cosmological
+times, suggesting the action of a small-scale dynamo (SSD) in the
+interstellar medium (ISM) of galaxies. Previous studies have focused
+on idealized turbulent driving of the SSD. We here simulate more
+realistic supernova-driven turbulence to determine whether it can
+drive a SSD.  We vary the physical resistivity (and thus the magnetic
+Reynolds number), as well as the numerical resolution and supernova
+rate to delineate the regime in which a SSD occurs.
+%mm [this is a conclusion, so moved down to the end] We confirm that
+%conditions in the ISM are likely highly conducive to SSD in the
+%diffuse hot and warm turbulent ISM, given Rm in the real ISM is
+%orders of magnitude higher than we model at our highest resolution and a modest SN
 %explosion frequency ($\SNr$), 20\% that of the solar neighbourhood.
+%mm [moved findings up]
+We find convergence in the growth rate of the SSD with resolution approaching 
+sub-parsec scale for a given supernova explosion frequency
+$\dot\sigma$. Across the modelled range of 0.5 to 4 parsec resolution we find that with
+sufficiently low resistivity the SSD saturates consistently at about 5\% of
+the energy equipartion level, independent of the growth rate. Dynamo
+growth rates for $\dot\sigma=\SNr$, the solar neighbourhood rate, relative to models with
+$\dot\sigma=0.2\SNr$, are greater despite higher Mach numbers.
+ %FAG moved and reworded below:
 %FAG: relabelling
-explosion frequency, $\dot\sigma$, at 20\% that of the solar neighbourhood ($\SNr$).
+%mm [didn't understand how this fit into the sentence] explosion
+%frequency, $\dot\sigma$, at 20\% that of the solar neighbourhood
+%($\SNr$). 
 This is despite the negative impact on SSD expected from the highly compressible
 %MJK So we have varying SN rates; do these have a higher Ma? What I am after is whether we can quantify that statement?
 %FAG: yes in ssdyn_paper I now added tables for sigma=\SNr and mean Ms increases
@@ -300,25 +318,22 @@ This is despite the negative impact on SSD expected from the highly compressible
 %MJK Fred now has some higher Pm runs existing, but we do not have space to show a picture of them. We will just add a sentence somehwere that they show the expected behavior (with your ref) and then state that we see it too.
 nature of the flow and low magnetic Prandtl number of our experiments.
 %FAG: added in response to above
-Dynamo growth rates for $\dot\sigma=\SNr$, relative to models with
-$\dot\sigma=0.2\SNr$, are even greater despite higher Mach numbers.
 %
-We find convergence in the growth rate of the SSD with resolution for a given 
-$\dot\sigma$ approaching 
-sub-parsec scale. %FAG moved and reworded below:
 % and a trend towards the suppression of SSD for resolution
 %more coarse than 4 parsecs, where higher resistivity is required to resolve
 %the magnetic field.
 %MJK Also the following statement is not in line with the previous one with exclusion.
 %Across the modelled range of 0.5 to 4 parsec resolution we find the SSD 
 %FAG: added low resistivity
-Across the modelled range of 0.5 to 4 parsec resolution we find with
-sufficiently low resistivity the SSD saturates consistently at about 5\% of
-the energy equipartion level, independent of the growth rate.
 %FAG: Reworked from previous sentence
-With higher resistivity required to resolve the magnetic field as resolution becomes
-more coarse the trend suggests the small scale dynamo cannot be excited for grid
-spacing much more than above 4\,pc.
+%mm [this is kind of backwards] With higher resistivity required to resolve the magnetic field as resolution becomes
+%more coarse the trend suggests the small scale dynamo cannot be excited for grid
+%spacing much more than above 4\,pc.
+As the grid becomes coarser, the minimum physical resistivity that can
+be resolved increases as well. The trend suggests that an SSD cannot
+be excited for grid spacing exceeding 4~pc, as the numerical
+resistivity suppresses it.
+
 
 \end{abstract}
 
@@ -350,32 +365,44 @@ at all}
 %MJK can, and must resort to what is listed above.
 %FAG 28.9 reword
 
-This letter addresses the necessary conditions for and nature of small-scale
+This letter addresses the necessary conditions for and nature of a small-scale
 dynamo (SSD) in the interstellar medium (ISM).
-SSD are dynamo modes acting at small eddy scales of the turbulence.
+The SSD consists of dynamo modes acting at small eddy scales of the
+turbulence,
+%mm
+   so it drives magnetic field growth at the corresponding short
+   turnover times.
 There are large scales of separation between the fastest growing SSD
 instabilities and the large-scale dynamo (LSD) modes generating the magnetic
 field structures organised at the systemic scales of the galactic disk, spiral
 arms, or similar.
-As such, modelling simulations capable of capturing the LSD alongside the faster
+As such, simulations capable of capturing the LSD alongside the faster
 growing modes of SSD are computationally challenging.
-However, it is likely that the interaction of SSD modes with LSD fundamentally
+However, it is likely that the interaction of SSD modes with the LSD fundamentally
 alter the evolution and structure of the magnetic field.
 
-In many simulations of supernova driven turbulence with realistic vertical 
+In many simulations of supernova (SN) driven turbulence with realistic vertical 
 stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the
-mechanisms for inducing large scale magnetic fields are absent, such as rotation
-and shear.
-To examine the effect of strong ordered magnetic fields these models then rely
+mechanisms for inducing large scale magnetic fields, such as rotation
+and shear, are absent. To examine the effect of strong ordered magnetic fields these models then rely
 on imposition of a background or initial magnetic field, typically uniform,
-which is then perturbed by supernova explosions.
-The amplification of the magnetic field in these cases may include a small scale
-dynamo in case of sufficiently high magnetic Reynolds numbers, Rm, but any
-amplification of the field is limited to linear growth through
+which is then perturbed by SN explosions.
+The amplification of the magnetic field in these cases may include a
+SSD in case of sufficiently high magnetic Reynolds numbers, Rm, but
+any amplification of the 
+%MJK re-instating large scale; there seems to be some sort of hyphen issue throughout, which I cannot sort out. I feel like there should be a hyphen in large-scale field, Fred obviously does not, and I am not sure whether it should be single or double hyphenated.
+large--scale
+field is limited to linear growth through
 tangling of the imposed field.
+%MJK and adding this; trying to resolve the issue.
+The fluctuations can then undergo either linear/exponential growth dependending on the absence/presence of SSD.
+%MJK
+%mm [I do not understand the above sentence: is it arguing that you
+%can't have exponential growth from an SSD in case of an imposed field??]
 %\ns{The above sentence seems to suggest (linear) growth of large-scale field,
 %but one might argue that tangling produces fields preferably on %the forcing
 %scale, thus essentially leading to (linear) growth of fluctuating %field.
+%MJK I see that the reformulation due to Nishant's concerng leads to a conflict with Fred's statement in the beginning of the sentence.... See above an attempt to remedy this.
 %(Aside) Interestingly, I think, it is only the tangling produced %magnetic
 %noise (and not the SSD) which leads to quenching of large-scale %dynamo, as
 %$\alpha_M$ is sourced primarily by tangling.}
@@ -386,22 +413,34 @@ Any initial large scale field would diffuse leaving only the random field.
 If an imposed field is sufficiently close to equipartition its characteristics
 would dominate any MHD results.
 %NS: added; pls feel free to decide whether it should be kept here or not
-It is reasonable to expect that the tangling produced magnetic noise
+%mm It is reasonable to expect that the tangling produced magnetic
+%noise
+     On the other hand, the magnetic noise produced by tangling
 will grow exponentially if the system supports the LSD instability.
 Such a noise plays an important role in quenching the LSD by contributing
-to the magnetic $\alpha$-effect $\alpha_M$ which leads to the saturation
+to the magnetic $\alpha$-effect $\alpha_M$, which leads to the saturation
 of large-scale fields in the nonlinear regime.
 %NS.
+%MJK Is this paragraph now too complicated? Should we only try to highlight the aspects relevant here? I am not sure how much text we can have here in the first place...
 
-More commonly models of supernova driven dynamo in the ISM have ignored the 
-large scale effects and examined the small scale dynamo or the effect of the
+%MJK The previous para was about neglecting the LS effects, and this paragraph continues on the same topic. Is this really intended? I guess we could get a rid of this simply. I understand models referred to above have vertical stratification and those below not, but cannot we simply group them together? Btw, stratification alone and even boundary conditions that are inhomogeneous in the vertical, can of course drive some sort of a dynamo effect, but definitely not o
+More commonly, models of the SN-driven dynamo in the ISM have ignored the 
+large scale effects and examined the SSD or the effect of the
 turbulent magnetic field on the properties of the ISM
 \citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}.
 A seed or imposed field for such models could be uniform or random, but if the
-simulated field results from tangling rather than dynamo, then any conclusions
-about the ISM depend on the veracity of the chosen field rather than the 
+simulated field
+%mm [counterfactual results from
+   were the result of
+tangling rather than dynamo, then any conclusions
+about the ISM
+%mm [counterfactual]
+    would
+depend on the veracity of the chosen field rather than the 
 nature of the MHD turbulence.
 
+%mm [where does Korpi:1999a fit into this taxonomy??]
+%MJK I guess it belongs to the class of "miserable early failures to produce any dynamo", which does not need to be listed.
 While the SN experiments considered in this letter are restricted to SSD, some
 large scale models do include the large scale dynamo
 \citep[e.g.,][]{Gressel:2008,HWK09,WA09,Gent:2013b,EGSFB16,Pakmor17,SBADMN19,SDLMBP20,GE20}.
@@ -410,23 +449,25 @@ Most of these do not include a small scale dynamo.
 %FAG: added appear to
 \citet{Gent:2013b,EGSFB16} do appear to include SSD, but without a clear
 understanding of the characteristics of this SSD it is difficult to explore the
-effect this has on the large scale dynamo (LSD) and the properties of the ISM.
+effect this has on the LSD and the properties of the ISM.
 %FAG: revised
 %\citet{SBADMN19,SDLMBP20} also suspect they have SSD.
 \citet{SBADMN19,SDLMBP20} also claim that SSD is present in a galactic-scale
 simulation, but do not excite LSD. 
-At late stage the SSD ceases corresponding to the disappearance of Kazantsev
-scaling in the magnetic power spectra.
+At late stage the SSD ceases,
+%mm corresponding to
+     as shown by
+the disappearance of Kazantsev scaling in the magnetic power spectra.
 %FAG: ended and new para
 
 %FAG: added
 Given the uncertainty over the presence of SSD in the large scale simulations
 we seek to confirm how to identify, quantify and characterise SSD, so that we
 can adequately interpret its action in simulations of LSD.
-\citet{BKMM04} report SSD in ideal MHD, but with only numerical diffusion and
-a limited set of resolution and parameters it is not possible to demonstrate 
+\citet{BKMM04} report SSD in ideal magnetohydrodynamics (MHD), but with only numerical diffusion and
+a limited set of resolution and parameters it was not possible for them to demonstrate 
 convergence of the solutions nor dependence on Rm or magnetic Prandtl number, Pm.
-They include a weak imposed uniform field, and we shall show that it is possible
+They include a weak imposed uniform field; we shall show that it is possible
 to demonstrate conclusively that the amplification of their field is a result of
 dynamo action and not just tangling of the field.
 %
@@ -448,7 +489,7 @@ simulations \citep[such as][]{Gent:2013b,GE20,SDLMBP20}.
 
 %recent results of \citet{GE20}, which asserts the 
 %absence of a small scale (fluctuation) dynamo (SSD) in the interstellar medium
-%(ISM) subject to supernova induced turbulence and multi-phase structure
+%(ISM) subject to SN induced turbulence and multi-phase structure
 %applicable to the solar neighbourhood. 
 %They refute the earlier dynamo solutions of \citet{BKMM04}
 
@@ -639,7 +680,7 @@ applied.
 \end{figure*}
 %-------------------------------------------------------------------------------
 
-The supernovae are injected randomly uniform in 3D space and as a Poisson
+The SNe are injected randomly uniform in 3D space and as a Poisson
 process proportional to the solar neigbourhood rate in the Milky Way,
  $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$.
 Each explosion injects $10^{51}\erg$ as thermal energy, $\EST$, but in dense
@@ -647,7 +688,7 @@ media a small proportion may be in kinetic energy, $\ESK$.
 This is described in detail by \citet{GMKSH20}.
 %FAG moved forward from below
 %MJK This sounds like belonging to the simulation design, and not in the middle of results.
-To reduce statistical noise, at all $\dx$ and $\eta$ the supernova are
+To reduce statistical noise, at all $\dx$ and $\eta$ the SN are
 scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$ and for 
 correspondingly for $\dot\sigma=\SNr$.
 Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
@@ -728,7 +769,7 @@ Pm.
   \end{picture}
 \caption{
 The effect of resistivity $\eta$ is compared at each $\dx$, {\rm(a)} -- {\rm(d)}
-for supernova rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
+for SN rate $\dot\sigma=0.2\SNr$ and {\rm(e)} -- {\rm(f)} for
 $\dot\sigma=\SNr$ at lower resolution, where
 $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$ is the solar neighbourhood equivalent
 random SN frequency.
@@ -773,7 +814,7 @@ $3.8\lesssim\langle\Rm\rangle\lesssim6$, as discussed above from the induction
 equation of $\Rm=1500$ using the common definition. 
 %FAG moved to design
 %MJK This sounds like belonging to the simulation design, and not in the middle of results.
-%To reduce statistical noise, at all $\dx$ and $\eta$ the supernova are
+%To reduce statistical noise, at all $\dx$ and $\eta$ the SN are
 %scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$,
 %panels (a) -- (d), and for $\dot\sigma=\SNr$, panels (e) -- (f).
 Although models with a the same SN rate have the same schedule and location of
@@ -828,7 +869,7 @@ There is a reduced susceptibility to thermal runaway at low resolution,
 and only lower Rm can be resolved, both an effect of more diffusive numerics.
 Hence, as the resolution becomes more coarse it is likely that the small-scale 
 dynamo will be suppressed in simulations of the ISM.
-Higher supernova rates driving increased velocities may permit coarse models 
+Higher SN rates driving increased velocities may permit coarse models 
 to attain the critical Rm for SSD, but it is likely that models with 
 $\dx$ much above $4\pc$ will suppress the dynamo. 
 
@@ -842,7 +883,7 @@ SSD even with high resistivity in galaxies that produce sustained regions of
 hot turbulence.
 We shall examine the nature of this fast dynamo in a later report.
 To exclude SSD in SN driven turbulence simulations will require
-$\eta\gtrsim10^{-3}$ or supernova implementation which avoids thermal runaway.
+$\eta\gtrsim10^{-3}$ or SN implementation which avoids thermal runaway.
 In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
 and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which excludes SSD,
 while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
@@ -924,7 +965,7 @@ Resistivity $\eta=0,\,10^{-4}$ and $10^{-3}$ in panel pairs (a,b), (c,d) and
 Panels (g,h) for $\dx=2\pc$ at 100\,Myr for $\dot\sigma=0.2\SNr$ and
 140\,Myr for $\dot\sigma=\SNr$ for
 $\eta=10^{-4}$ or $10^{-3}$ as listed in the legends show the effect of 
-supernova rate.
+SN rate.
 Energy spectra are compensated against theoretical profiles of Kazantsev
 $k^{3/2}$, left panels, and Kolmogorov $k^{-5/3}$, right. 
 \label{fig:3power}}
@@ -958,6 +999,9 @@ $k$ than the Kazantsev range in the corresponding magnetic spectrum.
 
 \section{Conclusion and discussion}\label{sec:conc}
 
+\acknowledgments M-MML was partly supported by US NSF grant AST18-15461.
+
+\software{Pencil Code \citep{brandenburg2002,Pencil-JOSS}}
 \bibliography{refs}{}
 \bibliographystyle{aasjournal}
 
