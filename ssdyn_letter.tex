@@ -249,10 +249,6 @@ Inter-University Centre for Astronomy \& Astrophysics, Post Bag 4, Ganeshkhind, 
 Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G\"ottingen, Germany
 }
 
-%% Note that the \and command from previous versions of AASTeX is now
-%% depreciated in this version as it is no longer necessary. AASTeX 
-%% automatically takes care of all commas and "and"s between authors names.
-
 %% AASTeX 6.3 has the new \collaboration and \nocollaboration commands to
 %% provide the collaboration status of a group of authors. These commands 
 %% can be used either before or after the list of corresponding authors. The
@@ -263,7 +259,6 @@ Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G
 
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
-
 %We present a numerical resolution study over a range of magnetic Reynolds
 %number (Rm) to identify characteristics of the small-scale dynamo (SSD) under
 %FAG: Reynolds -> resistivity
@@ -274,6 +269,7 @@ Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G
 %(and by implication magnetic Reynolds number, Rm) to identify characteristics
 %of the small-scale dynamo (SSD) under supernova-driven turbulence of the
 %interstellar medium (ISM).
+%FAG: OK
 Magnetic fields appear to grow quickly even at early cosmological
 times, suggesting the action of a small-scale dynamo (SSD) in the
 interstellar medium (ISM) of galaxies. Previous studies have focused
@@ -319,6 +315,7 @@ This is despite the negative impact on SSD expected from the highly compressible
 %NS: Oh, ok. Then I will perhaps suppress high Pm citations from sec 2.
 %FAG: keep citations as I now reference runs to follow with high Pm.
 %MJK Fred now has some higher Pm runs existing, but we do not have space to show a picture of them. We will just add a sentence somehwere that they show the expected behavior (with your ref) and then state that we see it too.
+%FAG OK
 nature of the flow and low magnetic Prandtl number of our experiments.
 %FAG: added in response to above
 %
@@ -342,11 +339,8 @@ resistivity suppresses it.
 
 
 \end{abstract}
-
-%% Keywords should appear after the \end{abstract} command. 
-%% See the online documentation for the full list of available subject
-%% keywords and the rules for their use.
 \keywords{Dynamo --- Magnetohydrodynmaical simulations --- Supernova dynamics --- Interstellar magnetic fields --- Turbulence}
+
 
 \section{Introduction} \label{sec:intro}
 %==============================================================================
@@ -405,6 +399,7 @@ field.
 %MJK and adding this; trying to resolve the issue.
 The fluctuations can then undergo either linear/exponential growth dependending on the absence/presence of SSD.
 %MJK
+%FAG OK
 %mm [I do not understand the above sentence: is it arguing that you
 %can't have exponential growth from an SSD in case of an imposed field??]
 %\ns{The above sentence seems to suggest (linear) growth of large-scale field,
@@ -501,15 +496,6 @@ LSD models and subsequently establish the importance of SSD-LSD interactions
 on galaxy dynamics. 
 We aim to find objective criteria with which to determine the presence of SSD in 
 simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
-%MJK The two first paragraphs should go into the intro in some form. 
-%MJK This section should basically only contain the toy model results. Toy model is also a bit degrading...
-%MJK The two comments above are obsolete, and can be deleted.
-
-%recent results of \citet{GE20}, which asserts the 
-%absence of a small scale (fluctuation) dynamo (SSD) in the interstellar medium
-%(ISM) subject to SN induced turbulence and multi-phase structure
-%applicable to the solar neighbourhood. 
-%They refute the earlier dynamo solutions of \citet{BKMM04}
 
 %==============================================================================
 \begin{figure*}
@@ -565,6 +551,7 @@ The forcing scale, $\kf/k_1=8$, is indicated by the vertical dotted line.
 %a simplified model with non-helical random forcing with wavenumber $\kf=8$
 %applied to isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
 %NS: used SSD; kf => kf/k1; and modified a bit
+%FAG: OK
 To illustrate some differences between tangling and SSD we adopt
 a simplified model with non-helical random forcing with wavenumber $\kf/k_1=8$
 applied to isothermal uniform density in $256^3$, $2\pi$-periodic boxes with
@@ -618,12 +605,6 @@ The Kazantsev range of the spectrum extends to wavenumbers larger than the
 forcing scale for SSD, while confined to larger scales for the field with
 tangling only.
 
-%NS: commenting out the following
-%\ns{Added 5 new references in refs.bib to quote earlier works on Kazantsev, low/high
-%Pm SSD; we can include those here as \citet{K68,KA92}; \cite{Sch02} (high Pm);
-%\cite{Sch07} (low Pm); \cite{BS14} (finite correlation time). Please feel free
-%to remove any from these that appear unsuitable here.}
-
 Given the high magnetic Prandtl numbers, the magnetic spectra retain more energy
 %NS: is it high or low Pm meant in the line above (abstract has low only)
 %NS: but i agree that at high Pm, M_k > E_k at large k
@@ -633,12 +614,12 @@ Given the high magnetic Prandtl numbers, the magnetic spectra retain more energy
 at smaller scales than the kinetic spectra.
 Although the kinetic parameters are identical and are subject to the same 
 viscous cutoff, the SSD extends the kinetic energy into the 
-%MJK smaller?
-larger scales
+smaller scales
 due to the feedback from the Lorentz force.
 With SSD there is a short inertial range for $10\leq k/k_1\lesssim 15$.
 %MJK Is there not also for the tangling case?
 %MJK Why in Fig 1 the y-scales are so much different when eb/ek is close to one?
+%FAG the spectra are integral quantities and all the kinetic energy is concentrated around k=8, which biases the peak value for eK and also there are the k-power prefactors
 Thus, in the dynamo kinetic energy deposited along the Kolmogorov range to
 smaller scales transfers energy to the magnetic field at these scales
 inducing an inverse Kazantsev range begining at scales below the forcing
@@ -665,10 +646,12 @@ We solve the system of non-ideal compressible MHD equations, including
 mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
 induction Eq.\,\eqref{eq:ind}:
 %NS: may be better to cite some paper here (Gent+2020?)
+%FAG: We are using a different form of the equations, which justify giving them explicitly, we include for the first time hyper diffusion and exclude for the first time shock resistivity and laplacian thermal diffusivity
 %-------------------------------------------------------------------------------
   \begin{eqnarray}
   \label{eq:mass}
   %NS: shouldn't it be del / del t instead of D/Dt in line below?
+  %FAG: no in this case it is the material derivative on the left
     \frac{D\rho}{Dt} &=& 
     -\vect\nabla \cdot (\rho \vect{u})
     +\vect\nabla \cdot\zeta_D\vect\nabla\rho,
@@ -747,9 +730,6 @@ process proportional to the solar neigbourhood rate in the Milky Way,
 Each explosion injects $10^{51}\erg$ as thermal energy, $\EST$, but in dense
 media a small proportion may be in kinetic energy, $\ESK$.
 This is described in detail by \citet{GMKSH20}.
-%FAG moved forward from below
-%MJK This sounds like belonging to the simulation design, and not in the middle of results.
-%MJK Now ok.
 To reduce statistical noise, at all $\dx$ and $\eta$ the SN are
 scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$ and for 
 correspondingly for $\dot\sigma=\SNr$.
@@ -757,9 +737,6 @@ Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
 following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in 
 \citet{Gent:2013a}.
 
-%MJK Somewhere we should point out that this strategy, in effect, results in us considering low Pm flows only. This is not ideal for the ISM, of course, but maybe our excuse here is that this regime is known to be more difficult for the SSD in any case, as then the eta cut off is places in the inertial range of the kinetic turbulence, hence most of our conclusions should definitely hold for the ISM.
-%FAG: added paragraph two below as response
-%MJK ok.
 In the subset of experiments presented in this letter we set viscosity, $\nu=0$,
 with $\nu_3$ applying optimally for each $\dx$ to ensure the flow is well
 resolved.
@@ -767,8 +744,7 @@ We establish a benchmark for the magnetic field evolution setting $\eta=0$, with
 numerical resistivity acting via the optimal setting for $\eta_3$.
 We then vary $\eta\geq10^{-6}\kpc\kms$ to identify minimal range for which the
 physical resistivity is dynamically dominating the numerical resistivity, and
-%MJK eta?
-examine the dependence of the dynamo on $\nu$ and grid resolution.
+examine the dependence of the dynamo on $\eta$ and grid resolution.
 Henceforth, where $\eta$ is specified for the SN simulations it has units of
 $\kpc\kms$. 
 In contrast to our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
@@ -779,8 +755,6 @@ at time and spatial scales much shorter than considered here.
 \fag{Mordecai, could you suggest some appropriate reference?}
 
 An important 
-%consideration in dynamo theory 
-%MJK I would rather say
 parameter for the excitation of the SSD
 is the magnetic Reynolds number, Rm,
 and the magnetic Prandtl number, $\Pm = \Rm/\Rey \simeq \nu/\eta$, where $\Rey$
@@ -789,12 +763,17 @@ A commonly used definition is \[\Rm=\frac{\ell u_{\rm rms}}{\eta},\] where
 $\ell$ is the forcing scale.
 However, in these simulations of the ISM, given the 
 %MJK ?
-Galilean invariance of the 
+%FAG opposit of what I meant - reworded
+%Galilean invariance of the 
+inhomogeneity of the 
 turbulence, variation within hot and warm medium, and inclusion of
 hyperdiffusion, defining a single forcing scale from the SN explosions or 
 common rms velocity is unreliable.
 %MJK "a field" sounds alien to me
-We, therefore, directly compute a field of Reynolds numbers from the equations,
+%FAG: absolutely no alienation allowed
+%We, therefore, directly compute a field of Reynolds numbers from the equations,
+We, therefore, compute Reynolds numbers at each grid point
+directly from the equations,
 for example,
 %-------------------------------------------------------------------------------
 \begin{eqnarray}
@@ -803,26 +782,30 @@ for example,
 \end{eqnarray}
 %-------------------------------------------------------------------------------
 %NS: should LHS in the above equation be <Rm> ?
-Hence, for the high resolution runs at 20\,Myr we obtain linear
+%FAG: at each grid poitn we compute Rm. From the distribution we compute <Rm> whatever that tells us!!
+%Hence, for the high resolution runs at 20\,Myr we obtain linear
 %NS: by "linear", is it meant of order unity?
+%FAG: no just not a log norm or exp norm distribution, but this is not clear and no need to go into it unless we compare different norms, so
+Hence, for the high resolution runs at 20\,Myr we obtain
 %NS: Rm = 4 by directly using eq 5? It might be good to have a number for also
 %NS: the standard definition, so that we could simply say, 4, 15000 using Eqs (), (5).
 %MJK Everything goes nuts when one starts looking at the Rms. Still I ask: what would be our Rm_crit according to these definitions?
 %NS: I have commented on fig3a that 10^-4 is close to 0, so perhaps not resolved?
 %NS: A rough estimate of Rm_crit (based on Eq 5) is perhaps from eta=10^-3 case,
 %NS: which is perhaps marginal?
+%FAG: I think maybe we need to consider further how eta_3 actually applies to the effective Rm, but not here
 $\langle\Rm\rangle=4$ with standard deviation 5.6, whereas 
 $\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and $u_{\rm rms}=30\kms$ using
 the common formula.
 In this suite of experiments, with $\nu=0$ and $\nu_3=\eta_3$ sufficient to
 numerically resolve the grid scale, $\Pm<1$, which is an even more difficult
 regime in which to excite the SSD than in the high $\Pm$
-regime typical of the ISM.
+regime typical of the ISM \citep{HBD04}.
 In separate experiments with high Pm, which we shall include in the more in
 depth future analysis, we do in fact see increased growth rates for higher
 Pm.
 %MJK Reference(s) to this expectation needed.
-
+%FAG: done
 %-------------------------------------------------------------------------------
 \section{Resolution and resistivity} \label{sec:results}
 %-------------------------------------------------------------------------------
@@ -1314,7 +1297,6 @@ dynamo in a later submission.
 
 
 
-\fag{edits done to this point}
 
 
 \acknowledgments
