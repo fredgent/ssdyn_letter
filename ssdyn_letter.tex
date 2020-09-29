@@ -484,6 +484,8 @@ convergence of the solutions nor dependence on Rm or magnetic Prandtl number, Pm
 They include a weak imposed uniform field; we shall show that it is possible
 to demonstrate conclusively that the amplification of their field is a result of
 dynamo action and not just tangling of the field.
+%MJK But we are not going to show any runs with imposed fields?
+%MJK On the contrary, I think we can show that imposed field is NOT A REQUIREMENT to provide dynamo action.
 %
 In this letter we explore the SSD in realistic simulations of SN driven 
 turbulence
@@ -500,6 +502,7 @@ We aim to find objective criteria with which to determine the presence of SSD in
 simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
 %MJK The two first paragraphs should go into the intro in some form. 
 %MJK This section should basically only contain the toy model results. Toy model is also a bit degrading...
+%MJK The two comments above are obsolete, and can be deleted.
 
 %recent results of \citet{GE20}, which asserts the 
 %absence of a small scale (fluctuation) dynamo (SSD) in the interstellar medium
@@ -536,11 +539,18 @@ Panel (a) displays mean magnetic energy density, $e_B$,
 evolving due to non-helical random forcing, scaled to time-averaged kinetic
 energy density, $\overline{e_K}$.
 The inset shows a zoom-in of the early linear growth of the tangled field.
-Time is normalised by the inverse eddy turnover time at the forcing scale,
-$\kf \overline{u_{\rm rms}}$.
+%Time is normalised by the inverse eddy turnover time at the forcing scale,
+%$\kf \overline{u_{\rm rms}}$.
+%NS: modified by removing "inverse"
+Time is normalised by the eddy turnover time at the forcing scale,
+$1/\kf \overline{u_{\rm rms}}$.
+%NS: do we need overline over u_rms, as Rm definition (unnumbered) doesn't have it either
+%NS: panel a above has it with overbar; its just looks a bit odd
 Sample compensated power spectra at times indicated in the legends are
 displayed for the model with SSD (b) and with tangling (c). 
-The forcing scale, $\kf=8$, is indicated by the vertical dotted line.
+%The forcing scale, $\kf=8$, is indicated by the vertical dotted line.
+%NS: kf => kf/k1; is it better to mention other parameters Rm etc in the caption?
+The forcing scale, $\kf/k_1=8$, is indicated by the vertical dotted line.
 \label{fig:tangling}}
 \end{figure*}
 
@@ -549,9 +559,15 @@ The forcing scale, $\kf=8$, is indicated by the vertical dotted line.
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
 %==============================================================================
 
-To illustrate some differences between tangling and small-scale dynamo we adopt
-a simplified model with non-helical random forcing with wavenumber $\kf=8$
-applied to isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
+%MJK We should introduce abbrv. SSD early on and then use it consistently.
+%To illustrate some differences between tangling and small-scale dynamo we adopt
+%a simplified model with non-helical random forcing with wavenumber $\kf=8$
+%applied to isothermal uniform density in $256^3$ $2\pi$-periodic boxes.
+%NS: used SSD; kf => kf/k1; and modified a bit
+To illustrate some differences between tangling and SSD we adopt
+a simplified model with non-helical random forcing with wavenumber $\kf/k_1=8$
+applied to isothermal uniform density in $256^3$, $2\pi$-periodic boxes with
+$k_1=1$ being the lowest wavenumber in the domain.
 A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is
 imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
 The two simulations are distinguished only by use of dimensionless
@@ -612,11 +628,16 @@ Given the high magnetic Prandtl numbers, the magnetic spectra retain more energy
 %NS: but i agree that at high Pm, M_k > E_k at large k
 %FAG: in these experiments the PM are high, but in the SN runs they are low Pm
 %FAG: although we have some runs with high Pm for inclusion in the full paper.
+%MJK This is certainly a point that the referee might critisize (ask us to repeat the simplified model at low Pm). But we can worry about that then. 
 at smaller scales than the kinetic spectra.
 Although the kinetic parameters are identical and are subject to the same 
-viscous cutoff, the SSD extends the kinetic energy into the larger scales
+viscous cutoff, the SSD extends the kinetic energy into the 
+%MJK smaller?
+larger scales
 due to the feedback from the Lorentz force.
 With SSD there is a short inertial range for $10\leq k/k_1\lesssim 15$.
+%MJK Is there not also for the tangling case?
+%MJK Why in Fig 1 the y-scales are so much different when eb/ek is close to one?
 Thus, in the dynamo kinetic energy deposited along the Kolmogorov range to
 smaller scales transfers energy to the magnetic field at these scales
 inducing an inverse Kazantsev range begining at scales below the forcing
@@ -627,8 +648,6 @@ range.
 
 \section{SN turbulence model design} \label{sec:model}
 
-
-%MJK We should mention that the domain is not subject to rotation, shear, nor stratification. And also in most cases no imposed field, I guess? 
 To exclude any large-scale magnetic field dynamics in these simulations, the
 %FAG: correction
 %computational domain occupies a cube of length 120 pc, with periodic boundaries
@@ -644,9 +663,11 @@ Grid size $\delta x=0.5$, 1, 2 and 4$\pc$  along each side are considered.
 We solve the system of non-ideal compressible MHD equations, including 
 mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
 induction Eq.\,\eqref{eq:ind}:
+%NS: may be better to cite some paper here (Gent+2020?)
 %-------------------------------------------------------------------------------
   \begin{eqnarray}
   \label{eq:mass}
+  %NS: shouldn't it be del / del t instead of D/Dt in line below?
     \frac{D\rho}{Dt} &=& 
     -\vect\nabla \cdot (\rho \vect{u})
     +\vect\nabla \cdot\zeta_D\vect\nabla\rho,
@@ -727,6 +748,7 @@ media a small proportion may be in kinetic energy, $\ESK$.
 This is described in detail by \citet{GMKSH20}.
 %FAG moved forward from below
 %MJK This sounds like belonging to the simulation design, and not in the middle of results.
+%MJK Now ok.
 To reduce statistical noise, at all $\dx$ and $\eta$ the SN are
 scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$ and for 
 correspondingly for $\dot\sigma=\SNr$.
@@ -736,6 +758,7 @@ following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in
 
 %MJK Somewhere we should point out that this strategy, in effect, results in us considering low Pm flows only. This is not ideal for the ISM, of course, but maybe our excuse here is that this regime is known to be more difficult for the SSD in any case, as then the eta cut off is places in the inertial range of the kinetic turbulence, hence most of our conclusions should definitely hold for the ISM.
 %FAG: added paragraph two below as response
+%MJK ok.
 In the subset of experiments presented in this letter we set viscosity, $\nu=0$,
 with $\nu_3$ applying optimally for each $\dx$ to ensure the flow is well
 resolved.
@@ -743,6 +766,7 @@ We establish a benchmark for the magnetic field evolution setting $\eta=0$, with
 numerical resistivity acting via the optimal setting for $\eta_3$.
 We then vary $\eta\geq10^{-6}\kpc\kms$ to identify minimal range for which the
 physical resistivity is dynamically dominating the numerical resistivity, and
+%MJK eta?
 examine the dependence of the dynamo on $\nu$ and grid resolution.
 Henceforth, where $\eta$ is specified for the SN simulations it has units of
 $\kpc\kms$. 
@@ -753,12 +777,18 @@ physical effects of thermal conductivity can be expected to be relevant only
 at time and spatial scales much shorter than considered here.
 \fag{Mordecai, could you suggest some appropriate reference?}
 
-An important consideration in dynamo theory is the magnetic Reynolds number, Rm,
+An important 
+%consideration in dynamo theory 
+%MJK I would rather say
+parameter for the excitation of the SSD
+is the magnetic Reynolds number, Rm,
 and the magnetic Prandtl number, $\Pm = \Rm/\Rey \simeq \nu/\eta$, where $\Rey$
 is the fluid Reynolds number.
 A commonly used definition is \[\Rm=\frac{\ell u_{\rm rms}}{\eta},\] where
 $\ell$ is the forcing scale.
-However, in these simulations of the ISM, given the Galilean invariance of the 
+However, in these simulations of the ISM, given the 
+%MJK ?
+Galilean invariance of the 
 turbulence, variation within hot and warm medium, and inclusion of
 hyperdiffusion, defining a single forcing scale from the SN explosions or 
 common rms velocity is unreliable.
@@ -770,7 +800,11 @@ for example,
     \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
 \end{eqnarray}
 %-------------------------------------------------------------------------------
-Hence, for the high resolution runs at 20\,Myr we obtain linear 
+%NS: should LHS in the above equation be <Rm> ?
+Hence, for the high resolution runs at 20\,Myr we obtain linear
+%NS: by "linear", is it meant of order unity?
+%NS: Rm = 4 by directly using eq 5? It might be good to have a number for also
+%NS: the standard definition, so that we could simply say, 4, 15000 using Eqs (), (5).
 $\langle\Rm\rangle=4$ with standard deviation 5.6, whereas 
 $\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and $u_{\rm rms}=30\kms$ using
 the common formula.
@@ -858,7 +892,10 @@ At all $\dx$ $\eta=10^{-3}$ is clearly well resolved and dynamics and
 %FAG: added
 Rm well defined by the physical application of resistivity, varying locally with
 $3.8\lesssim\langle\Rm\rangle\lesssim6$, as discussed above from the induction
-equation of $\Rm=1500$ using the common definition. 
+%equation of $\Rm=1500$ using the common definition. 
+%NS: I think its Rm=15000, changed it, but pls check
+%NS: instead of just "common definition" we could also add Eq () if ok as commented before
+equation of $\Rm=15000$ using the common definition. 
 %FAG moved to design
 %MJK This sounds like belonging to the simulation design, and not in the middle of results.
 %To reduce statistical noise, at all $\dx$ and $\eta$ the SN are
@@ -1265,6 +1302,8 @@ resources.
 \hline\hline\\
 {Notation Symbol} & {Denoting} & {Units/Definition}\\\hline\\
  $\dfrac{D}{Dt}$ & material derivative & $\dfrac{\partial }{\partial t}+\vect{u}\cdot \vect\nabla$ \\
+ %$\vect\nabla$ & gradient vector & e.g.,$\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}$ \\
+ %NS: brackets for vector, and space after comma
  $\vect\nabla$ & gradient vector & e.g.,$\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}$ \\
  $\rho$ & gas density & [g cm$^{-3}$]  \\
  $\vect u$ & gas velocity & [km s$^{-1}$] \\
