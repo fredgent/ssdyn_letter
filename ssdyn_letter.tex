@@ -497,7 +497,7 @@ This will also identify the prerequisites for including or excluding SSD in the
 LSD models and subsequently establish the importance of SSD-LSD interactions 
 on galaxy dynamics. 
 We aim to find objective criteria with which to determine the presence of SSD in 
-simulations \citep[such as][]{Gent:2013b,GE20,SDLMBP20}.
+simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
 %MJK The two first paragraphs should go into the intro in some form. 
 %MJK This section should basically only contain the toy model results. Toy model is also a bit degrading...
 
@@ -1132,42 +1132,99 @@ which we shall investigate in future work.
 
 
 \section{Summary of results}\label{sec:conc}
-\fag{edits done to this point}
-%FAG Moved from above
-There is a reduced susceptibility to thermal runaway at low resolution, 
-and only lower Rm can be resolved, both an effect of more diffusive numerics.
-Hence, as the resolution becomes more coarse it is likely that the small-scale 
-dynamo will be suppressed in simulations of the ISM.
-Higher SN rates driving increased velocities may permit coarse models 
-to attain the critical Rm for SSD, but it is likely that models with 
-$\dx$ much above $4\pc$ will suppress the dynamo. 
 
-To attain a truly convergent numerical regime simulations should apply 
-resolution better than $2\pc$.
-In the ISM with Rm much higher than we can resolve, our results confirm that
-SSD is very easy to excite by SN, and may even be present in galaxies with
+%FAG: added
+In this letter we confirm, without the use of an imposed magnetic field, that
+the field amplification demonstrated by \citet{BKMM04} was evidence of 
+small-scale dynamo (SSD) in the interstellar medium (ISM) and not just due to
+tangling of their imposed field.
+Through the most extensive resolution and parameter based study to date,
+%FAG Moved from above
+in the ISM with Rm much higher than we can resolve, we conclude that SSD is
+very easy to excite by SN, and may even be present in galaxies with
 low SN rates.
+From the solutions for $\dx=0.5$ abd $1\pc$ with $\eta=10^{-3}\kpc\kms$, 
+Figure\,\ref{fig:eb-res}(b), 
+we see that a seed field of less than a nG can be amplified to saturation at
+$\mu G$ levels within about 10\,Myr.
+%
 
-As shown in Figure\,\ref{fig:eb-nu}(a) and (b), properties of the hot gas cannot exclude
-SSD even with high resistivity in galaxies that produce sustained regions of
-hot turbulence.
-%FAG not fast
-%We shall examine the nature of this fast dynamo in a later report.
-We shall examine the nature of acceleration of the dynamo in a later report.
-To exclude SSD in SN driven turbulence simulations will require
-$\eta\gtrsim10^{-3}$ or SN implementation which avoids thermal runaway.
-In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
-and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which excludes SSD,
-while \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
-which would support SSD, even without thermal runaway.
-The latter obtain a LSD with galactic angular momentum
-$\Omega=\OSN$, where $\OSN=25\kms\kpc^{-1}$ is the rate in the solar
-neighbourhood, while the former require $\Omega\geq4\OSN$ to excite LSD.
-Rm applying at the largest scales would be 7.5 times higher for the latter 
-model, so alone is sufficient to explain the LSD.
-How the SSD affects the galactic dynamo requires further study.
-\fag{add discussion of Ulrich's results}
+We show that simulations with insufficient resolution may appear to converge, 
+only to a false solution.
+These simulations are not scale independent.
+The SN energy input and the physically motivated ISM cooling processes impose
+length and time scales, which must be adequately resolved.
 %FAG Moved from above
+To attain a truly convergent numerical regime simulations should apply 
+resolution at least as fine as $1\pc$.
+In our experiments models with $\dx\geq2\pc$ not only give an incorrect dynamo
+solution, but also exhibit significant kinetic energy losses due to excess
+dissipation.
+%
+%FAG: added
+We do, however find, independent of resolution, that when SSD is excited it
+saturates at about 5\% of the energy equipartition level.
+For low resolution this is a lower absolute level, because the time-averaged
+kinetic energy density is understated, due to dissipative losses.
+This might account for the discrepency between the energy density of the mean
+magnetic field and the random magnetic field in \citet{Gent:2013b}, due to the
+LSD being well resloved while the SSD being under resolved.
+
+%FAG: added
+We find that the conventional approach from dynamo theory to categorise the 
+turbulence according to Rm based on a forcing scale $\ell$, random velocity and
+resistivity, is inadequate for such a complicated system.
+The ISM appears to host at least two regimes of SSD, apparently
+embedded in the hot or warm phases, and with radically different 
+dynamo characteristics and growth rates, and which occupy changing fractional
+volumes and epochs.
+This is further exacerbated by the susceptibility to thermal runaway, which 
+alters the SSD properties.
+Explaining the interaction of these SSDs will require more sophisticated
+statistical and perhaps toplogical techniques, in advance of being able to 
+address how such SSD interacts with LSD.
+%FAG Moved from above
+Due to the more diffusive numerics there is a reduced susceptibility to
+thermal runaway at low resolution. 
+Higher SN rates may permit coarse models to enter thermal
+runaway and more easily excite SSD, but it is likely that models with 
+$\dx$ much above $4\pc$ will suppress SSD in simulations of the ISM.
+
+%FAG Moved from above
+To exclude SSD in SN driven turbulence simulations will require
+$\eta\gtrsim10^{-3}\kpc\kms$ or SN implementation which avoids thermal runaway.
+In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
+and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which in all probabilty excludes SSD.
+\citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
+which would support SSD with SN rates similar to the solar neighbourhood, even
+without thermal runaway.
+The latter obtain a LSD with galactic angular momentum $\Omega=\OSN$, where
+$\OSN=25\kms\kpc^{-1}$ is the rate in the solar neighbourhood.
+The former require $\Omega\geq4\OSN$ to excite LSD.
+Rm applying at the largest scales would be 7.5 times higher for the latter 
+model, so alone is sufficient to explain the LSD at lower $\Omega$.
+How the SSD affects the galactic dynamo requires further study.
+%FAG added ???? Not sure this is actually so relevant having read it? Though I find it puzzling that they have SSD but no LSD
+Using an SPH code \citet{SBADMN19} report a SSD in a global galaxy simulation
+with minimum resolution equivalent to about 20\,pc.
+In this model the SN are not directly modelled and the turbulence is driven
+on a much larger forcing scale by the galactic wind and fountain.
+The disk height is relatively small-scale in the model, so the LSD model
+to which this letter is a preliminary step, might appropriately fit into
+design of a subgrid-scale model for their halo model.
+%
+
+%FAG Moved from above
+As shown in Figure\,\ref{fig:eb-nu}(a) and (b), turbulence 
+can excite accelerated SSD even with high resistivity in galaxies that
+sustain regions of hot gas.
+To understand this we shall examine the nature of the acceleration of the
+dynamo in a later submission.
+
+
+
+\fag{edits done to this point}
+
 
 \acknowledgments
 The authors wish to acknowledge CSC – IT Center for Science, Finland, for computational
