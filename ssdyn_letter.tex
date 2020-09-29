@@ -792,6 +792,7 @@ Galilean invariance of the
 turbulence, variation within hot and warm medium, and inclusion of
 hyperdiffusion, defining a single forcing scale from the SN explosions or 
 common rms velocity is unreliable.
+%MJK "a field" sounds alien to me
 We, therefore, directly compute a field of Reynolds numbers from the equations,
 for example,
 %-------------------------------------------------------------------------------
@@ -805,6 +806,7 @@ Hence, for the high resolution runs at 20\,Myr we obtain linear
 %NS: by "linear", is it meant of order unity?
 %NS: Rm = 4 by directly using eq 5? It might be good to have a number for also
 %NS: the standard definition, so that we could simply say, 4, 15000 using Eqs (), (5).
+%MJK Everything goes nuts when one starts looking at the Rms. Still I ask: what would be our Rm_crit according to these definitions?
 $\langle\Rm\rangle=4$ with standard deviation 5.6, whereas 
 $\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and $u_{\rm rms}=30\kms$ using
 the common formula.
@@ -815,6 +817,7 @@ regime typical of the ISM.
 In separate experiments with high Pm, which we shall include in the more in
 depth future analysis, we do in fact see increased growth rates for higher
 Pm.
+%MJK Reference(s) to this expectation needed.
 
 %-------------------------------------------------------------------------------
 \section{Resolution and resistivity} \label{sec:results}
@@ -868,9 +871,12 @@ The time in Myr is plotted on a log scale to better present the differences in
 the higher resolution runs, which saturate much faster than at $\dx=4\pc$.
 Whilst for $\eta=10^{-4}$ the dynamo growth rates are very slow at $\dx=4\pc$,
 the growth rate shows some convergence near $\dx=0.5\pc$ and the saturation
-level of above 5\% of $\overline{e_K}$ is independent of resolution.
+level of 
+%MJK around instead of above? Slightly above?
+above 5\% of $\overline{e_K}$ is independent of resolution.
 %MJK How do we know that we currently capture the correct one?
 %FAG Not sure to what 'one' you refer?
+%MJK To false/true convergence?
 At $\eta=10^{-3}$, there is a \emph{false convergence} \citep{FMA91} between
 $\dx=2$ and $4\pc$, with the magnetic energy decaying at similar rates, however
 at higher resolution we see that the results converge around an alternative
@@ -883,10 +889,12 @@ We note that at $\dx=0.5$, panel (a), and $1\pc$, panel (b), the profile at
 $\eta=10^{-5}$ is indistinguishable from $\eta=0$, and so numerical resistivity
 continues to control the dynamics.
 At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, such that physical
+%NS: seems still close to eta=0 in panel 3a
 resistivity is dynamically dominant, at least for some of the domain and Rm is
 unevenly defined by a combination of physical and numerical resistivity.
 At all $\dx$ $\eta=10^{-3}$ is clearly well resolved and dynamics and
 %MJK Has Rm been defined? I think we should try to make a connection to earlier studies by using the "standard" definition, and then the one directly computing from the code as a ratio of the relevant terms.
+%MJK this comment is now resolved.
 
 %Rm well defined by the physical application of resistivity.
 %FAG: added
@@ -1304,7 +1312,7 @@ resources.
  $\dfrac{D}{Dt}$ & material derivative & $\dfrac{\partial }{\partial t}+\vect{u}\cdot \vect\nabla$ \\
  %$\vect\nabla$ & gradient vector & e.g.,$\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}$ \\
  %NS: brackets for vector, and space after comma
- $\vect\nabla$ & gradient vector & e.g.,$\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}$ \\
+ $\vect\nabla$ & gradient vector & e.g., $\left(\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}\right)$ \\
  $\rho$ & gas density & [g cm$^{-3}$]  \\
  $\vect u$ & gas velocity & [km s$^{-1}$] \\
  $t$ & time & [Myr] \\
@@ -1329,7 +1337,9 @@ resources.
  $\Gamma$ & UV-heating& [erg g$^{-1}$ s$^{-1}$]\\
  $\Lambda$ & radiative cooling& [erg cm$^{3}$ g$^{-2}$ s$^{-1}$]\\
  $\ESK+\EST$ & SN explosion energy& [10$^{51}$erg]\\
- $\dot\sigma$ & SN explosion rate & [kpc Myr$^{-1}$]\\
+ %$\dot\sigma$ & SN explosion rate & [kpc Myr$^{-1}$]\\
+ %NS: kpc => kpc^-3 for per unit volume, but pls check
+ $\dot\sigma$ & SN explosion rate & [kpc$^{-3}$ Myr$^{-1}$]\\
  $c_{\rm s}$ & sound speed & [km s$^{-1}$]\\
  $c_{\rm p}$ & specific heat at constant pressure & [erg g$^{-1}$ K$^{-1}$]\\
  $e_B$ & magnetic energy density & [erg cm$^{-3}$]\\
