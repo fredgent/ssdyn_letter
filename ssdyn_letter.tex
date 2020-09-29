@@ -369,6 +369,7 @@ at all}
 %MJK without it.
 %MJK It would be interesting if a critical Rm could be nailed down, but I doubt we
 %MJK can, and must resort to what is listed above.
+%NS: also commented below; could 10^-3 case be used for an estimate of Rm_crit (eq 5 based)?
 %FAG 28.9 reword
 
 This letter addresses the necessary conditions for and nature of a small-scale
@@ -807,6 +808,9 @@ Hence, for the high resolution runs at 20\,Myr we obtain linear
 %NS: Rm = 4 by directly using eq 5? It might be good to have a number for also
 %NS: the standard definition, so that we could simply say, 4, 15000 using Eqs (), (5).
 %MJK Everything goes nuts when one starts looking at the Rms. Still I ask: what would be our Rm_crit according to these definitions?
+%NS: I have commented on fig3a that 10^-4 is close to 0, so perhaps not resolved?
+%NS: A rough estimate of Rm_crit (based on Eq 5) is perhaps from eta=10^-3 case,
+%NS: which is perhaps marginal?
 $\langle\Rm\rangle=4$ with standard deviation 5.6, whereas 
 $\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and $u_{\rm rms}=30\kms$ using
 the common formula.
@@ -880,8 +884,10 @@ above 5\% of $\overline{e_K}$ is independent of resolution.
 At $\eta=10^{-3}$, there is a \emph{false convergence} \citep{FMA91} between
 $\dx=2$ and $4\pc$, with the magnetic energy decaying at similar rates, however
 at higher resolution we see that the results converge around an alternative
-solution, with a dynamo amplification of the field occurring between 400 and
-600\,Myr.
+solution, with a dynamo amplification of the field occurring between
+%400 and 600\,Myr.
+%NS: perhaps you meant 40 and 60; changed, but pls check
+40 and 60\,Myr.
 
 In Figure\,\ref{fig:eb-nu} we show how at each resolution $e_B/\overline{e_K}$
 evolves for various values of $\eta$.
@@ -898,6 +904,8 @@ At all $\dx$ $\eta=10^{-3}$ is clearly well resolved and dynamics and
 
 %Rm well defined by the physical application of resistivity.
 %FAG: added
+%MJK something strange in this sentence.
+%MJK For which resistivity is this?
 Rm well defined by the physical application of resistivity, varying locally with
 $3.8\lesssim\langle\Rm\rangle\lesssim6$, as discussed above from the induction
 %equation of $\Rm=1500$ using the common definition. 
@@ -906,10 +914,13 @@ $3.8\lesssim\langle\Rm\rangle\lesssim6$, as discussed above from the induction
 equation of $\Rm=15000$ using the common definition. 
 %FAG moved to design
 %MJK This sounds like belonging to the simulation design, and not in the middle of results.
+%MJK ok now
 %To reduce statistical noise, at all $\dx$ and $\eta$ the SN are
 %scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$,
 %panels (a) -- (d), and for $\dot\sigma=\SNr$, panels (e) -- (f).
-Although models with a the same SN rate have the same schedule and location of
+Although models with 
+%a 
+the same SN rate have the same schedule and location of
 SN, at low resolution the timestep is longer, such that the actual timing and 
 environment of the explosions can differ between models, so the statistical
 noise is more evident, particularly in panels (e) and (f).
@@ -922,6 +933,7 @@ noise is more evident, particularly in panels (e) and (f).
 %FAG: not sure, giving the times made relating them to the time series plots easier. The bottleneck does not show well in linear scale
 %MJK Fig. 5: eta values in the title of each plot ((a) - (f)); resolution (g)-(h)?
 %FAG OK done
+%MJK OK...
 
 %MJK Would help if it was not introduced as a complication, but explained first as behavior seen in the figure, then given an explanation, and then convincing the reader that what is seen now only in Figs 3 a,b as puzzling, we can easily explain in these terms.
 
@@ -952,6 +964,8 @@ Closer inspection of each plot, zooming in on specific intervals, however,
 %FAG :changed to eta, as table in paper suggest mean Rm cannot explain this
 %confirms that growth rates are higher as expected for higher Rm.
 confirms that growth rates are higher as expected for lower $\eta$.
+%MJK Hmmh...
+%MJK Which figure?
 For example between 8 and 15 Myr there is weak growth or decay in panels (a)
 and (b) with critical $\eta$ for dynamo between $10^{-4}$ and $10^{-3}$.
 Rm and corresponding growth at low $\eta$ is higher in the $0.5\pc$ simulation
@@ -961,6 +975,7 @@ converge for $\eta=10^{-3}$, where the physical resistivity is most resolved.
 %Between 15 and 20\,Myr there is a fast dynamo driven in the hot gas, in which
 Between 15 and 20\,Myr there is an acceleration in the dynamo driven in the hot
 gas, in which growth rates are related to the level of resistivity.
+%MJK Rm is not given for all models... difficult to know what are you referring to...
 The high Rm models at $0.5\pc$ already saturate by 20\,Myr, but for $1\pc$ there
 %FAG: lower
 %is another slow dynamo driven in the warm gas up to 40\,Myr and then a
@@ -1046,12 +1061,24 @@ In panel (e) we see two phases of accelerated dynamo growth at 90  and
 %$k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d), 
 %each represented by the horizontal black dashed lines.
 %FAG: streamlining
+%Compensated energy spectra for $\dx=0.5\pc$ at time in Myr listed in the
+%legends.
+%$\eta=10^{-4}$ (a), (b) is supercritical for SSD and $\eta=10^{-3}$ (c),(d) 
+%is subcritical or marginal for SSD.
+%Energy spectra are compensated against theoretical profiles of Kazantsev
+%$k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d).
+%NS: minor changes
 Compensated energy spectra for $\dx=0.5\pc$ at time in Myr listed in the
-legends.
-$\eta=10^{-4}$ (a), (b) is supercritical for SSD and $\eta=10^{-3}$ (c),(d) 
+legends; $\eta=10^{-4}$ (a, b) is supercritical for SSD, and $\eta=10^{-3}$ (c, d) 
 is subcritical or marginal for SSD.
 Energy spectra are compensated against theoretical profiles of Kazantsev
-$k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d).
+$k^{3/2}$ (a, c), and Kolmogorov $k^{-5/3}$ (b, d).
+%
+%NS: in (c), has the spectrum saturated by t=9 Myr? If so, then earlier
+%NS: time may also be included; or may be there was growth at very late time
+%NS: as indicated from Fig 3a, between 40-60 Myr.
+%NS: have not yet removed "subcritical" from above, but maybe we should
+%NS: as in that case there will be a clear decay; here only high res case discussed, right?
 \label{fig:4power}}
 \end{figure*}
 %-------------------------------------------------------------------------------
@@ -1059,28 +1086,39 @@ $k^{3/2}$, (a) and (c), and Kolmogorov $k^{-5/3}$, (b) and (d).
 In contrast to the simplified model in Section\,\ref{sec:ssd-tang}, SN driven
 turbulence does not have a well-defined forcing scale, due to the heterogeneous
 temperature and density of the ISM and random clustering of explosions.
-In our simulations the forcing scale will range between 10 and $50\pc$,
+In our simulations the forcing scale will range between
+%MJK How did you come up with this value?
+10 and $50\pc$,
 or $k\in(3,16)$.
 In Figure\,\ref{fig:4power} we show the evolving compensated spectra for the
 high resolution kinetic energy in the kinematic phase (b) for $\eta=10^{-4}$
 and during decay (d) for $\eta=10^{-3}$.
+%MJK You mean here the kinetic spectra moving up and down in magnitude, or what?
 The spectra magnitude between the models show the same fluctuations over time,
 except at 32\,Myr, when saturation of the dynamo, (b), reduces
 the energy slightly, compared to (d). 
-Many of the spectra display a \emph{bottleneck} effect
+%Many of the spectra display a \emph{bottleneck} effect
+%NS: removed "of the"
+Many spectra display a \emph{bottleneck} effect
 \citep{Falkovich94,HBD03} with a peak at $k\simeq50$.
+%MJK Bump would be more descriptive.
 The compensated magnetic energy spectra in panels (a) and (c) have ranges 
 conforming to the Kazantsev inverse cascade in the SSD case (a) extending to
 $k\gtrsim 20$, consistent with the SSD behaviour of the simplified model in
 Figure\,\ref{fig:tangling}\,(b).
 In panel (c) of Figure\,\ref{fig:4power} the Kazantsev range in similar fashion
-to Figure\,\ref{fig:tangling}\,(c) is in the range $K\lesssim10$ except
+to Figure\,\ref{fig:tangling}\,(c) is in the range 
+%MJK small k
+$K\lesssim10$ except
 for 22\,Myr, which corresponds to a short growth spurt in
 Figure\,\ref{fig:eb-res}\,(b) and consistent with the presence of SSD.
 %FAG: added 
+%MJK 'SN' needed?
 So for these SN low Pm models any Kazantsev spectral range dissipates 
 at $k$ below the extent of Kolmogorov range.
-This makes the SSD in the models even less efficient than the high PM ISM,
+This makes the SSD in the models even less efficient 
+%MJK PM -> Pm
+than the high PM ISM,
 where transfer from kinetic energy can occur at every wavenumber in the
 Kolmogorov spectrum.
 
@@ -1126,8 +1164,6 @@ $t=140\Myr$. $\dot\sigma$ and $\eta$ as listed in the legends.
 \end{figure*}
 %-------------------------------------------------------------------------------
 
-%MJK The bottleneck in the kinetic energy spectra seems independent of Pm EXCEPT for the high SN rate case. Why should that be so different?
-%FAG: does this question still apply?
 In Figure\,\ref{fig:3power} panels (a) -- (f) the effect of resolution on the
 compensated energy spectra is shown for $\eta=0$, $10^{-4}$ and $10^{-3}$
 with $\dot\sigma=0.2\SNr$.
@@ -1178,6 +1214,16 @@ which we shall investigate in future work.
 
 \section{Summary of results}\label{sec:conc}
 
+%MJK Now the summary (but it could be also outdated)
+%MJK does not really address the main results presented in the paper. 
+%MJK 1) SSD can be excited without imposed field present in the system, i.e. the confirmation of Balsara results being not caused by the presence of it, as Detlef thought.
+%MJK 2) Convergence (and hopefully a true one) in between 0.5 and 1 pc res, and their implication for the previously published simulations.
+%MJK 3) General agreement (hopefully) with the picture of growth rate being somehow related to Rm, and some (maybe forcefully handwavy) estimate of the critical value.
+%NS: As Balsara paper talks also about helicity, may be we could briefly say
+%NS: that this being SSD is unlikely to be affected by the kinetic helicity
+%NS: at least the growth rates.
+%MJK But do we know this for sure? Have we looked at the helicity?
+%MJK In Miikka's paper we find evidence for kin. helicity making SSD much easier to excite.
 %FAG: added
 In this letter we confirm, without the use of an imposed magnetic field, that
 the field amplification demonstrated by \citet{BKMM04} was evidence of 
@@ -1275,6 +1321,11 @@ dynamo in a later submission.
 The authors wish to acknowledge CSC – IT Center for Science, Finland, for computational
 resources.
  M-MML was partly supported by US NSF grant AST18-15461.
+ FAG and MJK acknowledge the support of the Academy of Finland
+ReSoLVE Centre of Excellence (grant number 307411).
+This project has received funding from the European Research Council (ERC)
+under the European Union's Horizon 2020 research and innovation
+programme (Project UniSDyn, grant agreement n:o 818665).
 \software{Pencil Code \citep{brandenburg2002,Pencil-JOSS}}
 
 \bibliography{refs}{}
