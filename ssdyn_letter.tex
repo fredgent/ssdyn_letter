@@ -259,33 +259,33 @@ Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G
 
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
-%Magnetic fields appear to grow quickly even at early cosmological
-%times, suggesting the action of a small-scale dynamo (SSD) in the
-%interstellar medium (ISM) of galaxies. Previous studies have focused
-%on idealized turbulent driving of the SSD. We here simulate more
-%realistic supernova-driven turbulence to determine whether it can
-%drive an SSD.  We vary the physical resistivity (and thus the magnetic
-%Reynolds number), as well as the numerical resolution and supernova
-%rate to delineate the regime in which an SSD occurs.
-%We find convergence in the growth rate of the SSD with resolution approaching 
-%sub-parsec scale for a given supernova explosion frequency
-%$\dot\sigma$. Across the modelled range of 0.5 to 4 parsec resolution we find that with
-%sufficiently low resistivity the SSD saturates consistently at about 5\% of
-%the energy equipartion level, independent of the growth rate. Dynamo
-%growth rates for $\dot\sigma=\SNr$, the solar neighbourhood rate, relative to models with
-%$\dot\sigma=0.2\SNr$, are greater despite higher Mach numbers.
-%This is despite the negative impact on SSD expected from the highly compressible
-%%MJK So we have varying SN rates; do these have a higher Ma? What I am after is whether we can quantify that statement?
-%%FAG: yes in ssdyn_paper I now added tables for sigma=\SNr and mean Ms increases
-%%FAG: from 0.4/0.5 at 2pc/4pc to 0.6/0.8, even though urms is similar for each resolution.
-%%FAG: Now added comment of Mach numbers to Section 4
-%nature of the flow and low magnetic Prandtl number of our experiments.
-%As the grid becomes coarser, the minimum physical resistivity that can
-%be resolved increases as well. The trend suggests that an SSD cannot
-%%FAG added much - haven't identified the hard limit yet
-%%be excited for grid spacing exceeding 4~pc, as the numerical
-%be excited for grid spacing much exceeding 4~pc, as the numerical
-%resistivity suppresses it.
+Magnetic fields appear to grow quickly even at early cosmological
+times, suggesting the action of a small-scale dynamo (SSD) in the
+interstellar medium (ISM) of galaxies. Previous studies have focused
+on idealized turbulent driving of the SSD. We here simulate more
+realistic supernova-driven turbulence to determine whether it can
+drive an SSD.  We vary the physical resistivity (and thus the magnetic
+Reynolds number), as well as the numerical resolution and supernova
+rate to delineate the regime in which an SSD occurs.
+We find convergence in the growth rate of the SSD with resolution approaching 
+sub-parsec scale for a given supernova explosion frequency
+$\dot\sigma$. Across the modelled range of 0.5 to 4 parsec resolution we find that with
+sufficiently low resistivity the SSD saturates consistently at about 5\% of
+the energy equipartion level, independent of the growth rate. Dynamo
+growth rates for $\dot\sigma=\SNr$, the solar neighbourhood rate, relative to models with
+$\dot\sigma=0.2\SNr$, are greater despite higher Mach numbers.
+This is despite the negative impact on SSD expected from the highly compressible
+%MJK So we have varying SN rates; do these have a higher Ma? What I am after is whether we can quantify that statement?
+%FAG: yes in ssdyn_paper I now added tables for sigma=\SNr and mean Ms increases
+%FAG: from 0.4/0.5 at 2pc/4pc to 0.6/0.8, even though urms is similar for each resolution.
+%FAG: Now added comment of Mach numbers to Section 4
+nature of the flow and low magnetic Prandtl number of our experiments.
+As the grid becomes coarser, the minimum physical resistivity that can
+be resolved increases as well. The trend suggests that an SSD cannot
+%FAG added much - haven't identified the hard limit yet
+%be excited for grid spacing exceeding 4~pc, as the numerical
+be excited for grid spacing much exceeding 4~pc, as the numerical
+resistivity suppresses it.
 \end{abstract}
 \keywords{Dynamo --- Magnetohydrodynmaical simulations --- Supernova dynamics --- Interstellar magnetic fields --- Turbulence}
 
@@ -1162,89 +1162,89 @@ programme (Project UniSDyn, grant agreement n:o 818665).
 
 \bibliography{refs}{}
 \bibliographystyle{aasjournal}
-%
-%\appendix
-%\fag{
-%\begin{itemize}
-%\item
-%    Abstract – no more than 250 words - currently 220 0ut of 4289
-%\item
-%    Main Text – no more than 3500 words (not including appendices or other supplementary material)
-%\item
-%    Figures and Tables – no more than 5 combined figures (each limited to 9 panels) and tables, e.g. 3 figures and 2 tables.
-%\item
-%    References – no more than 50 references
-%\end{itemize}}
-%
-%\section{Notation}\label{sec:table}
-%
-%\begin{table*}[h]
-%%\begin{deluxetable*}{ccl}
-%%\tablenum{A1}
-%%\tablecaption{Notation\label{tab:notation}}
-%%\tablewidth{0pt}
-%%\tablehead{
-%%\colhead{Notation Symbol} & \colhead{Denoting} & \colhead{Units/Definition} 
-%%\\
-%%}
-%%\decimalcolnumbers
-%%\startdata\\
-%\begin{tabular}{ccl}
-%\hline\hline\\
-%{Notation Symbol} & {Denoting} & {Units/Definition}\\\hline\\
-% $\dfrac{D}{Dt}$ & material derivative & $\dfrac{\partial }{\partial t}+\vect{u}\cdot \vect\nabla$ \\
-% $\vect\nabla$ & gradient vector & e.g., $\left(\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}\right)$ \\
-% $\rho$ & gas density & [g cm$^{-3}$]  \\
-% $\vect u$ & gas velocity & [km s$^{-1}$] \\
-% $t$ & time & [Myr] \\
-% $s$ & specific entropy & [erg g$^{-1}$ K$^{-1}$] \\
-% $T$ & gas temperature & [K] \\
-% $\vect A$ & magnetic vector potential & [$\upmu$G cm] \\
-% $\vect B$ & magnetic field & [$\upmu$G] \\
-% $\vect j$ & current density & [Bi cm$^{-2}$] \\
-% $\mathbfss W$ & traceless rate of strain tensor &
-%   ${\mathsf W}_{ij} = \dfrac{1}{2}\left(\dfrac{\partial u_i}{\partial x_j}
-%                  + \dfrac{\partial u_j}{\partial x_i}
-%                  -\dfrac{2}{3} \delta_{ij}\vect\nabla\cdot \vect u\right)$ \\
-% $|\mathbfss W|^2$ & contracted rate of strain tensor &
-%   $|\mathbfss W|^2={\mathsf W}_{ij}{\mathsf W}_{ij}$\\
-% $\mathbfss W^{(3)}$ & 6th order rate of strain tensor &
-%   ${\mathsf W}_{ij}^{(3)} = \dfrac{1}{2}\left(\dfrac{\partial^5 u_j}{\partial x_i^5}
-%                  + \dfrac{\partial^4}{\partial x_i^4}\left(\dfrac{\partial u_i}{\partial x_j}\right)
-%                  -\dfrac{1}{3}\dfrac{\partial^4}{\partial x_i^4}\left(\vect\nabla\cdot \vect u\right)\right)$ \\
-% $\zeta_{D},\zeta_{\nu},\zeta_{\chi}$ & shock diffusion coefficient& $\propto \left(-\vect\nabla\cdot\vect u\right)_+$\\
-% $\nu,\eta$ & viscosity, resistivity coefficient& [kpc km s$^{-1}$]\\
-% $\nu_3,\chi_3,\eta_3$ & hyperdiffusion coefficient& [kpc$^{5}$ km s$^{-1}$]\\
-% $\Gamma$ & UV-heating& [erg g$^{-1}$ s$^{-1}$]\\
-% $\Lambda$ & radiative cooling& [erg cm$^{3}$ g$^{-2}$ s$^{-1}$]\\
-% $\ESK+\EST$ & SN explosion energy& [10$^{51}$erg]\\
-% $\dot\sigma$ & SN explosion rate & [kpc$^{-3}$ Myr$^{-1}$]\\
-% $c_{\rm s}$ & sound speed & [km s$^{-1}$]\\
-% $c_{\rm p}$ & specific heat at constant pressure & [erg g$^{-1}$ K$^{-1}$]\\
-% $e_B$ & magnetic energy density & [erg cm$^{-3}$]\\
-% $\overline{e_K}$ & time-averaged kinetic energy density & [erg cm$^{-3}$]\\
-%\hline
-%\end{tabular}
-%%\enddata
-%%\tablecomments{
-%%Summary of notation used in the text.}
-%%\end{deluxetable*}
-%%\tablecomments{\fag{to be continued \ldots}
-%%This table ``hides'' the third column in the \latex\ when compiled.
-%%The Distance is also centered on the decimals.  Note that when using decimal
-%%alignment you need to include the {\tt\string\decimals} command before
-%%{\tt\string\startdata} and all of the values in that column have to have a
-%%space before the next ampersand.}
-%\end{table*}
-%%\end{deluxetable*}
-%
-%%% This command is needed to show the entire author+affiliation list when
-%%% the collaboration and author truncation commands are used.  It has to
-%%% go at the end of the manuscript.
-%%\allauthors
-%
-%%% Include this line if you are using the \added, \replaced, \deleted
-%%% commands to see a summary list of all changes at the end of the article.
-%%\listofchanges
+
+\appendix
+\fag{
+\begin{itemize}
+\item
+    Abstract – no more than 250 words - currently 220 0ut of 4289
+\item
+    Main Text – no more than 3500 words (not including appendices or other supplementary material)
+\item
+    Figures and Tables – no more than 5 combined figures (each limited to 9 panels) and tables, e.g. 3 figures and 2 tables.
+\item
+    References – no more than 50 references
+\end{itemize}}
+
+\section{Notation}\label{sec:table}
+
+\begin{table*}[h]
+%\begin{deluxetable*}{ccl}
+%\tablenum{A1}
+%\tablecaption{Notation\label{tab:notation}}
+%\tablewidth{0pt}
+%\tablehead{
+%\colhead{Notation Symbol} & \colhead{Denoting} & \colhead{Units/Definition} 
+%\\
+%}
+%\decimalcolnumbers
+%\startdata\\
+\begin{tabular}{ccl}
+\hline\hline\\
+{Notation Symbol} & {Denoting} & {Units/Definition}\\\hline\\
+ $\dfrac{D}{Dt}$ & material derivative & $\dfrac{\partial }{\partial t}+\vect{u}\cdot \vect\nabla$ \\
+ $\vect\nabla$ & gradient vector & e.g., $\left(\dfrac{\partial }{\partial x},\dfrac{\partial }{\partial y},\dfrac{\partial }{\partial z}\right)$ \\
+ $\rho$ & gas density & [g cm$^{-3}$]  \\
+ $\vect u$ & gas velocity & [km s$^{-1}$] \\
+ $t$ & time & [Myr] \\
+ $s$ & specific entropy & [erg g$^{-1}$ K$^{-1}$] \\
+ $T$ & gas temperature & [K] \\
+ $\vect A$ & magnetic vector potential & [$\upmu$G cm] \\
+ $\vect B$ & magnetic field & [$\upmu$G] \\
+ $\vect j$ & current density & [Bi cm$^{-2}$] \\
+ $\mathbfss W$ & traceless rate of strain tensor &
+   ${\mathsf W}_{ij} = \dfrac{1}{2}\left(\dfrac{\partial u_i}{\partial x_j}
+                  + \dfrac{\partial u_j}{\partial x_i}
+                  -\dfrac{2}{3} \delta_{ij}\vect\nabla\cdot \vect u\right)$ \\
+ $|\mathbfss W|^2$ & contracted rate of strain tensor &
+   $|\mathbfss W|^2={\mathsf W}_{ij}{\mathsf W}_{ij}$\\
+ $\mathbfss W^{(3)}$ & 6th order rate of strain tensor &
+   ${\mathsf W}_{ij}^{(3)} = \dfrac{1}{2}\left(\dfrac{\partial^5 u_j}{\partial x_i^5}
+                  + \dfrac{\partial^4}{\partial x_i^4}\left(\dfrac{\partial u_i}{\partial x_j}\right)
+                  -\dfrac{1}{3}\dfrac{\partial^4}{\partial x_i^4}\left(\vect\nabla\cdot \vect u\right)\right)$ \\
+ $\zeta_{D},\zeta_{\nu},\zeta_{\chi}$ & shock diffusion coefficient& $\propto \left(-\vect\nabla\cdot\vect u\right)_+$\\
+ $\nu,\eta$ & viscosity, resistivity coefficient& [kpc km s$^{-1}$]\\
+ $\nu_3,\chi_3,\eta_3$ & hyperdiffusion coefficient& [kpc$^{5}$ km s$^{-1}$]\\
+ $\Gamma$ & UV-heating& [erg g$^{-1}$ s$^{-1}$]\\
+ $\Lambda$ & radiative cooling& [erg cm$^{3}$ g$^{-2}$ s$^{-1}$]\\
+ $\ESK+\EST$ & SN explosion energy& [10$^{51}$erg]\\
+ $\dot\sigma$ & SN explosion rate & [kpc$^{-3}$ Myr$^{-1}$]\\
+ $c_{\rm s}$ & sound speed & [km s$^{-1}$]\\
+ $c_{\rm p}$ & specific heat at constant pressure & [erg g$^{-1}$ K$^{-1}$]\\
+ $e_B$ & magnetic energy density & [erg cm$^{-3}$]\\
+ $\overline{e_K}$ & time-averaged kinetic energy density & [erg cm$^{-3}$]\\
+\hline
+\end{tabular}
+%\enddata
+%\tablecomments{
+%Summary of notation used in the text.}
+%\end{deluxetable*}
+%\tablecomments{\fag{to be continued \ldots}
+%This table ``hides'' the third column in the \latex\ when compiled.
+%The Distance is also centered on the decimals.  Note that when using decimal
+%alignment you need to include the {\tt\string\decimals} command before
+%{\tt\string\startdata} and all of the values in that column have to have a
+%space before the next ampersand.}
+\end{table*}
+%\end{deluxetable*}
+
+%% This command is needed to show the entire author+affiliation list when
+%% the collaboration and author truncation commands are used.  It has to
+%% go at the end of the manuscript.
+%\allauthors
+
+%% Include this line if you are using the \added, \replaced, \deleted
+%% commands to see a summary list of all changes at the end of the article.
+%\listofchanges
 \end{document}
 
