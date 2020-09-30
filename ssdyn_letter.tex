@@ -861,17 +861,17 @@ $\eta=10^{-3}$.
 %FAG not hot
 %At 100\,Myr there is a hot dynamo at $\dx=2\pc$, but this is not
 At 100\,Myr there is a period of accelerated dynamo at $\dx=2\pc$, but this is
-not sustained and for $\eta=10^{-3}$ susbequently diffuses away.
+not sustained and for $\eta=10^{-3}$ subsequently diffuses away.
 
 %FAG removing Rm and para break
 %At $\dot\sigma=\SNr$, panels (e) and (f), the increased Rm due to the 
-At $\dot\sigma=\SNr$, panels (e) and (f), the 
+At $\dot\sigma=\SNr$, Figure\,\ref{fig:eb-nu}(e) and (f), the 
 higher forcing rate is sufficient to produce a dynamo at $\eta\geq10^{-3}$, but
 not for $\eta=5\cdot10^{-3}$.
 %FAG: added
 Mean sound speed Mach number, $\overline\Ms=0.8$ for $\dot\sigma=\SNr$,
 compared to $\overline\Ms=0.5$ for $0.2\SNr$.
-High Mach number has been demonstrated to impede the dynamo in isothermal 
+High Mach number has been demonstrated to impede the SSD in isothermal 
 turbulence \citep{Haugen:2004M}, which is contradicted by this result.
 %
 Due to the increased statistical noise we cannot confirm that $\eta\leq10^{-4}$
@@ -880,8 +880,8 @@ However, at $\dx=2\pc$ $\eta=5\cdot10^{-4}$ (magenta, solid) is resolved and
 at $\dx=4\pc$ the resolved limit is $\eta\lesssim10^{-3}$ (cyan, dotted).
 %FAG not hot
 %In panel (e) we see two hot dynamo phases at 90  and 110\,Myr, which are not 
-In panel (e) we see two phases of accelerated dynamo growth at 90  and
-110\,Myr, which are not  present in panel (f).
+In panel (e) for $\dx=2\pc$ we see two phases of accelerated dynamo growth at
+90 and 110\,Myr, which are not present for $\dx=4\pc$ in panel (f).
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
@@ -904,12 +904,13 @@ $k^{3/2}$ (a, c), and Kolmogorov $k^{-5/3}$ (b, d).
 In contrast to the simplified model in Section\,\ref{sec:ssd-tang}, SN driven
 turbulence does not have a well-defined forcing scale, due to the heterogeneous
 temperature and density of the ISM and random clustering of explosions.
-In our simulations the forcing scale will range between
 %MJK How did you come up with this value?
 %FAG: k = 2pi/l, k in kpc^{-1}
-\fag{handle on k}
-10 and $50\pc$,
-or $k\in(3,16)$.
+%In our simulations the forcing scale will range between
+%10 and $50\pc$,
+%or $k\in(3,16)$.
+In our simulations the forcing scale will be distributed at scales 
+greater than about $60\pc$ \citep[][Table\,3]{HSSFG17}, or $k\lesssim17$.
 %FAG: clarify choice of time interval
 %In Figure\,\ref{fig:4power} we show the evolving compensated spectra for the
 %high resolution kinetic energy in the kinematic phase (b) for $\eta=10^{-4}$
@@ -917,9 +918,9 @@ or $k\in(3,16)$.
 In Figure\,\ref{fig:4power} we show the evolving compensated spectra for
 $\dx=0.5\pc$ between 9 and 32\,Myr.
 We compare spectra for $\eta=10^{-4}$, (a) and (b), when the magnetic field is 
-amplified to saturation and for $\eta=10^{-3}$, (c) and (d) when the field
-persists near seed proportions.
-The kinetic spectra magnitude between the models show the same fluctuations
+amplified to saturation and for $\eta=10^{-3}$, (c) and (d) while the field
+persists near seed strength.
+The kinetic spectra show the same magnitude fluctuations between the models
 over time,
 except at 32\,Myr, when saturation of the dynamo, (b), reduces
 the energy slightly, compared to (d). 
@@ -989,7 +990,6 @@ arising from differences in resolution.
 Also, the total kinetic energy is reduced with low resolution due to 
 increased viscous dissipation acting at lower $k$.
 
-\fag{handle on k}
 %FAG para break
 %To fully resolve the kinetic energetics for scales larger than $k=24$ corresponding to $\ell\simeq40\pc$ would therefore require $\dx\gtrsim1\pc$.
 To fully resolve the kinetic energetics for scales larger than $k=24$, that is
@@ -999,15 +999,13 @@ The energy spectrum at $\dx=2\pc$ shares the same characterstics as the high
 %resolution runs, but with some loss of energy.
 resolution runs, but with some loss of energy, as does $\dx=4\pc$, but with 
 even greater dissipative losses and peak $k\simeq3$.
-%Many of the spectra display a \emph{bottleneck} effect
-%NS: removed "of the"
-Many spectra display a {bottleneck} effect
-\citep{Falkovich94,HBD03} with a peak at $k\simeq50$.
-%MJK Bump would be more descriptive.
-There is a bottleneck evident, an energy cascade less efficient than $k^{-5/3}$
-terminating at a peak, before rapid dissipation at high $k$.
+The kinetic spectra display a bottleneck effect \citep{Falkovich94,HBD03},
+%with a bump at $k\simeq50$, 
+an energy cascade less efficient than $k^{-5/3}$ terminating at a bump,
+before rapid dissipation at high $k$.
 This bottleneck shifts to lower $k$ as $\dx$ increases, but always at higher
-$k$ than the Kazantsev range in the corresponding magnetic spectrum.
+$k$ than the Kazantsev range in the corresponding magnetic spectrum, reflective
+of the low Pm character of these models.
 
 Perhaps surprisingly, there is very little difference in the kinetic energy
 spectrum, Figure\,\ref{fig:3power}(h), between simulations with
@@ -1020,7 +1018,7 @@ The comparison is obscured for $\eta=10^{-4}$, because the high $\dot\sigma$
 magnetic field is already 3 or 4 orders of magnitude stronger, aquiring some of
 the kinetic energy (red dash-dotted line).
 More hot gas from the higher SN rate may also improve the efficiency of SSD,
-which we shall investigate in future work.  
+which we shall investigate in future work. 
 
 
 
