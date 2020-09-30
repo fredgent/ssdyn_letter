@@ -275,9 +275,9 @@ times, suggesting the action of a small-scale dynamo (SSD) in the
 interstellar medium (ISM) of galaxies. Previous studies have focused
 on idealized turbulent driving of the SSD. We here simulate more
 realistic supernova-driven turbulence to determine whether it can
-drive a SSD.  We vary the physical resistivity (and thus the magnetic
+drive an SSD.  We vary the physical resistivity (and thus the magnetic
 Reynolds number), as well as the numerical resolution and supernova
-rate to delineate the regime in which a SSD occurs.
+rate to delineate the regime in which an SSD occurs.
 %mm [this is a conclusion, so moved down to the end] We confirm that
 %conditions in the ISM are likely highly conducive to SSD in the
 %diffuse hot and warm turbulent ISM, given Rm in the real ISM is
@@ -349,11 +349,11 @@ at all}
 
 %MJK The landscape to me seems to be the following:
 %MJK GE20 do not explicitely state that they do not have SSD, but do go forward with QKTFM, which assumes that no magnetic background turbulence is present, hence they make an implicit claim of having no SSD.
-%MJK Balsara04 clearly had a SSD, as LSD was not allowed for, but had an imposed
+%MJK Balsara04 clearly had an SSD, as LSD was not allowed for, but had an imposed
 %MJK field, and the role of that is unclear.
 %MJK Fred+gang claim LSD and SSD, but it is unclear whether this is true, as
 %MJK separating SSD and LSD is difficult.
-%MJK Steinwandel et al. have recently claimed that a SSD is present in a
+%MJK Steinwandel et al. have recently claimed that an SSD is present in a
 %MJK galactic-scale simulation, but no LSD, and that SSD "dies" off at later
 %MJK stages, when Kazantsev scaling is not observed.
 %MJK So, our study now tries to address at which resolution a fully healthy
@@ -397,7 +397,8 @@ any amplification of the
 large-scale field is limited to linear growth through tangling of the imposed
 field.
 %MJK and adding this; trying to resolve the issue.
-The fluctuations can then undergo either linear/exponential growth dependending on the absence/presence of SSD.
+The fluctuations can then undergo either linear or exponential growth
+dependending on the absence or presence of an SSD.
 %MJK
 %FAG OK
 %mm [I do not understand the above sentence: is it arguing that you
@@ -560,7 +561,7 @@ $k_1=1$ being the lowest wavenumber in the domain.
 A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is
 imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
 The two simulations are distinguished only by use of dimensionless
-$\eta=10^{-4}$, exciting a SSD, and $\eta=2\cdot10^{-3}$
+$\eta=10^{-4}$, exciting an SSD, and $\eta=2\cdot10^{-3}$
 subcritical for dynamo.
 %FAG: moved from caption
 %The simulation with $R_{\rm m}=148.0$ and $P_{\rm m}=50.0$ supports dynamo 
@@ -806,8 +807,10 @@ regime in which to excite the SSD than in the high $\Pm$
 regime typical of the ISM \citep{HBD04}.
 In separate experiments with high Pm, which we shall include in the more in
 %depth future analysis, we do in fact see increased growth rates for higher Pm.
-%NS: in fact see => indeed fin
-depth future analysis, we do in fact see increased growth rates for higher Pm.
+%NS: added citations, both Pm<1 (2007 paper) and Pm>1 (2002 paper); inserted "as expected"
+%NS: 2007 paper is good enough i guess (fig 1 there)
+depth future analysis, we do in fact see increased growth rates for higher Pm,
+as expected \citep{Sch07}.
 %MJK Reference(s) to this expectation needed.
 %FAG: done
 %-------------------------------------------------------------------------------
@@ -1211,42 +1214,53 @@ which we shall investigate in future work.
 %NS: at least the growth rates.
 %MJK But do we know this for sure? Have we looked at the helicity?
 %MJK In Miikka's paper we find evidence for kin. helicity making SSD much easier to excite.
+%NS: Ok, I recall some papers (also by Axel I think) where helical/non-helical cases
+%NS: produced identical growth rates, but this is perhaps minor issue here.
 %FAG: added
 In this letter we confirm, without the use of an imposed magnetic field, that
 the field amplification demonstrated by \citet{BKMM04} was evidence of 
-small-scale dynamo (SSD) in the interstellar medium (ISM) and not just due to
+SSD in the ISM and not just caused by
 tangling of their imposed field.
-Through the most extensive resolution and parameter based study to date,
+Through the most extensive resolution and parameter study to date,
 %FAG Moved from above
-in the ISM with Rm much higher than we can resolve, we conclude that SSD is
-very easy to excite by SN, and may even be present in galaxies with
-low SN rates.
-From the solutions for $\dx=0.5$ abd $1\pc$ with $\eta=10^{-3}\kpc\kms$, 
-Figure\,\ref{fig:eb-res}(b), 
-we see that a seed field of less than a nG can be amplified to saturation at
-$\mu G$ levels within about 10\,Myr.
-%
+%mm in the ISM with Rm much higher than we can resolve,
+we conclude that SN driven turbulence easily excites SSD even at SN
+rates well below the Galactic value.
+% mm
+     Our conclusion is supported by noting that the resistivity of the
+     ISM is far smaller than we can resolve numerically, so the ISM is
+     far more susceptible to dynamo action than our models.
+Our models with $\dx=0.5$ and $1\pc$ with
+$\eta=10^{-3}\kpc\kms$ (see
+Figure\,\ref{fig:eb-res}b), 
+show that a seed field of less than 1~nG can be amplified to saturation at
+microgauss levels within about 10\,Myr.
 
-We show that simulations with insufficient resolution may appear to converge, 
-only to a false solution.
-These simulations are not scale independent.
+We further show that simulations with insufficient resolution
+     % mm may
+     can
+appear to converge to a false solution
+%mm . These
+     lacking dynamo activity.  This can occur because these     
+simulations are not scale independent.
 The SN energy input and the physically motivated ISM cooling processes impose
-length and time scales, which must be adequately resolved.
+length and time scales that must be adequately resolved.
 %FAG Moved from above
-To attain a truly convergent numerical regime simulations should apply 
-resolution at least as fine as $1\pc$.
-In our experiments models with $\dx\geq2\pc$ not only give an incorrect dynamo
+To
+%mm attain a truly convergent numerical regime simulations should apply resolution at least as fine as $1\pc$.
+      reach true convergence requires resolution of $1\pc$ or better.
+In our models, resolutions $\dx\geq2\pc$ not only give an incorrect dynamo
 solution, but also exhibit significant kinetic energy losses due to excess
 dissipation.
 %
 %FAG: added
-We do, however find, independent of resolution, that when SSD is excited it
+We do, however find, independent of resolution, that when an SSD is excited it
 saturates at about 5\% of the energy equipartition level.
-For low resolution this is a lower absolute level, because the time-averaged
+At low resolution this is a lower bound, because the time-averaged
 kinetic energy density is understated, due to dissipative losses.
 This might account for the discrepency between the energy density of the mean
 magnetic field and the random magnetic field in \citet{Gent:2013b}, due to the
-LSD being well resloved while the SSD being under resolved.
+LSD being well resolved while the SSD remained under resolved.
 
 %FAG: added
 We find that the conventional approach from dynamo theory to categorise the 
@@ -1283,7 +1297,7 @@ Rm applying at the largest scales would be 7.5 times higher for the latter
 model, so alone is sufficient to explain the LSD at lower $\Omega$.
 How the SSD affects the galactic dynamo requires further study.
 %FAG added ???? Not sure this is actually so relevant having read it? Though I find it puzzling that they have SSD but no LSD
-Using an SPH code \citet{SBADMN19} report a SSD in a global galaxy simulation
+Using an SPH code \citet{SBADMN19} report an SSD in a global galaxy simulation
 with minimum resolution equivalent to about 20\,pc.
 In this model the SN are not directly modelled and the turbulence is driven
 on a much larger forcing scale by the galactic wind and fountain.
