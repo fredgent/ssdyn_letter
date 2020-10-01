@@ -85,7 +85,7 @@
 \newcommand{\mathbfss}[1]{\textbf{\textsf{#1}}}
 \newcommand\kpc{~ {\rm kpc}}
 \newcommand\pc{~ {\rm pc}}
-\newcommand\dx{~ {\delta x}}
+\newcommand\dx{ {\delta x}}
 \newcommand\Myr{~ {\rm Myr}}
 \newcommand\erg{~ {\rm erg}}
 \newcommand\kms{~ {\rm km~ s}^{-1}}
@@ -610,17 +610,26 @@ Our numerical implementations use the {\sc Pencil Code}\footnote{
 
 \section{SN turbulence model design} \label{sec:model}
 
-To exclude any large-scale magnetic field dynamics in these simulations, the
-computational domain occupies a cube of length 256 pc, with periodic boundaries
-on all sides.
-In particular rotation, shear and stratification of the simulation domain are
-not included.
-There is no imposed field, in contrast to \citet{BKMM04}, so we can exclude
-tangling as a source of amplification of the initial nG random seed field.
-Grid size $\delta x=0.5$, 1, 2 and 4$\pc$  along each side are considered.
-We solve the system of non-ideal compressible MHD equations, including 
-mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
-induction Eq.\,\eqref{eq:ind}:
+%To exclude any large-scale magnetic field dynamics in these simulations, the
+%computational domain occupies a cube of length 256 pc, with periodic boundaries
+%on all sides.
+%In particular rotation, shear and stratification of the simulation domain are
+%not included.
+%There is no imposed field, in contrast to \citet{BKMM04}, so we can exclude
+%tangling as a source of amplification of the initial nG random seed field.
+%Grid size $\delta x=0.5$, 1, 2 and 4$\pc$  along each side are considered.
+%We solve the system of non-ideal compressible MHD equations, including 
+%mass Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent} and
+%induction Eq.\,\eqref{eq:ind}:
+ We exclude large-scale magnetic field dynamics in simulations occupying 
+ a cube of length 256 pc, with periodic boundaries without 
+ rotation, shear nor stratification.
+ A random nG seed field excludes tangling of an imposed field as the 
+ source of any magnetic amplification.
+ Grid size $\delta x=0.5$, 1, 2 and 4$\pc$  along each side are considered.
+ We solve the system of non-ideal compressible MHD equations, including mass
+ Eq\,\eqref{eq:mass}, momentum Eq\,\eqref{eq:mom}, energy Eq\,\eqref{eq:ent}
+ and induction Eq.\,\eqref{eq:ind}:
 %-------------------------------------------------------------------------------
   \begin{eqnarray}
   \label{eq:mass}
@@ -663,22 +672,36 @@ induction Eq.\,\eqref{eq:ind}:
     +\eta_3\vect\nabla^6\vect{A},
   \end{eqnarray}
 %-------------------------------------------------------------------------------
-completing the system with the equation of state for an ideal gas.
+%-------------------------------------------------------------------------------
+ with the ideal gas equation of state closing the system.
 %FAG: omitting appendix
 %Many symbols have their usual meaning, and a table (\ref{sec:table}) is
 %included in the Appendix for clarity.
-In particular, terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ are the
-application of artificial diffusion acting proportional to shocks in 
-Eqs.\,\eqref{eq:mass},\,\eqref{eq:mom} and \eqref{eq:ent}, respectively.
-This machinery is described in detail in \citet{GMKSH20}, which is included to
-resolve shock discontinuities.
-In contrast to \citet{Gent:2013b} shock diffusion is not applied to
-Eq.\,\eqref{eq:ind}, where it would result in unphysical dissipation of the
-magnetic field in the shock fronts, when in fact in the shocks it is highly
-enhanced by compression.
-In Eqs.\,\eqref{eq:mom} -- \eqref{eq:ind}, expressions containing 
-$\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion applying
-primarily at the grid scale to resolve small-scale instabilities
+%In particular, terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ are the
+%application of artificial diffusion acting proportional to shocks in 
+%Eqs.\,\eqref{eq:mass},\,\eqref{eq:mom} and \eqref{eq:ent}, respectively.
+%This machinery is described in detail in \citet{GMKSH20}, which is included to
+%resolve shock discontinuities.
+%In contrast to \citet{Gent:2013b} shock diffusion is not applied to
+%Eq.\,\eqref{eq:ind}, where it would result in unphysical dissipation of the
+%magnetic field in the shock fronts, when in fact in the shocks it is highly
+%enhanced by compression.
+%In Eqs.\,\eqref{eq:mom} -- \eqref{eq:ind}, expressions containing 
+%$\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion applying
+%primarily at the grid scale to resolve small-scale instabilities
+%\citep[see, e.g.,][]{ABGS02,HB04}.
+%FAG: word count
+ Terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ apply artificial
+ diffusion proportional to shocks in Eqs.\,\eqref{eq:mass},\,\eqref{eq:mom} and
+ \eqref{eq:ent}, respectively,
+ machinery included to resolve shock discontinuities 
+ \citep[][for details]{GMKSH20}.
+ Unlike \citet{Gent:2013b} shock diffusion is not applied to
+ Eq.\,\eqref{eq:ind}, to avoid excessive magnetic dissipation in shocks.
+ It is actually enhanced by compression.
+ In Eqs.\,\eqref{eq:mom} -- \eqref{eq:ind}, expressions containing 
+ $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
+ to resolve small-scale instabilities at the grid scale
 \citep[see, e.g.,][]{ABGS02,HB04}.
 
 %-------------------------------------------------------------------------------
@@ -701,101 +724,159 @@ primarily at the grid scale to resolve small-scale instabilities
 \end{figure*}
 %-------------------------------------------------------------------------------
 
-The SNe are injected randomly uniform in 3D space and as a Poisson
-process proportional to the solar neigbourhood rate in the Milky Way,
- $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$.
-Each explosion injects $10^{51}\erg$ as thermal energy, $\EST$, but in dense
-media a small proportion may be in kinetic energy, $\ESK$.
-This is described in detail by \citet{GMKSH20}.
-To reduce statistical noise, at all $\dx$ and $\eta$ the SN are
-scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$ and for 
-correspondingly for $\dot\sigma=\SNr$.
-Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
-following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in 
-\citet{Gent:2013a}.
+%The SNe are injected randomly uniform in 3D space and as a Poisson
+%process proportional to the solar neigbourhood rate in the Milky Way,
+% $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$.
+%Each explosion injects $10^{51}\erg$ as thermal energy, $\EST$, but in dense
+%media a small proportion may be in kinetic energy, $\ESK$.
+%This is described in detail by \citet{GMKSH20}.
+%To reduce statistical noise, at all $\dx$ and $\eta$ the SN are
+%scheduled at the same time and coordinates for $\dot\sigma=0.2\SNr$ and for 
+%correspondingly for $\dot\sigma=\SNr$.
+%Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are included
+%following \citet{Wolfire:1995} and \citet{Sarazin:1987}, as described in 
+%\citet{Gent:2013a}.
+%FAG word count
+ SNe explosions are random uniform in space at a Poisson rate, $\dot\sigma$,
+ proportional 
+ to $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$, that of the solar neigbourhood.
+ Explosions inject $10^{51}\erg$ thermal energy, $\EST$, except for dense ISM
+ a proportion is kinetic, $\ESK$ 
+ \citep[see][]{GMKSH20}.
+ For comparability, at all $\dx$ and $\eta$ SN for a given $\dot\sigma$
+ follow a common schedule of timing and location.
+ Non-adiabatic heating, $\Gamma$, and cooling, $\Lambda$, processes are
+ included \citep{Gent:2013a} following \citet{Wolfire:1995} and
+ \citet{Sarazin:1987}.
 
-In the subset of experiments presented in this letter we set viscosity, $\nu=0$,
-with $\nu_3$ applying optimally for each $\dx$ to ensure the flow is well
-resolved.
-We establish a benchmark for the magnetic field evolution setting $\eta=0$, with
-numerical resistivity acting via the optimal setting for $\eta_3$.
-We then vary $\eta\geq10^{-6}\kpc\kms$ to identify minimal range for which the
-physical resistivity is dynamically dominating the numerical resistivity, and
-examine the dependence of the dynamo on $\eta$ and grid resolution.
-Henceforth, where $\eta$ is specified for the SN simulations it has units of
-$\kpc\kms$. 
-In contrast to our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
-we do not include thermal diffusivity, $\chi$, in these experiments as the
-artificial diffusivities are adequate to ensure numerical stability and the
-physical effects of thermal conductivity can be expected to be relevant only
-at time and spatial scales much shorter than considered here.
+%In the subset of experiments presented in this letter we set viscosity, $\nu=0$,
+%with $\nu_3$ applying optimally for each $\dx$ to ensure the flow is well
+%resolved.
+%We establish a benchmark for the magnetic field evolution setting $\eta=0$, with
+%numerical resistivity acting via the optimal setting for $\eta_3$.
+%We then vary $\eta\geq10^{-6}\kpc\kms$ to identify minimal range for which the
+%physical resistivity is dynamically dominating the numerical resistivity, and
+%examine the dependence of the dynamo on $\eta$ and grid resolution.
+%Henceforth, where $\eta$ is specified for the SN simulations it has units of
+%$\kpc\kms$. 
+%In contrast to our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
+%we do not include thermal diffusivity, $\chi$, in these experiments as the
+%artificial diffusivities are adequate to ensure numerical stability and the
+%physical effects of thermal conductivity can be expected to be relevant only
+%at time and spatial scales much shorter than considered here.
+%\fag{Mordecai, could you suggest some appropriate reference?}
+%FAG word count
+ The subset of experiments presented in this letter have viscosity, $\nu=0$,
+ and $\nu_3$ set optimally for each $\dx$ to ensure the flow is well resolved.
+ We benchmark the magnetic field evolution setting $\eta=0$, using only
+ numerical resistivity via $\eta_3$.
+ We vary $\eta\geq10^{-6}\kpc\kms$ to identify for which range the physical
+ resistivity is dynamically effective.
+ Henceforth, where $\eta$ is specified for the SN simulations it has units of
+ $\kpc\kms$.
+ Unlike our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
+ we do not include thermal diffusivity, $\chi$, as the artificial diffusivities
+ are adequate to ensure numerical stability and physical effects of thermal
+ conductivity can be expected to be relevant only at much shorter time and
+ spatial scales.
 \fag{Mordecai, could you suggest some appropriate reference?}
 
-An important 
-parameter for the excitation of the SSD
-is the magnetic Reynolds number, Rm,
-and the magnetic Prandtl number, $\Pm = \Rm/\Rey = \nu/\eta$, where $\Rey$
-is the fluid Reynolds number.
+%An important 
+%parameter for the excitation of the SSD
+%is the magnetic Reynolds number, Rm,
+%and the magnetic Prandtl number, $\Pm = \Rm/\Rey = \nu/\eta$, where $\Rey$
+%is the fluid Reynolds number.
+%%FAG: added overline for consistency and added eq number as NS suggested
+%A commonly used definition is 
+%\begin{equation}\label{eq:sRm}
+%\Rm=\frac{\ell \overline{u_{\rm rms}}}{\eta},
+%\end{equation}
+%where $\ell$ is the forcing scale.
+%However, in these simulations of the ISM, given the 
+%%MJK ?
+%%FAG opposit of what I meant - reworded
+%%Galilean invariance of the 
+%inhomogeneity of the 
+%turbulence, variation within hot and warm medium, and inclusion of
+%hyperdiffusion, defining a single forcing scale from the SN explosions or 
+%common rms velocity is unreliable.
+%%MJK "a field" sounds alien to me
+%%FAG: absolutely no alienation allowed
+%%We, therefore, directly compute a field of Reynolds numbers from the equations,
+%We, therefore, compute Reynolds numbers at each grid point
+%directly from the equations,
+%for example,
+%%-------------------------------------------------------------------------------
+%\begin{eqnarray}\label{eq:Rm}
+%  \Rm = \frac{\left|\vect{u}\times\vect{B}\right|}{
+%    \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
+%\end{eqnarray}
+%%-------------------------------------------------------------------------------
+%Hence, for the high resolution runs at 20\,Myr we obtain for $\eta=10^{-4}$ 
+%$\langle\Rm\rangle=4.1$ with standard deviation 5.7, whereas using
+%equation\,\eqref{eq:sRm} 
+%%FAG: added overline for consistency
+%$\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and
+%$\overline{u_{\rm rms}}=30\kms$.
+%%FAG: added
+%The spread of Rm, using equation\,\eqref{eq:Rm}, extends well above 15000 and to
+%$\ll1$.
+%Given the multiphase structure of the ISM, the mean Rm appears unhelpful and 
+%the concept of a critical Rm for SSD may differ between phases and regions.
+%In the real ISM such variation in Rm will be present.
+%Microscopic resistivity may be temperature dependent \citep{CSR50}, but even if
+%we consider only the turbulent resistivity as relevant to the definition of 
+%Rm, this will also vary between phases due to the differences in typical 
+%length scales and velocities.
+%We shall address this challenge in future work, but here we shall use the 
+%explicit input $\eta$ rather than Rm to discriminate between models.
+%%
+%FAG: word count
 %FAG: added overline for consistency and added eq number as NS suggested
-A commonly used definition is 
-\begin{equation}\label{eq:sRm}
-\Rm=\frac{\ell \overline{u_{\rm rms}}}{\eta},
-\end{equation}
-where $\ell$ is the forcing scale.
-However, in these simulations of the ISM, given the 
-%MJK ?
-%FAG opposit of what I meant - reworded
-%Galilean invariance of the 
-inhomogeneity of the 
-turbulence, variation within hot and warm medium, and inclusion of
-hyperdiffusion, defining a single forcing scale from the SN explosions or 
-common rms velocity is unreliable.
-%MJK "a field" sounds alien to me
-%FAG: absolutely no alienation allowed
-%We, therefore, directly compute a field of Reynolds numbers from the equations,
-We, therefore, compute Reynolds numbers at each grid point
-directly from the equations,
-for example,
-%-------------------------------------------------------------------------------
-\begin{eqnarray}\label{eq:Rm}
-  \Rm = \frac{\left|\vect{u}\times\vect{B}\right|}{
-    \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
-\end{eqnarray}
-%-------------------------------------------------------------------------------
-Hence, for the high resolution runs at 20\,Myr we obtain for $\eta=10^{-4}$ 
-$\langle\Rm\rangle=4.1$ with standard deviation 5.7, whereas using
-equation\,\eqref{eq:sRm} 
-%FAG: added overline for consistency
-$\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and
-$\overline{u_{\rm rms}}=30\kms$.
-%FAG: added
-The spread of Rm, using equation\,\eqref{eq:Rm}, extends well above 15000 and to
-$\ll1$.
-Given the multiphase structure of the ISM, the mean Rm appears unhelpful and 
-the concept of a critical Rm for SSD may differ between phases and regions.
-In the real ISM such variation in Rm will be present.
-Microscopic resistivity may be temperature dependent \citep{CSR50}, but even if
-we consider only the turbulent resistivity as relevant to the definition of 
-Rm, this will also vary between phases due to the differences in typical 
-length scales and velocities.
-We shall address this challenge in future work, but here we shall use the 
-explicit input $\eta$ rather than Rm to discriminate between models.
-%
+ A commonly used expression for Rm is 
+ \begin{equation}\label{eq:sRm}
+ \Rm=\frac{\ell \overline{u_{\rm rms}}}{\eta},
+ \end{equation}
+ where $\ell$ is the forcing scale.
+ However, the inhomogeneity of the turbulence and changing multiphase
+ composition of the ISM render unreliable defining a single forcing scale from
+ SN explosions or common rms velocity.
+ We, therefore, consider compute Rm at each grid point directly from the
+ equation,
+ %-------------------------------------------------------------------------------
+ \begin{eqnarray}\label{eq:Rm}
+   \Rm = \frac{\left|\vect{u}\times\vect{B}\right|}{
+     \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
+ \end{eqnarray}
+ %-------------------------------------------------------------------------------
+ Hence, for $\dx=0.5\pc$ and $\eta=10^{-4}$ at 20\,Myr we obtain 
+ $\langle\Rm\rangle=4.1\pm5.7$.
+ Using equation\,\eqref{eq:sRm} 
+ $\Rm = 15000$, for $\eta=10^{-4}$, $\ell=50\pc$ and
+ $\overline{u_{\rm rms}}=30\kms$.
+ With equation\,\eqref{eq:Rm} $\Rm\in(\ll1,>15000)$0.
+ The mean Rm appears unhelpful and the concept of a critical Rm for SSD may
+ differ between phases and regions.
+ In the real ISM such Rm variation will be present.
+ Microscopic resistivity appears temperature dependent \citep{CSR50}.
+ Even considering only turbulent resistivity to have relevance, 
+ typical length scales and rms velocities differ between phases.
+ This challenge is for future work, but here we shall use explicit input $\eta$
+ to discriminate between models.
 
-In this suite of experiments, with $\nu=0$ and $\nu_3=\eta_3$ sufficient to
-numerically resolve the grid scale, $\Pm<1$, which is an even more difficult
-regime in which to excite the SSD than in the high $\Pm$
-regime typical of the ISM \citep{HBD04}.
-In separate experiments with $\nu>\eta$ (high Pm), which we shall include in
-the more in depth future analysis, we do in fact see increased growth rates
-for lower $\eta$, as expected \citep{Sch07}.
-%FAG: added
-As with Rm in this system we have a range $Pm\ll1$ and $Pm\gg1$, due to the
-inclusion of shock capturing viscosity and differences in the definition of
-hyper viscosity to hyper ressitivity.
-Hence, in all models some part of the domain will be characterised by high Pm,
-and how this effects interpretation of the SSD properties shall also be
-addressed in later work.
+
+ We have set $\nu=0$ and $\nu_3=\eta_3$ sufficient to numerically resolve the
+ grid scale.
+ $\Pm = \Rm/\Rey$, and like Rm we have $Pm\in(\ll1,\gg1)$, due
+ to inclusion of shock capturing viscosity and differences in
+ definition of hyper viscosity and hyper resistivity.
+ Hence, some part of each simulation will be characterised by high Pm,
+ however $\langle\Pm\rangle<1$.
+ This is an even more difficult regime in which to excite SSD than high $\Pm$
+ typical of the ISM \citep{HBD04}.
+ In separate experiments with $\nu>\eta$ (high Pm), which we shall include in
+ more in depth future analysis, we do in fact see increased growth rates for
+ lower $\eta$, as expected \citep{Sch07}.
 %
 %-------------------------------------------------------------------------------
 \section{Resolution and resistivity} \label{sec:results}
