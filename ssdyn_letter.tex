@@ -497,73 +497,116 @@ Our numerical implementations use the {\sc Pencil Code}\footnote{
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
 %==============================================================================
 
-To illustrate some differences between tangling and SSD we adopt a simplified
-model with non-helical random forcing with wavenumber $\kf/k_1=8$ applied to
-isothermal uniform density in $256^3$, $2\pi$-periodic boxes with $k_1=1$ being
-the lowest wavenumber in the domain.
-A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is
-imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
-The two simulations are distinguished only by use of dimensionless
-$\eta=10^{-4}$, exciting an SSD, and $\eta=2\cdot10^{-3}$
-subcritical for dynamo.
-These yield Rm=148.0 with Pm=50.0 for the SSD and Rm=7.4 with Pm=2.5 where
-the dynamo is suppressed and amplification is limited to tangling of the
-imposed magnetic field.
+%To illustrate some differences between tangling and SSD we adopt a simplified
+%model with non-helical random forcing with wavenumber $\kf/k_1=8$ applied to
+%isothermal uniform density in $256^3$, $2\pi$-periodic boxes with $k_1=1$ being
+%the lowest wavenumber in the domain.
+%A uniform field with energy density $e_B\simeq6\cdot10^{-22}\overline{e_K}$ is
+%imposed, where $\overline{e_K}$ is the time-averaged kinetic energy density.
+%The two simulations are distinguished only by use of dimensionless
+%$\eta=10^{-4}$, exciting an SSD, and $\eta=2\cdot10^{-3}$
+%subcritical for dynamo.
+%These yield Rm=148.0 with Pm=50.0 for the SSD and Rm=7.4 with Pm=2.5 where
+%the dynamo is suppressed and amplification is limited to tangling of the
+%imposed magnetic field.
+%FAG: streamlining
+ To illustrate differences between tangling and SSD we adopt a simplified
+ model.
+ Non-helical random forcing is applied at wavenumber $\kf/k_1=8$ to
+ $256^3$, $2\pi$-periodic isothermal boxes.
+ $k_1=1$ is the lowest wavenumber in the domain.
+ The imposed uniform field has $e_B\simeq6\cdot10^{-22}\overline{e_K}$, where
+ $\overline{e_K}$ is time-averaged kinetic energy density.
+ Two simulations are distinguished by use of dimensionless $\eta=10^{-4}$
+ and $\eta=2\cdot10^{-3}$.
+ These yield Rm=148.0 with Pm=50.0, exciting SSD, and Rm=7.4 with Pm=2.5,
+ where dynamo is inhibited and amplification limited to tangling of the imposed
+ field.
 %FAG: moved to intro
 %Our numerical implementations use the {\sc Pencil Code}\footnote{
 %\href{https://github.com/pencil-code}{https://github.com/pencil-code}}.
 
-We plot some of the diagnostics from the results of these two simulations in 
-Figure\,\ref{fig:tangling}.
-Panel (a) illustrates that the SSD is characterised by
-exponential growth just over 400 eddy turnover times; see \cite{ZRS83} for the
-properties and excitation conditions of SSD.
-Tangling results only in linear amplification early on (see inset), saturating
-within 100 eddy turnover times at below 5 times the imposed field energy
-density.
+%We plot some of the diagnostics from the results of these two simulations in 
+%Figure\,\ref{fig:tangling}.
+%Panel (a) illustrates that the SSD is characterised by
+%exponential growth just over 400 eddy turnover times; see \cite{ZRS83} for the
+%properties and excitation conditions of SSD.
+%Tangling results only in linear amplification early on (see inset), saturating
+%within 100 eddy turnover times at below 5 times the imposed field energy
+%density.
+%FAG: streamlining
+ In Figure\,\ref{fig:tangling}(a) the SSD grows exponentially in just over 400
+ eddy turnover times; see \cite{ZRS83} for SSD properties and excitation
+ conditions.
+ Tangling induces only linear growth (see inset), saturating just above
+ the imposed field energy within 50 turnover times.
 
-In panel (b) we plot for the SSD model some power spectra for the magnetic
-energy, evolving over time alongside a kinetic energy spectrum at late stage.
-$k$ is normalised by $k_1=L/(2\pi)$, where $L$ is the largest length scale in
-the simulation domain, with the largest wavenumber $k/k_1=128$.
-The magnetic energy spectra are compensated by $k^{-3/2}$ and kinetic by
-$k^{5/3}$.
-A profile becoming horizontal, therefore, corresponds to the Kazantsev's
-$3/2$ scaling \citep{Sch02,BS14} or the Kolomogorov turbulent energy spectrum.
-In panel (c) see we show similar for the tangling model.
-The forcing scale $\kf=8$ is evident in the kinetic spectra and highlighted by 
-a vertical dotted line.
-The SSD magnetic spectrum (b) evolves near self-similarly, with an uncompensated
-peak wavenumber above 20 at early times reducing to below 20 upon saturation of
-the dynamo.
-The forcing scale has negligible effect on the magnetic spectra.
-However, for the tangling case (c) the peak wavenumber for the magnetic energy
-spectrum is strongly identified with the forcing scale.
-The Kazantsev range of the spectrum extends to wavenumbers larger than the 
-forcing scale for SSD, while confined to larger scales for the field with
-tangling only.
+%In panel (b) we plot for the SSD model some power spectra for the magnetic
+%energy, evolving over time alongside a kinetic energy spectrum at late stage.
+%$k$ is normalised by $k_1=L/(2\pi)$, where $L$ is the largest length scale in
+%the simulation domain, with the largest wavenumber $k/k_1=128$.
+%The magnetic energy spectra are compensated by $k^{-3/2}$ and kinetic by
+%$k^{5/3}$.
+%A profile becoming horizontal, therefore, corresponds to the Kazantsev's
+%$3/2$ scaling \citep{Sch02,BS14} or the Kolomogorov turbulent energy spectrum.
+%In panel (c) see we show similar for the tangling model.
+%The forcing scale $\kf=8$ is evident in the kinetic spectra and highlighted by 
+%a vertical dotted line.
+%The SSD magnetic spectrum (b) evolves near self-similarly, with an uncompensated
+%peak wavenumber above 20 at early times reducing to below 20 upon saturation of
+%the dynamo.
+%The forcing scale has negligible effect on the magnetic spectra.
+%However, for the tangling case (c) the peak wavenumber for the magnetic energy
+%spectrum is strongly identified with the forcing scale.
+%The Kazantsev range of the spectrum extends to wavenumbers larger than the 
+%forcing scale for SSD, while confined to larger scales for the field with
+%tangling only.
+%FAG: streamlining
+ Power spectra for the magnetic energy for the SSD as it evolves are plotted
+ in Figure\,\ref{fig:tangling}(b) alongside a kinetic energy spectrum late on
+ and similar for tangling in (c).
+ $k$ is normalised by $k_1=L/(2\pi)$, where $L$ is the simulations's largest
+ length scale and the largest wavenumber $k/k_1=128$.
+ Magnetic energy spectra multiply $k^{-3/2}$ and kinetic $k^{5/3}$.
+ The horizontal, therefore, corresponds to Kazantsev's $3/2$ scaling
+ \citep{Sch02,BS14} or the Kolomogorov turbulent energy spectrum.
+ The vertical dotted line indicates $\kf/k_1$.
+ The SSD magnetic spectrum (b) evolves near self-similarly, the wavenumber for
+ its peak above 20 early on, reducing to below 20 at saturation.
+ $\kf$ is strongly identified with the peak in kientic energy and for 
+ magnetic energy with tangling, but has negligible effect on magnetic
+ spectra for SSD.
+ The Kazantsev range of extends to wavenumbers larger than $\kf$ for SSD, while
+ confined to scales larger than $\kf$ with tangling.
+%FAG: moved from next para
+ Thus, in dynamo kinetic energy along the Kolmogorov range transfers energy to
+ the magnetic field at these scales inducing an inverse Kazantsev range
+ at scales below $\kf$, while tangling transfers energy only at scales between
+ $\kf$ and scale of the imposed field.
+ At scales smaller than the Kazantsev range there is only dissipation. 
+ 
 
-Given the high magnetic Prandtl numbers, the magnetic spectra retain more energy
-at smaller scales than the kinetic spectra.
-Although the kinetic parameters are identical and are subject to the same 
-viscous cutoff, the SSD extends the kinetic energy into the 
-smaller scales
-due to the feedback from the Lorentz force.
-%With SSD there is a short inertial range for $10\leq k/k_1\lesssim 15$.
-%MJK Is there not also for the tangling case?
-%FAG: I say not add clarification
-With SSD there is a short inertial range in the kinetic spectrun 
-for $10\leq k/k_1\lesssim 15$, whereas in the tangling model the spectrum is
-decaying already at $k/k_1\gtrsim10$.
-%MJK Why in Fig 1 the y-scales are so much different when eb/ek is close to one?
-%FAG the spectra are integral quantities and all the kinetic energy is concentrated around k=8, which biases the peak value for eK and also there are the k-power prefactors
-Thus, in the dynamo kinetic energy deposited along the Kolmogorov range to
-smaller scales transfers energy to the magnetic field at these scales
-inducing an inverse Kazantsev range beginning at scales below the forcing
-scale, while with tangling the energy transfers to the magnetic field
-only at scales between the forcing scale and scale of the imposed field.
-There is only dissipation of the field at scales smaller than the Kazantsev 
-range.
+%Given the high magnetic Prandtl numbers, the magnetic spectra retain more energy
+%at smaller scales than the kinetic spectra.
+%Although the kinetic parameters are identical and are subject to the same 
+%viscous cutoff, the SSD extends the kinetic energy into the 
+%smaller scales
+%due to the feedback from the Lorentz force.
+%%With SSD there is a short inertial range for $10\leq k/k_1\lesssim 15$.
+%%MJK Is there not also for the tangling case?
+%%FAG: I say not add clarification
+%With SSD there is a short inertial range in the kinetic spectrun 
+%for $10\leq k/k_1\lesssim 15$, whereas in the tangling model the spectrum is
+%decaying already at $k/k_1\gtrsim10$.
+%%MJK Why in Fig 1 the y-scales are so much different when eb/ek is close to one?
+%%FAG the spectra are integral quantities and all the kinetic energy is concentrated around k=8, which biases the peak value for eK and also there are the k-power prefactors
+%Thus, in the dynamo kinetic energy deposited along the Kolmogorov range to
+%smaller scales transfers energy to the magnetic field at these scales
+%inducing an inverse Kazantsev range beginning at scales below the forcing
+%scale, while with tangling the energy transfers to the magnetic field
+%only at scales between the forcing scale and scale of the imposed field.
+%There is only dissipation of the field at scales smaller than the Kazantsev 
+%range.
 
 \section{SN turbulence model design} \label{sec:model}
 
