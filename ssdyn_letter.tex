@@ -170,7 +170,7 @@
 
 \begin{document}
 
-\title{Small-scale dynamo in supernova driven ISM turbulence}
+\title{Small-Scale Dynamo in Supernova-Driven Interstellar Turbulence}
 
 %%
 %% The \author command is the same as before except it now takes an optional
@@ -222,7 +222,9 @@ Astroinformatics, Department of Computer Science, Aalto University, PO Box 15400
 
 \author[0000-0003-0064-4060]{Mordecai-Mark {Mac Low}}
 \affiliation{
-American Museum of Natural History, 79th Street at Central Park West, New York, NY 10024, USA
+  Department of Astrophysics, American Museum of Natural History,
+  %mm [not needed I think] 79th Street at Central Park West,
+  New York, NY 10024, USA
 }
 \affiliation{
 {Center for Computational Astrophysics, Flatiron Institute, New York,
@@ -317,13 +319,13 @@ resistivity suppresses it.
 %FAG: rewording more concisely
 %This letter addresses the necessary conditions for and nature of a small-scale
 %dynamo (SSD) in the interstellar medium (ISM).
- This letter addresses the necessary conditions and properties of small-scale
+ This letter addresses the necessary conditions and properties of a small-scale
  dynamo (SSD) in the interstellar medium (ISM).
 %The SSD consists of dynamo modes acting at small eddy scales of the
 %turbulence, so it drives magnetic field growth at the corresponding short
  SSD acts at small eddy scales of the turbulence, thus driving magnetic field
- growth correspondingly short turnover times.
-There are large scales of separation between the fastest growing SSD
+ growth at correspondingly short turnover times.
+%mm There are large scales of separation between the fastest growing SSD
 %instabilities and the large-scale dynamo (LSD) modes generating the magnetic
 %field structures organised at the systemic scales of the galactic disk, spiral
 %arms, or similar.
@@ -331,9 +333,13 @@ There are large scales of separation between the fastest growing SSD
 %growing modes of SSD are computationally challenging.
 %However, it is likely that the interaction of SSD modes with the LSD
 %fundamentally alter the evolution and structure of the magnetic field.
- instabilities and the large-scale dynamo (LSD) generating magnetic
- field structures organised on systemic scales, such as the galactic disk or
- spiral arms.
+%mm instabilities and the large-scale dynamo (LSD) generating magnetic
+% field structures organised on systemic scales, such as the galactic disk or
+% spiral arms.
+ The fastest growing SSD modes are far smaller than
+the large-scale dynamo (LSD) modes generating the magnetic
+field structures organised at the systemic scale of the galactic disk.
+%mm [removed para break]
  Hence, simulations capable of capturing LSD alongside the faster growing modes
  of SSD are computationally challenging.
  However, the interaction of SSD modes with the LSD likely fundamentally alters
@@ -344,18 +350,20 @@ There are large scales of separation between the fastest growing SSD
 %stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} the
 %mechanisms for inducing large-scale magnetic fields, such as rotation and shear,
 %are absent.
- Many simulations of supernova- (SN-)driven turbulence with realistic vertical
+ Many simulations of supernova- (SN)-driven turbulence with realistic vertical
  stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} have no
  mechanisms for inducing LSD, such as rotation and shear.
 %To examine the effect of strong ordered magnetic fields these models then rely
 %on imposition of a background or initial magnetic field, typically uniform,
 %which is then perturbed by SN explosions.
- The effect of strong ordered magnetic fields is modelled by imposition of a
+ The effect of strong ordered magnetic fields is modelled by initial imposition of a
  background, typically uniform, magnetic field.
  If an imposed field is sufficiently close to equipartition its characteristics
- would dominate any MHD results.
- Any amplification of the field will add only to the turbulent structure
- due to tangling of the imposed field or SSD, if it is present. 
+ would dominate any magnetized results.
+%mm [I'm not getting the point here.  What else would amplification
+%do?] Any amplification of the field will add only to the turbulent structure
+% due to tangling of the imposed field or SSD, if it is present.
+%
 %The amplification of the magnetic field in these cases may include an SSD in
 %case of sufficiently high magnetic Reynolds numbers, Rm, but any amplification
 %of the large-scale field is limited to linear growth through tangling of the
@@ -373,7 +381,6 @@ There are large scales of separation between the fastest growing SSD
 %of large-scale fields in the nonlinear regime.
 %MJK Is this paragraph now too complicated? Should we only try to highlight the aspects relevant here? I am not sure how much text we can have here in the first place...
 %FAG OK
-
 %FAG: rewording more concisely
 %While the SN experiments considered in this letter are restricted to SSD, some
 %large-scale models do seek to include the LSD
@@ -385,22 +392,29 @@ There are large scales of separation between the fastest growing SSD
 %understanding of the characteristics of this SSD it is difficult to explore the
 %effect this has on the LSD and the properties of the ISM.
  Some large-scale models do seek to include LSD \citep[e.g.,][]{Korpi:1999b,
- Gressel:2008,HWK09,WA09,Pakmor17,SBADMN19,GE20}.
- Most have no SSD.
- \citet{SBADMN19} find SSD, but no LSD.
- \citet{Gent:2013b,EGSFB16} appear to include SSD, but without clear
+   Gressel:2008,HWK09,WA09,Pakmor17,SBADMN19,GE20},
+ %mm .  Most have
+     but most show
+ no SSD. \citet{SBADMN19} do find an SSD, but no LSD.
+ \citet{Gent:2013b,EGSFB16} do appear to include an SSD, but without clear
  understanding of the SSD properties how can this be confirmed and its
- effect on the LSD?
+ effect on the LSD
+ % mm [seems like a missing word here]
+     determined?
 %\citet{SBADMN19,SDLMBP20} also claim that SSD is present in a galactic-scale
 %simulation, but do not excite LSD. 
 %At late stage the SSD ceases, as shown by
 %the disappearance of Kazantsev scaling in the magnetic power spectra.
 %FAG: moved from para 2 and rephrased
- The magnetic noise produced by tangling will also grow exponentially due to
- the LSD.
+%mm [add para break]
+     
+ Any magnetic noise produced by tangling will also grow exponentially due to
+ an LSD if present
  This noise plays an important role in quenching the LSD due to the magnetic
  $\alpha$-effect, causing saturation of large-scale fields.
- We need to discriminate these effects.
+ We need to discriminate
+ %mm these effects.
+      this effect from an SSD.   
 
 %FAG: reorder para 3 -> 4
 %MJK The previous para was about neglecting the LS effects, and this paragraph continues on the same topic. Is this really intended? I guess we could get a rid of this simply. I understand models referred to above have vertical stratification and those below not, but cannot we simply group them together? Btw, stratification alone and even boundary conditions that are inhomogeneous in the vertical, can of course drive some sort of a dynamo effect, but definitely not of the type we believe to take place in the galaxies. Does anybody see a way how to reconcile this?
@@ -424,24 +438,28 @@ There are large scales of separation between the fastest growing SSD
 %They include a weak imposed uniform field; we shall show that it is possible
 %to demonstrate conclusively that the amplification of their field is a result of
 %dynamo action and not just tangling of the field.
- Given uncertainty over the presence of SSD in the large-scale simulations
- how do we identify, quantify and characterise the SSD, so we can adequately
- interpret its action in simulations of LSD?
+ Given uncertainty over the presence of SSD in the large-scale simulations,
+%mm  how do we identify, quantify and characterise the SSD, so we can adequately
+%interpret its action in simulations of LSD?
+      we seek to demonstrate that an SSD indeed occurs
 %FAG: moved from next para
- In this letter we explore SSD in realistic simulations of SN driven turbulence
+%mm In this letter we explore SSD in realistic simulations of
+       in
+ SN-driven turbulence
  in isolation from any drivers of LSD.
  The extensive resolution and parameter study is intended to identify critical
  conditions for excitation, growth rates and saturation of SSD.
 %
  Previous experiments 
  \citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}
- have examined the SN-driven SSD using ideal magnetohydrodynamics (MHD) with
- a limited set of resolution and parameters, in which it is not possible to
- demonstrate convergence of the solutions nor dependence on  magnetic  
- parameters, Reynolds (Rm) or Prandtl (Pm) numbers.
- They include a weak imposed uniform field; we shall show that it is possible
- to demonstrate conclusively that the amplification of their field is a result
- of dynamo action and not just tangling of the field.
+ examined the SN-driven SSD using ideal magnetohydrodynamics (MHD) with
+ a limited set of resolution and parameters that did not allow
+ demonstration of convergence of the solutions nor dependence on
+ magnetic Reynolds (Rm) or Prandtl (Pm) numbers.
+ They included a weak imposed uniform field; we shall show
+ % mm that it is possible to demonstrate conclusively
+ that the amplification of their field is a result
+ of SSD action and not just tangling of the field.
  We aim to find objective criteria with which to determine the presence of SSD
  in simulations \citep[such as][]{Gent:2013b,GE20}.
 %FAG: merge with previous para
@@ -458,8 +476,32 @@ There are large scales of separation between the fastest growing SSD
 %We aim to find objective criteria with which to determine the presence of SSD
 %in simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
 %FAG: moved from section 2.
+
+%mm [added sections to this and rewrote to make it into a paper summary]
+In this letter we compare the SSD to tangling in
+% mm realistic
+an idealized simulation (Sect.\ 2), and then
+% mm in
+    determine its presence in
+simulations of SN-driven 
+turbulence in isolation from any drivers of an LSD (Sect.\ 3). 
 Our numerical implementations use the {\sc Pencil Code}\footnote{
 \href{https://github.com/pencil-code}{https://github.com/pencil-code}}.
+A broad resolution and parameter study allows us to identify the critical
+%mm ranges for excitation of SSD and understand dynamo growth rates
+%and saturation conditions.
+   resistivity and resolution for excitation of an SSD, and follow the
+   growth to saturation (Sect.\ 4).
+%mm [not sure this is well supported by our results] This will also
+%identify the prerequisites for including or excluding SSD in the LSD
+%models and subsequently establish the importance of SSD-LSD
+%interactions on galaxy dynamics. We aim to find
+   This provides
+objective criteria with which to determine the presence of SSD
+in simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
+% FAG: moved from section 2.
+Finally, we conclude in Sect.\ 5.
+
 
 %==============================================================================
 \begin{figure*}
@@ -513,14 +555,21 @@ Our numerical implementations use the {\sc Pencil Code}\footnote{
  To illustrate differences between tangling and SSD we adopt a simplified
  model.
  Non-helical random forcing is applied at wavenumber $\kf/k_1=8$ to
- $256^3$, $2\pi$-periodic isothermal boxes.
- $k_1=1$ is the lowest wavenumber in the domain.
+ $256^3$ zone, $2\pi$-periodic, isothermal boxes.
+The lowest wavenumber in the domain is $k_1=1$.
  The imposed uniform field has $e_B\simeq6\cdot10^{-22}\overline{e_K}$, where
  $\overline{e_K}$ is time-averaged kinetic energy density.
- Two simulations are distinguished by use of dimensionless $\eta=10^{-4}$
+ Two simulations are distinguished by use of dimensionless
+ %mm
+     resistivity
+ $\eta=10^{-4}$
  and $\eta=2\cdot10^{-3}$.
- These yield Rm=148.0 with Pm=50.0, exciting SSD, and Rm=7.4 with Pm=2.5,
- where dynamo is inhibited and amplification limited to tangling of the imposed
+ {\bf [WHAT IS THE VISCOSITY?  WAS IT EXPLICIT, as suggested by the Pm given?]}
+ These yield Rm=
+ % mm 148.0  with Pm=50.0, [ to match numbers of significant digits]
+     150, with Pm = 50,
+exciting SSD, and Rm=7.4 with Pm=2.5,
+ inhibiting the dynamo so that amplification is limited to tangling of the imposed
  field.
 %FAG: moved to intro
 %Our numerical implementations use the {\sc Pencil Code}\footnote{
@@ -1091,7 +1140,7 @@ $k^{3/2}$ (a, c); and Kolmogorov $k^{-5/3}$ (b, d).
 \end{figure*}
 %-------------------------------------------------------------------------------
 
-In contrast to the simplified model in Section\,\ref{sec:ssd-tang}, SN driven
+In contrast to the simplified model in Section\,\ref{sec:ssd-tang}, SN-driven
 turbulence does not have a well-defined forcing scale, due to the heterogeneous
 temperature and density of the ISM and random clustering of explosions.
 %MJK How did you come up with this value?
@@ -1231,7 +1280,7 @@ In this letter we confirm, without the use of an imposed magnetic field, that
 the field amplification demonstrated by \citet{BKMM04} was evidence of SSD in
 the ISM and not just caused by tangling of their imposed field.
 Through the most extensive resolution and parameter study to date, we conclude
-that SN driven turbulence easily excites SSD even at SN rates well below the
+that SN-driven turbulence easily excites SSD even at SN rates well below the
 Galactic value.
 Our conclusion is supported by noting that the resistivity of the ISM is far
 smaller than we can resolve numerically, so the ISM is far more susceptible to
@@ -1289,14 +1338,14 @@ address how such SSD interacts with LSD.
 
 %FAG Moved from above
 %%FAG removing thermal runaway focus
-%To exclude SSD in SN driven turbulence simulations will require 
+%To exclude SSD in SN-driven turbulence simulations will require 
 %$\eta\gtrsim10^{-3}\kpc\kms$ or SN implementation which avoids thermal runaway.
 %In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
 %and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which in all probabilty excludes SSD.
 %\citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
 %which would support SSD with SN rates similar to the solar neighbourhood, even
 %without thermal runaway.
-With grid resolution $\dx\geq2\pc$ SSD in SN driven turbulence simulations can be
+With grid resolution $\dx\geq2\pc$ SSD in SN-driven turbulence simulations can be
 excluded with $\eta\gtrsim10^{-3}\kpc\kms$.
 In \citet{Gressel:2008,GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
 and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which in all probabilty excludes SSD.
