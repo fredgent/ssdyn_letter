@@ -1246,54 +1246,100 @@ $t=140\Myr$. $\dot\sigma$ and $\eta$ in the legends.
 \end{figure*}
 %-------------------------------------------------------------------------------
 
-In Figure\,\ref{fig:3power} panels (a) -- (f) the effect of resolution on the
-compensated energy spectra is shown for $\eta=0$, $10^{-4}$ and $10^{-3}$
-with $\dot\sigma=0.2\SNr$.
-%FAG: updated 
-%The time of the spectral snapshot for $\dx=0.5$ and $1\pc$ correspond to a
-%common phase of rapid magnetic growth fastest in the hot gas, while for
-%$\dx=2$ and $4\pc$ it corresponds to a period of hot-phase rapid growth at
-The time, $19.5\Myr$, of the spectral snapshot
-corresponds to a common phase of accelerated magnetic growth for $\dx=0.5$ and $1\pc$.
-For $\dx=2$ and $4\pc$ the time 100\,Myr corresponds to a period of accelerated
-growth at $2\pc$, which is absent in the $4\pc$ model.
-The hydrodynamic parameters are fixed for each resolution and are 
-consistent between panels (b), (d) and (f).
-We note the convergence in the kinetic energy spectrum for
-$\dx=0.5\pc$ and $\dx=1\pc$, apart from the energy cutoff at higher $k$
-arising from differences in resolution.
-Also, the total kinetic energy is reduced with low resolution due to 
-increased viscous dissipation acting at lower $k$.
+%In Figure\,\ref{fig:3power} panels (a) -- (f) the effect of resolution on the
+%compensated energy spectra is shown for $\eta=0$, $10^{-4}$ and $10^{-3}$
+%with $\dot\sigma=0.2\SNr$.
+%%FAG: updated 
+%%The time of the spectral snapshot for $\dx=0.5$ and $1\pc$ correspond to a
+%%common phase of rapid magnetic growth fastest in the hot gas, while for
+%%$\dx=2$ and $4\pc$ it corresponds to a period of hot-phase rapid growth at
+%The time, $19.5\Myr$, of the spectral snapshot
+%corresponds to a common phase of accelerated magnetic growth for $\dx=0.5$ and $1\pc$.
+%For $\dx=2$ and $4\pc$ the time 100\,Myr corresponds to a period of accelerated
+%growth at $2\pc$, which is absent in the $4\pc$ model.
+%The hydrodynamic parameters are fixed for each resolution and are 
+%consistent between panels (b), (d) and (f).
+%We note the convergence in the kinetic energy spectrum for
+%$\dx=0.5\pc$ and $\dx=1\pc$, apart from the energy cutoff at higher $k$
+%arising from differences in resolution.
+%Also, the total kinetic energy is reduced with low resolution due to 
+%increased viscous dissipation acting at lower $k$.
+%FAG word count
+ In Figure\,\ref{fig:3power}(a) -- (f) for $\eta=0$, $10^{-4}$ and $10^{-3}$
+ compensated energy spectra are shown for each $\dx$ with $\dot\sigma=0.2\SNr$.
+ $19.5\Myr$ for the spectral snapshot corresponds to a common phase of
+ accelerated SSD at $\dx=0.5$ and $1\pc$.
+ 100\,Myr is used for $\dx=2$ and $4\pc$, a period of accelerated SSD at
+ $2\pc$, which is absent in the $4\pc$ model.
+ Hydrodynamic parameters are fixed for each $\dx$ and are consistent
+ in Figure\,\ref{fig:3power}(b), (d) and (f).
+ The kinetic energy spectrum is convergent for $\dx=0.5\pc$ and $\dx=1\pc$ up
+ to viscous cutoff at lower $k$ for $\dx=1$.
+ The kinetic energy at all $k$ is reduced for low resolution not just at
+ the viscous dissipation scale, affecting the solution even at the largest 
+ scales.
+%FAG moved from next para
+ To fully resolve the kinetic energetics for scales larger than $k=24$, that is
+ $\ell\gtrsim40\pc$, would therefore require $\dx\lesssim1\pc$.
+ The kinetic spectra display a bottleneck effect \citep{Falkovich94,HBD03},
+ an energy cascade less efficient than $k^{-5/3}$ terminating at a bump and
+ rapid dissipation at high $k$.
+ This bottleneck shifts to lower $k$ as $\dx$ increases, but always at higher
+ $k$ than the Kazantsev range in the corresponding magnetic spectrum, due to
+ low Pm.
 
-%FAG para break
-%To fully resolve the kinetic energetics for scales larger than $k=24$ corresponding to $\ell\simeq40\pc$ would therefore require $\dx\gtrsim1\pc$.
-To fully resolve the kinetic energetics for scales larger than $k=24$, that is
-$\ell\gtrsim40\pc$, would therefore require $\dx\lesssim1\pc$.
-The energy spectrum at $\dx=2\pc$ shares the same characterstics as the high
-%FAG added 
-%resolution runs, but with some loss of energy.
-resolution runs, but with some loss of energy, as does $\dx=4\pc$, but with 
-even greater dissipative losses and peak $k\simeq3$.
-The kinetic spectra display a bottleneck effect \citep{Falkovich94,HBD03},
-%with a bump at $k\simeq50$, 
-an energy cascade less efficient than $k^{-5/3}$ terminating at a bump,
-before rapid dissipation at high $k$.
-This bottleneck shifts to lower $k$ as $\dx$ increases, but always at higher
-$k$ than the Kazantsev range in the corresponding magnetic spectrum, reflective
-of the low Pm character of these models.
+%%FAG para break
+%%To fully resolve the kinetic energetics for scales larger than $k=24$ corresponding to $\ell\simeq40\pc$ would therefore require $\dx\gtrsim1\pc$.
+%To fully resolve the kinetic energetics for scales larger than $k=24$, that is
+%$\ell\gtrsim40\pc$, would therefore require $\dx\lesssim1\pc$.
+%The energy spectrum at $\dx=2\pc$ shares the same characterstics as the high
+%%FAG added 
+%%resolution runs, but with some loss of energy.
+%resolution runs, but with some loss of energy, as does $\dx=4\pc$, but with 
+%even greater dissipative losses and peak $k\simeq3$.
+%The kinetic spectra display a bottleneck effect \citep{Falkovich94,HBD03},
+%%with a bump at $k\simeq50$, 
+%an energy cascade less efficient than $k^{-5/3}$ terminating at a bump,
+%before rapid dissipation at high $k$.
+%This bottleneck shifts to lower $k$ as $\dx$ increases, but always at higher
+%$k$ than the Kazantsev range in the corresponding magnetic spectrum, reflective
+%of the low Pm character of these models.
 
-Perhaps surprisingly, there is very little difference in the kinetic energy
-spectrum, Figure\,\ref{fig:3power}(h), between simulations with
-$\dot\sigma=0.2\SNr$ and $\SNr$, despite five times as much energy being 
-applied from the forcing in the latter case.
-From the models with $\eta=10^{-3}$ it is evident that there is more energy
-near the bottleneck in the high $\dot\sigma$ case (cyan dotted line), so more
-energy can be tranferred to the SSD.
-The comparison is obscured for $\eta=10^{-4}$, because the high $\dot\sigma$
-magnetic field is already 3 or 4 orders of magnitude stronger, aquiring some of
-the kinetic energy (red dash-dotted line).
-More hot gas from the higher SN rate may also improve the efficiency of SSD,
-which we shall investigate in future work. 
+%Perhaps surprisingly, there is very little difference in the kinetic energy
+%spectrum, Figure\,\ref{fig:3power}(h), between simulations with
+%$\dot\sigma=0.2\SNr$ and $\SNr$, despite five times as much energy being 
+%applied from the forcing in the latter case.
+%From the models with $\eta=10^{-3}$ it is evident that there is more energy
+%near the bottleneck in the high $\dot\sigma$ case (cyan dotted line), so more
+%energy can be tranferred to the SSD.
+%The comparison is obscured for $\eta=10^{-4}$, because the high $\dot\sigma$
+%magnetic field is already 3 or 4 orders of magnitude stronger, aquiring some of
+%the kinetic energy (red dash-dotted line).
+%More hot gas from the higher SN rate may also improve the efficiency of SSD,
+%which we shall investigate in future work. 
+%FAG word count succeeded
+%Perhaps surprisingly, there is very little difference in the kinetic energy
+%spectrum, Figure\,\ref{fig:3power}(h), between simulations with
+%$\dot\sigma=0.2\SNr$ and $\SNr$, despite five times as much energy being 
+%applied from the forcing in the latter case.
+%From the models with $\eta=10^{-3}$ it is evident that there is more energy
+%near the bottleneck in the high $\dot\sigma$ case (cyan dotted line), so more
+%energy can be tranferred to the SSD.
+%The comparison is obscured for $\eta=10^{-4}$, because the high $\dot\sigma$
+%magnetic field is already 3 or 4 orders of magnitude stronger, aquiring some of
+%the kinetic energy (red dash-dotted line).
+%More hot gas from the higher SN rate may also improve the efficiency of SSD,
+%which we shall investigate in future work. 
+ Perhaps surprisingly, there is little difference in the kinetic energy
+ spectrum, Figure\,\ref{fig:3power}(h), between simulations with
+ $\dot\sigma=0.2\SNr$ and $\SNr$, despite five times as much energy being
+ applied from the forcing in the latter case.
+ For $\eta=10^{-3}$ there is more energy near the bottleneck with high
+ $\dot\sigma$ case (cyan dotted line), so more energy can be tranferred to
+ the SSD at the smallest scales.
+ The comparison is obscured for $\eta=10^{-4}$, because the high $\dot\sigma$
+ magnetic field is already 3 or 4 orders of magnitude stronger, aquiring some
+ of the kinetic energy (red dash-dotted line).
 
 
 
@@ -1428,7 +1474,7 @@ modest $\Omega$.
 
 \acknowledgments
 The authors wish to acknowledge CSC – IT Center for Science, Finland, for computational
-resources.
+resources.\fag{add grand challenge}
  M-MML was partly supported by US NSF grant AST18-15461.
  FAG and MJK acknowledge the support of the Academy of Finland
 ReSoLVE Centre of Excellence (grant number 307411).
