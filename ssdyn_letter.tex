@@ -101,6 +101,7 @@
 \received{June 1, 2019}
 \revised{January 10, 2019}
 \accepted{\today}
+%NS: The PDF version mentions "Accepted". Is that ok to keep as such?
 %% Command to document which AAS Journal the manuscript was submitted to.
 %% Adds "Submitted to " the argument.
 \submitjournal{ApJL}
@@ -207,7 +208,7 @@
 %% automatically put the author and affiliation information from the manuscript
 %% and save the corresponding author the trouble of entering it by hand.
 
-\correspondingauthor{Frederick Gent}
+\correspondingauthor{Maarit K\"apyl\"a}
 \email{Email: frederick.gent@aalto.fi, mordecai@amnh.org,\\ maarit.kapyla@aalto.fi, nishant@iucaa.in}
 
 \author[0000-0002-1331-2260]{Frederick A. Gent}
@@ -305,8 +306,11 @@ grid spacing much exceeding 4~pc.
  mechanisms for inducing LSD, such as rotation and shear.
  The effect of strong ordered magnetic fields is modelled by initial
  imposition of a background, typically uniform, magnetic field.
- If an imposed field is sufficiently close to equipartition its characteristics
- would dominate any magnetized results.
+ %If an imposed field is sufficiently close to equipartition its characteristics
+ %would dominate any magnetized results.
+ %NS: "magnetized results" appears a bit odd, so modified slightly. Pls chk if ok
+ If an imposed field is sufficiently close to equipartition, it
+ would influence the results.
  Some large-scale models do seek to include LSD \citep[e.g.,][]{Korpi:1999b,
  Gressel:2008,HWK09,WA09,Pakmor17,SBADMN19,GE20}, but most show no SSD.
  \citet{SBADMN19} do find an SSD, but no LSD.
@@ -316,7 +320,9 @@ grid spacing much exceeding 4~pc.
  %
      
  Any magnetic noise produced by tangling will also grow exponentially due to
- an LSD if present
+ %an LSD if present
+ %NS: added full stop
+ an LSD if present.
  This noise plays an important role in quenching the LSD due to the magnetic
  $\alpha$-effect, causing saturation of large-scale fields.
  We need to discriminate this effect from an SSD.   
@@ -369,6 +375,9 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
  $256^3$ zone, $2\pi$-periodic, isothermal boxes.
  The lowest wavenumber in the domain is $k_1=1$
     and the largest is the Nyquist frequency $k/k_1 = 128$.
+    %NS: If word count is still to be adjusted, then this Nyquist part of
+    %NS: the sentence may be omitted, as redundant with 256 explicitly mentioned before
+    %NS: k_1 is mentioned as we normalize k's by this, so ok to keep that
  The imposed uniform field has $e_B\simeq6\cdot10^{-22}~\overline{e_K}$, where
  $\overline{e_K}$ is the time-averaged kinetic energy density.
  Two simulations are distinguished by use of dimensionless
@@ -386,11 +395,20 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
 
  Power spectra for the magnetic energy of the evolving SSD and
  tangling model are plotted
- in Figures~\ref{fig:tangling}(b) and~\ref{fig:tangling}(c), alongside a late kinetic energy spectrum.
+ %in Figures~\ref{fig:tangling}(b) and~\ref{fig:tangling}(c),
+ %NS: inserted "respectively,"
+ in Figures~\ref{fig:tangling}(b) and~\ref{fig:tangling}(c), respectively,
+ alongside a late kinetic energy spectrum.
+ %Magnetic energy spectra are compensated by Kazantsev's $k^{3/2}$
+ %spectrum \citep{Sch02,BS14}, and the kinetic energy spectrum by the
+ %Kolmogorov $k^{-5/3}$ spectrum.
+ %NS: avoided too many "spectrum" from the above sentence by modifying as
  Magnetic energy spectra are compensated by Kazantsev's $k^{3/2}$
- spectrum \citep{Sch02,BS14}, and the kinetic energy spectrum by the
- Kolmogorov $k^{-5/3}$ spectrum.
- The SSD magnetic spectrum (Figure~\ref{fig:tangling} b) 
+ scaling \citep{Sch02,BS14}, and the kinetic energy ones by the
+ Kolmogorov's $k^{-5/3}$ spectrum.
+ %The SSD magnetic spectrum (Figure~\ref{fig:tangling} b) 
+ %NS: no space between 1b
+ The SSD magnetic spectrum (Figure~\ref{fig:tangling}b) 
      experiences only a slight shift of its peak to smaller wavenumber
      during its evolution.
  The forcing scale $\kf$ is strongly reflected in kinetic energy and tangling 
@@ -866,7 +884,7 @@ FAG and MJK acknowledge support of the Academy of Finland
 ReSoLVE Centre of Excellence (grant number 307411).
 This project has received funding from the European Research Council (ERC)
 under the European Union's Horizon 2020 research and innovation
-programme (Project UniSDyn, grant agreement n:o 818665).
+programme (Project UniSDyn, grant agreement no: 818665).
 \software{Pencil Code \citep{brandenburg2002,Pencil-JOSS}}
 
 \bibliography{refs}{}
