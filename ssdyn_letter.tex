@@ -493,8 +493,11 @@ We solve the system of non-ideal compressible MHD equations
  containing $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
  to resolve grid-scale instabilities
 \citep[see, e.g.,][]{ABGS02,HB04}.
+%NS: should we say something like, most symbols have usual meanings?
 
 %FAG added
+%NS: too short a para, so maybe we merge this with the one above?
+%NS: Could simply start as "Note that", avoiding "Please"
 Please note that in Sect.\,\ref{sec:ssd-tang} only Eqs.~\eqref{eq:mom} and
 \eqref{eq:ind} are solved; $\rho=1$; no shock-dependent diffusion nor
 hyperdiffusion is applied; and $\vect{B}=\vect\nabla\times\vect{A}+
@@ -545,7 +548,9 @@ hyperdiffusion is applied; and $\vect{B}=\vect\nabla\times\vect{A}+
  \begin{equation}\label{eq:sRm}
  \Rm=\frac{\ell \overline{u_{\rm rms}}}{\eta},
 \end{equation}
- where $\ell = 2 \pi/k_f$ is the forcing scale.
+ %where $\ell = 2 \pi/k_f$ is the forcing scale.
+ %NS: k_f => \kf (macro)
+  where $\ell = 2 \pi/\kf$ is the forcing scale.
  However, the inhomogeneity of the turbulence and changing multiphase
  composition of the ISM render defining a single forcing scale or rms velocity
  unreliable.
