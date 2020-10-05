@@ -458,27 +458,30 @@ We solve the system of non-ideal compressible MHD equations
   \end{eqnarray}
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
- with the ideal gas equation of state closing the system.
+  with the ideal gas equation of state closing the system.
+  % mm [add]
+          Most variables take their usual meanings.
  Terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ 
       resolve shock discontinuities with artificial diffusion of mass,
       momentum, and energy proportional to shock strength  
  \citep[see][for details]{GMKSH20}.
  Unlike \citet{Gent:2013b} shock diffusion is not applied to
- equation~(\eqref{eq:ind}), to avoid excessive magnetic dissipation in
+ %mm [eqref provides its own parentheses, so eliminated the excess ones]
+ equation~\eqref{eq:ind}, to avoid excessive magnetic dissipation in
  shocks, which actually enhance the field by compression.
        Terms
  containing $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
  to resolve grid-scale instabilities
 \citep[see, e.g.,][]{ABGS02,HB04}.
 %NS: should we say something like, most symbols have usual meanings?
-
-
-%FAG added
+%mm done, above.
+%FAG added %mm [minor edits]
 %NS: too short a para, so maybe we merge this with the one above?
 %NS: Could simply start as "Note that", avoiding "Please"
-Please note that in Sect.\,\ref{sec:ssd-tang} only Eqs.~\eqref{eq:mom} and
-\eqref{eq:ind} are solved; $\rho=1$; no shock-dependent diffusion nor
-hyperdiffusion is applied; and $\vect{B}=\vect\nabla\times\vect{A}+
+%mm implemented both.
+In Sect.\,\ref{sec:ssd-tang}, we only solve equations~\eqref{eq:mom}
+and~\eqref{eq:ind}; set $\rho=1$; do not apply shock-dependent
+diffusion nor hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
 \vect{B}_{\rm imposed}$.
 
 %-------------------------------------------------------------------------------
@@ -540,14 +543,16 @@ hyperdiffusion is applied; and $\vect{B}=\vect\nabla\times\vect{A}+
  \end{eqnarray}
  %-------------------------------------------------------------------------------
 
- Using averaged values (eq.~\eqref{eq:sRm}) 
+ %mm [used [\ref{}] rather than eqref{} to eliminate double (())]
+ Using averaged values (eq.~[\ref{eq:sRm}]), 
  $\Rm = 1.5 \cdot 10^4$, for $\eta=10^{-4}$, $\ell=50\pc$ and
  $\overline{u_{\rm rms}}=30\kms$.
- With the local definition (eq.~\eqref{eq:Rm}) in the model with 
+ With the local definition (eq.~[\ref{eq:Rm}]) in the model with 
  $\dx=0.5\pc$ and $\eta=10^{-4}$ at 20\,Myr we find
  $\Rm\in(1.0\cdot10^{-4},5.8\cdot 10^3)$,
  and mean value $\langle\Rm\rangle=4.1\pm5.7$.
- The mean Rm appears unhelpful:
+%mm [added "thus"]
+ Thus, the mean Rm appears unhelpful:
  in the ISM some phases and regions may exceed the critical Rm for an
  SSD while others do not.
  Microscopic resistivity is temperature dependent \citep{CSR50}.
@@ -639,7 +644,10 @@ Saturation at around 5\% of $\overline{e_K}$
      even at $\delta x = 0.5\pc$.
  At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, showing that physical
  resistivity is dynamically dominant, at least in part of the domain.
- At all $\dx$ physical resistivity $\eta=10^{-3}$ is clearly well resolved
+ At all $\dx$
+ % mm
+     in our study
+ physical resistivity $\eta=10^{-3}$ is clearly well resolved
  and determines the dynamics.
  Models with common $\dot\sigma$ have the same schedule and location of SN,
  but the timestep at low resolution is larger, such that actual timing and
@@ -830,7 +838,10 @@ We do, however find
 that when an SSD is excited it saturates at about 5\% of the energy equipartition level.
 At low resolution this is a lower bound, because the time-averaged kinetic
 energy density is understated, due to dissipative losses.
-This might account for the discrepency between the energy density of the mean
+This might account for the
+%mm discrepency
+         discrepancy
+between the energy density of the mean
 magnetic field and the random magnetic field in \citet{Gent:2013b}, due to the
 LSD being well resolved while the SSD remained underresolved.
 
