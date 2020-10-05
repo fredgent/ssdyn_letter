@@ -98,10 +98,9 @@
 \newcommand{\ns}[1]{\textcolor{orange}{#1}}
 
 %% Reintroduced the \received and \accepted commands from AASTeX v5.2
-\received{June 1, 2019}
-\revised{January 10, 2019}
-\accepted{\today}
-%NS: The PDF version mentions "Accepted". Is that ok to keep as such?
+\received{October 4, 2020}
+\revised{\today}
+\accepted{}
 %% Command to document which AAS Journal the manuscript was submitted to.
 %% Adds "Submitted to " the argument.
 \submitjournal{ApJL}
@@ -367,8 +366,8 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
  model.
  Non-helical random forcing is applied at wavenumber $\kf/k_1=8$ to
  $256^3$ zone, $2\pi$-periodic, isothermal boxes.
- The lowest wavenumber in the domain is $k_1=1$
-    and the largest is the Nyquist frequency $k/k_1 = 128$.
+ The lowest wavenumber in the domain is $k_1=1$ and the largest is the Nyquist
+ frequency $k/k_1 = 128$.
  The imposed uniform field has $e_B\simeq6\cdot10^{-22}~\overline{e_K}$, where
  $\overline{e_K}$ is the time-averaged kinetic energy density.
  Two simulations are distinguished by use of dimensionless
@@ -378,8 +377,8 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
  $\Pm=2.5$, inhibiting the dynamo so that amplification is limited to tangling
  of the imposed field.
 
- Figure\,\ref{fig:tangling}(a) shows the SSD growing exponentially in just over 400
- eddy turnover times; see \cite{ZRS83} for SSD properties and excitation
+ Figure\,\ref{fig:tangling}(a) shows the SSD growing exponentially in just over
+ 400 eddy turnover times; see \cite{ZRS83} for SSD properties and excitation
  conditions.
  Tangling induces only linear growth (see inset), saturating just above
  the imposed field energy within 50 turnover times.
@@ -391,19 +390,17 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
  Magnetic energy spectra are compensated by Kazantsev's $k^{3/2}$
  scaling \citep{Sch02,BS14}, and the kinetic energy by the
  Kolmogorov's $k^{-5/3}$ spectrum.
- The SSD magnetic spectrum (Figure~\ref{fig:tangling}b) 
-     experiences only a slight shift of its peak to smaller wavenumber
-     during its evolution.
+ The SSD magnetic spectrum (Figure~\ref{fig:tangling}b) experiences only a
+ slight shift of its peak to smaller wavenumber during its evolution.
  The forcing scale $\kf$ is strongly reflected in kinetic energy and tangling 
- magnetic energy, but does not affect the SSD magnetic
- spectra.
+ magnetic energy, but does not affect the SSD magnetic spectra.
  The Kazantsev range extends larger than $\kf$ for SSD, while
  confined below $\kf$ with tangling.
  Thus, in the SSD, kinetic energy along the Kolmogorov range transfers to
  the magnetic field at these scales, inducing an inverse Kazantsev range
  at scales below $\kf$, while tangling transfers energy only at scales between
  $\kf$ and the scale of the imposed field.
- Dissipation controls scales below the Kazantsev range. 
+ Dissipation controls scales below the Kazantsev range.
  
 \section{SN turbulence model design} \label{sec:model}
 
@@ -458,31 +455,24 @@ We solve the system of non-ideal compressible MHD equations
   \end{eqnarray}
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
-  with the ideal gas equation of state closing the system.
-  % mm [add]
-          Most variables take their usual meanings.
- Terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ 
-      resolve shock discontinuities with artificial diffusion of mass,
-      momentum, and energy proportional to shock strength  
- \citep[see][for details]{GMKSH20}.
+ with the ideal gas equation of state closing the system.
+ Most variables take their usual meanings.
+ Terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ resolve shock
+ discontinuities with artificial diffusion of mass, momentum, and energy
+ proportional to shock strength \citep[see][for details]{GMKSH20}.
  Unlike \citet{Gent:2013b} shock diffusion is not applied to
- %mm [eqref provides its own parentheses, so eliminated the excess ones]
  equation~\eqref{eq:ind}, to avoid excessive magnetic dissipation in
  shocks, which actually enhance the field by compression.
-       Terms
- containing $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
- to resolve grid-scale instabilities
-\citep[see, e.g.,][]{ABGS02,HB04}.
-%NS: should we say something like, most symbols have usual meanings?
-%mm done, above.
+ Terms containing $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
+ to resolve grid-scale instabilities \citep[see, e.g.,][]{ABGS02,HB04}.
 %FAG added %mm [minor edits]
 %NS: too short a para, so maybe we merge this with the one above?
 %NS: Could simply start as "Note that", avoiding "Please"
 %mm implemented both.
-In Sect.\,\ref{sec:ssd-tang}, we only solve equations~\eqref{eq:mom}
-and~\eqref{eq:ind}; set $\rho=1$; do not apply shock-dependent
-diffusion nor hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
-\vect{B}_{\rm imposed}$.
+ In Sect.\,\ref{sec:ssd-tang}, we only solve equations~\eqref{eq:mom}
+ and~\eqref{eq:ind}; set $\rho=1$; do not apply shock-dependent diffusion nor
+ hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
+ \vect{B}_{\rm imposed}$.
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
@@ -500,15 +490,12 @@ diffusion nor hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
  SNe are exploded at random positions at a Poisson rate $\dot\sigma$
  normalized by the solar neighborhood value $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$.
  Explosions inject $\EST = 10^{51}\erg$ of thermal energy, except in
- dense regions, where
- a proportion is kinetic $\ESK$ 
+ dense regions, where a proportion is kinetic $\ESK$ 
  \citep[see][]{GMKSH20}.
- For comparability,
-    explosions in all models with the same $\dot\sigma$ occur at the same
-    times and places.
- Non-adiabatic heating $\Gamma$ and cooling $\Lambda (T)$ are
- included \citep{Gent:2013a} following \citet{Wolfire:1995} and
- \citet{Sarazin:1987}.
+ For comparability, explosions in all models with the same $\dot\sigma$ occur
+ at the same times and places.
+ Non-adiabatic heating $\Gamma$ and cooling $\Lambda (T)$ are included
+ \citep{Gent:2013a} following \citet{Wolfire:1995} and \citet{Sarazin:1987}.
 
  The subset of experiments presented in this letter have viscosity $\nu=0$,
  and hyperviscosity $\nu_3$ set optimally for each $\dx$ to ensure the flow
@@ -527,10 +514,8 @@ diffusion nor hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
  A commonly used expression for Rm is 
  \begin{equation}\label{eq:sRm}
  \Rm=\frac{\ell \overline{u_{\rm rms}}}{\eta},
-\end{equation}
- %where $\ell = 2 \pi/k_f$ is the forcing scale.
- %NS: k_f => \kf (macro)
-  where $\ell = 2 \pi/\kf$ is the forcing scale.
+ \end{equation}
+ where $\ell = 2 \pi/\kf$ is the forcing scale.
  However, the inhomogeneity of the turbulence and changing multiphase
  composition of the ISM render defining a single forcing scale or rms velocity
  unreliable.
@@ -542,8 +527,6 @@ diffusion nor hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
      \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
  \end{eqnarray}
  %-------------------------------------------------------------------------------
-
- %mm [used [\ref{}] rather than eqref{} to eliminate double (())]
  Using averaged values (eq.~[\ref{eq:sRm}]), 
  $\Rm = 1.5 \cdot 10^4$, for $\eta=10^{-4}$, $\ell=50\pc$ and
  $\overline{u_{\rm rms}}=30\kms$.
@@ -551,7 +534,6 @@ diffusion nor hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
  $\dx=0.5\pc$ and $\eta=10^{-4}$ at 20\,Myr we find
  $\Rm\in(1.0\cdot10^{-4},5.8\cdot 10^3)$,
  and mean value $\langle\Rm\rangle=4.1\pm5.7$.
-%mm [added "thus"]
  Thus, the mean Rm appears unhelpful:
  in the ISM some phases and regions may exceed the critical Rm for an
  SSD while others do not.
@@ -563,13 +545,9 @@ diffusion nor hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
 
  We have set $\nu=0$ and $\nu_3=\eta_3$ sufficient to numerically resolve the
  grid scale.
- %The magnetic Prandtl number $\Pm = \Rm/\Rey$, and like Rm we have
- %$Pm\in(4.2\cdot10^{-6},4.8\cdot10^{4})$, due 
- %NS: Pm => \Pm and Rm => \Rm
  The magnetic Prandtl number $\Pm = \Rm/\Rey$, and like $\Rm$ we have
- $\Pm\in(4.2\cdot10^{-6},4.8\cdot10^{4})$, due 
- to inclusion of shock capturing viscosity and differences in
- definition of hyperviscosity and hyperresistivity.
+ $\Pm\in(4.2\cdot10^{-6},4.8\cdot10^{4})$, due to inclusion of shock capturing
+ viscosity and differences in definition of hyperviscosity and hyperresistivity.
  Hence, some part of each simulation will be characterised by high Pm,
  but $\langle\Pm\rangle<1$.
  This is a regime less conducive to exciting the SSD than the high $\Pm$ regime
@@ -594,14 +572,14 @@ diffusion nor hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
             \fig{figs/4pc-eB-nu6.png}{0.45\textwidth}{(f)}
           }
   \begin{picture}(0,0)(0,0)
-    \put( 56,428){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put( 56,428){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
     \put(445,438){\begin{scriptsize}{\sf{$\delta x=1.0$pc}}\end{scriptsize}}
-    \put(445,428){\begin{scriptsize}{\sf{$\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put( 56,256){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(445,428){\begin{scriptsize}{\sf{$\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put( 56,256){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
     \put(445,266){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
-    \put(445,256){\begin{scriptsize}{\sf{$\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put( 56, 78){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\sigma=\SNr$}}\end{scriptsize}}
-    \put(405, 78){\begin{scriptsize}{\sf{$\delta x=4.0$pc, $\sigma=\SNr$}}\end{scriptsize}}
+    \put(445,256){\begin{scriptsize}{\sf{$\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put( 56, 78){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\dot\sigma=\SNr$}}\end{scriptsize}}
+    \put(405, 78){\begin{scriptsize}{\sf{$\delta x=4.0$pc, $\dot\sigma=\SNr$}}\end{scriptsize}}
   \end{picture}
 \caption{
 Magnetic energy density $e_B$ normalized by the time-averaged kinetic
@@ -614,12 +592,11 @@ Time axes vary to accommodate SSD saturation at all $\dx$ with $\eta=10^{-4}$.
 \end{figure*}
 %-------------------------------------------------------------------------------
 
-      Figure~\ref{fig:eb-res}(a) shows improving convergence of dynamo growth 
-      rate for $\eta=10^{-4}$
-      as resolution increases, although even at 0.5~pc resolution full
-      convergence does not appear to have been reached.
-Saturation at around 5\% of $\overline{e_K}$
-     appears to be a well-converged result.
+ Figure~\ref{fig:eb-res}(a) shows improving convergence of dynamo growth rate
+ for $\eta=10^{-4}$ as resolution increases, although even at 0.5~pc resolution
+ full convergence does not appear to have been reached.
+ Saturation at around 5\% of $\overline{e_K}$ appears to be a well-converged
+ result.
  At $\eta=10^{-3}$, there is false convergence \citep{FMA91} of solutions with
  similar magnetic energy decay at $\dx=2$ and $4\pc$.
  However, higher resolution solutions converge to rapid magnetic
@@ -629,64 +606,53 @@ Saturation at around 5\% of $\overline{e_K}$
  Growth is accelerated in Figure\,\ref{fig:eb-res}(a) and (b) near 20\,Myr,
  40\,Myr and again at 100\,Myr.
  Other times show decay or lower growth rates, depending on $\dx$ or $\eta$.
- The irregular SN forcing and varying fractional volume of
-      different phases of the ISM  
- account for these alternating regimes, but we defer analysis of the details
- %to future work.
- %NS: inserted "a"
- to a future work.
+ The irregular SN forcing and varying fractional volume of different phases of
+ the ISM account for these alternating regimes, but we defer analysis of the
+ details to a future work.
  
 
-       Figure~\ref{fig:eb-nu} shows that 
- profiles at $\eta=10^{-5}$ are
- indistinguishable from $\eta=0$, and so numerical resistivity still
- controls dynamics,
-     even at $\delta x = 0.5\pc$.
+ Figure~\ref{fig:eb-nu} shows that profiles at $\eta=10^{-5}$ are
+ indistinguishable from $\eta=0$, and so numerical resistivity still controls
+ dynamics, even at $\delta x = 0.5\pc$.
  At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, showing that physical
  resistivity is dynamically dominant, at least in part of the domain.
- At all $\dx$
- % mm
-     in our study
- physical resistivity $\eta=10^{-3}$ is clearly well resolved
- and determines the dynamics.
+ At all $\dx$ in our study physical resistivity $\eta=10^{-3}$ is clearly well
+ resolved and determines the dynamics.
  Models with common $\dot\sigma$ have the same schedule and location of SN,
  but the timestep at low resolution is larger, such that actual timing and
  explosive environment can differ between models.
- Increased statistical noise is therefore evident, particularly in panels (e) and (f).
+ Increased statistical noise is therefore evident, particularly in panels (e)
+ and (f).
 
-
- Growth rates are sporadic within models, but are consistent between
- models.
+ Growth rates are sporadic within models, but are consistent between models.
  For example, between 8 and 15\,Myr the strength of growth (or decay) in 
  Figure\,\ref{fig:eb-nu}(a, b) reduces as $\eta$ increases.
- Accelerated growth near 19\,Myr for $\eta=10^{-3}$ coincides with
- even higher acceleration for $\eta\le10^{-4}$, consistent with theory.
+ Accelerated growth near 19\,Myr for $\eta=10^{-3}$ coincides with even higher
+ acceleration for $\eta\le10^{-4}$, consistent with theory.
  The low $\eta$ models at $0.5\pc$ saturate already by 20\,Myr, but for $1\pc$
  there is another epoch of lower growth rate up to 40\,Myr and then a
  subsequent acceleration resulting in saturation for all models within
  60\,Myr, including for $\eta=10^{-3}$.
 
- In Figure\,\ref{fig:eb-nu}(c, d) at low resolution with
- $\dot\sigma=0.2\SNr$ profiles for $\eta=10^{-4}$ are not distinct from $\eta=0$,
- and there is no dynamo at all for $\dx=4\pc$ with well resolved $\eta=10^{-3}$.
+ In Figure\,\ref{fig:eb-nu}(c, d) at low resolution with $\dot\sigma=0.2\SNr$
+ profiles for $\eta=10^{-4}$ are not distinct from $\eta=0$, and there is no
+ dynamo at all for $\dx=4\pc$ with well resolved $\eta=10^{-3}$.
  At 100\,Myr there is a period of accelerated dynamo at $\dx=2\pc$, but 
  for $\eta=10^{-3}$ this is not sustained and subsequently diffuses away.
 
- At $\dot\sigma=\SNr$ (Fig.\,\ref{fig:eb-nu}e, f) the higher forcing
- rate is sufficient to produce an SSD at $\eta\geq10^{-3}$, but not $\eta=5\cdot10^{-3}$.
-     The mean sonic
- Mach number $\overline\Ms=0.8$ for $\dot\sigma=\SNr$,
- compared to $0.5$ for $0.2\SNr$.
+ At $\dot\sigma=\SNr$ (Fig.\,\ref{fig:eb-nu}e, f) the higher forcing rate is
+ sufficient to produce SSD at $\eta\geq10^{-3}$, but not $\eta=5\cdot10^{-3}$.
+ The mean sonic Mach number $\overline\Ms=0.8$ for $\dot\sigma=\SNr$, compared
+ to $0.5$ for $0.2\SNr$.
  A higher $\Ms$ has been demonstrated to impede an SSD in isothermal turbulence
  \citep{Haugen:2004M}, which is contradicted here.
- With the level of statistical noise we cannot affirm $\eta\leq10^{-4}$
-     exceeds numerical resistivity in this model. 
- However, $\eta\gtrsim5\cdot10^{-4}$ is
- resolved at $\dx=2\pc$ (magenta, solid) and 
- at $\dx=4\pc$ the resolved limit is $2\cdot10^{-4}<\eta\lesssim10^{-3}$
+ With the level of statistical noise we cannot affirm $\eta\leq10^{-4}$ exceeds
+ numerical resistivity in this model. 
+ However, $\eta\gtrsim5\cdot10^{-4}$ is resolved at $\dx=2\pc$ (magenta, solid)
+ and at $\dx=4\pc$ the resolved limit is $2\cdot10^{-4}<\eta\lesssim10^{-3}$
  (purple, solid and cyan, dotted lines).
- For $\dx=2\pc$, (e), we see two phases of accelerated SSD at 90 and
- 110\,Myr, which are not present for $\dx=4\pc$, (f).
+ For $\dx=2\pc$, (e), we see two phases of accelerated SSD at 90 and 110\,Myr,
+ which are not present for $\dx=4\pc$, (f).
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
@@ -722,19 +688,17 @@ $k^{3/2}$ (a, c) or the Kolmogorov spectrum $k^{-5/3}$ (b, d).
  The Kolmogorov range extends at all times to $k>20\kpc^{-1}$ and mostly 
  to $k>40\kpc^{-1}$. 
 
- The compensated magnetic energy spectra in
- Figures\,\ref{fig:4power}(a) and (c)
+ The compensated magnetic energy spectra in Figures\,\ref{fig:4power}(a) and (c)
  have ranges conforming to the Kazantsev inverse cascade.
- For $\eta=10^{-4}$ this range extends to $k\gtrsim 20\kpc^{-1}$, above the forcing
- scale and consistent with SSD (Figure\,\ref{fig:tangling}b), 
- until it contracts upon saturation to $k<10\kpc^{-1}$, consistent with no dynamo 
+ For $\eta=10^{-4}$ this range extends to $k\gtrsim 20\kpc^{-1}$, above the
+ forcing scale and consistent with SSD (Figure\,\ref{fig:tangling}b), until it
+ contracts upon saturation to $k<10\kpc^{-1}$, consistent with no dynamo 
  (Figure\,\ref{fig:tangling}c).
  In Figure\,\ref{fig:4power}(c) the Kazantsev range occurs at $k\lesssim10$
- except for the period of 19--22\,Myr, which corresponds to a short growth spurt in
- Figure\,\ref{fig:eb-res}(b).
+ except for the period of 19--22\,Myr, which corresponds to a short growth
+ spurt in Figure\,\ref{fig:eb-res}(b).
  The Kazantsev range does not extend to as high $k$ as the Kolmogorov range,
- a consequence of 
- the low Pm in these SN-driven models. 
+ a consequence of the low Pm in these SN-driven models. 
  In the high Pm ISM, where transfer from kinetic energy can occur at every
  wavenumber in the Kolmogorov spectrum, an SSD is even easier to excite.
 
@@ -771,24 +735,20 @@ $t=140\Myr$.The values of $\dot\sigma$ and $\eta$ are given in the legends.
 \end{figure*}
 %-------------------------------------------------------------------------------
 
-Figure\,\ref{fig:3power}(a) -- (f)
-     shows spectra at $t=19.5$ Myr when an SSD is active for the higher
-     resolution models, and at $t=100$ Myr for the lower resolution
-     models, which shows SSD for the $\dx= 2\pc$ model, but not for the
-     $4\pc$ model. (Hydrodynamic parameters are fixed at each resolution.)
- The kinetic energy spectrum is convergent for $\dx=0.5\pc$ and
- $\dx=1\pc$, except for a
- viscous cutoff at lower $k$ for $\dx=1$.
+Figure\,\ref{fig:3power}(a) -- (f) shows spectra at $t=19.5$ Myr when an SSD is
+ active for the higher resolution models, and at $t=100$ Myr for the lower
+ resolution models, which shows SSD for the $\dx= 2\pc$ model, but not for the
+ $4\pc$ model. (Hydrodynamic parameters are fixed at each resolution.)
+ The kinetic energy spectrum is convergent for $\dx=0.5\pc$ and $\dx=1\pc$,
+ except for a viscous cutoff at lower $k$ for $\dx=1$.
  The kinetic energy at all $k$ is reduced for lower resolution, not just at
- the viscous dissipation scale, but even at the largest 
- scales.
- To fully resolve the kinetic energy for scales larger than $k=24\kpc^{-1}$, that is
- $\ell\gtrsim40\pc$, therefore requires $\dx\lesssim1\pc$.
+ the viscous dissipation scale, but even at the largest scales.
+ To fully resolve the kinetic energy for scales larger than $k=24\kpc^{-1}$,
+ that is $\ell\gtrsim40\pc$, therefore requires $\dx\lesssim1\pc$.
  
- The kinetic energy spectra display a bottleneck effect \citep{Falkovich94,HBD03},
- an energy cascade less efficient than $k^{-5/3}$
-      leading to an accumulation of power and then
- rapid dissipation at high $k$.
+ The kinetic energy spectra display a bottleneck effect
+ \citep{Falkovich94,HBD03}, an energy cascade less efficient than $k^{-5/3}$
+ leading to an accumulation of power and then rapid dissipation at high $k$.
  This bottleneck shifts to lower $k$ as $\dx$ increases, but always at higher
  $k$ than the Kazantsev range in the corresponding magnetic spectrum, due to
  the low Pm.
@@ -806,74 +766,69 @@ Figure\,\ref{fig:3power}(a) -- (f)
 
 \section{Conclusions}\label{sec:conc}
 
-In this Letter we demonstrate, without the use of an imposed magnetic field, that
-the field amplification demonstrated by \citet{BKMM04} was evidence of
-an SSD in SN-driven ISM turbulence and not just caused by tangling of their imposed field.
-Through the most extensive resolution and parameter study to date, we show
-that SN-driven turbulence easily excites an SSD even at SN rates well below the
-Galactic value.
-Our conclusion is supported by noting that the resistivity of the ISM is far
-smaller than we can resolve numerically, so the ISM is far more susceptible to
-dynamo action than our models.
-Our models with $\dx=0.5$ and $1\pc$ with $\eta=10^{-3}\kpc\kms$ show that a seed field of less than 1~nG can be
-amplified to saturation at microgauss levels within about 10\,Myr
-(Figure\,\ref{fig:eb-res}). 
-Unlike isothermal turbulence high Mach numbers do not necessarily impede SSD
-in the ISM with increasing SN forcing.
+ In this Letter we demonstrate, without the use of an imposed magnetic field,
+ that the field amplification demonstrated by \citet{BKMM04} was evidence of
+ an SSD in SN-driven ISM turbulence and not just caused by tangling of their
+ imposed field.
+ Through the most extensive resolution and parameter study to date, we show
+ that SN-driven turbulence easily excites an SSD even at SN rates well below the
+ Galactic value.
+ Our conclusion is supported by noting that the resistivity of the ISM is far
+ smaller than we can resolve numerically, so the ISM is far more susceptible to
+ dynamo action than our models.
+ Our models with $\dx=0.5$ and $1\pc$ with $\eta=10^{-3}\kpc\kms$ show that a
+ seed field of less than 1~nG can be amplified to saturation at microgauss
+ levels within about 10\,Myr (Figure\,\ref{fig:eb-res}). 
+ Unlike isothermal turbulence high Mach numbers do not necessarily impede SSD
+ in the ISM with increasing SN forcing.
 
-We further show that simulations with insufficient resolution can appear to
-converge to a false solution lacking dynamo activity
-(Figure\,\ref{fig:eb-res}b). This can occur because these simulations
-are not scale independent. 
-The SN energy input and the physically motivated ISM cooling processes impose
-length and time scales that must be adequately resolved.
-To reach true convergence requires resolution of $1\pc$ or better.
-In our models, resolutions $\dx\geq2\pc$ not only give an incorrect dynamo
-solution, but also exhibit significant kinetic energy losses due to excess
-dissipation.
-This also affects the energy spectrum at the largest scales, so should be 
-considered when interpreting results using adaptive mesh refinement.
-We do, however find
-     the well-converged result at all resolutions
-that when an SSD is excited it saturates at about 5\% of the energy equipartition level.
-At low resolution this is a lower bound, because the time-averaged kinetic
-energy density is understated, due to dissipative losses.
-This might account for the
-%mm discrepency
-         discrepancy
-between the energy density of the mean
-magnetic field and the random magnetic field in \citet{Gent:2013b}, due to the
-LSD being well resolved while the SSD remained underresolved.
+ We further show that simulations with insufficient resolution can appear to
+ converge to a false solution lacking dynamo activity
+ (Figure\,\ref{fig:eb-res}b). This can occur because these simulations are not
+ scale independent. 
+ The SN energy input and the physically motivated ISM cooling processes impose
+ length and time scales that must be adequately resolved.
+ To reach true convergence requires resolution of $1\pc$ or better.
+ In our models, resolutions $\dx\geq2\pc$ not only give an incorrect dynamo
+ solution, but also exhibit significant kinetic energy losses due to excess
+ dissipation.
+ This also affects the energy spectrum at the largest scales, so should be 
+ considered when interpreting results using adaptive mesh refinement.
+ We do, however find the well-converged result at all resolutions that when an
+ SSD is excited it saturates at about 5\% of the energy equipartition level.
+ At low resolution this is a lower bound, because the time-averaged kinetic
+ energy density is understated, due to dissipative losses.
+ This might account for the discrepancy between the energy density of the mean
+ magnetic field and the random magnetic field in \citet{Gent:2013b}, due to the
+ LSD being well resolved while the SSD remained underresolved.
 
-We find that the conventional approach from dynamo theory of categorising the 
-turbulence according to Rm based on a forcing scale $\ell$, random
-velocity $\overline{u}$ and
-resistivity $\eta$ is inadequate for such a complicated system.
-    We will show in upcoming work that the
-ISM appears to have multiple regimes
-     with thermal phases 
-occupying changing fractional volumes
-       \citep[e.g.][]{gatto2015} and hosting
-SSD instabilities with different thresholds and growth rates.
-Explaining the interaction of these SSDs will require more sophisticated
-statistical and perhaps toplogical techniques, in advance of being able to 
-address how such an SSD interacts with an LSD.
+ We find that the conventional approach from dynamo theory of categorising the 
+ turbulence according to Rm based on a forcing scale $\ell$, random velocity
+ $\overline{u}$ and resistivity $\eta$ is inadequate for such a complicated
+ system.
+ We will show in upcoming work that the ISM appears to have multiple regimes
+ with thermal phases occupying changing fractional volumes
+ \citep[e.g.][]{gatto2015} and hosting SSD instabilities with different
+ thresholds and growth rates.
+ Explaining the interaction of these SSDs will require more sophisticated
+ statistical and perhaps toplogical techniques, in advance of being able to 
+ address how such an SSD interacts with an LSD.
 
-With grid resolution $\dx\geq2\pc$, an SSD in SN-driven turbulence simulations can be
-excluded with $\eta\gtrsim10^{-3}\kpc\kms$.
-In \citet{Gressel:2008} and \citet{GE20}, $\dx$ is 8.3 and $6.7\pc$, respectively
-and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which
-     appears to exclude an
-SSD.  \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
-which would support SSD with SN rates similar to the solar neighbourhood.
-The latter obtain an LSD with galactic angular momentum $\Omega=\OSN$, where
-$\OSN=25\kms\kpc^{-1}$ is the rate in the solar neighbourhood.
-The former require $\Omega\geq4\OSN$ to excite an LSD. The value of
-Rm at the largest scales would be 7.5 times higher for the latter 
-model, which alone can explain the LSD at lower $\Omega$.
-Early efforts by \citet{Korpi:1999b} were unable to detect even LSD.
-With a resolution even less than \citet{Gressel:2008} $\Omega\gg\OSN$ would be 
-required to excite LSD, and SSD would be ruled out.
+ With grid resolution $\dx\geq2\pc$, an SSD in SN-driven turbulence simulations
+ can be excluded with $\eta\gtrsim10^{-3}\kpc\kms$.
+ In \citet{Gressel:2008} and \citet{GE20}, $\dx$ is 8.3 and $6.7\pc$,
+ respectively and $\eta\simeq6.5\cdot10^{-3}\kpc\kms$, which appears to exclude
+ an SSD.
+ \citet{Gent:2013b} applied $\eta\simeq8\cdot10^{-4}\kpc\kms$ with $\dx=4\pc$,
+ which would support SSD with SN rates similar to the solar neighbourhood.
+ The latter obtain an LSD with galactic angular momentum $\Omega=\OSN$, where
+ $\OSN=25\kms\kpc^{-1}$ is the rate in the solar neighbourhood.
+ The former require $\Omega\geq4\OSN$ to excite an LSD.
+ The value of Rm at the largest scales would be 7.5 times higher for the latter
+ model, which alone can explain the LSD at lower $\Omega$.
+ Early efforts by \citet{Korpi:1999b} were unable to detect even LSD.
+ With a resolution even less than \citet{Gressel:2008} $\Omega\gg\OSN$ would
+ be required to excite LSD, and SSD would be ruled out.
 
 \acknowledgments
 The authors wish to acknowledge CSC – IT Center for Science, Finland, for
