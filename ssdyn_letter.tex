@@ -342,16 +342,16 @@ in simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
 Finally, we conclude in Sect.~\ref{sec:conc}.
 %==============================================================================
 \begin{figure*}
-\gridline{ \fig{figs/ssd-tang-brms.png}{0.45\textwidth}{(a)}
+\gridline{ \fig{eps/ssd-tang-brms.eps}{0.45\textwidth}{(a)}
           }
-\gridline{     \fig{figs/ssdBpower.png}{0.45\textwidth}{(b)}
-          \fig{figs/tanglingBpower.png}{0.45\textwidth}{(c)}
+\gridline{     \fig{eps/ssdBpower.eps}{0.45\textwidth}{(b)}
+          \fig{eps/tanglingBpower.eps}{0.45\textwidth}{(c)}
           }
 \caption{
  (a) Mean magnetic energy density, $e_B$, with non-helical random forcing,
  scaled to time-averaged kinetic energy density, $\overline{e_K}$.
  Inset: early zoom-in of linear growth of tangled field.
- Time is normalised by eddy turnover time, $1/\kf \overline{u_{\rm rms}}$.
+ Time is normalised by eddy turnover time, $1/\kf {u_{\rm rms}}$.
  (b) SSD and (c) tangling compensated power spectra, at times given in the
  legends.  Note that the kinetic energy uses the right-hand axes.
   Forcing scale, $\kf/k_1=8$: vertical dotted line.
@@ -472,8 +472,8 @@ We solve the system of non-ideal compressible MHD equations
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
-\gridline{\fig{figs/eB-res-4eta.png}{0.45\textwidth}{(a)}
-          \fig{figs/eB-res-3eta.png}{0.45\textwidth}{(b)}
+\gridline{\fig{eps/eB-res-4eta.eps}{0.45\textwidth}{(a)}
+          \fig{eps/eB-res-3eta.eps}{0.45\textwidth}{(b)}
           }
 \caption{
  Magnetic energy density for resolutions $\dx=0.5$--$4\pc$,
@@ -509,7 +509,7 @@ We solve the system of non-ideal compressible MHD equations
 
  A commonly used expression for Rm is 
  \begin{equation}\label{eq:sRm}
- \Rm=\frac{\ell \overline{u_{\rm rms}}}{\eta},
+ \Rm=\frac{\ell {u_{\rm rms}}}{\eta},
  \end{equation}
  where $\ell = 2 \pi/\kf$ is the forcing scale.
  However, the inhomogeneity of the turbulence and changing multiphase
@@ -525,7 +525,7 @@ We solve the system of non-ideal compressible MHD equations
  %-------------------------------------------------------------------------------
  Using averaged values (eq.~[\ref{eq:sRm}]), 
  $\Rm = 1.5 \cdot 10^4$, for $\eta=10^{-4}$, $\ell=50\pc$ and
- $\overline{u_{\rm rms}}=30\kms$.
+ ${u_{\rm rms}}=30\kms$.
  With the local definition (eq.~[\ref{eq:Rm}]) in the model with 
  $\dx=0.5\pc$ and $\eta=10^{-4}$ at 20\,Myr we find
  $\Rm\in(1.0\cdot10^{-4},5.8\cdot 10^3)$,
@@ -557,15 +557,15 @@ We solve the system of non-ideal compressible MHD equations
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
-\gridline{\fig{figs/0_5pc-eB-nu4.png}{0.45\textwidth}{(a)}
-            \fig{figs/1pc-eB-nu4.png}{0.45\textwidth}{(b)}
+\gridline{\fig{eps/0_5pc-eB-nu4.eps}{0.45\textwidth}{(a)}
+            \fig{eps/1pc-eB-nu4.eps}{0.45\textwidth}{(b)}
           }
-\gridline{  \fig{figs/2pc-eB-nu4.png}{0.45\textwidth}{(c)}
-            \fig{figs/4pc-eB-nu4.png}{0.45\textwidth}{(d)}
+\gridline{  \fig{eps/2pc-eB-nu4.eps}{0.45\textwidth}{(c)}
+            \fig{eps/4pc-eB-nu4.eps}{0.45\textwidth}{(d)}
           }
 \gridline{
-            \fig{figs/2pc-eB-nu5.png}{0.45\textwidth}{(e)}
-            \fig{figs/4pc-eB-nu6.png}{0.45\textwidth}{(f)}
+            \fig{eps/2pc-eB-nu5.eps}{0.45\textwidth}{(e)}
+            \fig{eps/4pc-eB-nu6.eps}{0.45\textwidth}{(f)}
           }
   \begin{picture}(0,0)(0,0)
     \put( 56,428){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
@@ -651,11 +651,11 @@ Time axes vary to accommodate SSD saturation at all $\dx$ with $\eta=10^{-4}$.
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
-\gridline{\fig{figs/0_5pcPm0e-4_0Bpower.png}{0.45\textwidth}{(a)}
-          \fig{figs/0_5pcPm0e-4_0kpower.png}{0.45\textwidth}{(b)}
+\gridline{\fig{eps/0_5pcPm0e-4_0Bpower.eps}{0.45\textwidth}{(a)}
+          \fig{eps/0_5pcPm0e-4_0kpower.eps}{0.45\textwidth}{(b)}
           }
-\gridline{\fig{figs/0_5pcPm0e-3_0Bpower.png}{0.45\textwidth}{(c)}
-          \fig{figs/0_5pcPm0e-3_0kpower.png}{0.45\textwidth}{(d)}
+\gridline{\fig{eps/0_5pcPm0e-3_0Bpower.eps}{0.45\textwidth}{(c)}
+          \fig{eps/0_5pcPm0e-3_0kpower.eps}{0.45\textwidth}{(d)}
           }
 \caption{
 Compensated magnetic (a, c) and kinetic (b, d) power spectra for $\dx=0.5\pc$ at times given in megayears by
@@ -699,14 +699,14 @@ $k^{3/2}$ (a, c) or the Kolmogorov spectrum $k^{-5/3}$ (b, d).
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
-\gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
-          \vspace{-0.7cm} \fig{figs/nu0_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
-\gridline{\vspace{-0.7cm}\fig{figs/nu1_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
-          \vspace{-0.7cm}\fig{figs/nu1_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
-\gridline{\vspace{-0.7cm} \fig{figs/nu10_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
-          \vspace{-0.7cm} \fig{figs/nu10_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
-\gridline{\vspace{-0.3cm}  \fig{figs/SN_Bpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
-          \vspace{-0.3cm}  \fig{figs/SN_kpower.png}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
+\gridline{\vspace{-0.7cm} \fig{eps/nu0_Bpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
+          \vspace{-0.7cm} \fig{eps/nu0_kpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
+\gridline{\vspace{-0.7cm}\fig{eps/nu1_Bpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
+          \vspace{-0.7cm}\fig{eps/nu1_kpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
+\gridline{\vspace{-0.7cm} \fig{eps/nu10_Bpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
+          \vspace{-0.7cm} \fig{eps/nu10_kpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
+\gridline{\vspace{-0.3cm}  \fig{eps/SN_Bpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
+          \vspace{-0.3cm}  \fig{eps/SN_kpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
   \begin{picture}(0,0)(0,0)
     \put(165,455){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
     \put(420,455){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
@@ -798,8 +798,8 @@ Figure\,\ref{fig:3power}(a) -- (f) shows spectra at $t=19.5$ Myr when an SSD is
  LSD being well resolved while the SSD remained underresolved.
 
  We find that the conventional approach from dynamo theory of categorising the 
- turbulence according to Rm based on a forcing scale $\ell$, random velocity
- $\overline{u}$ and resistivity $\eta$ is inadequate for such a complicated
+ turbulence according to Rm based on a forcing scale $\ell$, mean random velocity
+ $u_{\rm rms}$ and resistivity $\eta$ is inadequate for such a complicated
  system.
  We will show in upcoming work that the ISM appears to have multiple regimes
  with thermal phases occupying changing fractional volumes
