@@ -65,3 +65,18 @@ know how anybody can be sure about exponential phase for the entire galaxy.
 In conclusion, I think the authors should address all these very important issues and substantially revise this paper.
 
 I don’t think this will be too difficult.  We will accompany it with a stiff letter to the editor pointing out that the referee isn’t nearly as knowledgeable out the field as they believe...
+
+Comment on 
+We have stated explicitly in the text ... 
+Simplify the text
+We have monitored the spectra and there are no numerical growth, the growth appears physical.
+Seek duplication and confusing language.
+Reproduce Balsara setup
+Run 64^3
+Duplicate Balsara simulations
+Compute the energy of the hyperdiffusion contribution to the energy,
+refer to paper how much the energy losses are from shock.
+
+Check gloob package to reverse engineer
+check the snapshot location on curves
+
