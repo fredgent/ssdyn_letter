@@ -307,9 +307,10 @@ grid spacing much exceeding 4~pc.
  imposition of a background, typically uniform, magnetic field.
  If an imposed field is sufficiently close to equipartition, it
  would excessively influence the results.
+ %FAG: temporarily placed Federrath citations here. Will disucss them separately %FAG: with Balsara or relate to Section 2.
  Some large-scale models do seek to include LSD \citep[e.g.,][]{Korpi:1999b,
- Gressel:2008,HWK09,WA09,Pakmor17,SBADMN19,GE20}, but most show no SSD.
- \citet{SBADMN19} do find an SSD, but no LSD.
+ Gressel:2008,HWK09,WA09,FCSBKS11,FSBS14,RT16,RT17,RT17a,Pakmor17,SBADMN19,GE20}, but most show no SSD.
+ \citet{RT16,SBADMN19} do find an SSD, but no LSD.
  \citet{Gent:2013b,EGSFB16} do appear to include an SSD.
  To confirm this and determine its effect on LSD, we must understand the
  properties of the SSD.
@@ -430,7 +431,9 @@ We solve the system of non-ideal compressible MHD equations
     &+&\vect\nabla\cdot \left(2\rho\nu{\mathbfss W}\right)
     +\rho\,\vect\nabla\left(\zeta_{\nu}\vect\nabla \cdot \vect{u} \right)
     \nonumber\\
-    &+&\vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right),
+    &+&\vect\nabla\cdot \left(2\rho\nu_3{\mathbfss W}^{(3)}\right)
+    %FAG added correction terms
+  \fg{-\vect u\vect{\nabla}\cdot\left(\zeta_D\vect{\nabla}\rho\right)},
   \end{eqnarray}
 %-------------------------------------------------------------------------------
   \begin{eqnarray}
@@ -443,7 +446,11 @@ We solve the system of non-ideal compressible MHD equations
     +\rho\,\zeta_{\nu}\left(\vect\nabla \cdot \vect{u} \right)^2
     \nonumber\\
     &+&\vect\nabla\cdot\left(\zeta_\chi\rho T\vect\nabla s\right)
-    +\rho T\chi_3\vect\nabla^6 s,
+    +\rho T\chi_3\vect\nabla^6 s
+    %FAG added correction terms
+    \nonumber\\
+    &-& \fg{c_{\rm{v}}\,T \left(
+    \zeta_D\nabla^2\rho + \vect\nabla\zeta_D\cdot\vect\nabla\rho\right)},
   \end{eqnarray}
 %-------------------------------------------------------------------------------
   \begin{eqnarray}
@@ -457,7 +464,9 @@ We solve the system of non-ideal compressible MHD equations
 %-------------------------------------------------------------------------------
  with the ideal gas equation of state closing the system.
  Most variables take their usual meanings.
- Terms containing $\zeta_D,\,\zeta_\nu$ and $\zeta_\eta$ resolve shock
+ %FAG added values
+ Terms containing $\zeta_D\fg{=2},\,\zeta_\nu\fg{=5}$ and $\zeta\fg{_\chi=2}$
+ resolve shock
  discontinuities with artificial diffusion of mass, momentum, and energy
  proportional to shock strength \citep[see][for details]{GMKSH20}.
  Unlike \citet{Gent:2013b} shock diffusion is not applied to
@@ -465,7 +474,10 @@ We solve the system of non-ideal compressible MHD equations
  shocks, which actually enhance the field by compression.
  Terms containing $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
  to resolve grid-scale instabilities \citep[see, e.g.,][]{ABGS02,HB04}.
- In Sect.\,\ref{sec:ssd-tang}, we only solve equations~\eqref{eq:mom}
+
+ %FAG para break
+ \fg{For the simplified model of the previous}
+ Sect.\,\ref{sec:ssd-tang}, we solve only equations~\eqref{eq:mom}
  and~\eqref{eq:ind}; set $\rho=1$; do not apply shock-dependent diffusion nor
  hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
  \vect{B}_{\rm imposed}$.

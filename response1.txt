@@ -1,82 +1,146 @@
 
-1- First, I think the language used is a real issue. The style is very cumbersome and impossible to follow. Just one example:
-On page 3, the authors used "inducing an inverse Kazantsev range...". This unfortunately does not mean anything. 
-I am sure the authors meant "inducing an inverse Kazantsev cascade..." but this is not what was written. 
-Language issues similar to this one are found everywhere in the manuscript and I am sure the editor agrees with me.
+> 1- First, I think the language used is a real issue. The style is very
+> cumbersome and impossible to follow. Just one example: On page 3, the authors
+> used "inducing an inverse Kazantsev range...". This unfortunately does not
+> mean anything.  I am sure the authors meant "inducing an inverse Kazantsev
+> cascade..." but this is not what was written.  Language issues similar to this
+> one are found everywhere in the manuscript and I am sure the editor agrees
+> with me.
 
-The editor doesn’t appear too concerned.  We can of course revise, but the lack of specific points here beyond range vs cascade makes it look not too serious.
+The editor doesn’t appear too concerned.  We can of course revise, but the lack
+of specific points here beyond range vs cascade makes it look not too serious.
+
+> 2- Second, I think the code used here, namely the PENCIL code, is a huge
+> problem. The PENCIL code is used routinely for subsonic turbulent problems,
+> for example in the Sun, and is a very accurate and validated tool to model
+> such phenomena. On the other hand, it is not suited for strong shocks.
+> For one, the
+> energy equation (Eq. 3) uses the entropy, which is motivated in solar physics
+> to model accurately convective motions.  But in the context of interstellar
+> supersonic turbulence driven by strong supernova shocks, this is not at all
+> the state of the art. Energy will not be conserved accurately enough.
+>  Moreover,
+> the very surprising choice of the authors to turn off all viscosity terms is
+> clearly even more problematic in this context. Indeed, although the PENCIL
+> code
+> is not by far the best code to do this, it could still make a reasonable job
+> using the explicit viscosity shown in the equations.  But the authors turned
+> viscosity off, only keeping the 6-th order viscosity terms that are clearly
+> not
+> suited for strong shocks.
+
+%We need to be more explicit that we also have multiple shock diffusivity terms
+%rather than just relying on the citation to the shock paper, but the criticism
+%doesn’t hold water beyond that.
+
+This is not correct. We have validated the implementation of the pencil code of
+our convergence proportional diffusivities for handling shock discontinuities in
+Gent, F. A., Mac Low, M. M., Käpylä, M. J., Sarson, G. R., & Hollins, J. F.
+2020, Geophysical and Astrophysical Fluid Dynamics, 114, 77 and these are
+included explicitly in Eqs 1, 2 and 3. The hyper diffusion is applied only to 
+suppress instabilities at the grid scale, and the terms involving zeta resolve
+the strong shocks. Also, the application of cooling and heating, which are a
+crude simplification of the physical processes in the context of a monatomic
+gas, exclude energy conservation of the ISM.
+
+We now make the inclusion of shock handling explicit in the text and the
+correction terms for momentum and energy conservation, which are applied to
+compensate for artificial mass diffusion. The reference to Section 2 using only
+Eq 2 and 4 may have confused the referee, so we have separated the comment to a new paragraph and explicitly refer to the simplified model.
+
+> 3- Third, section 2, although a very interesting experiment in principle, does
+> not make sense in my opinion.  Why turning off Equation 1 and 3 in that
+> context?
+> It does not make sense for compressible turbulence with heating and cooling
+> to turn these absolutely fundamental processes off. I think also that a key
+> reference is missing in that section, namely the work of Federrath et al.
+> (2011, 2014) who performed the same study.
+ 
+The objective of Sect. 2 is to clarify the differences between tangling and
+dynamo amplification, given some debate within the community about whether
+Balsara's results exhibit tangling only, due to the imposed field. For this
+only a simple experiment is required and we relate our physically motivated
+experimental results to this for confirmation that they are indeed dynamo.
+%FAG TODO:
+The Federrath papers are indeed relevant, and we include them in our 
+commentary, although they do not model the ISM nor SN explosions.
+
+%Again, we need to be clearer that we are presenting a simplified model to study
+%a specific physical process.  Neither Federrath et al 2011 or 2014 examine the
+%magnetic tangling regime.  Citing them in our introduction would certainly be
+%appropriate, though, particularly as the 2014 paper makes a strong general case
+%for highly compressible flows having turbulent dynamos in general, which you
+%could argue our model is a special case of including ISM characteristics and
+%supernova driving.  (Also it will make our referee happy, who is quite likely
+%CF)
+ 
+ 
+> 4- Fourth, in the introduction, a very important reference is missing, namely
+> the work of Rieder and Teyssier (2016, 2017) who reported a clear SSD in a
+> rotating, supernova-driven turbulent, dwarf galaxy disk and observed a clear
+> exponential growth of the field, when the resolution was high enough,
+> addressing directly the major science goals outlined in the introduction.
 
 
+This appears to be similar to Uli’s model, with a maximum resolution of dx = 9
+pc and no convergence whatsoever (see Figure 9 in the 2016 paper, right hand
+side).  It is certainly worth mentioning in the Introduction along with Uli’s
+papers.
 
-2- Second, I think the code used here, namely the PENCIL code, is a huge problem. The PENCIL code is used routinely for subsonic turbulent problems,
-for example in the Sun, and is a very accurate and validated tool to model such phenomena. On the other hand, it is not suited for strong shocks.
-For one, the energy equation (Eq. 3) uses the entropy, which is motivated in solar physics to model accurately convective motions.
-But in the context of interstellar supersonic turbulence driven by strong supernova shocks, this is not at all the state of the art. Energy will not be conserved accurately enough.
-Moreover, the very surprising choice of the authors to turn off all viscosity terms is clearly even more problematic in this context. Indeed, although
-the PENCIL code is not by far the best code to do this, it could still make a reasonable job using the explicit viscosity shown in the equations.
-But the authors turned viscosity off, only keeping the 6-th order viscosity terms that are clearly not suited for strong shocks.
+> 5- The results presented in section 4 are very problematic. No clear
+> exponential growth is observed, although exponential growth of the magnetic
+> energy is a clear and accepted sign of ongoing dynamo processes.  The magnetic
+> energy growth looks very erratic and is, in my opinion, a consequence of
+> various numerical instabilities due to the poor choice of the PENCIL code
+> parameters, the most serious one being (as I said) to completely remove linear
+> viscosity.
 
-We need to be more explicit that we also have multiple shock diffusivity terms rather than just relying on the citation to the shock paper, but the criticism doesn’t hold water beyond that.
-
-
-3- Third, section 2, although a very interesting experiment in principle, does not make sense in my opinion.
-Why turning off Equation 1 and 3 in that context ? It does not make sense for compressible turbulence with heating and cooling
-to turn these absolutely fundamental processes off. I think also that a key reference is missing in that section, namely the work of Federrath et al. (2011, 2014)
-who performed the same study.
-
-Again, we need to be clearer that we are presenting a simplified model to study a specific physical process.  Neither Federrath et al 2011 or 2014 examine the magnetic tangling regime.  Citing them in our introduction would certainly be appropriate, though, particularly as the 2014 paper makes a strong general case for highly compressible flows having turbulent dynamos in general, which you could argue our model is a special case of including ISM characteristics and supernova driving.  (Also it will make our referee happy, who is quite likely CF)
+We need to think about whether to include an explicit viscosity model in the
+current paper rather than holding them for Paper 2.  Since the referee doesn’t
+understand shock viscosity, it may not be necessary.
 
 
-4- Fourth, in the introduction, a very important reference is missing, namely the work of Rieder and Teyssier (2016, 2017) who reported a clear SSD in a rotating,
-supernova-driven turbulent, dwarf galaxy disk and observed a clear exponential growth of the field, when the resolution was high enough, addressing directly the
-major science goals outlined in the introduction.
-
-
-This appears to be similar to Uli’s model, with a maximum resolution of dx = 9 pc and no convergence whatsoever (see Figure 9 in the 2016 paper, right hand side).  It is certainly worth mentioning in the Introduction along with Uli’s papers.
-
-5- The results presented in section 4 are very problematic. No clear exponential growth is observed,
-although exponential growth of the magnetic energy is a clear and accepted sign of ongoing dynamo processes.
-The magnetic energy growth looks very erratic and is, in my opinion, a consequence of various numerical instabilities due to the poor choice of the PENCIL code parameters,
-the most serious one being (as I said) to completely remove linear viscosity.
-
-We need to think about whether to include an explicit viscosity model in the current paper rather than holding them for Paper 2.  Since the referee doesn’t understand shock viscosity, it may not be necessary.
-
-
-6- Section 4 is very cumbersome to read. It has no structure and the message is a juxtaposition of random comments on the numerical results.
-This is probably a consequence of the spurious nature of the numerical solution.
-
+> 6- Section 4 is very cumbersome to read. It has no structure and the message
+> is
+> a juxtaposition of random comments on the numerical results.  This is probably
+> a consequence of the spurious nature of the numerical solution.
+ 
 Well, we could maybe revise a bit, but this is hardly a show-stopping critique.
 
+ 
+> 7- In the introduction and in the conclusion, the authors refer to the seminal
+> work of Balsara.  Balsara's results, although much older, appear much more
+> reliable than the present work.  Balsara used a shock-capturing, energy
+> conserving MHD code, ideal for strong supernova-driven shocks.  The observed
+> SSD was also quite clear and convincing, as opposed to the present paper, with
+> a nice and clear exponential growth of the magnetic energy. The fact that this
+> paper could not reproduce Balsara's results is a very serious worry.
 
-7- In the introduction and in the conclusion, the authors refer to the seminal work of Balsara.
-Balsara's results, although much older, appear much more reliable than the present work.
-Balsara used a shock-capturing, energy conserving MHD code, ideal for strong supernova-driven shocks.
-The observed SSD was also quite clear and convincing, as opposed to the present paper, with a nice and clear exponential growth of the magnetic energy.
-The fact that this paper could not reproduce Balsara's results is a very serious worry.
-
-Given how Balsara’s results have been called into serious question in the field, this comment makes me think that the referee is out of touch with the issues being discussed.  We can delicately make this point to the editor. 
+Given how Balsara’s results have been called into serious question in the
+field, this comment makes me think that the referee is out of touch with the
+issues being discussed.  We can delicately make this point to the editor. 
 
 
-Agreeing to what Mordecai wrote, ... just adding ..., given that we don't have a real access to the kinematic phases
-of real galaxies, we can't be sure if there was ever any neat exponential phase for volume averaged brms type
-quantity ... 'accepted' does not necessarily make it a truth! Reality can indeed be far too complicated, and I don't
-know how anybody can be sure about exponential phase for the entire galaxy.
+Agreeing to what Mordecai wrote, ... just adding ..., given that we don't have
+a real access to the kinematic phases of real galaxies, we can't be sure if
+there was ever any neat exponential phase for volume averaged brms type
+quantity ... 'accepted' does not necessarily make it a truth! Reality can
+indeed be far too complicated, and I don't know how anybody can be sure about
+exponential phase for the entire galaxy.
 
-In conclusion, I think the authors should address all these very important issues and substantially revise this paper.
+In conclusion, I think the authors should address all these very important
+issues and substantially revise this paper.
 
-I don’t think this will be too difficult.  We will accompany it with a stiff letter to the editor pointing out that the referee isn’t nearly as knowledgeable out the field as they believe...
+I don’t think this will be too difficult.  We will accompany it with a stiff
+letter to the editor pointing out that the referee isn’t nearly as
+knowledgeable out the field as they believe...
 
-Comment on 
-We have stated explicitly in the text ... 
-Simplify the text
-We have monitored the spectra and there are no numerical growth, the growth appears physical.
-Seek duplication and confusing language.
-Reproduce Balsara setup
-Run 64^3
-Duplicate Balsara simulations
-Compute the energy of the hyperdiffusion contribution to the energy,
-refer to paper how much the energy losses are from shock.
+Comment on We have stated explicitly in the text ...  Simplify the text We have
+monitored the spectra and there are no numerical growth, the growth appears
+physical.  Seek duplication and confusing language.  Reproduce Balsara setup
+Run 64^3 Duplicate Balsara simulations Compute the energy of the hyperdiffusion
+contribution to the energy, refer to paper how much the energy losses are from
+shock.
 
-Check gloob package to reverse engineer
-check the snapshot location on curves
+Check gloob package to reverse engineer check the snapshot location on curves
 
