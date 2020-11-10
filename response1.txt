@@ -95,10 +95,27 @@ papers.
 > parameters, the most serious one being (as I said) to completely remove linear
 > viscosity.
 
-We need to think about whether to include an explicit viscosity model in the
-current paper rather than holding them for Paper 2.  Since the referee doesn’t
-understand shock viscosity, it may not be necessary.
+%We need to think about whether to include an explicit viscosity model in the
+%current paper rather than holding them for Paper 2.  Since the referee doesn’t
+%understand shock viscosity, it may not be necessary.
 
+The erratic behaviour is physical and due to the evolving thermal properties of
+the ISM and the low (0.2x) supernova rate. We see the same qualitative behaviour
+in models with varying levels of physical viscosity, which we include for the
+benefit of the referee and editor, but which we reserve for later publications.
+As the SN rate increases the filling fraction of the hot gas becomes 
+dominant and the kinematics more spatially uniform, so that the energetics 
+become more steady. Consequently the exponential growth is more uniform and 
+faster.
+
+We have also taken care to illiminate numerical effects, which is why we have
+implemented the hyper diffusivity in addition to the shock-dependent
+diffusivity. We have included the kinetic and magnetic energy spectra, 
+specifically to demsonstrate that the flow and magnetic field are well resolved,
+with the energy cutoff clearly applying well away from the grid scale. 
+Exhibiting the classical Kolmogorov and Kazentsev energy ranges in all the
+spectra is evidence that the fields are well resolved and behaving 
+physically.
 
 > 6- Section 4 is very cumbersome to read. It has no structure and the message
 > is
@@ -115,6 +132,31 @@ Well, we could maybe revise a bit, but this is hardly a show-stopping critique.
 > SSD was also quite clear and convincing, as opposed to the present paper, with
 > a nice and clear exponential growth of the magnetic energy. The fact that this
 > paper could not reproduce Balsara's results is a very serious worry.
+
+We opted to use lower supernova rates in these experiments to remain in a 
+regime which retains a typical distribution of warm and hot phase ISM. In a 
+confined periodic box there is no escape for the over pressured gas, as in a 
+real galaxy, so the ISM is subject to thermal runaway, in which the filling 
+fraction of hot gas exceeds 90%. For the benefit of the referee we provide
+results, in which we replicate the experiments of Balsara et al. The have runs 
+with 1pc and 2pc resolution. As can be seen from the plot our 1 and 2pc runs
+do show clear exponential growth, but much faster and saturating far higher
+than Balsara. The explanation is due to the improved accuracy and lower
+diffusivity of the Pencil Code. To verify this we included a run with 4pc
+resolution, which matches closely the results of Balsara's 1pc run.
+Note, that in this case there is a subsequent dynamo burst after 40\,Myr. We do
+not know what would have happened with the Balsara experiment, because their
+resources were more limited and they ceased the experiment believing the
+plateau to indicate saturation of the small scale dynamo.
+
+In addition, the Balsara experiments used 8x the solar neighbourhood rate for
+SN injection. This results in the rapid saturation of the simulation by hot gas
+and consequently a steadier kinetic energy profile. Compare the kinetic energy
+profiles in our plot between the Balsara replicas and the model in our paper. 
+We also provide snapshots of temperature for the 8x, 1x and 0.2x SN rate, and
+from this you will see that the characteristics of the ISM are substantially 
+altered with the former having gas mainly hotter than 10^7 K.
+our plot 
 
 Given how Balsara’s results have been called into serious question in the
 field, this comment makes me think that the referee is out of touch with the
