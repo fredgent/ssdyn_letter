@@ -5,7 +5,7 @@ BIBTEX=bibtex
 
 default=ssdyn_letter.pdf
 
-ssdyn_letter.pdf:ssdyn_letter.tex Makefile figs/*.png letter.tex 
+ssdyn_letter.pdf:ssdyn_letter.tex Makefile figs/*.pdf letter.tex 
 	$(LATEX) ssdyn_letter
 	$(BIBTEX) ssdyn_letter
 	$(LATEX) ssdyn_letter

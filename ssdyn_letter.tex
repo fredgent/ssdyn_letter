@@ -342,12 +342,15 @@ This provides objective criteria with which to determine the presence of SSD
 in simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
 Finally, we conclude in Sect.~\ref{sec:conc}.
 %==============================================================================
-\begin{figure*}
-\gridline{ \fig{eps/ssd-tang-brms.eps}{0.45\textwidth}{(a)}
-          }
-\gridline{     \fig{eps/ssdBpower.eps}{0.45\textwidth}{(b)}
-          \fig{eps/tanglingBpower.eps}{0.45\textwidth}{(c)}
-          }
+\begin{figure}
+  \includegraphics[trim=0.00cm 0.3cm 0.0cm 0.0cm, clip=true,width=0.91\columnwidth]{figs/ssd-tang-brms.pdf}
+  \includegraphics[trim=0.25cm 0.3cm 0.5cm 0.1cm, clip=true,width=1.0\columnwidth]{figs/ssdBpower.pdf}
+  \includegraphics[trim=0.35cm 0.3cm 0.5cm 0.3cm, clip=true,width=1.0\columnwidth]{figs/tanglingBpower.pdf}
+  \begin{picture}(0,0)(0,0)
+    \put(45,370){{\sf\bf{(a)}}}
+    \put(48,255){{\sf\bf{(b)}}}
+    \put(48,125){{\sf\bf{(c)}}}
+  \end{picture}
 \caption{
  (a) Mean magnetic energy density, $e_B$, with non-helical random forcing,
  scaled to time-averaged kinetic energy density, $\overline{e_K}$.
@@ -357,7 +360,7 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
  legends.  Note that the kinetic energy uses the right-hand axes.
   Forcing scale, $\kf/k_1=8$: vertical dotted line.
 \label{fig:tangling}}
-\end{figure*}
+\end{figure}
 
 %==============================================================================
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
@@ -483,16 +486,20 @@ We solve the system of non-ideal compressible MHD equations
  \vect{B}_{\rm imposed}$.
 
 %-------------------------------------------------------------------------------
-\begin{figure*}
-\gridline{\fig{eps/eB-res-4eta.eps}{0.45\textwidth}{(a)}
-          \fig{eps/eB-res-3eta.eps}{0.45\textwidth}{(b)}
-          }
+\begin{figure}
+  \includegraphics[trim=0.2cm 0.0cm 0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
+  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-Bals.pdf}
+  \begin{picture}(0,0)(0,0)
+    \put(210,325){{\sf\bf{(a)}}}
+    \put(210,200){{\sf\bf{(b)}}}
+    \put(210, 52){{\sf\bf{(c)}}}
+  \end{picture}
 \caption{
  Magnetic energy density for resolutions $\dx=0.5$--$4\pc$,
  scaled to time-averaged kinetic energy density $\overline{e_K}$ for resistivity
  (a) $\eta=10^{-4}$ and (b) $10^{-3}\kpc\kms$.
 \label{fig:eb-res}}
-\end{figure*}
+\end{figure}
 %-------------------------------------------------------------------------------
 
  SNe are exploded at random positions at a Poisson rate $\dot\sigma$
@@ -569,25 +576,27 @@ We solve the system of non-ideal compressible MHD equations
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
-\gridline{\fig{eps/0_5pc-eB-nu4.eps}{0.45\textwidth}{(a)}
-            \fig{eps/1pc-eB-nu4.eps}{0.45\textwidth}{(b)}
-          }
-\gridline{  \fig{eps/2pc-eB-nu4.eps}{0.45\textwidth}{(c)}
-            \fig{eps/4pc-eB-nu4.eps}{0.45\textwidth}{(d)}
-          }
-\gridline{
-            \fig{eps/2pc-eB-nu5.eps}{0.45\textwidth}{(e)}
-            \fig{eps/4pc-eB-nu6.eps}{0.45\textwidth}{(f)}
-          }
+  \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/1pc-eB-nu4.pdf}
+  \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/1pc-eB-nu5.pdf}\\
+  \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/2pc-eB-nu5.pdf}
+  \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/4pc-eB-nu6.pdf}
   \begin{picture}(0,0)(0,0)
-    \put( 56,428){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(445,438){\begin{scriptsize}{\sf{$\delta x=1.0$pc}}\end{scriptsize}}
-    \put(445,428){\begin{scriptsize}{\sf{$\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put( 56,256){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(445,266){\begin{scriptsize}{\sf{$\delta x=4.0$pc}}\end{scriptsize}}
-    \put(445,256){\begin{scriptsize}{\sf{$\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put( 56, 78){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\dot\sigma=\SNr$}}\end{scriptsize}}
-    \put(405, 78){\begin{scriptsize}{\sf{$\delta x=4.0$pc, $\dot\sigma=\SNr$}}\end{scriptsize}}
+    \put(-346,455){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(-100,455){\begin{scriptsize}{\sf{$\delta x=1.0$pc, $\nu=10^{-3}$}}\end{scriptsize}}
+    \put(-346,330){\begin{scriptsize}{\sf{$\delta x=1.0$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(-100,330){\begin{scriptsize}{\sf{$\delta x=1.0$pc, $\eta=10^{-4}$}}\end{scriptsize}}
+    \put(-416,170){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(-170,170){\begin{scriptsize}{\sf{$\delta x=4.0$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(-335, 45){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\dot\sigma=\SNr$}}\end{scriptsize}}
+    \put( -90, 45){\begin{scriptsize}{\sf{$\delta x=4.0$pc, $\dot\sigma=\SNr$}}\end{scriptsize}}
+    \put(-450,455){{\sf\bf{(a)}}}
+    \put(-450,330){{\sf\bf{(b)}}}
+    \put(-450,170){{\sf\bf{(e)}}}
+    \put(-450, 45){{\sf\bf{(f)}}}
+    \put(-205,455){{\sf\bf{(c)}}}
+    \put(-205,330){{\sf\bf{(d)}}}
+    \put(-205,170){{\sf\bf{(h)}}}
+    \put(-205, 45){{\sf\bf{(i)}}}
   \end{picture}
 \caption{
 Magnetic energy density $e_B$ normalized by the time-averaged kinetic
@@ -662,13 +671,20 @@ Time axes vary to accommodate SSD saturation at all $\dx$ with $\eta=10^{-4}$.
  which are not present for $\dx=4\pc$, (f).
 
 %-------------------------------------------------------------------------------
-\begin{figure*}
-\gridline{\fig{eps/0_5pcPm0e-4_0Bpower.eps}{0.45\textwidth}{(a)}
-          \fig{eps/0_5pcPm0e-4_0kpower.eps}{0.45\textwidth}{(b)}
-          }
-\gridline{\fig{eps/0_5pcPm0e-3_0Bpower.eps}{0.45\textwidth}{(c)}
-          \fig{eps/0_5pcPm0e-3_0kpower.eps}{0.45\textwidth}{(d)}
-          }
+\begin{figure}
+  \includegraphics[trim=0.5cm 0.2cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/0_5pcPm0e-4_0kpower.pdf}
+  \includegraphics[trim=0.5cm 0.5cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/0_5pcPm0e-3_0kpower.pdf}
+  \begin{picture}(0,0)(0,0)
+    \put(110,455){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\nu=10^{-4}$}}\end{scriptsize}}
+    \put(110,330){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\nu=10^{-4}$}}\end{scriptsize}}
+    \put(110,175){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\nu=10^{-3}$}}\end{scriptsize}}
+    \put(110, 50){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\nu=10^{-3}$}}\end{scriptsize}}
+    \put(53,543){{\color{white}{\circle*{100}}}}
+    \put(45,540){{\sf\bf{(a)}}}
+    \put(45,415){{\sf\bf{(b)}}}
+    \put(45,260){{\sf\bf{(c)}}}
+    \put(45,135){{\sf\bf{(d)}}}
+  \end{picture}
 \caption{
 Compensated magnetic (a, c) and kinetic (b, d) power spectra for $\dx=0.5\pc$ at times given in megayears by
 the legends.  Resistivity is 
@@ -676,7 +692,7 @@ the legends.  Resistivity is
 Compensation is by the Kazantsev spectrum 
 $k^{3/2}$ (a, c) or the Kolmogorov spectrum $k^{-5/3}$ (b, d).
 \label{fig:4power}}
-\end{figure*}
+\end{figure}
 %-------------------------------------------------------------------------------
 
  SN-driven turbulence does not have a well-defined forcing scale, unlike the
@@ -711,14 +727,14 @@ $k^{3/2}$ (a, c) or the Kolmogorov spectrum $k^{-5/3}$ (b, d).
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
-\gridline{\vspace{-0.7cm} \fig{eps/nu0_Bpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
-          \vspace{-0.7cm} \fig{eps/nu0_kpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
-\gridline{\vspace{-0.7cm}\fig{eps/nu1_Bpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
-          \vspace{-0.7cm}\fig{eps/nu1_kpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
-\gridline{\vspace{-0.7cm} \fig{eps/nu10_Bpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
-          \vspace{-0.7cm} \fig{eps/nu10_kpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
-\gridline{\vspace{-0.3cm}  \fig{eps/SN_Bpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
-          \vspace{-0.3cm}  \fig{eps/SN_kpower.eps}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
+\gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
+          \vspace{-0.7cm} \fig{figs/nu0_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
+\gridline{\vspace{-0.7cm}\fig{figs/nu1_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
+          \vspace{-0.7cm}\fig{figs/nu1_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
+\gridline{\vspace{-0.7cm} \fig{figs/nu10_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
+          \vspace{-0.7cm} \fig{figs/nu10_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
+\gridline{\vspace{-0.3cm}  \fig{figs/SN_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
+          \vspace{-0.3cm}  \fig{figs/SN_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
   \begin{picture}(0,0)(0,0)
     \put(165,455){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
     \put(420,455){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
