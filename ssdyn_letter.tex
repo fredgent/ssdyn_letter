@@ -91,9 +91,9 @@
 \newcommand\kms{~ {\rm km~ s}^{-1}}
 
 \definecolor{midblue}{rgb}{0.0,0.4,0.7}
-\definecolor{midgreen}{rgb}{0.0,0.8,0.3}
+\definecolor{midgreen}{rgb}{0.1,0.6,0.3}
 \definecolor{mypurple}{rgb}{0.8,0.2,0.8}
-\newcommand{\fg}[1]{\textcolor{midblue}{#1}}
+\newcommand{\fg}[1]{\textcolor{midgreen}{#1}}
 \newcommand{\fag}[1]{\textcolor{midgreen}{FAG: #1}}
 \newcommand{\ns}[1]{\textcolor{orange}{#1}}
 \newcommand{\mjk}[1]{\textcolor{red}{#1}}
@@ -346,7 +346,7 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
 \begin{figure}
   \includegraphics[trim=0.00cm 0.3cm 0.0cm 0.0cm, clip=true,width=0.91\columnwidth]{figs/ssd-tang-brms.pdf}
   \includegraphics[trim=0.25cm 0.3cm 0.5cm 0.1cm, clip=true,width=1.0\columnwidth]{figs/ssdBpower.pdf}
-  \includegraphics[trim=0.35cm 0.3cm 0.5cm 0.3cm, clip=true,width=1.0\columnwidth]{figs/tanglingBpower.pdf}
+  \includegraphics[trim=0.35cm 0.6cm 0.5cm 0.3cm, clip=true,width=1.0\columnwidth]{figs/tanglingBpower.pdf}
   \begin{picture}(0,0)(0,0)
     \put(45,370){{\sf\bf{(a)}}}
     \put(48,255){{\sf\bf{(b)}}}
@@ -492,7 +492,7 @@ We solve the system of non-ideal compressible MHD equations
 %-------------------------------------------------------------------------------
 \begin{figure}
   \includegraphics[trim=0.2cm 0.0cm 0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
-  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-Bals.pdf}
+  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-Ball.pdf}
   \begin{picture}(0,0)(0,0)
     \put(210,325){{\sf\bf{(a)}}}
     \put(210,200){{\sf\bf{(b)}}}
@@ -502,6 +502,8 @@ We solve the system of non-ideal compressible MHD equations
  Magnetic energy density for resolutions $\dx=0.5$--$4\pc$,
  scaled to time-averaged kinetic energy density $\overline{e_K}$ for resistivity
  (a) $\eta=10^{-4}$ and (b) $10^{-3}\kpc\kms$.
+ \fg{(c) Comparison at resolution, an imposed field and $\dot\sigma=8\SNr$
+ matching \citet{BKMM04}.}
 \label{fig:eb-res}}
 \end{figure}
 %-------------------------------------------------------------------------------
@@ -605,9 +607,11 @@ We solve the system of non-ideal compressible MHD equations
 \caption{
 Magnetic energy density $e_B$ normalized by the time-averaged kinetic
 energy $\overline{e_K}$ for various resistivities $\eta$ for values
-given in each panel of resolution $\dx$ and SN rate $\dot\sigma$ normalized by the
-solar neighborhood rate $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$.
+given in each panel of resolution $\dx$ and SN rate $\dot\sigma$ normalized by
+the solar neighborhood rate $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$.
 Time axes vary to accommodate SSD saturation at all $\dx$ with $\eta=10^{-4}$.
+\fg{$\nu=0$, except where Pm is varied with $\nu$ fixed (c) or 
+$\eta$ fixed (d).}
 \label{fig:eb-nu}}
 \end{figure*}
 %-------------------------------------------------------------------------------
@@ -751,7 +755,7 @@ $k^{3/2}$ (a, c) or the Kolmogorov spectrum $k^{-5/3}$ (b, d).
   \end{picture}
 \caption{
 Compensated energy spectra as in Figure\,\ref{fig:4power}.
-Resistivity $\eta$ and supernova rate $\dot{sigma}$ are shown in the captions.
+Resistivity $\eta$ and supernova rate $\dot{\sigma}$ are shown in the captions.
 (a)--(f): Times shown are
  $t=19.5\Myr$ for models with $\dx=0.5$ \& $1\pc$ and 100\,Myr for
  $\dx=2$ \& $4\pc$; 
