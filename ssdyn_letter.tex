@@ -469,12 +469,20 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
  at scales \fg{smaller than} $\kf$, while tangling transfers energy only at
  scales between
  $\kf$ and the scale of the imposed field.
- Dissipation controls scales below the Kazantsev range.
+ Dissipation \fg{characterises} scales below the Kazantsev range.
  
 \section{SN turbulence model design} \label{sec:model}
 
- In our SN-driven turbulence models, we exclude large-scale magnetic
- field dynamics by neglecting rotation, shear, and stratification. Our
+ %In our SN-driven turbulence models, we exclude large-scale magnetic
+ %field dynamics by neglecting rotation, shear, and stratification. Our
+ %simulation domain is a periodic cube of length 256 pc and zone size
+ %of $\delta x=0.5$, 1, 2 or 4$\pc$.
+ %A random 1~nG seed field excludes tangling of an imposed field as the 
+ %source of any magnetic amplification.
+ \fg{The design of these} SN-driven turbulence models, excludes large-scale
+ magnetic field dynamics by \fg{omitting global scale} rotation, shear, and
+ stratification.
+ Our
  simulation domain is a periodic cube of length 256 pc and zone size
  of $\delta x=0.5$, 1, 2 or 4$\pc$.
  A random 1~nG seed field excludes tangling of an imposed field as the 
@@ -534,33 +542,46 @@ We solve the system of non-ideal compressible MHD equations
  Most variables take their usual meanings.
  %FAG added values
  Terms containing $\zeta_D\fg{=2},\,\zeta_\nu\fg{=5}$ and $\zeta\fg{_\chi=2}$
- resolve shock
+ \fg{are applied to all ISM models and} resolve shock
  discontinuities with artificial diffusion of mass, momentum, and energy
  proportional to shock strength \citep[see][for details]{GMKSH20}.
- Unlike \citet{Gent:2013b} shock diffusion is not applied to
- equation~\eqref{eq:ind}, to avoid excessive magnetic dissipation in
- shocks, which actually enhance the field by compression.
+ \fg{Equations~\eqref{eq:mom} and \eqref{eq:ent} include terms with $\zeta_D$
+ provide momentum and energy conserving corrections for artificial mass
+ diffusion applying in \eqref{eq:mass}.}
+ %Unlike \citet{Gent:2013b} shock diffusion is not applied to
+ %equation~\eqref{eq:ind}, to avoid excessive magnetic dissipation in
+ %shocks, which actually enhance the field by compression.
+ Shock diffusion is not applied to equation~\eqref{eq:ind}\fg{, unlike
+ \citet{Gent:2013b}. We avoid excessive magnetic dissipation in
+ shocks, where compression actually enhances it.}
  Terms containing $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
- to resolve grid-scale instabilities \citep[see, e.g.,][]{ABGS02,HB04}.
+ to resolve grid-scale instabilities \citep[see, e.g.,][]{ABGS02,HB04}, \fg{
+ with coefficients optimal for each $\dx$}.
 
  %FAG para break
  %MJK Nishant's original experiments were
  %MJK solving for the continuity equation.
  %MJK Yours really not?
- \fg{For the simplified model of the previous}
- Sect.\,\ref{sec:ssd-tang}, we solve only equations~\eqref{eq:mom}
- and~\eqref{eq:ind}; set $\rho=1$; do not apply shock-dependent diffusion nor
- hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
- \vect{B}_{\rm imposed}$.
+ %FAG: yes, I was mistaken
+ %\fg{For the simplified model of the previous}
+ %Sect.\,\ref{sec:ssd-tang}, we solve only equations~\eqref{eq:mom}
+ %and~\eqref{eq:ind}; set $\rho=1$; do not apply shock-dependent diffusion nor
+ %hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
+ %\vect{B}_{\rm imposed}$.
+ \fg{The simplified isothermal model considered above
+ (Sect.\,\ref{sec:ssd-tang}) solves
+ equations~\fg{\eqref{eq:mass},} \eqref{eq:mom} and~\eqref{eq:ind} without the
+ shock-dependent diffusion or hyperdiffusion terms,
+ in which $\vect{B}=\vect\nabla\times\vect{A}+\vect{B}_{\rm imposed}$.}
 
 %-------------------------------------------------------------------------------
 \begin{figure}
-  \includegraphics[trim=0.2cm 0.0cm 0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
-  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-Ball.pdf}
+  \includegraphics[trim=0.2cm 0.2cm 0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
+  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.2cm, clip=true,width=\columnwidth]{figs/eB-Ball.pdf}
   \begin{picture}(0,0)(0,0)
-    \put(210,325){{\sf\bf{(a)}}}
-    \put(210,200){{\sf\bf{(b)}}}
-    \put(210, 52){{\sf\bf{(c)}}}
+    \put(210,315){{\sf\bf{(a)}}}
+    \put(210,194){{\sf\bf{(b)}}}
+    \put(210, 48){{\sf\bf{(c)}}}
   \end{picture}
 \caption{
  Magnetic energy density for resolutions $\dx=0.5$--$4\pc$,
@@ -572,29 +593,52 @@ We solve the system of non-ideal compressible MHD equations
 \end{figure}
 %-------------------------------------------------------------------------------
 
- SNe are exploded at random positions at a Poisson rate $\dot\sigma$
- normalized by the solar neighborhood value $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$.
- Explosions inject $\EST = 10^{51}\erg$ of thermal energy, except in
- dense regions, where a proportion is kinetic $\ESK$ 
+ \fg{In the ISM simulations} SNe are exploded at \fg{uniform} random positions
+ at a Poisson rate $\dot\sigma$ \fg{proportional to} the solar neighborhood
+ value $\SNr\simeq \fg{64}\kpc^{-3}\Myr^{-1}$.
+ %FAG: to check rate again the rate when CSC back on line
+ Explosions inject $\EST = 10^{51}\erg$ thermal energy, except in
+ dense regions, where a proportion \fg{($<5\%$)} is kinetic $\ESK$ 
  \citep[see][]{GMKSH20}.
- For comparability, explosions in all models with the same $\dot\sigma$ occur
- at the same times and places.
+ %FAG: rephrase
+ %For comparability, explosions in all models with the same $\dot\sigma$ occur
+ %at the same times and places.
+ \fg{Explosions in models with common $\dot\sigma$ have common timing and
+ locations.}
  Non-adiabatic heating $\Gamma$ and cooling $\Lambda (T)$ are included
  \citep{Gent:2013a} following \citet{Wolfire:1995} and \citet{Sarazin:1987}.
 
- The subset of experiments presented in this letter have viscosity $\nu=0$,
- and hyperviscosity $\nu_3$ set optimally for each $\dx$ to ensure the flow
- is well resolved.
- We benchmark the magnetic field evolution by setting $\eta=0$, using only
- hyperresistivity $\eta_3$.
- We determine how low a physical resistivity $\eta$ can be resolved by varying
- it from $10^{-5}$ to $10^{-3}\kpc\kms$ (units assumed henceforth).
- Unlike our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
- we do not include thermal diffusivity, $\chi$, as the artificial diffusivities
- are adequate to ensure numerical stability and physical effects of thermal
+ \fg{Unlike past} experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
+ thermal diffusivity, $\chi$, \fg{is omitted as} the artificial diffusivities
+ are adequate to ensure numerical stability.
+ \fg{The} physical effects of thermal
  conductivity can be expected to be relevant only at the unresolved or
  marginally resolved Field length defined by \citet[][named after George
  Field, not the magnetic field]{BM90}.
+
+ %FAG: reworded without hyper to avoid confusion
+ %The subset of experiments presented in this letter have viscosity $\nu=0$,
+ %and hyperviscosity $\nu_3$ set optimally for each $\dx$ to ensure the flow
+ %is well resolved.
+ %We benchmark the magnetic field evolution by setting $\eta=0$, using only
+ %hyperresistivity $\eta_3$.
+ %We determine how low a physical resistivity $\eta$ can be resolved by varying
+ %it from $10^{-5}$ to $10^{-3}\kpc\kms$ (units assumed henceforth).
+ We \fg{isolate how numerical diffusion evolves the}
+ magnetic field evolution by 
+ setting $\eta=0$ \fg{and $\nu=0$.}
+ We determine how low a physical resistivity $\eta$ can be resolved by varying
+ it from $10^{-5}$ to $10^{-3}\kpc\kms$ (units assumed henceforth).
+ \fg{We also test the effect of Pm, while varying $\nu$ with 
+ $\eta=10^{-4}$ or varying $\eta$ with $\nu=10^{-3}$.}
+ %FAG moved to para above
+ %Unlike our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
+ %we do not include thermal diffusivity, $\chi$, as the artificial diffusivities
+ %are adequate to ensure numerical stability and physical effects of thermal
+ %conductivity can be expected to be relevant only at the unresolved or
+ %marginally resolved Field length defined by \citet[][named after George
+ %Field, not the magnetic field]{BM90}.
+
 
  A commonly used expression for Rm is 
  \begin{equation}\label{eq:sRm}
