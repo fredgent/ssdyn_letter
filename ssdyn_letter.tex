@@ -293,51 +293,87 @@ grid spacing much exceeding 4~pc.
  dynamo (SSD) in the interstellar medium (ISM).
  SSD acts at small eddy scales of the turbulence, thus driving magnetic field
  growth at correspondingly short turnover times.
- The fastest growing SSD modes are far smaller than the large-scale dynamo
- (LSD) modes generating the magnetic field structures organised at the systemic
- scale of the galactic disk.
+ %FAG: split sentence for readability
+ %The fastest growing SSD modes are far smaller than the large-scale dynamo
+ %(LSD) modes generating the magnetic field structures organised at the systemic
+ %scale of the galactic disk.
+ \fg{The large-scale dynamo (LSD) with much longer turnover times generates
+ magnetic fields ordered on kpc scales.}
  Hence, simulations capable of capturing LSD alongside the faster growing modes
  of SSD are computationally challenging.
- However, the interaction of SSD modes with the LSD likely fundamentally alters
- the evolution and structure of the magnetic field.
+ %FAG: trim
+ %However, the interaction of SSD modes with the LSD likely fundamentally alters
+ %the evolution and structure of the magnetic field.
+ However, \fg{interaction between SSD and LSD modes will likely
+ fundamentally alter} evolution and structure of the magnetic field.
 
  Many simulations of supernova- (SN)-driven turbulence with realistic vertical
  stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} have no
- mechanisms for inducing LSD, such as rotation and shear.
- The effect of strong ordered magnetic fields is modelled by initial
+ mechanism to induce LSD, such as rotation and shear.
+ %FAG: trimmed - limitation sufficiently apparent, removed initial
+ %The effect of strong ordered magnetic fields is modelled by initial
+ %imposition of a background, typically uniform, magnetic field.
+ %If an imposed field is sufficiently close to equipartition, it
+ %would excessively influence the results.
+ The effect of strong ordered magnetic fields is modelled by
  imposition of a background, typically uniform, magnetic field.
- If an imposed field is sufficiently close to equipartition, it
- would excessively influence the results.
  %FAG: temporarily placed Federrath citations here. Will disucss them separately %FAG: with Balsara or relate to Section 2.
- Some large-scale models do seek to include LSD \citep[e.g.,][]{Korpi:1999b,
- Gressel:2008,HWK09,WA09,FCSBKS11,FSBS14,RT16,RT17,RT17a,Pakmor17,SBADMN19,GE20}, but most show no SSD.
- \citet{RT16,SBADMN19} do find an SSD, but no LSD.
- \citet{Gent:2013b,EGSFB16} do appear to include an SSD.
+ %FAG: split and concise
+ %Some large-scale models do seek to include LSD \citep[e.g.,][]{Korpi:1999b,
+ %Gressel:2008,HWK09,WA09,FCSBKS11,FSBS14,RT16,RT17,RT17a,Pakmor17,SBADMN19,GE20}, but most show no SSD.
+ %\citet{RT16,SBADMN19} do find an SSD, but no LSD.
+ %\citet{Gent:2013b,EGSFB16} do appear to include an SSD.
+ \fg{Some large-scale models do seek to include LSD 
+ \citep[e.g.,][]{Korpi:1999b,Gressel:2008,HWK09,WA09,Pakmor17,
+ GE20}, but show no SSD, or appear to find SSD 
+ \citep[e.g.,][]{RT16,RT17,RT17a,SBADMN19}, within the context of halo-disk
+ scale flows, but capture no LSD.}
+ \citet{Gent:2013b,EGSFB16} do appear to include an \fg{SSD with LSD}.
  To confirm this and determine its effect on LSD, we must understand the
  properties of the SSD.
      
- Any magnetic noise produced by tangling will also grow exponentially due to
- an LSD if present.
+ Any magnetic noise produced by tangling \fg{of a large scale field}
+ will also grow exponentially due to an LSD if present.
  This noise plays an important role in quenching the LSD due to the magnetic
  $\alpha$-effect, causing saturation of large-scale fields.
  We need to discriminate this effect from an SSD.   
 
+ %FAG: splitting
+ %Previous experiments \citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}
+ %examined the SN-driven SSD using ideal magnetohydrodynamics (MHD) with
+ %a limited set of resolution and parameters that did not allow
+ %demonstration of convergence of the solutions nor dependence on
+ %magnetic Reynolds (Rm) or Prandtl (Pm) numbers.
  Previous experiments \citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}
- examined the SN-driven SSD using ideal magnetohydrodynamics (MHD) with
- a limited set of resolution and parameters that did not allow
- demonstration of convergence of the solutions nor dependence on
- magnetic Reynolds (Rm) or Prandtl (Pm) numbers.
+ examined the SN-driven SSD.
+ \fg{The limited set of resolution did not allow
+ demonstration of convergence of the solutions.
+ Dependence on magnetic Reynolds (Rm) or Prandtl (Pm) numbers was not
+ explored due to use of ideal magnetohydrodynamics (MHD).}
  They included a weak imposed uniform field; we shall show
  that the amplification of their field is a result
  of SSD action and not just tangling of the field.
 
+%FAG: splitting
+%In this letter we compare the SSD to tangling in an idealized simulation
+%(Sect.~\ref{sec:ssd-tang}), and then determine its presence in simulations of SN-driven 
+%turbulence in isolation from any drivers of an LSD (Sect.~\ref{sec:model}). 
+%Our numerical implementations use the {\sc Pencil Code}\footnote{
+%\href{https://github.com/pencil-code}{https://github.com/pencil-code}}.
+%A broad resolution and parameter study allows us to identify the critical
+%resistivity and resolution for excitation of an SSD, and follow the growth to
+%saturation (Sect.~\ref{sec:results}).
+%This provides objective criteria with which to determine the presence of SSD
+%in simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
+%Finally, we conclude in Sect.~\ref{sec:conc}.
 In this letter we compare the SSD to tangling in an idealized simulation
-(Sect.~\ref{sec:ssd-tang}), and then determine its presence in simulations of SN-driven 
-turbulence in isolation from any drivers of an LSD (Sect.~\ref{sec:model}). 
+(Sect.~\ref{sec:ssd-tang})\fg{.
+We outline simulations of SN-driven turbulence, excluding any drivers of an LSD (Sect.~\ref{sec:model}) to examine the presence of SSD.} 
 Our numerical implementations use the {\sc Pencil Code}\footnote{
 \href{https://github.com/pencil-code}{https://github.com/pencil-code}}.
-A broad resolution and parameter study allows us to identify the critical
-resistivity and resolution for excitation of an SSD, and follow the growth to
+A broad resolution and parameter study allows us to identify \fg{convergence
+and} the critical
+resistivity for excitation of an SSD, \fg{which we follow} to 
 saturation (Sect.~\ref{sec:results}).
 This provides objective criteria with which to determine the presence of SSD
 in simulations \citep[such as][]{Gent:2013b,GE20,SBADMN19}.
@@ -353,11 +389,11 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
     \put(48,125){{\sf\bf{(c)}}}
   \end{picture}
 \caption{
- (a) Mean magnetic energy density, $e_B$, with non-helical random forcing,
+ (a) Mean magnetic energy density, $e_B$, with nonhelical random forcing,
  scaled to time-averaged kinetic energy density, $\overline{e_K}$.
  Inset: early zoom-in of linear growth of tangled field.
  Time is normalised by eddy turnover time, $1/\kf {u_{\rm rms}}$.
- (b) SSD and (c) tangling compensated power spectra, at times given in the
+ Compensated power spectra for (b) SSD and (c) tangling, at times given in the
  legends.  Note that the kinetic energy uses the right-hand axes.
   Forcing scale, $\kf/k_1=8$: vertical dotted line.
 \label{fig:tangling}}
@@ -367,9 +403,15 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
 %==============================================================================
 
- To illustrate differences between tangling and SSD we adopt a simplified
- model.
- Non-helical random forcing is applied at wavenumber $\kf/k_1=8$ to
+ %FAG: added refs and reworded for clarity
+ \fg{Previous SSD studies have examined Pm dependence with
+ nonhelical forcing, including high Mach number \citep[e.g.,][]{ 
+ HBD03,HBD04,Haugen:2004M,FCSBKS11,FSBS14}.}
+ %To illustrate differences between tangling and SSD we adopt a simplified
+ %model.
+ \fg{Here, however, we adopt a simplified model purely t}o illustrate
+ differences between tangling and SSD.
+ Nonhelical random forcing is applied at wavenumber $\kf/k_1=8$ to
  $256^3$ zone, $2\pi$-periodic, isothermal boxes.
  The lowest wavenumber in the domain is $k_1=1$ and the largest is the Nyquist
  frequency $k/k_1 = 128$.
@@ -388,22 +430,44 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
  Tangling induces only linear growth (see inset), saturating just above
  the imposed field energy within 50 turnover times.
 
- Power spectra for the magnetic energy of the evolving SSD and
- tangling model are plotted
- in Figures~\ref{fig:tangling}(b) and~\ref{fig:tangling}(c), respectively,
- alongside a late kinetic energy spectrum.
- Magnetic energy spectra are compensated by Kazantsev's $k^{3/2}$
- scaling \citep{Sch02,BS14}, and the kinetic energy by the
- Kolmogorov's $k^{-5/3}$ spectrum.
- The SSD magnetic spectrum (Figure~\ref{fig:tangling}b) experiences only a
- slight shift of its peak to smaller wavenumber during its evolution.
- The forcing scale $\kf$ is strongly reflected in kinetic energy and tangling 
- magnetic energy, but does not affect the SSD magnetic spectra.
- The Kazantsev range extends larger than $\kf$ for SSD, while
- confined below $\kf$ with tangling.
+ %FAG: edit for language
+ %Power spectra for the magnetic energy of the evolving SSD and
+ %tangling model are plotted
+ %in Figures~\ref{fig:tangling}(b) and~\ref{fig:tangling}(c), respectively,
+ %alongside a late kinetic energy spectrum.
+ \fg{Power spectra of the kinetic energy and the
+ evolving magnetic energy are plotted in Figures~\ref{fig:tangling}(b) for the
+ SSD and~\ref{fig:tangling}(c) tangling.}
+ %FAG: clearer
+ %Magnetic energy spectra are compensated by Kazantsev's $k^{3/2}$
+ %scaling \citep{Sch02,BS14}, and the kinetic energy by the
+ %Kolmogorov's $k^{-5/3}$ spectrum.
+ Magnetic energy spectra are compensated \fg{for} Kazantsev's $k^{3/2}$
+ \fg{power law} \citep{Sch02,BS14}, and kinetic energy \fg{for}
+ Kolmogorov's $k^{-5/3}$.
+ %FAG: swapped order
+ %The SSD magnetic spectrum (Figure~\ref{fig:tangling}b) experiences only a
+ %slight shift of its peak to smaller wavenumber during its evolution.
+ %The forcing scale $\kf$ is strongly reflected in kinetic energy and tangling 
+ %magnetic energy, but does not affect the SSD magnetic spectra.
+ The forcing scale $\kf$ is strongly \fg{identified} in kinetic
+ energy \fg{spectra for both models} and the magnetic energy \fg{spectra of
+ the tangling}, but
+ \fg{is not evident in the magnetic spectra of the SSD}.
+ %FAG: revised
+ %The SSD magnetic spectrum (Figure~\ref{fig:tangling}b) experiences only a
+ %slight shift of its peak to smaller wavenumber during its evolution.
+ \fg{For SSD the range with Kazantsev power law (horizontal) extends to scales
+ smaller than the forcing scale (Figure~\ref{fig:tangling}b), and during the
+ kinematic phase the magnetic energy peak is at $k/k_1\simeq9$.}
+ \fg{For tangling (Figure~\ref{fig:tangling}c) the Kazantsev range applies
+ only at $k/k_1<\kf$.}
+ %The Kazantsev range extends larger than $\kf$ for SSD, while
+ %confined below $\kf$ with tangling.
  Thus, in the SSD, kinetic energy along the Kolmogorov range transfers to
- the magnetic field at these scales, inducing an inverse Kazantsev range
- at scales below $\kf$, while tangling transfers energy only at scales between
+ the magnetic field at these scales, inducing an inverse Kazantsev \fg{cascade}
+ at scales \fg{smaller than} $\kf$, while tangling transfers energy only at
+ scales between
  $\kf$ and the scale of the imposed field.
  Dissipation controls scales below the Kazantsev range.
  
