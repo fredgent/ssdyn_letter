@@ -613,6 +613,26 @@ We solve the system of non-ideal compressible MHD equations
  Non-adiabatic heating $\Gamma$ and cooling $\Lambda (T)$ are included
  \citep{Gent:2013a} following \citet{Wolfire:1995} and \citet{Sarazin:1987}.
 
+%-------------------------------------------------------------------------------
+\begin{figure}
+  \includegraphics[trim=0.2cm 0.2cm 0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
+  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.2cm, clip=true,width=\columnwidth]{figs/eB-Ball.pdf}
+  \begin{picture}(0,0)(0,0)
+    \put(210,315){{\sf\bf{(a)}}}
+    \put(210,194){{\sf\bf{(b)}}}
+    \put(210, 48){{\sf\bf{(c)}}}
+  \end{picture}
+\caption{
+ Magnetic energy density,
+ scaled to time-averaged kinetic energy density $\overline{e_K}$,
+ for resolutions $\dx=0.5$--$4\pc$ and resistivity
+ (a) $\eta=10^{-4}$ or (b) $10^{-3}$,
+ \fg{and (c) matching \BKM\ scaled by $\EST$ for an imposed field with
+ $\dot\sigma=8\SNr$ at $\dx=0.78$--$3.12\pc$.}
+\label{fig:eb-res}}
+\end{figure}
+%-------------------------------------------------------------------------------
+
  \fg{Unlike past} experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
  thermal diffusivity, $\chi$, \fg{is omitted as} the artificial diffusivities
  are adequate to ensure numerical stability.
@@ -637,25 +657,6 @@ We solve the system of non-ideal compressible MHD equations
  \fg{We also test the effect of $\Pm=\nu/\eta$, varying $\nu$ with 
  $\eta=10^{-4}$ or varying $\eta$ with $\nu=10^{-3}$.}
  Our direct comparison with the results of \fg{\BKM} uses $\Pm=2.5$.
-
-%-------------------------------------------------------------------------------
-\begin{figure}
-  \includegraphics[trim=0.2cm 0.2cm 0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
-  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.2cm, clip=true,width=\columnwidth]{figs/eB-Ball.pdf}
-  \begin{picture}(0,0)(0,0)
-    \put(210,315){{\sf\bf{(a)}}}
-    \put(210,194){{\sf\bf{(b)}}}
-    \put(210, 48){{\sf\bf{(c)}}}
-  \end{picture}
-\caption{
- Magnetic energy density for resolutions $\dx=0.5$--$4\pc$,
- scaled to time-averaged kinetic energy density $\overline{e_K}$ for resistivity
- (a) $\eta=10^{-4}$ and (b) $10^{-3}\kpc\kms$.
- \fg{(c) $\dx=0.78$--$3.12\pc$ with an imposed field and $\dot\sigma=8\SNr$
- matching \fg{\BKM}.}
-\label{fig:eb-res}}
-\end{figure}
-%-------------------------------------------------------------------------------
  
  %FAG moved to para above
  %Unlike our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
@@ -670,10 +671,112 @@ comparison. I have cut this section and move it after the bibliography.
  We may canabalise the relevant text for the conclusion about how Rm/Pm not
  easily related to dynamo properties in ISM}
 
+%-------------------------------------------------------------------------------
+\begin{figure*}
+\gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
+          \vspace{-0.7cm} \fig{figs/nu0_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
+\gridline{\vspace{-0.7cm}\fig{figs/nu1_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
+          \vspace{-0.7cm}\fig{figs/nu1_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
+\gridline{\vspace{-0.7cm} \fig{figs/nu10_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
+          \vspace{-0.7cm} \fig{figs/nu10_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
+\gridline{\vspace{-0.3cm}  \fig{figs/SN_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
+          \vspace{-0.3cm}  \fig{figs/SN_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
+  \begin{picture}(0,0)(0,0)
+    \put(165,455){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(420,455){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(150,325){\begin{scriptsize}{\sf{$\eta=10^{-4}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(410,325){\begin{scriptsize}{\sf{$\eta=10^{-4}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(150,192){\begin{scriptsize}{\sf{$\eta=10^{-3}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put(410,192){\begin{scriptsize}{\sf{$\eta=10^{-3}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
+    \put( 90,62){\begin{scriptsize}{\sf{$\dx=2\pc$}}\end{scriptsize}}
+    \put(345,62){\begin{scriptsize}{\sf{$\dx=2\pc$}}\end{scriptsize}}
+  \end{picture}
+\caption{
+Compensated energy spectra as in Figure\,\ref{fig:4power}.
+Resistivity $\eta$ and supernova rate $\dot{\sigma}$ are shown in the captions.
+(a)--(f): Times shown are
+ $t=19.5\Myr$ for models with $\dx=0.5$ \& $1\pc$ and 100\,Myr for
+ $\dx=2$ \& $4\pc$; 
+The value of $\dx$ in parsecs is given in the legends.
+(g)--(h): The model with $\dot\sigma=0.2\SNr = 10$\,Myr$^{-1}$\,kpc$^{-3}$
+ is shown at $t=100\Myr$ and $\dot\sigma=\SNr$ at
+$t=140\Myr$.
+The values of $\dot\sigma$ and $\eta$ are given in the legends.
+\label{fig:3power}}
+\end{figure*}
+%-------------------------------------------------------------------------------
+
+
+%%-------------------------------------------------------------------------------
+%\section{Resolution and resistivity} \label{sec:results}
+%%-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
-\section{Resolution and resistivity} \label{sec:results}
+\section{Results} \label{sec:results}
 %-------------------------------------------------------------------------------
+
+\fag{I am restructuring section 4 to deal with issues in order rather than talking about the plots in order. Hopefully this will address the referee's criticism}
+
+%-------------------------------------------------------------------------------
+\subsection{\fg{Resolution and convergence}} \label{sec:conv}
+%-------------------------------------------------------------------------------
+
+\fg{For all $\dx$ considered we observe that exciting SSD in the
+ ISM appears very easy.
+ Figure~\ref{fig:eb-res}(a) for $\eta=10^{-4}$ and $\dot\sigma=0.2\SNr$
+ shows growth at all $\dx$, the growth rate increasing with resolution.
+ Higher numerical dissipation of the flow applies due to shock and hyper
+ diffusion at low resolution, which impedes the turbulence and efficiency of
+ the dynamo.
+ Saturation at around 5\% of $\overline{e_K}$ appears to be a well-converged
+ result.
+ The growth rate does not yet quite converge between 1 and 0.5\,pc, but as we
+ shall show, $\eta$ is not sufficiently acting beyond the numerical diffusion.}
+
+ \fg{When we consider} $\eta=10^{-3}$ \fg{(Figure\,\ref{fig:eb-res}b), at which
+ application of resistivity is dominated by $\eta$,} there is false convergence
+ \citep{FMA91} of solutions with similar magnetic energy decay at $\dx=2$ and
+ $4\pc$.
+ However, higher resolution solutions converge to rapid magnetic
+ amplification occurring between 40 and 60~Myr.
+ \fg{Further, strong fluctuations in the characteristics of the flow due to low
+ $\dot\sigma$ and unsteady multiphase fractions induce changes in growth rates
+ at higher resolution.
+ The timing of the sporadic acceleration is convergent for $\dx\lesssim1\pc$
+ and between $\eta=10^{-4}$ and $10^{-3}$, occurring near $t=20$ and 40\,Myr.}
+  
+ \fg{We choose low $\dot\sigma$ to preserve the multiphase structure in a 
+ closed numerical domain. 
+ However, we also display in Figure\,\ref{fig:eb-res}(c) results of direct
+ comparison with \BKM\ using $\dot\sigma=8\SNr$.
+ There is no multiphase structure with a single phase domain of hot gas
+ ($T>10^7$\,K).
+ The growth rate is very uniformly exponential, reflective of the single phase
+ kinematics, and faster, yet saturating also at about 5\% of $\overline{e_K}$.
+ The growth is faster than \BKM, because the Pencil Code is a higher order less
+ diffusive code.
+ We include a lower resolution run to demosnstrate the consistency with \BKM.
+ Our runs with $\dot\sigma=\SNr$, also grow more quickly than at $0.2\SNr$,
+ while saturating at $5\%\overline{e_K}$ (Figure\,\ref{fig:eb-nu}f,h).}
+
+ \fg{We can also examine the properties of the flow and magnetic field with
+ their energy spectra, some of which we display in Figure\,\ref{fig:3power}.
+ From panels (b), (d) and (f) with kinetic spectra for all $\dx$ and 
+ $\eta=0$, $10^{-4}$ and $10^{-3}$, respectively.
+ Clearly there is excellent convergence for $\dx\leq1\pc$ at all scales
+ $k\lesssim 30\kpc^{-1}$.
+ Interestingly, the higher dissipation in the flow at the grid scale 
+ $\dx\geq2\pc$ is also transferred along the whole spectrum, showing that
+ the flow is losing energy even at the largest scales.
+}
+ 
+ \fg{We have shown that SSD turbulence has convergent results for $\dx\leq1\pc$.
+ Underresolving SN driven turbulence results in a significant loss of energy
+ at all scales.
+ SSD for $0.2\SNr\leq \dot\sigma \leq 8\SNr$ saturates in the ISM at about
+ $5\%\overline{e_K}$ and grows more rapidly with increasing SN rates.
+ } 
+
 
 %-------------------------------------------------------------------------------
 \begin{figure*}
@@ -696,8 +799,8 @@ comparison. I have cut this section and move it after the bibliography.
     \put(-450, 45){{\sf\bf{(f)}}}
     \put(-205,455){{\sf\bf{(c)}}}
     \put(-205,330){{\sf\bf{(d)}}}
-    \put(-205,170){{\sf\bf{(h)}}}
-    \put(-205, 45){{\sf\bf{(i)}}}
+    \put(-205,170){{\sf\bf{(g)}}}
+    \put(-205, 45){{\sf\bf{(h)}}}
   \end{picture}
 \caption{
 Magnetic energy density $e_B$ normalized by the time-averaged kinetic
@@ -711,15 +814,15 @@ $\eta$ fixed (d).}
 \end{figure*}
 %-------------------------------------------------------------------------------
 
- Figure~\ref{fig:eb-res}(a) shows improving convergence of dynamo growth rate
- for $\eta=10^{-4}$ as resolution increases, although even at 0.5~pc resolution
- full convergence does not appear to have been reached.
- Saturation at around 5\% of $\overline{e_K}$ appears to be a well-converged
- result.
- At $\eta=10^{-3}$, there is false convergence \citep{FMA91} of solutions with
- similar magnetic energy decay at $\dx=2$ and $4\pc$.
- However, higher resolution solutions converge to rapid magnetic
- amplification occurring between 40 and 60~Myr.
+ %Figure~\ref{fig:eb-res}(a) shows improving convergence of dynamo growth rate
+ %for $\eta=10^{-4}$ as resolution increases, although even at 0.5~pc resolution
+ %full convergence does not appear to have been reached.
+ %Saturation at around 5\% of $\overline{e_K}$ appears to be a well-converged
+ %result.
+ %At $\eta=10^{-3}$, there is false convergence \citep{FMA91} of solutions with
+ %similar magnetic energy decay at $\dx=2$ and $4\pc$.
+ %However, higher resolution solutions converge to rapid magnetic
+ %amplification occurring between 40 and 60~Myr.
  
  For $\dx\geq2\pc$ growth rates vary sporadically.
  Growth is accelerated in Figure\,\ref{fig:eb-res}(a) and (b) near 20\,Myr,
@@ -827,41 +930,6 @@ $k^{3/2}$ (a, c) or the Kolmogorov spectrum $k^{-5/3}$ (b, d).
  a consequence of the low Pm in these SN-driven models. 
  In the high Pm ISM, where transfer from kinetic energy can occur at every
  wavenumber in the Kolmogorov spectrum, an SSD is even easier to excite.
-
-%-------------------------------------------------------------------------------
-\begin{figure*}
-\gridline{\vspace{-0.7cm} \fig{figs/nu0_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(a)}
-          \vspace{-0.7cm} \fig{figs/nu0_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(b)}}                                                                             
-\gridline{\vspace{-0.7cm}\fig{figs/nu1_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(c)}
-          \vspace{-0.7cm}\fig{figs/nu1_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(d)}}                                                                             
-\gridline{\vspace{-0.7cm} \fig{figs/nu10_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(e)}
-          \vspace{-0.7cm} \fig{figs/nu10_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(f)}}                                                                             
-\gridline{\vspace{-0.3cm}  \fig{figs/SN_Bpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(g)}
-          \vspace{-0.3cm}  \fig{figs/SN_kpower.pdf}{0.45\textwidth}{\vspace{-1.3cm}\hspace{-2cm}(h)} }
-  \begin{picture}(0,0)(0,0)
-    \put(165,455){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(420,455){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(150,325){\begin{scriptsize}{\sf{$\eta=10^{-4}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(410,325){\begin{scriptsize}{\sf{$\eta=10^{-4}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(150,192){\begin{scriptsize}{\sf{$\eta=10^{-3}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(410,192){\begin{scriptsize}{\sf{$\eta=10^{-3}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(190,62){\begin{scriptsize}{\sf{$\dx=2\pc$}}\end{scriptsize}}
-    \put(445,62){\begin{scriptsize}{\sf{$\dx=2\pc$}}\end{scriptsize}}
-  \end{picture}
-\caption{
-Compensated energy spectra as in Figure\,\ref{fig:4power}.
-Resistivity $\eta$ and supernova rate $\dot{\sigma}$ are shown in the captions.
-(a)--(f): Times shown are
- $t=19.5\Myr$ for models with $\dx=0.5$ \& $1\pc$ and 100\,Myr for
- $\dx=2$ \& $4\pc$; 
-The value of $\dx$ in parsecs is given in the legends.
-(g)--(h): The model with $\dot\sigma=0.2\SNr = 10$\,Myr$^{-1}$\,kpc$^{-3}$
- is shown at $t=100\Myr$ and $\dot\sigma=\SNr$ at
-$t=140\Myr$.
-The values of $\dot\sigma$ and $\eta$ are given in the legends.
-\label{fig:3power}}
-\end{figure*}
-%-------------------------------------------------------------------------------
 
 Figure\,\ref{fig:3power}(a) -- (f) shows spectra at $t=19.5$ Myr when an SSD is
  active for the higher resolution models, and at $t=100$ Myr for the lower
