@@ -89,6 +89,7 @@
 \newcommand\Myr{~ {\rm Myr}}
 \newcommand\erg{~ {\rm erg}}
 \newcommand\kms{~ {\rm km~ s}^{-1}}
+\newcommand\BKM{{\sf BKMM4}}
 
 %Models - without a table I'm not sure model labels will make it any easier to follow with so many parameters
 \newcommand\UOila{~ {\rm UPm0e0.0l}} %0.5pc nu0 eta 0e-0 0.2sn
@@ -105,18 +106,18 @@
 \newcommand\LOila{~ {\rm LPm0e0.0l}} %4.0pc nu0 eta 0e-0 0.2sn
 \newcommand\LOilb{~ {\rm LPm0e4.0l}} %4.0pc nu0 eta 1e-4 0.2sn
 \newcommand\LOilc{~ {\rm LPm0e3.0l}} %4.0pc nu0 eta 1e-3 0.2sn
-\newcommand\MOila{~ {\rm MPm0e0.0l}} %2.0pc nu0 eta 0e-0 0.2sn
-\newcommand\MOilb{~ {\rm MPm0e4.0l}} %2.0pc nu0 eta 1e-4 0.2sn
-\newcommand\MOilc{~ {\rm MPm0e3.0l}} %2.0pc nu0 eta 1e-3 0.2sn
-\newcommand\HOila{~ {\rm HP0e0.0l}} %1.0pc nu0 eta 1e-4 0.2sn
-\newcommand\HOilc{~ {\rm HP0e5.0l}} %1.0pc nu0 eta 1e-5 0.2sn
-\newcommand\HOilb{~ {\rm HP0e4.0l}} %1.0pc nu0 eta 1e-3 0.2sn
+\newcommand\MIila{~ {\rm MPm0e0.0l}} %2.0pc nu0 eta 0e-0 0.2sn
+\newcommand\MIilb{~ {\rm MPm0e4.0l}} %2.0pc nu0 eta 1e-4 0.2sn
+\newcommand\MIilc{~ {\rm MPm0e3.0l}} %2.0pc nu0 eta 1e-3 0.2sn
+\newcommand\HIila{~ {\rm HP0e0.0l}} %1.0pc nu0 eta 1e-4 0.2sn
+\newcommand\HIilc{~ {\rm HP0e5.0l}} %1.0pc nu0 eta 1e-5 0.2sn
+\newcommand\HIilb{~ {\rm HP0e4.0l}} %1.0pc nu0 eta 1e-3 0.2sn
 % to be continued?
 \definecolor{midblue}{rgb}{0.0,0.4,0.7}
 \definecolor{midgreen}{rgb}{0.1,0.6,0.3}
 \definecolor{mypurple}{rgb}{0.8,0.2,0.8}
 \newcommand{\fg}[1]{\textcolor{midgreen}{#1}}
-\newcommand{\fag}[1]{\textcolor{midgreen}{FAG: #1}}
+\newcommand{\fag}[1]{\textcolor{midblue}{FAG: #1}}
 \newcommand{\ns}[1]{\textcolor{orange}{#1}}
 \newcommand{\mjk}[1]{\textcolor{red}{#1}}
 
@@ -367,8 +368,9 @@ grid spacing much exceeding 4~pc.
  %demonstration of convergence of the solutions nor dependence on
  %magnetic Reynolds (Rm) or Prandtl (Pm) numbers.
  Previous experiments \citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}
- examined the SN-driven SSD.
- \fg{The limited set of resolution did not allow
+ examined the SN-driven SSD\fg{, the former of which we shall henceforth
+ identify as \BKM}.
+ \fg{The limited set of resolution \fg{of \BKM } did not allow
  demonstration of convergence of the solutions.
  Dependence on magnetic Reynolds (Rm) or Prandtl (Pm) numbers was not
  explored due to use of ideal magnetohydrodynamics (MHD).}
@@ -504,11 +506,12 @@ Finally, we conclude in Sect.~\ref{sec:conc}.
  \fg{The design of these} SN-driven turbulence models, excludes large-scale
  magnetic field dynamics by \fg{omitting global scale} rotation, shear, and
  stratification.
- Our
- simulation domain is a periodic cube of length 256 pc and zone size
- of $\delta x=0.5$, 1, 2 or 4$\pc$.
- A random 1~nG seed field excludes tangling of an imposed field as the 
- source of any magnetic amplification.
+ Our simulation domain is a periodic cube of length 256 pc and zone size
+ of $\delta x=0.5$, 1, 2 or 4$\pc$\fg{, except for direct comparison with
+ \BKM\  with domain 200 pc and $\delta x=0.78$, 1.56 and 3.12}.
+ \fg{When comparing \BKM\ a uniform background field $\sim10$~nG is imposed.
+ Otherwise we apply only a} random 1~nG seed field \fg{to} exclude tangling of
+ \fg{the} imposed field as the source of any magnetic amplification.
 
 We solve the system of non-ideal compressible MHD equations
 %-------------------------------------------------------------------------------
@@ -559,7 +562,6 @@ We solve the system of non-ideal compressible MHD equations
     +\eta_3\vect\nabla^6\vect{A},
   \end{eqnarray}
 %-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
  with the ideal gas equation of state closing the system.
  Most variables take their usual meanings.
  %FAG added values
@@ -591,42 +593,23 @@ We solve the system of non-ideal compressible MHD equations
  %hyperdiffusion; and take $\vect{B}=\vect\nabla\times\vect{A}+
  %\vect{B}_{\rm imposed}$.
  \fg{The simplified isothermal model considered above
- (Sect.\,\ref{sec:ssd-tang}) solves
- equations~\fg{\eqref{eq:mass},} \eqref{eq:mom} and~\eqref{eq:ind} without the
- shock-dependent diffusion or hyperdiffusion terms,
- in which $\vect{B}=\vect\nabla\times\vect{A}+\vect{B}_{\rm imposed}$.}
-
-%-------------------------------------------------------------------------------
-\begin{figure}
-  \includegraphics[trim=0.2cm 0.2cm 0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
-  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.2cm, clip=true,width=\columnwidth]{figs/eB-Ball.pdf}
-  \begin{picture}(0,0)(0,0)
-    \put(210,315){{\sf\bf{(a)}}}
-    \put(210,194){{\sf\bf{(b)}}}
-    \put(210, 48){{\sf\bf{(c)}}}
-  \end{picture}
-\caption{
- Magnetic energy density for resolutions $\dx=0.5$--$4\pc$,
- scaled to time-averaged kinetic energy density $\overline{e_K}$ for resistivity
- (a) $\eta=10^{-4}$ and (b) $10^{-3}\kpc\kms$.
- \fg{(c) Comparison at resolution, an imposed field and $\dot\sigma=8\SNr$
- matching \citet{BKMM04}.}
-\label{fig:eb-res}}
-\end{figure}
-%-------------------------------------------------------------------------------
+ (Sect.\,\ref{sec:ssd-tang}) solves only
+ equations~\fg{\eqref{eq:mass},} \eqref{eq:mom} and~\eqref{eq:ind} but 
+ without the
+ shock-dependent diffusion or hyperdiffusion terms, and while setting
+ $\vect{B}=\vect\nabla\times\vect{A}+\vect{B}_{\rm imposed}$.}
 
  \fg{In the ISM simulations} SNe are exploded at \fg{uniform} random positions
  at a Poisson rate $\dot\sigma$ \fg{proportional to} the solar neighborhood
  value $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$.
- %FAG: to check rate again the rate when CSC back on line
  Explosions inject $\EST = 10^{51}\erg$ thermal energy, except in
- dense regions, where a proportion \fg{($<5\%$)} is kinetic $\ESK$ 
+ dense regions, where a proportion \fg{($<5\%$) may be} kinetic $\ESK$ 
  \citep[see][]{GMKSH20}.
  %FAG: rephrase
  %For comparability, explosions in all models with the same $\dot\sigma$ occur
  %at the same times and places.
- \fg{Explosions in models with common $\dot\sigma$ have common timing and
- locations.}
+ \fg{Models with common $\dot\sigma$ have the same timing and location of
+ explosions.}
  Non-adiabatic heating $\Gamma$ and cooling $\Lambda (T)$ are included
  \citep{Gent:2013a} following \citet{Wolfire:1995} and \citet{Sarazin:1987}.
 
@@ -653,6 +636,27 @@ We solve the system of non-ideal compressible MHD equations
  it from $10^{-5}$ to $10^{-3}\kpc\kms$ (units assumed henceforth).
  \fg{We also test the effect of $\Pm=\nu/\eta$, varying $\nu$ with 
  $\eta=10^{-4}$ or varying $\eta$ with $\nu=10^{-3}$.}
+ Our direct comparison with the results of \fg{\BKM} uses $\Pm=2.5$.
+
+%-------------------------------------------------------------------------------
+\begin{figure}
+  \includegraphics[trim=0.2cm 0.2cm 0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
+  \includegraphics[trim=0.3cm 0.5cm 0.0cm 0.2cm, clip=true,width=\columnwidth]{figs/eB-Ball.pdf}
+  \begin{picture}(0,0)(0,0)
+    \put(210,315){{\sf\bf{(a)}}}
+    \put(210,194){{\sf\bf{(b)}}}
+    \put(210, 48){{\sf\bf{(c)}}}
+  \end{picture}
+\caption{
+ Magnetic energy density for resolutions $\dx=0.5$--$4\pc$,
+ scaled to time-averaged kinetic energy density $\overline{e_K}$ for resistivity
+ (a) $\eta=10^{-4}$ and (b) $10^{-3}\kpc\kms$.
+ \fg{(c) $\dx=0.78$--$3.12\pc$ with an imposed field and $\dot\sigma=8\SNr$
+ matching \fg{\BKM}.}
+\label{fig:eb-res}}
+\end{figure}
+%-------------------------------------------------------------------------------
+ 
  %FAG moved to para above
  %Unlike our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
  %we do not include thermal diffusivity, $\chi$, as the artificial diffusivities
@@ -661,51 +665,12 @@ We solve the system of non-ideal compressible MHD equations
  %marginally resolved Field length defined by \citet[][named after George
  %Field, not the magnetic field]{BM90}.
 
+\fag{We do not address Rm in the results, although now we do include some Pm 
+comparison. I have cut this section and move it after the bibliography.
+ We may canabalise the relevant text for the conclusion about how Rm/Pm not
+ easily related to dynamo properties in ISM}
 
- A commonly used expression for Rm is 
- \begin{equation}\label{eq:sRm}
- \Rm=\frac{\ell {u_{\rm rms}}}{\eta},
- \end{equation}
- where $\ell = 2 \pi/\kf$ is the forcing scale.
- However, the inhomogeneity of the turbulence and changing multiphase
- composition of the ISM render defining a single forcing scale or rms velocity
- unreliable.
- We, therefore, consider computing Rm at each grid point directly from the
- ratio of advective to diffusive terms in the induction equation
- %-------------------------------------------------------------------------------
- \begin{eqnarray}\label{eq:Rm}
-   \Rm = \frac{\left|\vect{u}\times\vect{B}\right|}{
-     \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
- \end{eqnarray}
- %-------------------------------------------------------------------------------
- Using averaged values (eq.~[\ref{eq:sRm}]), 
- $\Rm = 1.5 \cdot 10^4$, for $\eta=10^{-4}$, $\ell=50\pc$ and
- ${u_{\rm rms}}=30\kms$.
- With the local definition (eq.~[\ref{eq:Rm}]) in the model with 
- $\dx=0.5\pc$ and $\eta=10^{-4}$ at 20\,Myr we find
- $\Rm\in(1.0\cdot10^{-4},5.8\cdot 10^3)$,
- and mean value $\langle\Rm\rangle=4.1\pm5.7$.
- Thus, the mean Rm appears unhelpful:
- in the ISM some phases and regions may exceed the critical Rm for an
- SSD while others do not.
- Microscopic resistivity is temperature dependent \citep{CSR50}.
- Even considering only turbulent resistivity to have relevance, 
- typical length scales and rms velocities differ between phases.
- Therefore, we use the explicitly chosen resistivity $\eta$ to discriminate
- between models rather than Rm.
 
- We have set $\nu=0$ and $\nu_3=\eta_3$ sufficient to numerically resolve the
- grid scale.
- The magnetic Prandtl number $\Pm = \Rm/\Rey$, and like $\Rm$ we have
- $\Pm\in(4.2\cdot10^{-6},4.8\cdot10^{4})$, due to inclusion of shock capturing
- viscosity and differences in definition of hyperviscosity and hyperresistivity.
- Hence, some part of each simulation will be characterised by high Pm,
- but $\langle\Pm\rangle<1$.
- This is a regime less conducive to exciting the SSD than the high $\Pm$ regime
- typical of the ISM \citep{HBD04}.
- In separate experiments with $\nu>\eta$ (high Pm), which we shall describe in
- future work, we do in fact see increased growth rates for lower $\eta$, as
- expected \citep{Sch07}.
 %-------------------------------------------------------------------------------
 \section{Resolution and resistivity} \label{sec:results}
 %-------------------------------------------------------------------------------
@@ -1007,5 +972,50 @@ programme (Project UniSDyn, grant agreement no: 818665).
 \bibliography{refs}{}
 \bibliographystyle{aasjournal}
 
+ A commonly used expression for Rm is 
+ \begin{equation}\label{eq:sRm}
+ \Rm=\frac{\ell {u_{\rm rms}}}{\eta},
+ \end{equation}
+ where $\ell = 2 \pi/\kf$ is the forcing scale.
+ However, the inhomogeneity of the turbulence and changing multiphase
+ composition of the ISM render defining a single forcing scale or rms velocity
+ unreliable.
+ We, therefore, consider computing Rm at each grid point directly from the
+ ratio of advective to diffusive terms in the induction equation
+ %-------------------------------------------------------------------------------
+ \begin{eqnarray}\label{eq:Rm}
+   \Rm = \frac{\left|\vect{u}\times\vect{B}\right|}{
+     \left|\eta\vect\nabla^2\vect{A}+\eta_3\vect\nabla^6\vect{A}\right|}.
+ \end{eqnarray}
+ %-------------------------------------------------------------------------------
+%FAG saved from end of section 3 
+Using averaged values (eq.~[\ref{eq:sRm}]), 
+ $\Rm = 1.5 \cdot 10^4$, for $\eta=10^{-4}$, $\ell=50\pc$ and
+ ${u_{\rm rms}}=30\kms$.
+ With the local definition (eq.~[\ref{eq:Rm}]) in the model with 
+ $\dx=0.5\pc$ and $\eta=10^{-4}$ at 20\,Myr we find
+ $\Rm\in(1.0\cdot10^{-4},5.8\cdot 10^3)$,
+ and mean value $\langle\Rm\rangle=4.1\pm5.7$.
+ Thus, the mean Rm appears unhelpful:
+ in the ISM some phases and regions may exceed the critical Rm for an
+ SSD while others do not.
+ Microscopic resistivity is temperature dependent \citep{CSR50}.
+ Even considering only turbulent resistivity to have relevance, 
+ typical length scales and rms velocities differ between phases.
+ Therefore, we use the explicitly chosen resistivity $\eta$ to discriminate
+ between models rather than Rm.
+
+ We have set $\nu=0$ and $\nu_3=\eta_3$ sufficient to numerically resolve the
+ grid scale.
+ The magnetic Prandtl number $\Pm = \Rm/\Rey$, and like $\Rm$ we have
+ $\Pm\in(4.2\cdot10^{-6},4.8\cdot10^{4})$, due to inclusion of shock capturing
+ viscosity and differences in definition of hyperviscosity and hyperresistivity.
+ Hence, some part of each simulation will be characterised by high Pm,
+ but $\langle\Pm\rangle<1$.
+ This is a regime less conducive to exciting the SSD than the high $\Pm$ regime
+ typical of the ISM \citep{HBD04}.
+ In separate experiments with $\nu>\eta$ (high Pm), which we shall describe in
+ future work, we do in fact see increased growth rates for lower $\eta$, as
+ expected \citep{Sch07}.
 \end{document}
 
