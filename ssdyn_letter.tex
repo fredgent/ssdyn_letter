@@ -90,6 +90,28 @@
 \newcommand\erg{~ {\rm erg}}
 \newcommand\kms{~ {\rm km~ s}^{-1}}
 
+%Models - without a table I'm not sure model labels will make it any easier to follow with so many parameters
+\newcommand\UOila{~ {\rm UPm0e0.0l}} %0.5pc nu0 eta 0e-0 0.2sn
+\newcommand\UOilb{~ {\rm UPm0e5.0l}} %0.5pc nu0 eta 1e-5 0.2sn
+\newcommand\UOilc{~ {\rm UPm0e4.0l}} %0.5pc nu0 eta 1e-4 0.2sn
+\newcommand\UOild{~ {\rm UPm0e3.0l}} %0.5pc nu0 eta 1e-3 0.2sn
+\newcommand\HOila{~ {\rm HPm0e0.0l}} %1.0pc nu0 eta 0e-0 0.2sn
+\newcommand\HOilb{~ {\rm HPm0e5.0l}} %1.0pc nu0 eta 1e-5 0.2sn
+\newcommand\HOilc{~ {\rm HPm0e4.0l}} %1.0pc nu0 eta 1e-4 0.2sn
+\newcommand\HOild{~ {\rm HPm0e3.0l}} %1.0pc nu0 eta 1e-3 0.2sn
+\newcommand\MOila{~ {\rm MPm0e0.0l}} %2.0pc nu0 eta 0e-0 0.2sn
+\newcommand\MOilb{~ {\rm MPm0e4.0l}} %2.0pc nu0 eta 1e-4 0.2sn
+\newcommand\MOilc{~ {\rm MPm0e3.0l}} %2.0pc nu0 eta 1e-3 0.2sn
+\newcommand\LOila{~ {\rm LPm0e0.0l}} %4.0pc nu0 eta 0e-0 0.2sn
+\newcommand\LOilb{~ {\rm LPm0e4.0l}} %4.0pc nu0 eta 1e-4 0.2sn
+\newcommand\LOilc{~ {\rm LPm0e3.0l}} %4.0pc nu0 eta 1e-3 0.2sn
+\newcommand\MOila{~ {\rm MPm0e0.0l}} %2.0pc nu0 eta 0e-0 0.2sn
+\newcommand\MOilb{~ {\rm MPm0e4.0l}} %2.0pc nu0 eta 1e-4 0.2sn
+\newcommand\MOilc{~ {\rm MPm0e3.0l}} %2.0pc nu0 eta 1e-3 0.2sn
+\newcommand\HOila{~ {\rm HP0e0.0l}} %1.0pc nu0 eta 1e-4 0.2sn
+\newcommand\HOilc{~ {\rm HP0e5.0l}} %1.0pc nu0 eta 1e-5 0.2sn
+\newcommand\HOilb{~ {\rm HP0e4.0l}} %1.0pc nu0 eta 1e-3 0.2sn
+% to be continued?
 \definecolor{midblue}{rgb}{0.0,0.4,0.7}
 \definecolor{midgreen}{rgb}{0.1,0.6,0.3}
 \definecolor{mypurple}{rgb}{0.8,0.2,0.8}
@@ -595,7 +617,7 @@ We solve the system of non-ideal compressible MHD equations
 
  \fg{In the ISM simulations} SNe are exploded at \fg{uniform} random positions
  at a Poisson rate $\dot\sigma$ \fg{proportional to} the solar neighborhood
- value $\SNr\simeq \fg{64}\kpc^{-3}\Myr^{-1}$.
+ value $\SNr\simeq 50\kpc^{-3}\Myr^{-1}$.
  %FAG: to check rate again the rate when CSC back on line
  Explosions inject $\EST = 10^{51}\erg$ thermal energy, except in
  dense regions, where a proportion \fg{($<5\%$)} is kinetic $\ESK$ 
@@ -629,7 +651,7 @@ We solve the system of non-ideal compressible MHD equations
  setting $\eta=0$ \fg{and $\nu=0$.}
  We determine how low a physical resistivity $\eta$ can be resolved by varying
  it from $10^{-5}$ to $10^{-3}\kpc\kms$ (units assumed henceforth).
- \fg{We also test the effect of Pm, while varying $\nu$ with 
+ \fg{We also test the effect of $\Pm=\nu/\eta$, varying $\nu$ with 
  $\eta=10^{-4}$ or varying $\eta$ with $\nu=10^{-3}$.}
  %FAG moved to para above
  %Unlike our earlier experiments \citep{Gent:2013a,Gent:2013b,GMKSH20},
@@ -718,7 +740,7 @@ energy $\overline{e_K}$ for various resistivities $\eta$ for values
 given in each panel of resolution $\dx$ and SN rate $\dot\sigma$ normalized by
 the solar neighborhood rate $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$.
 Time axes vary to accommodate SSD saturation at all $\dx$ with $\eta=10^{-4}$.
-\fg{$\nu=0$, except where Pm is varied with $\nu$ fixed (c) or 
+\fg{$\nu=0$, except where $\Pm=\nu/\eta$ is varied with $\nu$ fixed (c) or 
 $\eta$ fixed (d).}
 \label{fig:eb-nu}}
 \end{figure*}
@@ -868,8 +890,10 @@ Resistivity $\eta$ and supernova rate $\dot{\sigma}$ are shown in the captions.
  $t=19.5\Myr$ for models with $\dx=0.5$ \& $1\pc$ and 100\,Myr for
  $\dx=2$ \& $4\pc$; 
 The value of $\dx$ in parsecs is given in the legends.
-(g)--(h): The model with $\dot\sigma=0.2\SNr = 10$~Myr${-1}$ is shown at $t=100\Myr$ and $\dot\sigma=\SNr$ at
-$t=140\Myr$.The values of $\dot\sigma$ and $\eta$ are given in the legends.
+(g)--(h): The model with $\dot\sigma=0.2\SNr = 10$\,Myr$^{-1}$\,kpc$^{-3}$
+ is shown at $t=100\Myr$ and $\dot\sigma=\SNr$ at
+$t=140\Myr$.
+The values of $\dot\sigma$ and $\eta$ are given in the legends.
 \label{fig:3power}}
 \end{figure*}
 %-------------------------------------------------------------------------------
