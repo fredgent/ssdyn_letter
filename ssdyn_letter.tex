@@ -117,6 +117,7 @@
 \definecolor{midgreen}{rgb}{0.1,0.6,0.3}
 \definecolor{mypurple}{rgb}{0.8,0.2,0.8}
 \newcommand{\fg}[1]{\textcolor{midgreen}{#1}}
+\newcommand{\mm}[1]{\textcolor{mypurple}{#1}}
 \newcommand{\fag}[1]{\textcolor{midblue}{FAG: #1}}
 \newcommand{\ns}[1]{\textcolor{orange}{#1}}
 \newcommand{\mjk}[1]{\textcolor{red}{#1}}
@@ -650,9 +651,12 @@ We solve the system of non-ideal compressible MHD equations
  %hyperresistivity $\eta_3$.
  %We determine how low a physical resistivity $\eta$ can be resolved by varying
  %it from $10^{-5}$ to $10^{-3}\kpc\kms$ (units assumed henceforth).
- We \fg{isolate how numerical diffusion evolves the}
- magnetic field evolution by 
- setting $\eta=0$ \fg{and $\nu=0$.}
+ %mm We \fg{isolate how numerical diffusion evolves the}
+ % magnetic field evolution by  setting
+ \mm{For comparison to our models with physical diffusivity and
+   understanding of the effects of purely numerical diffusivity, we
+   add an ideal MHD model}
+ $\eta=0$ \fg{and $\nu=0$.}
  We determine how low a physical resistivity $\eta$ can be resolved by varying
  it from $10^{-5}$ to $10^{-3}\kpc\kms$ (units assumed henceforth).
  \fg{We also test the effect of $\Pm=\nu/\eta$, varying $\nu$ with 
