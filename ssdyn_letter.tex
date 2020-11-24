@@ -287,24 +287,42 @@ Max Planck Institute for Solar System Research, Justus-von-Liebig-Weg 3, 37707 G
 Magnetic fields grow quickly even at early cosmological
 times, suggesting the action of a small-scale dynamo (SSD) in the
 interstellar medium (ISM) of galaxies. Many studies have focused
-on idealized turbulent driving of the SSD. We here simulate more
+%on idealized turbulent driving of the SSD. We here simulate more
+on idealized turbulent driving of the SSD. 
+Here we simulate more
 realistic supernova-driven turbulence to determine whether it can
-drive an SSD.  We vary the physical resistivity (and implicitly magnetic
-Reynolds number), as well as the numerical resolution and supernova
-rate to delineate the regime in which an SSD occurs.
-We find convergence for SSD growth rate with resolution approaching 
-sub-parsec scale for a given supernova distribution
-$\dot\sigma$.
-Despite higher Mach numbers and negative impact of compressibility expected on
-SSD, growth rates increase for $\dot\sigma=\SNr$ versus $0.2\SNr$, with $\SNr$
-the solar neighbourhood rate.
- Across the modelled range of 0.5 to 4 parsec resolution we find that for
-sufficiently low resistivity the SSD saturates consistently at about 5\% of
-energy equipartion, independent of growth rate and low Prandtl numbers in our
-experiments.
-As the grid becomes coarser, the minimum resolved physical resistivity
-increases. The trend suggests that numerical resistivity suppresses SSD for
-grid spacing much exceeding 4~pc.
+%drive an SSD.  We vary the physical resistivity (and implicitly magnetic
+%Reynolds number), as well as the numerical resolution and supernova
+%rate to delineate the regime in which an SSD occurs.
+%We find convergence for SSD growth rate with resolution approaching  
+%sub-parsec scale for a given supernova distribution $\dot\sigma$.
+drive an SSD. We vary the physical resistivity, \fg{$\eta$}, as well as the numerical
+resolution and supernova
+rate, $\dot\sigma$, to delineate the regime in which an SSD occurs.
+We find convergence for SSD growth rate with resolution approaching  
+sub-parsec scale for a given $\dot\sigma$.
+\fg{Critical resistivity is $0.005>\eta_{\rm crit}>0.001\kpc\kms$ for 
+$\dot\sigma\simeq\SNr$, with $\SNr$ the solar neighbourhood rate.}
+Across the modelled range of 0.5 to 4 parsec resolution we find that for
+\fg{$\eta<\eta{\rm crit}$}, the SSD saturates at about 5\% of
+energy equipartion, independent of growth rate \fg{or $\eta$.
+Saturation level is sensitive to viscosity}.
+%Despite higher Mach numbers and negative impact of compressibility expected on
+%SSD, growth rates increase for $\dot\sigma=\SNr$ versus $0.2\SNr$, with $\SNr$
+%the solar neighbourhood rate.
+\fg{In the range $0.2\SNr\leq \dot\sigma\leq8\SNr$ growth rate increases
+with $\dot\sigma$, despite the negative impact expected from increased
+Mach numbers.
+SSD commonly exhibit erratic growth.}
+
+% Across the modelled range of 0.5 to 4 parsec resolution we find that for
+%sufficiently low resistivity the SSD saturates consistently at about 5\% of
+%energy equipartion, independent of growth rate and low Prandtl numbers in our
+%experiments.
+%As the grid becomes coarser, the minimum resolved physical resistivity
+%increases. The trend suggests that numerical resistivity suppresses SSD for
+%grid spacing much exceeding 4~pc.
+
 \end{abstract}
 \keywords{dynamo --- magnetohydrodynamics (MHD) --- ISM: supernova remnants --- ISM: magnetic fields --- turbulence}
 
