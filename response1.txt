@@ -186,3 +186,12 @@ shock.
 
 Check gloob package to reverse engineer check the snapshot location on curves
 
+
+Discussion 24-Nov
+
+New paper - determine asymptote for saturation strength of field relative to Rm
+increase or reduce with increased Rm at fixed Pm. Check Kandu/Axel 2014 LSD is
+saturated lower as Rm increases -- due to SSD. Opposite result is Miikka.
+Traces of large scale dynamo.
+
+Figure 4  clarify legends/cpation fig a1 a2
