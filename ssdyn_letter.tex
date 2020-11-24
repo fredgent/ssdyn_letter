@@ -304,7 +304,8 @@ We find convergence for SSD growth rate with resolution
 \mm{of a parsec}
 for a given $\dot\sigma$.
 \fg{\mm{The c}ritical resistivity \mm{below which an  SSD occurs} is $0.005>\eta_{\rm crit}>0.001\kpc\kms$ for 
-$\dot\sigma\simeq\SNr$, with $\SNr$ the solar neighbourhood rate.}
+$\dot\sigma\simeq\SNr$, with $\SNr$ the solar neighbourhood rate\mm{,
+  and increases with the supernova rate}.}
 Across the modelled range of 0.5 to 4~\mm{pc} resolution we find that for
 \fg{$\eta<\eta{\rm crit}$}, the SSD saturates at about 5\% of
 energy equipartion, independent of growth rate \fg{or $\eta$.
@@ -664,12 +665,19 @@ We solve the system of non-ideal compressible MHD equations
     \put(210, 48){{\sf\bf{(c)}}}
   \end{picture}
 \caption{
- Magnetic energy density,
- scaled to time-averaged kinetic energy density $\overline{e_K}$,
- for resolutions $\dx=0.5$--$4$ and resistivity
- (a) $\eta=10^{-4}$ or (b) $10^{-3}$,
- \fg{and (c) matching \BKM\ scaled by $\EST$ for an imposed field with
- $\dot\sigma=8\SNr$ at $\dx=0.78$--$3.12$.}
+ Magnetic energy density \mm{shown for resolutions $\dx$ in parsecs
+   given in the legends for models (a) with resistivity
+   $\eta=10^{-4}$, (b) with $\eta=10^{-3}$, both scaled by the} 
+ % mm scaled to
+ time-averaged kinetic energy density $\overline{e_K}$,
+ %mm for resolutions $\dx=0.5$--$4$ and resistivity
+ %(a) $\eta=10^{-4}$ or (b) $10^{-3}$,
+ \fg{and (c) matching \BKM\, scaled by $\EST$ for an imposed field with
+   \mm{supernova rate} $\dot\sigma=8\SNr$
+   \mm{and viscosity $\nu$ in
+%mm [************************* CORRECT VISCOSITY UNITS? *****************]
+     $\kpc \kms$ given in the legend.} }
+ % at $\dx=0.78$--$3.12$.
 \label{fig:eb-res}}
 \end{figure}
 %-------------------------------------------------------------------------------
@@ -756,8 +764,9 @@ Kolmogorov spectrum $k^{-5/3}$ (right).
 (a)--(c): \fg{Spectra are samples at $t=27.5\Myr$ for all $\dx$ for
 resistivity $\eta$ and supernova rate $\dot{\sigma}$ as indicated.
 $\nu=0$, except $\nu=10^{-3}$ for models identified by Pm.
-(d): Samples taken for similar field strength at given $\eta$ for differing
-  $\dot\sigma$ as indicated. $\dx\simeq2$}  
+(d): Samples taken \mm{at different times with} similar field strength at given $\eta$ for differing
+  $\dot\sigma$ as indicated, \mm{with the highest supernova rate being the
+$\dx = 1.56$ run from the comparison with \BKM.}}  
 \label{fig:3power}}
 \end{figure*}
 %-------------------------------------------------------------------------------
@@ -777,34 +786,49 @@ $\nu=0$, except $\nu=10^{-3}$ for models identified by Pm.
 \subsection{\fg{Resolution and convergence}} \label{sec:conv}
 %-------------------------------------------------------------------------------
 
-\fg{For all
+%mm [2b shows this is not true] \fg{For all
   % mm $\dx$
-  \mm{resolutions}
-  considered we find that SSD in the
- ISM appears to be easily excited.
- Figure~\ref{fig:eb-res}\,(a) for $\eta=10^{-4}$ and $\dot\sigma=0.2\SNr$
- shows growth at all $\dx$, the growth rate increasing with resolution.
- Higher numerical dissipation of the flow applies due to shock and hyper
- diffusion at low resolution, which impedes the turbulence and efficiency of
- the dynamo.
+  %\mm{resolutions}
+  %considered we find that SSD in the
+  %ISM appears to be easily excited.
+\mm{Figure~\ref{fig:eb-res} shows magnetic energy as a function of
+  time for models with $\eta = 10^{-4}$ and $10^{-3}$, as well as a
+  direct comparison of our technique to \BKM.   We find that numerical
+diffusion still dominates at these resolutions for the lower
+resistivity, as can be seen from the increasing speed of the SSD with
+resolution, but that a converged SSD solution emerges at the higher 
+value for parsec resolution.}
+%mm Figure~\ref{fig:eb-res}\,(a) for $\eta=10^{-4}$ and $\dot\sigma=0.2\SNr$
+ % shows growth at all $\dx$, the growth rate increasing with resolution.
+ % Higher numerical dissipation of the flow
+ % %mm [no it is truncation error] applies due to shock and hyper
+ % %diffusion at low
+ %    \mm{occurs at lower}
+ % resolution, which impedes the turbulence and efficiency of
+ % the dynamo.
  Saturation at around 5\% of $\overline{e_K}$ appears to be a well-converged
  result.
- The growth rate does not yet quite converge between 1 and 0.5\,pc, but as we
- shall show, $\eta$ is not sufficiently acting beyond the numerical diffusion.}
-
- \fg{When we consider} $\eta=10^{-3}$ \fg{(Figure\,\ref{fig:eb-res}\,b), at which
- applicable resistivity is well determined by $\eta$,} there is false
- convergence
+%mm The growth rate does not yet quite converge between 1 and 0.5\,pc, but as we
+% shall show, $\eta$ is not sufficiently acting beyond the numerical diffusion.}
+%
+% \fg{When we consider} $\eta=10^{-3}$ \fg{(Figure\,\ref{fig:eb-res}\,b), at which
+% applicable resistivity is well determined by $\eta$, there is}
+\mm{The $\eta = 10^{-3}$ models show}
+ false convergence
  \citep{FMA91} of solutions with similar magnetic energy decay at $\dx\geq2$.
- However, higher resolution solutions converge to rapid magnetic
- amplification occurring between 40 and 60~Myr.
- \fg{We note that strong fluctuations in the characteristics of the flow due to
- low $\dot\sigma$ with thermal phases occupying changing fractional volumes
+%mm However, higher resolution solutions converge to rapid magnetic
+% amplification occurring between 40 and 60~Myr.
+ \fg{We note that strong fluctuations in the characteristics of the
+   flow
+   % mm due to
+   \mm{occur at the}
+ low $\dot\sigma$ \mm{that we chose to avoid thermal runaway
+   \citep{LOCBN15},} with thermal phases occupying changing fractional volumes
  \citep[e.g.][]{gatto2015} and hosting SSD instabilities with different 
  thresholds and growth rates.
- There is convergence in the occurrence of sporadic slowing and acceleration
- of the dynamo for $\dx\lesssim1$ and between $\eta=10^{-4}$ and $10^{-3}$,
- occurring near $t=20$ and 40\,Myr.
+ % mm There is convergence in the occurrence of sporadic slowing and acceleration
+ % of the dynamo for $\dx\lesssim1$ and between $\eta=10^{-4}$ and $10^{-3}$,
+ % occurring near $t=20$ and 40\,Myr.
  }
   
  \fg{We choose low $\dot\sigma$ to preserve the multiphase structure in the 
