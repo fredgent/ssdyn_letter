@@ -7,9 +7,8 @@
 > one are found everywhere in the manuscript and I am sure the editor agrees
 > with me.
 
-Apart from the example, it is unclear to what the referee refers, but we have
-revised the text extensively, both to respond to the details below and hopefully
-to improve readability and narrative.
+We have revised the text extensively, both to respond to the details below and
+to improve readability, narrative structure, and correct use of terminology.
 
 > 2- Second, I think the code used here, namely the PENCIL code, is a huge
 > problem. The PENCIL code is used routinely for subsonic turbulent problems,
@@ -30,22 +29,26 @@ to improve readability and narrative.
 > not
 > suited for strong shocks.
 
-This is not correct. We have validated the implementation of the pencil code of
-our convergence proportional diffusivities for handling shock discontinuities in
-Gent, F. A., Mac Low, M. M., Käpylä, M. J., Sarson, G. R., & Hollins, J. F.
-2020, Geophysical and Astrophysical Fluid Dynamics, 114, 77 and these are
-included explicitly in Eqs 1, 2 and 3. The hyper diffusion is applied only to 
-suppress instabilities at the grid scale, and the terms involving zeta resolve
-the strong shocks. Also, the application of cooling and heating, which are a
-crude simplification of the physical processes in the context of a monatomic
-gas, exclude energy conservation of the ISM.
+We relied too heavily on reference (to Gent et al. 2020) rather than a 
+self-contained description of our method for inclusion of a shock-capturing 
+artificial viscosity, compounded by neglecting to explicitly include several 
+of the relevant terms in equations (1)-(4).  We now make the inclusion of 
+a set of shock capturing artificial diffusivities (the zeta terms) explicit 
+in the text.  We further  include the correction terms for momentum 
+and energy conservation, which are applied to compensate for artificial 
+mass diffusion.  This well-tested artificial viscosity method accurately captures 
+shock discontinuities while conserving mass, momentum, and energy appropriately 
+(as explicitly shown in Gent et al. 2020).  The sixth-order hyperdiffusion is applied 
+only to suppress instabilities at the grid scale, and is indeed unsuited to 
+resolving shocks.  We separately vary the physical (Lagrangian) resistivity eta 
+and viscosity nu to study the small scale dynamo action.
 
-We now make the inclusion of shock handling explicit in the text and the
-correction terms for momentum and energy conservation, which are applied to
-compensate for artificial mass diffusion. The reference to Section 2 using only
-Eq 2 and 4 may have confused the referee, so we have separated the comment to a new paragraph and explicitly refer to the simplified model, and indeed it was an
-error to state we omitted Eq 1 in Section 2, because this is solved, without the
-artificial diffusion and the text has been corrected.
+We further note that there was likely further confusion because we described
+the simpler isothermal model of Section 2 in the same paragraph, as well as 
+inaccurately describing it as using only Equations 2 and 4. We have separated 
+the description of the isothermal model to a new paragraph and corrected the 
+description to note that it does indeed  solve the continuity equation (Eq 1), 
+though without the unnecessary shock-capturing artificial diffusion terms. 
 
 > 3- Third, section 2, although a very interesting experiment in principle, does
 > not make sense in my opinion.  Why turning off Equation 1 and 3 in that
@@ -56,13 +59,17 @@ artificial diffusion and the text has been corrected.
 > (2011, 2014) who performed the same study.
  
 The objective of Sect. 2 is to clarify the differences between tangling and
-dynamo amplification, given some informal debate within the community about
-whether Balsara's results exhibit tangling only, due to the imposed field. For
-this only a simple experiment is required and we relate our physically motivated
-experimental results to this for confirmation that they are indeed dynamo.
-The Federrath papers are relevant, and we include them in our 
-commentary, although they do not consider tangling, which is the point of the
-simplified model. We have emphasised in the revision this purpose.
+dynamo amplification, given the existence of extensive informal debate within 
+the community about whether Balsara's results exhibit tangling only, due to 
+the imposed field in that study. For this purpose, only a simple experiment 
+is required and we relate our physically motivated experimental results to this 
+for confirmation that they are indeed produced by the action of a dynamo.
+The Federrath papers are relevant, and we include them in our discussion, 
+although they do not consider tangling, which is the point of the simplified 
+model. We have emphasised in the revision this purpose.  Finally, we have 
+corrected the description to acknowledge that we do indeed solve the continuity 
+equation (Eq 1) here, but not the energy equation (Eq 3), as this experiment 
+is isothermal.
 
 > 4- Fourth, in the introduction, a very important reference is missing, namely
 > the work of Rieder and Teyssier (2016, 2017) who reported a clear SSD in a
@@ -70,8 +77,9 @@ simplified model. We have emphasised in the revision this purpose.
 > exponential growth of the field, when the resolution was high enough,
 > addressing directly the major science goals outlined in the introduction.
 
-We have included reference in the intorduction in the context of the larger 
-domain simultions, similar to Steinwandel et al.
+We have included these relevant references in the introduction in the context 
+of larger-domain but lower-resolution simulations, similar to those recently 
+published by Steinwandel et al. 
 
 > 5- The results presented in section 4 are very problematic. No clear
 > exponential growth is observed, although exponential growth of the magnetic
@@ -81,21 +89,33 @@ domain simultions, similar to Steinwandel et al.
 > parameters, the most serious one being (as I said) to completely remove linear
 > viscosity.
 
+There are two issues to consider here.  The first is whether the field growth
+we see is due to numerical artefacts.  As noted, we have indeed included 
+appropriate diffusivities to ensure numerical stability. We further note below
+that we have now included our reproduction of Balsara et al.'s work, as well
+as several runs with physical viscosity as well as resistivity included.  
+We have included the kinetic and magnetic energy spectra that specifically 
+demonstrate that the flow and magnetic field are well resolved,
+with the energy cutoff clearly occurring well away from the grid scale. 
+Therefore, we argue that there is strong evidence of the physical nature of
+our results.
 
-The referee's assertion that a steady exponential growth is a prerequisite for
-acceptance of dynamo is debatable. Such behaviour is based on physical systems
-without the multiphase properties of the ISM, with less sporadic forcing regimes
-as we present here. Given that we do not have access to the kinematic phases of
-real galaxies, we cannot be sure that there is ever any neat exponential phase
-for a volume averaged brms type quantity. 'accepted' does not necessarily equate
-with a truth! Reality can indeed be complicated, so can anybody be sure about
-the exponential phase for the entire galaxy? 
+The second issue is the referee's assertion that a steady exponential growth 
+is a prerequisite for identification of a small scale dynamo. This diagnostic 
+is based on consideration of idealized experiments with uniform driving that 
+do not have the multiphase, intermittent properties of the supernova-driven ISM.
+
+.... end of Mac Low revisions ...
+Given that we do 
+not have access to the kinematic velocity fields of real galaxies, we cannot 
+be sure that there is ever any neat exponential phase for a volume averaged
+magnetic field. That said, there are certainly substantial periods of dramatic 
+exponential growth that we argue clearly demonstrate the action of a small scale 
+dynamo during those periods.
 
 We have also taken care to illiminate numerical effects, which is why we have
 implemented the hyper diffusivity in addition to the shock-dependent
-diffusivity. We have included the kinetic and magnetic energy spectra,
-specifically to demonstrate that the flow and magnetic field are well resolved,
-with the energy cutoff clearly applying well away from the grid scale. 
+diffusivity. 
 
 Erratic behaviour can have a physical explanation, due to the evolving thermal
 properties of the ISM and low (0.2x) supernova rate, and is evident in the

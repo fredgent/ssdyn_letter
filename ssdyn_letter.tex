@@ -309,7 +309,8 @@ $\dot\sigma\simeq\SNr$, with $\SNr$ the solar neighbourhood rate\mm{,
 Across the modelled range of 0.5 to 4~\mm{pc} resolution we find that for
 \fg{$\eta<\eta{\rm crit}$}, the SSD saturates at about 5\% of
 energy equipartion, independent of growth rate \fg{or $\eta$.
-Saturation level is sensitive to viscosity}.
+  % mm Saturation level is sensitive to viscosity.
+  }
 %Despite higher Mach numbers and negative impact of compressibility expected on
 %SSD, growth rates increase for $\dot\sigma=\SNr$ versus $0.2\SNr$, with $\SNr$
 %the solar neighbourhood rate.
@@ -761,11 +762,14 @@ Compensation is
    \mm{for}
 the Kazantsev spectrum $k^{3/2}$ (left) or the
 Kolmogorov spectrum $k^{-5/3}$ (right).
-(a)--(c): \fg{Spectra are samples at $t=27.5\Myr$ for all $\dx$ for
-resistivity $\eta$ and supernova rate $\dot{\sigma}$ as indicated.
+(a)--(c): \fg{Spectra are samples at $t=27.5\Myr$ for $\dx$ \mm{given
+    in the legend (in pc)} for
+resistivity $\eta$ and supernova rate $\dot{\sigma}$ as indicated
+\mm{on each panel.  Different field strengths have been reached at
+  this time in different models (see Fig.~\ref{fig:eb-res}). Viscosity}
 $\nu=0$, except $\nu=10^{-3}$ for models identified by Pm.
-(d): Samples taken \mm{at different times with} similar field strength at given $\eta$ for differing
-  $\dot\sigma$ as indicated, \mm{with the highest supernova rate being the
+(d): Samples taken \mm{at different times but} similar field strength at $\eta$ \mm{and}
+  $\dot\sigma$ as indicated \mm{in the legend}, \mm{with the highest supernova rate being the
 $\dx = 1.56$ run from the comparison with \BKM.}}  
 \label{fig:3power}}
 \end{figure*}
@@ -830,43 +834,66 @@ value for parsec resolution.}
  % of the dynamo for $\dx\lesssim1$ and between $\eta=10^{-4}$ and $10^{-3}$,
  % occurring near $t=20$ and 40\,Myr.
  }
-  
- \fg{We choose low $\dot\sigma$ to preserve the multiphase structure in the 
- closed numerical domain. 
- However, we also display in Figure\,\ref{fig:eb-res}\,(c) results of direct
- comparison with \BKM\ using $\dot\sigma=8\SNr$.
- The multiphase structure rapidly fades into a single phase domain of hot gas
- ($T>10^7$\,K).
- The growth rate is faster and very uniformly exponential, reflective of the
- single phase kinematics and more persistent forcing rate, yet saturating
- also at about 5\% of $\overline{e_K}$.
- Our growth is faster than \BKM\ equivalent rates, because the Pencil Code is a
- higher order less diffusive code.
- We include a lower resolution run to demonstrate consistency with \BKM.
- Our runs with $\dot\sigma=\SNr$, also grow more quickly than at $0.2\SNr$,
- while saturating at $5\%\overline{e_K}$}% (Figure\,\ref{fig:eb-nu}\,f,h).}
+
+ \mm{\BKM chose a higher $\dot\sigma$ than the low value we chose for
+   our fiducial runs}
+ \fg{
+   % mm We choose low $\dot\sigma$
+   to preserve multiphase \mm{thermal} structure in \mm{our} 
+   % mm closed
+   \mm{periodic} numerical domain. 
+   % mm However, we also display in
+   \mm{We did run direct comparisons at varying resolution to \BKM (Figure\,\ref{fig:eb-res}\,(c))}
+   %mm results of direct
+   %comparison with \BKM\
+     using $\dot\sigma=8\SNr$.
+% mm The multiphase structure rapidly fades into a single phase domain of hot gas
+\mm{This high $\dot\sigma$ rapidly drives thermal runaway resulting in high temperatures $T>10^7$\,K.}
+The growth rate is faster \mm{than in our fiducial models},
+% mm [not in the higher res runs] and very uniformly exponential,
+reflective of the single phase kinematics and more persistent forcing
+rate, yet \mm{still} saturating
+ at about 5\% of $\overline{e_K}$.}
+\mm{At equivalent resolution, the sixth-order Pencil Code has lower
+  diffusion than the second-order Godunov code used by \BKM. As a
+  result, we find faster growth at equivalent resolution; we}
+%mm Our growth is faster than \BKM\ equivalent rates, because the Pencil Code is a
+%higher order less diffusive code. We
+  include a lower resolution run \mm{that} demonstrate\mm{s} consistency with
+  \BKM. 
+ %mm [this has been made redundant by the last paragraph of the section.]
+% Our runs with $\dot\sigma=\SNr$, also grow more quickly than at $0.2\SNr$,
+% while \mm{still} saturating at $5\%\overline{e_K}$.% (Figure\,\ref{fig:eb-nu}\,f,h).}
 
  \fg{We can also examine the properties of the flow and magnetic field through
- their energy spectra, some of which we display in Figure\,\ref{fig:3power}.
- From panels (a2), (b2) and (c2) with kinetic spectra for all $\dx$ and 
- $\eta=0$, $10^{-4}$ and $10^{-3}$, respectively.
- Clearly there is excellent convergence in the flow for $\dx\leq1$ at all
- scales $k\lesssim 30\kpc^{-1}$.
- The addition of viscosity $\nu=10^{-3}$, indicated by the magenta curves in
- panels (b2) and (c2), does not materially alter the kinetic energy spectrum
- Interestingly, the higher dissipation in the flow at the grid scale 
+ their energy spectra (Figure\,\ref{fig:3power}).
+ % mm [sentence fragment] From panels (a2), (b2) and (c2) with kinetic spectra for all $\dx$ and 
+% $\eta=0$, $10^{-4}$ and $10^{-3}$, respectively.
+ \mm{\bf [MM: what does this mean? It only seems to hold in (c), not
+   (a) or (b).]} Clearly there is excellent convergence in the flow for $\dx\leq1$ at all
+ scales $k\lesssim 30\kpc^{-1}$.}
+
+ \fg{The addition of viscosity $\nu=10^{-3}$, indicated by the magenta curves in
+ panels (b) and (c), \mm{makes little difference to the shape of the
+   magnetic or kinetic energy spectra.  The magnitude of the magnetic
+   energy spectrum increases somewhat with the addition of viscosity,
+   as can also be seen from comparing dotted light and dark blue
+   lines in Figure~\ref{fig:eb-nu}(a2).}
+%mm  does not materially alter the kinetic energy spectrum.
+ \mm{\bf [MM: can you rephrase this sentence carefully? It is
+   quite confusing to me.]} Interestingly, the \mm{resulting} higher dissipation in the flow at the grid scale 
  $\dx\geq2$ is also transferred along the whole spectrum, showing that
  the flow is losing energy even at the largest scales.
- The shape of the corresponding magnetic energy spectra are also consistent 
- for $\dx\leq1$, with variation in magnitude related to differences in
- numerical resistivity.
+%mm The shape of the corresponding magnetic energy spectra are also consistent 
+% for $\dx\leq1$, with variation in magnitude related to differences in
+% numerical resistivity.
 }
- 
- \fg{We have shown that SSD turbulence has convergent results for $\dx\leq1$.
+
+ \fg{We have shown that SSD turbulence \mm{converges} for $\dx\leq1$.
  Underresolving SN driven turbulence results in a significant loss of energy
- at all scales.
+ at all scales. \mm{The}
  SSD for $0.2\SNr\leq \dot\sigma \leq 8\SNr$ saturates in the ISM at about
- $5\%\overline{e_K}$ and grows more rapidly with increasing SN rates.
+ $5\%\overline{e_K}$ and grows more rapidly with increasing SN rate.
  } 
 
 
@@ -898,8 +925,9 @@ value for parsec resolution.}
 Magnetic energy density $e_B$ normalized by the time-averaged kinetic
 energy $\overline{e_K}$ for various resistivities $\eta$ for values
 given in each panel of resolution $\dx$ and SN rate $\dot\sigma$ normalized by
-the solar neighborhood rate $\SNr\simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$.
-Time axes vary to accommodate SSD saturation at all $\dx$ with $\eta=10^{-4}$.
+the solar neighborhood rate $\SNr$. % mm \simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$.
+Time axes vary to accommodate SSD saturation at all $\dx$ with
+$\eta=10^{-4}$. \mm{Viscosity}
 \fg{$\nu=0$, except where $\Pm=\nu/\eta$ is varied with $\nu$ fixed (b1) or 
 $\eta$ fixed (b2).}
 \label{fig:eb-nu}}
@@ -1275,8 +1303,11 @@ Resistivity is $\eta=10^{-4}$.}
  onset of LSD, critical $\Omega$, and dependence on $\dot\sigma$ for LSD.}   
 
 \acknowledgments
-The authors wish to acknowledge CSC – IT Center for Science, Finland, for
-computational resources Grand Challenge GDYNS Project 2001062.
+\mm{We thank O. Gressel for discussions inspiring this work, and the
+  anonymous referee for comments that resulted in a substantial
+  improvement of the presentation.}
+We acknowledge CSC – IT Center for Science, Finland, for
+computational resources under Grand Challenge GDYNS Project 2001062.
 M-MML was partly supported by US NSF grant AST18-15461.
 FAG and MJK acknowledge support of the Academy of Finland
 ReSoLVE Centre of Excellence (grant number 307411).
