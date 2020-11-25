@@ -303,7 +303,7 @@ We find convergence for SSD growth rate with resolution
 % mm approaching  sub-parsec scale
 \mm{of a parsec}
 for a given $\dot\sigma$.
-\fg{\mm{The c}ritical resistivity \mm{below which an  SSD occurs} is $0.005>\eta_{\rm crit}>0.001\kpc\kms$ for 
+\fg{\mm{The c}ritical resistivity \mm{below which an  SSD occurs} is $0.005>\eta_{\rm crit}>0.001{\,\rm kpc}^{-1}{\,\rm km~ s}^{-1}$ for 
 $\dot\sigma\simeq\SNr$, with $\SNr$ the solar neighbourhood rate\mm{,
   and increases with the supernova rate}.}
 Across the modelled range of 0.5 to 4~\mm{pc} resolution we find that for
@@ -666,7 +666,9 @@ We solve the system of non-ideal compressible MHD equations
     \put(210, 48){{\sf\bf{(c)}}}
   \end{picture}
 \caption{
- Magnetic energy density \mm{shown for resolutions $\dx$ in parsecs
+ %FAG removing units to save words pc and kpc kms are assumed earlier in the text
+ %Magnetic energy density \mm{shown for resolutions $\dx$ in parsecs
+ Magnetic energy density \mm{shown for resolutions $\dx$ %in parsecs
    given in the legends for models (a) with resistivity
    $\eta=10^{-4}$, (b) with $\eta=10^{-3}$, both scaled by the} 
  % mm scaled to
@@ -677,7 +679,9 @@ We solve the system of non-ideal compressible MHD equations
    \mm{supernova rate} $\dot\sigma=8\SNr$
    \mm{and viscosity $\nu$ 
 %mm [************************* CORRECT VISCOSITY UNITS? *****************]
-    in$\kpc\kms$ given in the legend.} }
+ %FAG removing units to save words pc and kpc kms are assumed earlier in the text
+    %in$\kpc\kms$
+    given in the legend.} }
  % at $\dx=0.78$--$3.12$.
 \label{fig:eb-res}}
 \end{figure}
@@ -769,7 +773,9 @@ Compensation is
 the Kazantsev spectrum $k^{3/2}$ (left) or the
 Kolmogorov spectrum $k^{-5/3}$ (right).
 (a)--(c): \fg{Spectra are samples at $t=27.5\Myr$ for $\dx$ \mm{given
-    in the legend (in pc)} for
+    %FAG units already assumed
+    %in the legend (in pc)} for
+    in the legend} for
 resistivity $\eta$ and supernova rate $\dot{\sigma}$ as indicated
 \mm{on each panel.  Different field strengths have been reached at
   this time in different models (see Fig.~\ref{fig:eb-res}). Viscosity}
@@ -876,13 +882,18 @@ rate, yet \mm{still} saturating
  % mm [sentence fragment] From panels (a2), (b2) and (c2) with kinetic spectra for all $\dx$ and 
 % $\eta=0$, $10^{-4}$ and $10^{-3}$, respectively.
  \mm{\bf [MM: what does this mean? It only seems to hold in (c), not
-   (a) or (b).]} \fag{I think it does, but I shall rewrite it for clarity.}
- Clearly there is excellent convergence in the flow for $\dx\leq1$ at all
- scales $k\lesssim 30\kpc^{-1}$.}
- \mm{\bf [MM: can you rephrase this sentence carefully? It is
-   quite confusing to me.]} Interestingly, the \mm{resulting} higher dissipation in the flow at the grid scale 
- $\dx\geq2$ is also transferred along the whole spectrum, showing that
- the flow is losing energy even at the largest scales.
+   (a) or (b).]} \fag{I think it does, but I have rewritten it for clarity.}
+ %Clearly there is excellent convergence in the flow for $\dx\leq1$ at all
+ %scales $k\lesssim 30\kpc^{-1}$.}
+ %\mm{\bf [MM: can you rephrase this sentence carefully? It is
+ %  quite confusing to me.]} Interestingly, the \mm{resulting} higher dissipation in the flow at the grid scale 
+ %$\dx\geq2$ is also transferred along the whole spectrum, showing that
+ %the flow is losing energy even at the largest scales.
+ The kinetic spectra (a--c right panels) for $\dx\leq1$ closely align 
+ for all scales above the viscous cutoff, which applies at lower $k$ for
+ $\dx=1$ than $\dx=0.5$.
+ By contrast the kinetic spectra for $\dx\geq2$ differ at all scales, 
+ indicating only solutions for $\dx\lesssim1$ are convergent.}
 %mm The shape of the corresponding magnetic energy spectra are also consistent 
 % for $\dx\leq1$, with variation in magnitude related to differences in
 % numerical resistivity.
@@ -1078,10 +1089,10 @@ Line styles in (a2) are as indicated in (a1).}
   \includegraphics[trim=0.5cm 0.2cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/0_5pcPm0e-4_0kpower.pdf}
   \includegraphics[trim=0.5cm 0.5cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/bals256rkpower.pdf}
   \begin{picture}(0,0)(0,0)
-    \put(110,455){{\sf{$\delta x=0.5 $pc, $\dot\sigma=\frac{1}{5}\SNr$}}}
-    \put(110,330){{\sf{$\delta x=0.5 $pc, $\dot\sigma=\frac{1}{5}\SNr$}}}
-    \put(110,175){{\sf{$\delta x=0.78$pc, $\dot\sigma=          8\SNr$}}}
-    \put(110, 50){{\sf{$\delta x=0.78$pc, $\dot\sigma=          8\SNr$}}}
+    \put(110,455){{\sf{$\delta x=0.5 $, $\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(110,330){{\sf{$\delta x=0.5 $, $\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(110,175){{\sf{$\delta x=0.78$, $\dot\sigma=          8\SNr$}}}
+    \put(110, 50){{\sf{$\delta x=0.78$, $\dot\sigma=          8\SNr$}}}
     %\put(53,543){{\color{white}{\circle*{100}}}}
     \put(210,540){{\sf\bf{(a1)}}}
     \put(210,415){{\sf\bf{(a2)}}}
@@ -1248,7 +1259,7 @@ Resistivity is $\eta=10^{-4}$.}
  The SN energy input and the physically motivated ISM cooling processes impose
  length and time scales that must be adequately resolved.
  \fg{We obtain convergent results for SSD with grid resolution
- $\dx\lesssim1\pc$.}
+ $\dx\lesssim1$.}
 
  \fg{We confirm, with and without the use of an imposed magnetic field, that
  the field amplification obtained in SN-driven ISM turbulence by \citet{BKMM04}
@@ -1338,7 +1349,7 @@ Resistivity is $\eta=10^{-4}$.}
  onset of LSD, critical $\Omega$, and dependence on $\dot\sigma$ for LSD.}   
 
 \acknowledgments
-\mm{We thank O. Gressel for discussions inspiring this work, and the
+\mm{We thank O. Gressel \fg{and D. Elstner} for discussions inspiring this work, and the
   anonymous referee for comments that resulted in a substantial
   improvement of the presentation.}
 We acknowledge CSC – IT Center for Science, Finland, for
