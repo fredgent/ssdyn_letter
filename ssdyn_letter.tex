@@ -679,7 +679,7 @@ $\dx = 1.56$ run from the comparison with \BKM\ }and $\dx=2$ otherwise.}
 %-------------------------------------------------------------------------------
 \subsection{\fg{Resolution and convergence}} \label{sec:conv}
 %-------------------------------------------------------------------------------
-
+%FAG: I guess I consider it easy if such high resistivity compared to real astrophysical bodies can excite SSD. However, happy with your edits
 %mm [2b shows this is not true] \fg{For all
   % mm $\dx$
   %\mm{resolutions}
@@ -692,34 +692,20 @@ diffusion still dominates at these resolutions for the lower
 resistivity, as can be seen from the increasing speed of the SSD with
 resolution, but that a converged SSD solution emerges at the higher 
 value for parsec resolution.}
-%mm Figure~\ref{fig:eb-res}\,(a) for $\eta=10^{-4}$ and $\dot\sigma=0.2\SNr$
- % shows growth at all $\dx$, the growth rate increasing with resolution.
- % Higher numerical dissipation of the flow
- % %mm [no it is truncation error] applies due to shock and hyper
- % %diffusion at low
- %    \mm{occurs at lower}
- % resolution, which impedes the turbulence and efficiency of
- % the dynamo.
  Saturation at around 5\% of $\overline{e_K}$ appears to be a well-converged
  result.
-%mm The growth rate does not yet quite converge between 1 and 0.5\,pc, but as we
-% shall show, $\eta$ is not sufficiently acting beyond the numerical diffusion.}
-%
-% \fg{When we consider} $\eta=10^{-3}$ \fg{(Figure\,\ref{fig:eb-res}\,b), at which
-% applicable resistivity is well determined by $\eta$, there is}
 \mm{The $\eta = 10^{-3}$ models show}
  false convergence
  \citep{FMA91} of solutions with similar magnetic energy decay at $\dx\geq2$.
-%mm However, higher resolution solutions converge to rapid magnetic
-% amplification occurring between 40 and 60~Myr.
  \fg{We note that strong fluctuations in the characteristics of the
    flow
-   % mm due to
    \mm{occur at the}
  low $\dot\sigma$ \mm{that we choose to avoid thermal runaway
    \citep{LOCBN15},} with thermal phases occupying changing fractional volumes
  \citep[e.g.][]{gatto2015} and hosting SSD instabilities with different 
  thresholds and growth rates.
+ %FAG: is it not worth commenting that the changed in growth/decay are 
+ %FAG: concurrent across models at high res?
  % mm There is convergence in the occurrence of sporadic slowing and acceleration
  % of the dynamo for $\dx\lesssim1$ and between $\eta=10^{-4}$ and $10^{-3}$,
  % occurring near $t=20$ and 40\,Myr.
@@ -728,32 +714,20 @@ value for parsec resolution.}
  \mm{\BKM\ chose a higher $\dot\sigma$ than the low value we choose for
    our fiducial runs}
  \fg{
-   % mm We choose low $\dot\sigma$
    to preserve multiphase \mm{thermal} structure in \mm{our} 
-   % mm closed
    \mm{periodic} numerical domain. 
-   % mm However, we also display in
    \mm{We did run direct comparisons at varying resolution to \BKM\ (Figure\,\ref{fig:eb-res}\,(c))}
-   %mm results of direct
-   %comparison with \BKM\
      using $\dot\sigma=8\SNr$.
-% mm The multiphase structure rapidly fades into a single phase domain of hot gas
 \mm{This high $\dot\sigma$ rapidly drives thermal runaway resulting in high temperatures $T>10^7$\,K.}
 The growth rate is faster \mm{than in our fiducial models},
-% mm [not in the higher res runs] and very uniformly exponential,
 reflective of the single phase kinematics and more persistent forcing
 rate, yet \mm{still} saturating
  at about 5\% of $\overline{e_K}$.
 \mm{At equivalent resolution, the sixth-order Pencil Code has lower
   diffusion than the second-order Godunov code used by \BKM. As a
   result, we find faster growth at equivalent resolution; we}
-%mm Our growth is faster than \BKM\ equivalent rates, because the Pencil Code is a
-%higher order less diffusive code. We
   include a lower resolution run \mm{that} demonstrate\mm{s} consistency with
   \BKM.} 
- %mm [this has been made redundant by the last paragraph of the section.]
-% Our runs with $\dot\sigma=\SNr$, also grow more quickly than at $0.2\SNr$,
-% while \mm{still} saturating at $5\%\overline{e_K}$.% (Figure\,\ref{fig:eb-nu}\,f,h).}
 
  \fg{We can also examine the properties of the flow and magnetic field through
  their energy spectra (Figure\,\ref{fig:3power}).
@@ -771,6 +745,7 @@ rate, yet \mm{still} saturating
  for all scales above the viscous cutoff, which applies at lower $k$ for
  $\dx=1$ than $\dx=0.5$.
  By contrast the kinetic spectra for $\dx\geq2$ differ at all scales, 
+ including significant enery losses and  
  indicating only solutions for $\dx\lesssim1$ are convergent.}
 %mm The shape of the corresponding magnetic energy spectra are also consistent 
 % for $\dx\leq1$, with variation in magnitude related to differences in
@@ -783,16 +758,7 @@ rate, yet \mm{still} saturating
    energy spectrum increases somewhat with the addition of viscosity,
    as can also be seen from comparing dotted light and dark blue
    lines in Figure\,\ref{fig:eb-nu}\,(a2).}
-%mm  does not materially alter the kinetic energy spectrum.
-%FAG: moved to previous para and reworded
-% \mm{\bf [MM: can you rephrase this sentence carefully? It is
-%   quite confusing to me.]} Interestingly, the \mm{resulting} higher dissipation in the flow at the grid scale 
-% $\dx\geq2$ is also transferred along the whole spectrum, showing that
-% the flow is losing energy even at the largest scales.
-%%mm The shape of the corresponding magnetic energy spectra are also consistent 
-%% for $\dx\leq1$, with variation in magnitude related to differences in
-%% numerical resistivity.
-}
+   }
 
  \fg{We have shown that SSD turbulence \mm{converges} for $\dx\leq1$.
  Underresolving SN driven turbulence results in a significant loss of energy
