@@ -675,9 +675,9 @@ We solve the system of non-ideal compressible MHD equations
  %(a) $\eta=10^{-4}$ or (b) $10^{-3}$,
  \fg{and (c) matching \BKM\, scaled by $\EST$ for an imposed field with
    \mm{supernova rate} $\dot\sigma=8\SNr$
-   \mm{and viscosity $\nu$ in
+   \mm{and viscosity $\nu$ 
 %mm [************************* CORRECT VISCOSITY UNITS? *****************]
-     $\kpc \kms$ given in the legend.} }
+    in$\kpc\kms$ given in the legend.} }
  % at $\dx=0.78$--$3.12$.
 \label{fig:eb-res}}
 \end{figure}
@@ -737,14 +737,20 @@ We solve the system of non-ideal compressible MHD equations
 \includegraphics[trim=0 0.5cm 0 0.2cm,clip=True,width=0.48\textwidth]{figs/SN_Bpower.pdf}
 \includegraphics[trim=0 0.5cm 0 0.2cm,clip=True,width=0.48\textwidth]{figs/SN_kpower.pdf}
   \begin{picture}(0,0)(0,0)
-    \put( -95,480){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-350,480){\begin{scriptsize}{\sf{$\eta=0$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-105,360){\begin{scriptsize}{\sf{$\eta=10^{-4}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-350,360){\begin{scriptsize}{\sf{$\eta=10^{-4}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-105,242){\begin{scriptsize}{\sf{$\eta=10^{-3}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-350,242){\begin{scriptsize}{\sf{$\eta=10^{-3}$, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-310,122){\begin{scriptsize}{\sf{$\dx=2$}}\end{scriptsize}}
-    \put( -60,122){\begin{scriptsize}{\sf{$\dx=2$}}\end{scriptsize}}
+    \put( -65,478){{\sf{$\eta=0$}}}
+    \put(-315,478){{\sf{$\eta=0$}}}
+    \put( -65,466){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-315,466){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put( -65,358){{\sf{$\eta=10^{-4}$}}}
+    \put(-315,358){{\sf{$\eta=10^{-4}$}}}
+    \put( -65,346){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-315,346){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put( -65,240){{\sf{$\eta=10^{-3}$}}}
+    \put(-315,240){{\sf{$\eta=10^{-3}$}}}
+    \put( -65,228){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-315,228){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-325,119){{\sf{$\dx=1.56,2$}}}
+    \put( -75,119){{\sf{$\dx=1.56,2$}}}
     %mm [removed digits to match caption]
     \put(-492,482){{\sf\bf{(a)}}}
     \put(-492,358){{\sf\bf{(b)}}}
@@ -770,7 +776,7 @@ resistivity $\eta$ and supernova rate $\dot{\sigma}$ as indicated
 $\nu=0$, except $\nu=10^{-3}$ for models identified by Pm.
 (d): Samples taken \mm{at different times but} similar field strength at $\eta$ \mm{and}
   $\dot\sigma$ as indicated \mm{in the legend}, \mm{with the highest supernova rate being the
-$\dx = 1.56$ run from the comparison with \BKM.}}  
+$\dx = 1.56$ run from the comparison with \BKM\ }and $\dx=2$ otherwise.}  
 \label{fig:3power}}
 \end{figure*}
 %-------------------------------------------------------------------------------
@@ -904,14 +910,24 @@ rate, yet \mm{still} saturating
   \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/2pc-eB-nu5.pdf}
   \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/4pc-eB-nu6.pdf}
   \begin{picture}(0,0)(0,0)
-    \put(-346,455){\begin{scriptsize}{\sf{$\delta x=0.5$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-100,455){\begin{scriptsize}{\sf{$\delta x=1.0$pc, $\nu=10^{-3}$}}\end{scriptsize}}
-    \put(-346,330){\begin{scriptsize}{\sf{$\delta x=1.0$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-100,330){\begin{scriptsize}{\sf{$\delta x=1.0$pc, $\eta=10^{-4}$}}\end{scriptsize}}
-    \put(-416,170){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-170,170){\begin{scriptsize}{\sf{$\delta x=4.0$pc, $\dot\sigma=0.2\SNr$}}\end{scriptsize}}
-    \put(-335, 45){\begin{scriptsize}{\sf{$\delta x=2.0$pc, $\dot\sigma=\SNr$}}\end{scriptsize}}
-    \put( -90, 45){\begin{scriptsize}{\sf{$\delta x=4.0$pc, $\dot\sigma=\SNr$}}\end{scriptsize}}
+    \put(-302,469){{\sf{$\delta x=0.5$}}}
+    \put(-302,456){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put( -60,482){{\sf{$\delta x=1$}}}
+    \put( -60,469){{\sf{$\nu=10^{-3}$}}}
+    \put( -60,456){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-302,343){{\sf{$\delta x=1$}}}
+    \put(-302,330){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put( -60,356){{\sf{$\delta x=1$}}}
+    \put( -60,343){{\sf{$\eta=10^{-4}$}}}
+    \put( -60,330){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-302,197){{\sf{$\delta x=2$}}}
+    \put(-302,184){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put( -60,197){{\sf{$\delta x=4$}}}
+    \put( -60,184){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-302, 58){{\sf{$\delta x=2$}}}
+    \put(-302, 47){{\sf{$\dot\sigma=\SNr$}}}
+    \put( -60, 58){{\sf{$\delta x=4$}}}
+    \put( -60, 47){{\sf{$\dot\sigma=\SNr$}}}
     \put(-450,455){{\sf\bf{(a1)}}}
     \put(-450,330){{\sf\bf{(a2)}}}
     \put(-450,170){{\sf\bf{(c1)}}}
@@ -922,14 +938,23 @@ rate, yet \mm{still} saturating
     \put(-205, 45){{\sf\bf{(d2)}}}
   \end{picture}
 \caption{
+%Magnetic energy density $e_B$ normalized by the time-averaged kinetic
+%energy $\overline{e_K}$ for various resistivities $\eta$ for values
+%given in each panel of resolution $\dx$ and SN rate $\dot\sigma$ normalized by
+%the solar neighborhood rate $\SNr$. % mm \simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$.
+%Time axes vary to accommodate SSD saturation at all $\dx$ with
+%$\eta=10^{-4}$. \mm{Viscosity}
+%\fg{$\nu=0$, except where $\Pm=\nu/\eta$ is varied with $\nu$ fixed (b1) or 
+%$\eta$ fixed (b2).}
 Magnetic energy density $e_B$ normalized by the time-averaged kinetic
-energy $\overline{e_K}$ for various resistivities $\eta$ for values
-given in each panel of resolution $\dx$ and SN rate $\dot\sigma$ normalized by
-the solar neighborhood rate $\SNr$. % mm \simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$.
-Time axes vary to accommodate SSD saturation at all $\dx$ with
-$\eta=10^{-4}$. \mm{Viscosity}
-\fg{$\nu=0$, except where $\Pm=\nu/\eta$ is varied with $\nu$ fixed (b1) or 
-$\eta$ fixed (b2).}
+energy $\overline{e_K}$ for values given in each panel of resolution $\dx$ and
+SN rate $\dot\sigma$. % mm \simeq 50$\,kpc$^{-3}$\,Myr$^{-1}$.
+Time axes vary to accommodate SSD saturation at all $\dx$ with $\eta=10^{-4}$.
+\fg{Captions indicate resistivity $\eta$, with 
+\mm{viscosity}
+$\nu=0$, unless indicated otherwise or where $\Pm=\nu/\eta$ is varied with
+$\nu$ fixed (b1) or $\eta$ fixed (b2).
+Line styles in (a2) are as indicated in (a1).}
 \label{fig:eb-nu}}
 \end{figure*}
 %-------------------------------------------------------------------------------
@@ -1043,10 +1068,10 @@ $\eta$ fixed (b2).}
   \includegraphics[trim=0.5cm 0.2cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/0_5pcPm0e-4_0kpower.pdf}
   \includegraphics[trim=0.5cm 0.5cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/bals256rkpower.pdf}
   \begin{picture}(0,0)(0,0)
-    \put(110,455){\begin{scriptsize}{\sf{$\delta x=0.5 $pc, $\nu=10^{-4}$}}\end{scriptsize}}
-    \put(110,330){\begin{scriptsize}{\sf{$\delta x=0.5 $pc, $\nu=10^{-4}$}}\end{scriptsize}}
-    \put(110,175){\begin{scriptsize}{\sf{$\delta x=0.78$pc, $\nu=10^{-4}$}}\end{scriptsize}}
-    \put(110, 50){\begin{scriptsize}{\sf{$\delta x=0.78$pc, $\nu=10^{-4}$}}\end{scriptsize}}
+    \put(110,455){{\sf{$\delta x=0.5 $pc, $\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(110,330){{\sf{$\delta x=0.5 $pc, $\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(110,175){{\sf{$\delta x=0.78$pc, $\dot\sigma=          8\SNr$}}}
+    \put(110, 50){{\sf{$\delta x=0.78$pc, $\dot\sigma=          8\SNr$}}}
     %\put(53,543){{\color{white}{\circle*{100}}}}
     \put(210,540){{\sf\bf{(a1)}}}
     \put(210,415){{\sf\bf{(a2)}}}
