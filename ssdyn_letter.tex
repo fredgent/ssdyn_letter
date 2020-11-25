@@ -841,7 +841,7 @@ value for parsec resolution.}
  % occurring near $t=20$ and 40\,Myr.
  }
 
- \mm{\BKM chose a higher $\dot\sigma$ than the low value we chose for
+ \mm{\BKM\ chose a higher $\dot\sigma$ than the low value we chose for
    our fiducial runs}
  \fg{
    % mm We choose low $\dot\sigma$
@@ -849,7 +849,7 @@ value for parsec resolution.}
    % mm closed
    \mm{periodic} numerical domain. 
    % mm However, we also display in
-   \mm{We did run direct comparisons at varying resolution to \BKM (Figure\,\ref{fig:eb-res}\,(c))}
+   \mm{We did run direct comparisons at varying resolution to \BKM\ (Figure\,\ref{fig:eb-res}\,(c))}
    %mm results of direct
    %comparison with \BKM\
      using $\dot\sigma=8\SNr$.
@@ -859,14 +859,14 @@ The growth rate is faster \mm{than in our fiducial models},
 % mm [not in the higher res runs] and very uniformly exponential,
 reflective of the single phase kinematics and more persistent forcing
 rate, yet \mm{still} saturating
- at about 5\% of $\overline{e_K}$.}
+ at about 5\% of $\overline{e_K}$.
 \mm{At equivalent resolution, the sixth-order Pencil Code has lower
   diffusion than the second-order Godunov code used by \BKM. As a
   result, we find faster growth at equivalent resolution; we}
 %mm Our growth is faster than \BKM\ equivalent rates, because the Pencil Code is a
 %higher order less diffusive code. We
   include a lower resolution run \mm{that} demonstrate\mm{s} consistency with
-  \BKM. 
+  \BKM.} 
  %mm [this has been made redundant by the last paragraph of the section.]
 % Our runs with $\dot\sigma=\SNr$, also grow more quickly than at $0.2\SNr$,
 % while \mm{still} saturating at $5\%\overline{e_K}$.% (Figure\,\ref{fig:eb-nu}\,f,h).}
@@ -876,16 +876,9 @@ rate, yet \mm{still} saturating
  % mm [sentence fragment] From panels (a2), (b2) and (c2) with kinetic spectra for all $\dx$ and 
 % $\eta=0$, $10^{-4}$ and $10^{-3}$, respectively.
  \mm{\bf [MM: what does this mean? It only seems to hold in (c), not
-   (a) or (b).]} Clearly there is excellent convergence in the flow for $\dx\leq1$ at all
+   (a) or (b).]} \fag{I think it does, but I shall rewrite it for clarity.}
+ Clearly there is excellent convergence in the flow for $\dx\leq1$ at all
  scales $k\lesssim 30\kpc^{-1}$.}
-
- \fg{The addition of viscosity $\nu=10^{-3}$, indicated by the magenta curves in
- panels (b) and (c), \mm{makes little difference to the shape of the
-   magnetic or kinetic energy spectra.  The magnitude of the magnetic
-   energy spectrum increases somewhat with the addition of viscosity,
-   as can also be seen from comparing dotted light and dark blue
-   lines in Figure~\ref{fig:eb-nu}(a2).}
-%mm  does not materially alter the kinetic energy spectrum.
  \mm{\bf [MM: can you rephrase this sentence carefully? It is
    quite confusing to me.]} Interestingly, the \mm{resulting} higher dissipation in the flow at the grid scale 
  $\dx\geq2$ is also transferred along the whole spectrum, showing that
@@ -893,6 +886,23 @@ rate, yet \mm{still} saturating
 %mm The shape of the corresponding magnetic energy spectra are also consistent 
 % for $\dx\leq1$, with variation in magnitude related to differences in
 % numerical resistivity.
+
+
+ \fg{The addition of viscosity $\nu=10^{-3}$, indicated by the magenta curves in
+ panels (b) and (c), \mm{makes little difference to the shape of the
+   magnetic or kinetic energy spectra.  The magnitude of the magnetic
+   energy spectrum increases somewhat with the addition of viscosity,
+   as can also be seen from comparing dotted light and dark blue
+   lines in Figure\,\ref{fig:eb-nu}\,(a2).}
+%mm  does not materially alter the kinetic energy spectrum.
+%FAG: moved to previous para and reworded
+% \mm{\bf [MM: can you rephrase this sentence carefully? It is
+%   quite confusing to me.]} Interestingly, the \mm{resulting} higher dissipation in the flow at the grid scale 
+% $\dx\geq2$ is also transferred along the whole spectrum, showing that
+% the flow is losing energy even at the largest scales.
+%%mm The shape of the corresponding magnetic energy spectra are also consistent 
+%% for $\dx\leq1$, with variation in magnitude related to differences in
+%% numerical resistivity.
 }
 
  \fg{We have shown that SSD turbulence \mm{converges} for $\dx\leq1$.
