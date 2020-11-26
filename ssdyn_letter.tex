@@ -669,25 +669,25 @@ SSD\fg{s} commonly exhibit erratic growth.}
  demonstrate\fg{s} consistency with \BKM.} 
 
  \fg{We can also examine the properties of the flow and magnetic field through
- their energy spectra (Figure\,\ref{fig:3power}).
- \mm{\bf [MM: what does this mean? It only seems to hold in (c), not
-   (a) or (b).]} \fag{I think it does, but I have rewritten it for clarity.}
+ their energy spectra (Figure~\ref{fig:3power}).
+%mm  \mm{\bf [MM: what does this mean? It only seems to hold in (c), not
+%   (a) or (b).]} \fag{I think it does, but I have rewritten it for clarity.}
  %Clearly there is excellent convergence in the flow for $\dx\leq1$ at all
  %scales $k\lesssim 30\kpc^{-1}$.}
  %\mm{\bf [MM: can you rephrase this sentence carefully? It is
  %  quite confusing to me.]} Interestingly, the \mm{resulting} higher dissipation in the flow at the grid scale 
  %$\dx\geq2$ is also transferred along the whole spectrum, showing that
  %the flow is losing energy even at the largest scales.
- The kinetic spectra (a--c right panels) for $\dx\leq1$ closely align 
- for all scales above the viscous cutoff, which applies at lower $k$ for
+ % mm [This explanation is much clearer to me!]
+ The kinetic spectra (a--c right panels) for $\dx\leq1$ \mm{agree well at} 
+ all scales above the viscous cutoff, which \mm{appears, as expected,} at lower $k$ for
  $\dx=1$ than $\dx=0.5$.
  By contrast the kinetic spectra for $\dx\geq2$ differ and exhibit significant
  energy losses at all scales,    
- indicating only solutions for $\dx\lesssim1$ are convergent.}
+ indicating only solutions for $\dx\lesssim1$ \mm{have converged}.}
 %mm The shape of the corresponding magnetic energy spectra are also consistent 
 % for $\dx\leq1$, with variation in magnitude related to differences in
 % numerical resistivity.
-
 
  \fg{The addition of viscosity $\nu=10^{-3}$, indicated by the magenta curves in
  panels (b) and (c), \fg{makes little difference to the shape of the
@@ -803,7 +803,7 @@ Line styles in (a1) also apply in (a2).}
  %dynamo at all for $\dx=4\pc$ with well resolved $\eta=10^{-3}$.
  %At 100\,Myr there is a period of accelerated dynamo at $\dx=2\pc$, but 
  %for $\eta=10^{-3}$ this is not sustained and subsequently diffuses away.
- \fg{When we consider $e_B$ for the models applying only numerical
+ \fg{When we consider $e_B$ for the models \mm{with} only numerical
  viscosity
  (Fig\,\ref{fig:eb-nu} a, c, d), $\eta\geq10^{-3}$ initially appears
  sufficient to suppress SSD.
@@ -816,17 +816,21 @@ Line styles in (a1) also apply in (a2).}
  A higher $\Ms$ has been demonstrated to impede an SSD in isothermal turbulence
  \citep{Haugen:2004M}, which is contradicted here.
 
- \fg{To resolve this contradiction, let us consider the 
- kinetic energy spectra in Figure\,\ref{fig:3power}.}
+ \fg{
+ %mm To resolve this contradiction, let us consider the 
+   The kinetic energy spectra in Figure\,\ref{fig:3power}} \mm{may
+   show the resolution of this contradiction. They}
  %FAG: moved here from below
- The kinetic energy spectra display a bottleneck effect
+ display a bottleneck effect
  \citep{Falkovich94,HBD03}, an energy cascade less efficient than $k^{-5/3}$
  leading to an accumulation of power and then rapid dissipation at high $k$.
- This bottleneck shifts to lower $k$ as $\dx$ increases.
- \fg{Comparing the spectra in Figure\,\ref{fig:3power}\,(d2), we
- see that the bottleneck peaks at lower scales, $k/k_1\simeq6,\,10$ and 12 for
- $\dot\sigma=0.2,\,1$ and $8\SNr$, respectively.
- The deeper into the magnetic energy spectrum this peak extends the more 
+ This bottleneck shifts to lower $k$ as $\dx$
+ %mm increases.
+%\fg{Comparing the spectra in Figure\,\ref{fig:3power}\,(d2), we
+% see that the bottleneck peaks at lower scales, $k/k_1\simeq6,\,10$ and 12 for
+% $\dot\sigma=0.2,\,1$ and $8\SNr$, respectively.
+ \mm{(panels a--c) and $\dot\sigma$ increase (panel d).}
+ \fg{The deeper into the magnetic energy spectrum this peak extends, the more 
  scales available for energy transfer to the magnetic field and the more
  efficient the SSD driving.
  The critical resistivity above which SSD is suppressed, therefore, 
@@ -893,19 +897,21 @@ Resistivity is $\eta=10^{-4}$.}
 
  \fg{Plotted in panel b2, where we fix $\eta=10^{-4}$ and vary $\nu$,
  initial growth of $e_B$ is faster for 
- $\Pm=0.1$ than for high Pm.}
- This is a regime less conducive to exciting the SSD than the high $\Pm$ regime
+ $\Pm=0.1$ than for higher \mm{values}.}
+ This is a regime {\em less} conducive to exciting the SSD than the high $\Pm$ regime
  typical of the ISM \citep{HBD04}.
  \fg{A plausible explanation may be that the higher fluid Reynolds number, Re,
- could facilitate dynamo.
- We therefore fix $\nu=10^{-3}$ and vary $\eta$. 
- Plotted in panel b1 the growth rates mainly
+ could facilitate \mm{the} dynamo.
+ We therefore %mm fix
+   \mm{set a physical viscosity}
+ $\nu=10^{-3}$ and vary $\eta$. 
+ Plotted in panel (b1) the growth rates mainly
  conform to our expectations, except for $\Pm=5$ between 20 and 40\,Myr.
  We confirm that $\eta\geq10^{-2.3}$ suppresses SSD at $\dot\sigma=0.2\SNr$.
  While the saturation level is insensitive to Pm, with $\nu$ fixed (panel
  b2), the saturation level increases with Pm for $\eta$ fixed (panel b1),
  indicating saturation level is sensitive to Re.
- We also include two of these plots in panel a2 for comparison to $\nu=0$.
+ We also include two of these plots in panel (a2) for comparison to $\nu=0$.
  Comparing the kinetic energy spectra (magenta) models in 
  Figure\,\ref{fig:3power}\,(b2, c2), $\nu$ alters very little.}
  
@@ -913,11 +919,15 @@ Resistivity is $\eta=10^{-4}$.}
  low SN rate is $10^{-2.3}>\eta_{\rm crit}>10^{-3}$ and
  that this increases with increasing
  $\dot\sigma$ within the range considered.
- Although higher Rm and Pm increase growth rate and ease of SSD in
- line with theoretical expectations, some anomolies in SSD pattern
- do not simply relate to Pm or Rm.
- The growth rates can vary considerably over time, which we believe to be a 
- response to variation in the multiphase ISM.
+ Although higher Rm and Pm \mm{generally} increase growth rate
+ % mm and ease of SSD
+ \mm{and saturation}
+ in line with theoretical expectations,
+ %mm some anomalies in SSD pattern do not simply relate to Pm or Rm.
+ % The growth rates can vary considerably over time, which we believe to be a 
+ % response to variation in the multiphase ISM.
+ \mm{there is considerable variation, likely due to intermittency in
+   the multiphase ISM.}
  }
  
 %-------------------------------------------------------------------------------
