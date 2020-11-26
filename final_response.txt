@@ -170,3 +170,21 @@ altered with the former having gas mainly hotter than 10^7 K.
 > In conclusion, I think the authors should address all these very important
 > issues and substantially revise this paper.
 
+
+Addiitional information regarding the revision:
+We have revised the text extensively, with the changes highlighted by color
+font.
+Figure 1 has been updated for style.
+Figure 2 has an additional panel (c) displaying results from Balsara et al and
+our comparison solutions.
+Figure 3 (previously 5) has been updated with rescaling of k and selection of
+spectra now from the same simulation time t=27.5 Myr (a -- c), and additional 
+spectra from models with viscosity of 0.001 (b) and (c). In (d) we include a
+Balsara comparison model with dx=1.56.
+Figure 4 (previously 3) has been rearranged and additional panels (c1) and (c2)
+now include explicit viscosity models. Two of these profiles are included in
+(a2) to emphasise that the variable growth patterns are not due to a lack of
+viscosity.
+Figure 5 (previously 4) has the latter two panels replacing spectra from 
+the 0.5pc fiducial model with eta=0.001 replaced by the 0.78pc Balsara 
+comparison spectra.
