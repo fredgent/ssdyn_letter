@@ -758,16 +758,27 @@ Line styles in (a1) also apply in (a2).}
  %FAG: adopted all preceeding \mm edits as \fg edit except where indicated and
  %FAG: removed preceeding resolved comments
 
- \fg{To understand the role of physical parameters $\eta$ and $\nu$ on the
- SSD, we need to differentiate them from numerical diffusivities.}
- Figure~\ref{fig:eb-nu}\,(a1-a2) shows that profiles at $\eta=10^{-5}$ are
- indistinguishable from $\eta=0$, and so numerical resistivity still controls
- dynamics, even at $\delta x = 0.5$.
- At $\eta=10^{-4}$ the dynamo diverges from $\eta=0$, showing that physical
- resistivity is \fg{effective}, at least in part of the domain.
- At all $\dx$ in our study physical resistivity $\eta\geq10^{-3}$ is clearly
- well resolved \fg{as the effective
- resistivity (Figure~\ref{fig:eb-nu}\,a1-d2)}.
+ \fg{To understand the role of \mm{physical} \mm{resistivity} $\nu$
+   and \mm{viscosity} $\eta$ on the
+   SSD,}
+   % mm we need to differentiate them from numerical diffusivities.}
+ \mm{we need to determine the value at each resolution where they
+   exceed numerical diffusion in strength.}
+ Figure~\ref{fig:eb-nu} shows that
+ % mm profiles at $\eta=10^{-5}$ are indistinguishable from $\eta=0$,
+ % and so numerical resistivity still controls dynamics, even at
+ % $\delta x = 0.5$. At $\eta=10^{-4}$ the dynamo diverges from
+ % $\eta=0$, showing that physical resistivity is \fg{effective}, at
+ % least in part of the domain.   At all $\dx$ in our study physical
+ % resistivity $\eta\geq10^{-3}$ is clearly  well resolved \fg{as the
+ % effective  resistivity (Figure~\ref{fig:eb-nu}\,a1-d2)}.
+ \mm{a physical resistivity of $\eta=10^{-5}$ makes no impact on field
+   growth at $\dot\sigma = 0.2 \SNr$, while $\eta=10^{-3}$ clearly
+   dominates over numerical resistivity at all resolutions.  The exact
+   value of the minimum physical resistivity does seem to vary not
+   just with $\dx$ but also with $\sigma$, as can be seen by
+   comparison of the $\eta=10^{-4}$ and $10^{-5}$ cases. 
+ }
  %FAG: true but not a significant remark
  %Models with common $\dot\sigma$ have the same schedule and location of SN,
  %but the timestep at low resolution is larger, such that actual timing and
@@ -793,8 +804,8 @@ Line styles in (a1) also apply in (a2).}
  %At 100\,Myr there is a period of accelerated dynamo at $\dx=2\pc$, but 
  %for $\eta=10^{-3}$ this is not sustained and subsequently diffuses away.
  \fg{When we consider $e_B$ for the models applying only numerical
- viscosity,
- Figure\,\ref{fig:eb-nu}\,(a, c, d), $\eta\geq10^{-3}$ initially appears
+ viscosity
+ (Fig\,\ref{fig:eb-nu} a, c, d), $\eta\geq10^{-3}$ initially appears
  sufficient to suppress SSD.
  At low resolution this remains so for $\dot\sigma=0.2\SNr$ (panels c1 and d1),
  apart from a transitory surge near 100\,Myr for $\dx=2$.
