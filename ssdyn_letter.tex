@@ -365,7 +365,9 @@ SSD\mm{s} commonly exhibit erratic growth.}
  Time is normalised by eddy turnover time, $1/\kf {u_{\rm rms}}$.
  Compensated power spectra \mm{of kinetic energy $P_k$ and magnetic
  energy $P_B$} for (b) SSD and (c) tangling, at times given in the
- legends.  Note that the kinetic energy uses the right-hand axes.
+%FAG: trim
+% legends.  Note that the kinetic energy uses the right-hand axes.
+ legends.  Kinetic energy uses the right-hand axes.
  Forcing scale, $\kf/k_1=8$: vertical dotted line.
 \label{fig:tangling}}
 \end{figure}
@@ -523,16 +525,23 @@ SSD\mm{s} commonly exhibit erratic growth.}
  %FAG removing units to save words pc and kpc kms are assumed earlier in the text
  %Magnetic energy density \mm{shown for resolutions $\dx$ in parsecs
  Magnetic energy density \mm{shown for resolutions $\dx$ %in parsecs
-   given in the legends for models (a) with resistivity
-   $\eta=10^{-4}$, (b) with $\eta=10^{-3}$, both scaled by the} 
+   %FAG: trim
+   %given in the legends for models (a) with resistivity
+   %$\eta=10^{-4}$, (b) with $\eta=10^{-3}$, both scaled by the} 
+   given in the legends for models with resistivity (a)
+   $\eta=10^{-4}$, and (b) $\eta=10^{-3}$, scaled by the} 
  time-averaged kinetic energy density $\overline{e_K}$,
- \fg{and (c) matching \BKM\, scaled by $\EST$ for an imposed field with
-   \mm{supernova rate} $\dot\sigma=8\SNr$
+   %FAG: trim
+ %\fg{and (c) matching \BKM\, scaled by $\EST$ for an imposed field with
+ %  \mm{supernova rate} $\dot\sigma=8\SNr$
+ \fg{and (c) matching \BKM\, scaled by $\EST$ %for an imposed field with
+   %\mm{supernova rate} $\dot\sigma=8\SNr$
    \mm{and viscosity $\nu$ 
 %mm [************************* CORRECT VISCOSITY UNITS? *****************]
  %FAG yes, but removing units to save words pc and kpc kms are assumed earlier in the text
     %in$\kpc\kms$
-    given in the legend.} }
+    %given in the legend.} }
+    included in the legend.} }
 \label{fig:eb-res}}
 \end{figure}
 %-------------------------------------------------------------------------------
@@ -589,13 +598,16 @@ SSD\mm{s} commonly exhibit erratic growth.}
  Compensated \fg{magnetic (left) and kinetic (right)} energy spectra.
  Compensation is \mm{for} the Kazantsev spectrum $k^{3/2}$ (left) or the
  Kolmogorov spectrum $k^{-5/3}$ (right).
- (a)--(c): \fg{Spectra are samples at $t=27.5\Myr$ for $\dx$ \mm{given
+ (a)--(c): \fg{Samples at $t=27.5\Myr$ for $\dx$ \mm{given
     %FAG units already assumed
     %in the legend (in pc)} for
     in the legend} for
  resistivity $\eta$ and supernova rate $\dot{\sigma}$ as indicated
- \mm{on each panel.  Different field strengths have been reached at
- this time in different models (see Fig.~\ref{fig:eb-res}). Viscosity}
+ %FAG trim
+ %\mm{on each panel.  Different field strengths have been reached at
+ %this time in different models (see Fig.~\ref{fig:eb-res}). Viscosity}
+ \mm{on each panel.  \fg{Field strengths reached differ between models} at
+ this time (see Fig.~\ref{fig:eb-res}). Viscosity}
  $\nu=0$, except $\nu=10^{-3}$ for models identified by Pm.
  (d): Samples taken \mm{at different times but} similar field strength at
  $\eta$ \mm{and} $\dot\sigma$ as indicated \mm{in the legend}, \mm{with the
@@ -701,19 +713,19 @@ SSD\mm{s} commonly exhibit erratic growth.}
   \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/4pc-eB-nu6.pdf}
   \begin{picture}(0,0)(0,0)
     \put(-302,469){{\sf{$\delta x=0.5$}}}
-    \put(-302,456){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-302,456){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
     \put( -60,482){{\sf{$\delta x=1$}}}
     \put( -60,469){{\sf{$\nu=10^{-3}$}}}
-    \put( -60,456){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put( -60,456){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
     \put(-302,343){{\sf{$\delta x=1$}}}
-    \put(-302,330){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-302,330){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
     \put( -60,356){{\sf{$\delta x=1$}}}
     \put( -60,343){{\sf{$\eta=10^{-4}$}}}
-    \put( -60,330){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put( -60,330){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
     \put(-302,197){{\sf{$\delta x=2$}}}
-    \put(-302,184){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put(-302,184){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
     \put( -60,197){{\sf{$\delta x=4$}}}
-    \put( -60,184){{\sf{$\dot\sigma=0.2\SNr$}}}
+    \put( -60,184){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
     \put(-302, 58){{\sf{$\delta x=2$}}}
     \put(-302, 47){{\sf{$\dot\sigma=\SNr$}}}
     \put( -60, 58){{\sf{$\delta x=4$}}}
@@ -731,7 +743,7 @@ SSD\mm{s} commonly exhibit erratic growth.}
 Magnetic energy density $e_B$ normalized by the time-averaged kinetic
 energy $\overline{e_K}$ for values given in each panel of resolution $\dx$ and
 SN rate $\dot\sigma$.
-Time axes vary to accommodate SSD saturation at all $\dx$ with $\eta=10^{-4}$.
+Time axes \fg{extend for $\dx\geq2$} to accommodate SSD saturation.
 \fg{Captions indicate resistivity $\eta$, with 
 \mm{viscosity}
 $\nu=0$, unless indicated otherwise or where $\Pm=\nu/\eta$ is varied with
@@ -862,8 +874,11 @@ Line styles in (a1) also apply in (a2).}
   \end{picture}
 \caption{
 Compensated spectra as in Figure\,\ref{fig:3power} of magnetic (a1, b1)
-and kinetic (a2, b2) energy for $\dx=0.5$ \fg{(a) and $\dx=0.78$ with an imposed
-field (b) at times given in the legends.
+%FAG: trim
+%and kinetic (a2, b2) energy for $\dx=0.5$ \fg{(a) and $\dx=0.78$ with an imposed
+%field (b) at times given in the legends.
+and kinetic (a2, b2) energy \fg{at times given in the legends for $\dx$ and 
+$\dot\sigma$ indicated.
 Resistivity is $\eta=10^{-4}$.}
  \label{fig:4power}}
 \end{figure}
