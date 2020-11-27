@@ -276,8 +276,10 @@ for a given $\dot\sigma$.
 $0.005>\eta_{\rm crit}>0.001{\,\rm kpc}^{-1}{\,\rm km~ s}^{-1}$ for
 $\dot\sigma\simeq\SNr$, with $\SNr$ the solar neighbourhood rate\fg{, and
 increases with the supernova rate}.}
+\mjk{saying 'below' and then giving lower limit is strange}
 Across the modelled range of 0.5 to 4~\fg{pc} resolution we find that for
 \fg{$\eta<\eta{\rm crit}$}, the SSD saturates at about 5\% of energy
+\mjk{vague; could be interpreted as total, thermal, kinetic, ... Can we afford adding word 'kinetic' here?}
 equipartion, independent of growth rate \fg{or $\eta$.}
 \fg{In the range $0.2\SNr\leq \dot\sigma\leq8\SNr$ growth rate increases
 with $\dot\sigma$, despite the negative impact expected from increased
@@ -296,6 +298,7 @@ SSD\fg{s} commonly exhibit erratic growth.}
  small-scale dynamo (SSD) in the interstellar medium (ISM).
  SSD acts at small eddy scales of the turbulence, thus driving magnetic field
  growth at correspondingly short turnover times.
+ \mjk{turnover time makes me think of eddies in a turbulent flow; time scale better?}
  \fg{The large-scale dynamo (LSD) with much longer turnover times generates
  magnetic fields ordered on \fg{kiloparsec} scales.}
  Hence, simulations capable of capturing LSD alongside the faster growing modes
@@ -313,22 +316,27 @@ SSD\fg{s} commonly exhibit erratic growth.}
  GE20}, but show no SSD, or appear to find SSD 
  \citep[e.g.,][]{RT16,SBADMN19}, within the context of halo-disk
  scale flows, but capture no LSD.}
+ \mjk{Is Evirgen a separate model, or just using data from Gent+2013?}
  \citet{Gent:2013b} \fg{and} \citet{EGSFB16} do appear to include an
  \fg{SSD with} \fg{an} \fg{LSD}.
  To confirm this and determine its effect on LSD, we must understand the
  properties of the SSD.
      
  Any magnetic noise produced by tangling \fg{of a large scale field}
+ \mjk{not an expert on hyphens, but I think here should be one}
  will also grow exponentially due to an LSD if present.
  This noise plays an important role in quenching the LSD due to the magnetic
  $\alpha$-effect, causing saturation of large-scale fields.
  We need to discriminate this effect from an SSD.   
 
  Previous experiments \citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}
- examined the SN-driven SSD\fg{, the former of which we shall henceforth
+ examined the SN-driven
+ \mjk{Here we are wasting words; just add (BKMM4) after the reference proper}
+ SSD\fg{, the former of which we shall henceforth
  identify as \BKM}.
  \fg{The limited  resolution} \fg{study} \fg{of \BKM\ did not allow
  demonstration of \fg{solution} convergence.
+ \mjk{plural? Dependencies?}
  Dependence on magnetic Reynolds (Rm) or Prandtl (Pm) numbers was not
  explored due to use of ideal magnetohydrodynamics (MHD).}
  They included a weak imposed uniform field; we shall show
@@ -377,8 +385,10 @@ SSD\fg{s} commonly exhibit erratic growth.}
 %==============================================================================
 
  \fg{Previous SSD studies have examined Pm dependence with \fg{uniform}
+ \mjk{stochastic and uniform; uniform alone gives a weird impression...}
  nonhelical forcing, including \fg{at} high Mach number \citep[e.g.,][]{ 
  HBD03,HBD04,Haugen:2004M,FCSBKS11,FSBS14}.}
+ \mjk{The above-mentioned models were equally simple, and now we make it sound like we do something even more simple, which is not true}
  \fg{Here, however, we adopt a simplified model purely t}o illustrate
  differences between tangling and SSD.
  Nonhelical random forcing is applied at wavenumber $\kf/k_1=8$ to
@@ -414,14 +424,18 @@ SSD\fg{s} commonly exhibit erratic growth.}
  \fg{For tangling (Figure~\ref{fig:tangling}\,c) the Kazantsev
  \fg{scaling} applies only at $k/k_1<\kf$.} 
  Thus, in the SSD, kinetic energy \fg{in the Kolmogorov cascade} transfers to
- the magnetic field at these scales, inducing an inverse Kazantsev \fg{cascade}
+ the magnetic field 
+ \mjk{energy transfers to field; energy should transfer to energy}
+ at these scales, inducing an inverse Kazantsev \fg{cascade}
  at scales \fg{smaller than} $\kf$, while tangling transfers energy only at
  scales between $\kf$ and the scale of the imposed field.
  Dissipation \fg{characterises} scales below the Kazantsev range.
+ \mjk{what does this mean? Dissipation occurs at scales smaller than the scale where Kazantsev scaling ends?}
  
 \section{\fg{Supernova-driven} turbulence model design} \label{sec:model}
 
  \fg{Our} SN-driven turbulence models exclude large-scale magnetic field
+ \mjk{hyphen global-scale}
  dynamics by \fg{omitting global scale} rotation, shear, and stratification.
  Our simulation domain is a periodic cube of length 256 pc and zone size
  $\dx=0.5$, 1, 2 or 4$\pc$\fg{, except for \fg{our} direct comparisons with
@@ -429,6 +443,7 @@ SSD\fg{s} commonly exhibit erratic growth.}
  3.12$\pc$ (units henceforth assumed)}.
  \fg{When comparing \fg{to} \BKM\ a uniform background field $\sim10$~nG is
  imposed.
+ \mjk{Clearer? In models aiming at reproducing BKMM4, we impose.... }
  Otherwise we apply only a} random 1~nG seed field \fg{to} exclude tangling of
  \fg{the} imposed field as the source of any magnetic amplification.
 
@@ -936,10 +951,14 @@ Resistivity is $\eta=10^{-4}$.}
   
  SN-driven turbulence does not have a well-defined forcing scale, unlike the
  simplified model in Section\,\ref{sec:ssd-tang}, because of the
- heterogeneous ISM structure and random explosions.
- The forcing scale will be distributed at scales greater than about $60\pc$
- \citep[][Table\,3]{HSSFG17}, or $k\lesssim\fg{105}$~kpc$^{-1}$ 
- \fg{($k/2\uppi\lesssim17$~kpc$^{-1}$)}. 
+ heterogeneous ISM structure and random explosion \mm{location}s.
+ The forcing scale will be distributed at scales
+ % mm greater than about $60\pc$\citep[][Table 3]{HSSFG17}
+ \mm{of roughly 60--200~pc
+   \citep{joung2006,avillez2007,HSSFG17}}, or
+ %mm $k\lesssim\fg{105}$~kpc$^{-1}$ 
+ % \fg{($k/2\uppi\lesssim17$~kpc$^{-1}$)}.
+\mm{ $k \sim 30$--105~kpc$^{-1}$.}
  Figure\,\ref{fig:4power}\,(a) shows the evolving compensated spectra for 
  $\dx=0.5$ between \fg{12} and 32\,Myr\fg{, and (b) for a comparison model
  with \BKM\ at $\dx=0.78$ between 4 and 21\,Myr.}
