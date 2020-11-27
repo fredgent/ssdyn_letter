@@ -295,8 +295,7 @@ SSD\fg{s} commonly exhibit erratic growth.}
  This \fg{L}etter addresses the necessary conditions and properties of a
  small-scale dynamo (SSD) in the interstellar medium (ISM).
  SSD acts at small eddy scales of the turbulence, thus driving magnetic field
- growth at correspondingly short turnover times.
- \mjk{turnover time makes me think of eddies in a turbulent flow; time scale better?}
+ growth at correspondingly short \mjk{timescales}.
  \fg{The large-scale dynamo (LSD) with much longer turnover times generates
  magnetic fields ordered on \fg{kiloparsec} scales.}
  Hence, simulations capable of capturing LSD alongside the faster growing modes
@@ -314,28 +313,29 @@ SSD\fg{s} commonly exhibit erratic growth.}
  GE20}, but show no SSD, or appear to find SSD 
  \citep[e.g.,][]{RT16,SBADMN19}, within the context of halo-disk
  scale flows, but capture no LSD.}
- \mjk{Is Evirgen a separate model, or just using data from Gent+2013?}
- \citet{Gent:2013b} \fg{and} \citet{EGSFB16} do appear to include an
- \fg{SSD with} \fg{an} \fg{LSD}.
+ %\mjk{Is Evirgen a separate model, or just using data from Gent+2013?}
+ \citet{Gent:2013b} \mjk{\citep[additional analysis][]{EGSFB16} does} appear to
+ include an \fg{SSD with} \fg{an} \fg{LSD}.
  To confirm this and determine its effect on LSD, we must understand the
  properties of the SSD.
      
- Any magnetic noise produced by tangling \fg{of a large scale field}
- \mjk{not an expert on hyphens, but I think here should be one}
+ Any magnetic noise produced by tangling \fg{of a large-scale field}
+ %\mjk{not an expert on hyphens, but I think here should be one}
  will also grow exponentially due to an LSD if present.
  This noise plays an important role in quenching the LSD due to the magnetic
  $\alpha$-effect, causing saturation of large-scale fields.
  We need to discriminate this effect from an SSD.   
 
- Previous experiments \citep[e.g.,][]{BKMM04,BalKim05,MacLow:2005}
- examined the SN-driven
- \mjk{Here we are wasting words; just add (BKMM4) after the reference proper}
- SSD\fg{, the former of which we shall henceforth
- identify as \BKM}.
+ Previous experiments (\mjk{\citealp[e.g.,][(\BKM)]{BKMM04};
+ \citealp{BalKim05,MacLow:2005}})
+ examined the SN-driven SSD.
+ %\mjk{Here we are wasting words; just add (BKMM4) after the reference proper}
+ %SSD\fg{, the former of which we shall henceforth
+ %identify as \BKM}.
  \fg{The limited  resolution} \fg{study} \fg{of \BKM\ did not allow
  demonstration of \fg{solution} convergence.
- \mjk{plural? Dependencies?}
- Dependence on magnetic Reynolds (Rm) or Prandtl (Pm) numbers was not
+ %\mjk{plural? Dependencies?}
+ Dependencies on magnetic Reynolds (Rm) or Prandtl (Pm) numbers was not
  explored due to use of ideal magnetohydrodynamics (MHD).}
  They included a weak imposed uniform field; we shall show
  that the amplification of their field is a result
@@ -382,12 +382,11 @@ SSD\fg{s} commonly exhibit erratic growth.}
 \section{Disentangling the dynamo} \label{sec:ssd-tang}
 %==============================================================================
 
- \fg{Previous SSD studies have examined Pm dependence with \fg{uniform}
- \mjk{stochastic and uniform; uniform alone gives a weird impression...}
+ \fg{Previous SSD studies have examined Pm dependence with %\fg{uniform}
+ \mjk{stochastic and uniform} %; uniform alone gives a weird impression...}
  nonhelical forcing, including \fg{at} high Mach number \citep[e.g.,][]{ 
- HBD03,HBD04,Haugen:2004M,FCSBKS11,FSBS14}.}
- \mjk{The above-mentioned models were equally simple, and now we make it sound like we do something even more simple, which is not true}
- \fg{Here, however, we adopt a simplified model purely t}o illustrate
+ HBD03,HBD04,Haugen:2004M,FCSBKS11,FSBS14}.} %\mjk{The above-mentioned models were equally simple, and now we make it sound like we do something even more simple, which is not true}
+ \mjk{We do so here specifically t}o illustrate
  differences between tangling and SSD.
  Nonhelical random forcing is applied at wavenumber $\kf/k_1=8$ to
  $256^3$ zone, $2\pi$-periodic, isothermal boxes.
@@ -422,28 +421,31 @@ SSD\fg{s} commonly exhibit erratic growth.}
  \fg{For tangling (Figure~\ref{fig:tangling}\,c) the Kazantsev
  \fg{scaling} applies only at $k/k_1<\kf$.} 
  Thus, in the SSD, kinetic energy \fg{in the Kolmogorov cascade} transfers to
- the magnetic field 
- \mjk{energy transfers to field; energy should transfer to energy}
+ \mjk{magnetic energy} 
+ %\mjk{energy transfers to field; energy should transfer to energy}
  at these scales, inducing an inverse Kazantsev \fg{cascade}
  at scales \fg{smaller than} $\kf$, while tangling transfers energy only at
  scales between $\kf$ and the scale of the imposed field.
- Dissipation \fg{characterises} scales below the Kazantsev range.
- \mjk{what does this mean? Dissipation occurs at scales smaller than the scale where Kazantsev scaling ends?}
+% FAG: could be said more clearly with more words, but not realy needed.
+% Dissipation \fg{characterises} scales below the Kazantsev range.
+% \mjk{what does this mean? Dissipation occurs at scales smaller than the scale where Kazantsev scaling ends?}
  
 \section{\fg{Supernova-driven} turbulence model design} \label{sec:model}
 
  \fg{Our} SN-driven turbulence models exclude large-scale magnetic field
- \mjk{hyphen global-scale}
- dynamics by \fg{omitting global scale} rotation, shear, and stratification.
+ %\mjk{hyphen global-scale}
+ dynamics by \mjk{omitting globals-scale} rotation, shear, and stratification.
  Our simulation domain is a periodic cube of length 256 pc and zone size
  $\dx=0.5$, 1, 2 or 4$\pc$\fg{, except for \fg{our} direct comparisons with
  \BKM, \fg{ which have} domains \fg{of} 200 pc and $\dx=0.78$, 1.56 and
  3.12$\pc$ (units henceforth assumed)}.
- \fg{When comparing \fg{to} \BKM\ a uniform background field $\sim10$~nG is
- imposed.
- \mjk{Clearer? In models aiming at reproducing BKMM4, we impose.... }
- Otherwise we apply only a} random 1~nG seed field \fg{to} exclude tangling of
- \fg{the} imposed field as the source of any magnetic amplification.
+ %\fg{When comparing \fg{to} \BKM\ a uniform background field $\sim10$~nG is
+ %imposed.
+ %\mjk{Clearer? 
+ \mjk{In models aiming to reproduce \BKM, we impose a uniform $10$~nG 
+ background field.}
+ \fg{Otherwise we apply only a} random 1~nG seed field \fg{to} exclude
+ tangling of \fg{the} imposed field a source of magnetic amplification.
 
  We solve the system of non-ideal compressible MHD equations
 %-------------------------------------------------------------------------------
@@ -1200,6 +1202,9 @@ programme (Project UniSDyn, grant agreement no: 818665).
 %\bibitem[{{de Avillez} \& {Breitschwerdt}(2005)}]{deAvillez:2005}
 %{de Avillez}, M.~A., \& {Breitschwerdt}, D. 2005, \aap, 436, 585
 %
+%\bibitem[{{de Avillez} \& {Breitschwerdt}(2007)}]{avillez2007}
+%---. 2007, \apjl, 665, L35
+%
 %\bibitem[{{Evirgen} {et~al.}(2017){Evirgen}, {Gent}, {Shukurov}, {Fletcher}, \&
 %  {Bushby}}]{EGSFB16}
 %{Evirgen}, C.~C., {Gent}, F.~A., {Shukurov}, A., {Fletcher}, A., \& {Bushby},
@@ -1280,6 +1285,9 @@ programme (Project UniSDyn, grant agreement no: 818665).
 %  \& {Gent}}]{HSSFG17}
 %{Hollins}, J.~F., {Sarson}, G.~R., {Shukurov}, A., {Fletcher}, A., \& {Gent},
 %  F.~A. 2017, \apj, 850, 4
+%
+%\bibitem[{{Joung} \& {Mac Low}(2006)}]{joung2006}
+%{Joung}, M.~K.~R., \& {Mac Low}, M.-M. 2006, \apj, 653, 1266
 %
 %\bibitem[{{Korpi} {et~al.}(1999){Korpi}, {Brandenburg}, {Shukurov}, \&
 %  {Tuominen}}]{Korpi:1999b}
