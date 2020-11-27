@@ -1,4 +1,10 @@
 
+%MJK We need to add an opening
+We thank the referee for the critical review of our study. The criticism
+has led to significant revisions and improvements, which we hope to
+have answered to all the concerns of the referee, as detailed below.
+%MJK
+
 > 1- First, I think the language used is a real issue. The style is very
 > cumbersome and impossible to follow. Just one example: On page 3, the authors
 > used "inducing an inverse Kazantsev range...". This unfortunately does not
@@ -7,8 +13,13 @@
 > one are found everywhere in the manuscript and I am sure the editor agrees
 > with me.
 
+
 We have revised the text extensively, both to respond to the details below and
 to improve readability, narrative structure, and correct use of terminology.
+%MJK Add something like this
+As is evident from the changes indicated with XXX font, a majority of
+our original text has been revised.
+%MJK
 
 > 2- Second, I think the code used here, namely the PENCIL code, is a huge
 > problem. The PENCIL code is used routinely for subsonic turbulent problems,
@@ -64,6 +75,7 @@ the community about whether Balsara's results exhibit tangling only, due to
 the imposed field in that study. For this purpose, only a simple experiment 
 is required and we relate our physically motivated experimental results to this 
 for confirmation that they are indeed produced by the action of a dynamo.
+%MJK The text from hereon is somewhat incoherent and repetitive...
 The Federrath papers are relevant, and we include them in our discussion, 
 although they do not consider tangling, which is the point of the simplified 
 model. We have emphasised in the revision this purpose.  Finally, we have 

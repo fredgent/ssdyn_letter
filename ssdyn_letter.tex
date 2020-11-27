@@ -267,13 +267,15 @@ action of a small-scale dynamo (SSD) in the interstellar medium of galaxies.
 Many studies have focused on idealized turbulent driving of the SSD. 
 Here we simulate more realistic supernova-driven turbulence to determine
 whether it can drive an SSD.
+\mm{Magnetic field growth occurring in our models appears consistent
+  with SSD action, and inconsistent with simple tangling of magnetic fields.}
 We vary the physical resistivity, \fg{$\eta$}, as well as the numerical
 resolution and supernova rate, $\dot\sigma$, to delineate the regime in which
 an SSD occurs.
 For a given $\dot\sigma$ we find convergence for SSD growth rate with
 resolution \fg{of a parsec}.
 \fg{For $\dot\sigma\simeq\SNr$, with $\SNr$ the solar neighbourhood rate,
-the critical resistivity at which an SSD occurs is
+the critical resistivity \mm{below} which an SSD occurs is
 $0.005>\eta_{\rm crit}>0.001{\,\rm kpc}^{-1}{\,\rm km~ s}^{-1}$, and this
 increases with the supernova rate.}
 Across the modelled range of 0.5 to 4~\fg{pc} resolution we find that for
@@ -282,7 +284,7 @@ equipartion, independent of growth rate.
 \fg{In the range $0.2\SNr\leq \dot\sigma\leq8\SNr$ growth rate increases
 with $\dot\sigma$, despite the negative impact expected from increased
 Mach numbers.
-SSD\fg{s} commonly exhibit erratic growth.}
+SSD\fg{s} \mm{in the supernova-driven interstellar medium} commonly exhibit erratic growth.}
 
 \end{abstract}
 \keywords{dynamo --- magnetohydrodynamics (MHD) --- ISM: supernova remnants --- ISM: magnetic fields --- turbulence}
@@ -454,7 +456,9 @@ SSD\fg{s} commonly exhibit erratic growth.}
 
  \fg{Our} SN-driven turbulence models exclude large-scale magnetic field
  %\mjk{hyphen global-scale}
- dynamics by \mjk{omitting globals-scale} rotation, shear, and stratification.
+ %dynamics by \mjk{omitting globals-scale} rotation, shear, and stratification.
+ %NS: typo
+ dynamics by \mjk{omitting global-scale} rotation, shear, and stratification.
  Our simulation domain is a periodic cube of length 256 pc and zone size
  $\dx=0.5$, 1, 2 or 4$\pc$\fg{, except for \fg{our} direct comparisons with
  \BKM, \fg{ which have} domains \fg{of} 200 pc and $\dx=0.78$, 1.56 and
@@ -465,7 +469,9 @@ SSD\fg{s} commonly exhibit erratic growth.}
  \mjk{In models aiming to reproduce \BKM, we impose a uniform $10$~nG 
  background field.}
  \fg{Otherwise we apply only a} random 1~nG seed field \fg{to} exclude
- tangling of \fg{the} imposed field a source of magnetic amplification.
+ %tangling of \fg{the} imposed field a source of magnetic amplification.
+ %NS: comma before "a source" ?
+ tangling of \fg{the} imposed field, a source of magnetic amplification.
 
  We solve the system of non-ideal compressible MHD equations
 %-------------------------------------------------------------------------------
@@ -835,7 +841,8 @@ Compensated spectra as in Figure\,\ref{fig:3power} of magnetic (a1, b1)
 %FAG: trim
 %and kinetic (a2, b2) energy for $\dx=0.5$ \fg{(a) and $\dx=0.78$ with an imposed
 %field (b) at times given in the legends.
-and kinetic (a2, b2) energy \fg{at times given in the legends for $\dx$ and 
+and kinetic (a2, b2) energy \fg{at times given in the legends
+  \mm{(combined for each pair)} for $\dx$ and 
 $\dot\sigma$ indicated.
 Resistivity is $\eta=10^{-4}$.}
  \label{fig:4power}}
@@ -888,63 +895,92 @@ Resistivity is $\eta=10^{-4}$.}
 %-------------------------------------------------------------------------------
 \subsection{\fg{Tangling of the imposed field}} \label{sec:Balsara}
 %-------------------------------------------------------------------------------
-  
- SN-driven turbulence does not have a well-defined forcing scale, unlike the
+
+% mm [introduce question to be studied in this section]
+\mm{We now examine whether the field growth seen in our models could
+  be due to field tangling.  In Sect.~\ref{sec:ssd-tang} we argued
+  based on our isothermal models that tangling should produce linear growth rate and that only an inverse
+  Kazantsev cascade should occur, with dissipation dominating scales
+  below the forcing range. Conversely, an SSD leads to exponential
+  growth and a direct Kazantsev cascade extending below the forcing scale.}
+
+ SN-driven turbulence does not have a \mm{single} forcing scale, unlike the
  simplified model in Section\,\ref{sec:ssd-tang}, because of the
  heterogeneous ISM structure and random explosion locations.
- The forcing scale will be distributed at scales
+ \mm{Instead, the} forcing scale \mm{is} distributed at scales
  \fg{of roughly 60--200~pc
    \citep{joung2006,avillez2007,HSSFG17}, or $k \sim 30$--105~kpc$^{-1}$}.
- Figure\,\ref{fig:4power}\,(a) shows the evolving compensated spectra for 
- $\dx=0.5$ between \fg{12} and 32\,Myr\fg{, and (b) for a comparison model
- with \BKM\ at $\dx=0.78$ between 4 and 21\,Myr.}
- \fg{The period spans two epochs of SSD with distinct rates of growth 
- followed by saturation in panels (a).
- Note, that the magnitude of the kinetic energy spectra fluctuate up and down
- during SSD, varying by 2 orders of magnitude at the lower $\dot\sigma$ (a2),
- but only 1 order of magnitude (b2) and 1 -- 2 orders of magnitude higher
- on average.} 
- The Kolmogorov range extends at all times to $k\fg{\simeq600}\kpc^{-1}$ and
- mostly to $k\fg{\simeq1200}\kpc^{-1}$ (a2) or $k\fg{\simeq1000}\kpc^{-1}$ (b). 
- %FAG: adopted all preceeding \mm edits as \fg edit except where indicated and
- %FAG: removed preceeding resolved comments
 
- The compensated magnetic energy spectra in Figure\,\ref{fig:4power}\,(a1, b1)
+ % mm [I have tried to rewrite this section to focus more on results
+ % rather than description.  Please check to see if it is correct]
+\mm{In Figures~\ref{fig:3power} and~\ref{fig:4power} we indeed demonstrate
+strong exponential growth over multiple orders of magnitude so long as
+the resistivity remains low enough, despite variation in supernova
+rate $\dot\sigma$, numerical resolution $\dx$, and physical viscosity
+$\nu$. Linear growth only appears to occur in models with high
+physical resistivity.}
+
+\mm{We now turn to the power spectra. Figure\,\ref{fig:4power} shows
+  compensated spectra over time during a period that }
+ %mm Figure\,\ref{fig:4power}\,(a) shows the evolving compensated spectra for  $\dx=0.5$ between \fg{12} and 32\,Myr\fg{, and (b) for a comparison model to \BKM\ at $\dx=0.78$ between 4 and 21\,Myr.}
+\fg{
+  % mm The period
+  spans two epochs of SSD with distinct rates of growth 
+  followed by saturation.
+  % mm in panels (a). Note, that the
+      \mm{The}
+  magnitude of the kinetic energy spectra \mm{increases
+  initially, but then saturates as the SSD saturates.} }
+  % mm [I don't see the advertised fluctuations in the previous
+  % writeup.  Have I missed something?]
+  %mm two orders of magnitude at the lower $\dot\sigma$ (a2),  but only one order of magnitude (b2) and 1--2 orders of magnitude higher on average.} 
+%mm The Kolmogorov range extends at all times to $k\fg{\simeq600}\kpc^{-1}$ and
+% mostly to $k\fg{\simeq1200}\kpc^{-1}$ (a2) or
+% $k\fg{\simeq1000}\kpc^{-1}$ (b).
+  
+The compensated magnetic energy spectra in Figure\,\ref{fig:4power}\,(a1, b1)
  have \fg{peaks conforming to the end of the Kazantsev range.
  For $\fg{\dot\sigma=0.2\SNr}$ up to 14\,Myr this peak is at
  $k\fg{\simeq200}\kpc^{-1}$ while the
- SSD grows modestly.
+ SSD grows \mm{slowly}.
  During accelerated growth the Kazentsev range extends to}
- $k\gtrsim\fg{700}\kpc^{-1}$, above the forcing scale and consistent with SSD
- (Figure\,\ref{fig:tangling}\,b).
+ $k\gtrsim\fg{700}\kpc^{-1}$, above the forcing scale and consistent
+ with SSD \mm{as shown in the uniform, isothermal model}
+ (Fig.\,\ref{fig:tangling}b).
  The peak contracts upon saturation to $k<\fg{200}\kpc^{-1}$, consistent with no
- dynamo (Figure\,\ref{fig:tangling}\,c).
- In Figure\,\ref{fig:4power}\,(b1) \fg{up to 7\,Myr there is no Kazantsev range
+ \mm{further} dynamo (Fig.\,\ref{fig:tangling}c).
+ In Figure\,\ref{fig:4power}\,(b1) \fg{until 7\,Myr there is no Kazantsev range
  and the peak energy increases as $k\rightarrow0$, a signature of tangling of
- the imposed field, similar to Figure\,\ref{fig:tangling}\,(c) (see also
- magenta curve Figure\,\ref{fig:3power}\,d1).
+ the imposed field
+ %mm , similar to Figure\,\ref{fig:tangling}\,(c) (see also  \mm{dark
+ %green dashed}
+ %curve Figure\,\ref{fig:3power}\,d). 
  However, as the magnetic field grows much larger than the imposed field,
  this signature disappears and the peak shifts to high $k$.}
  
  \fg{We have demonstrated that the magnetic field amplification in \BKM\ is
  due to SSD. 
- Tangling of the imposed field is present, but is limited to within an
- order of magnitude.
- The amplification is dominated by SSD and our other models 
+ Tangling of the imposed field is \mm{initially} present, but is
+ % mm limited to within an order of magnitude. The amplification is
+ dominated by SSD. \mm{O}ur other models 
  confirm an imposed field is not required.
  }
 
 \section{Conclusions}\label{sec:conc}
 
  \fg{Through the most extensive resolution and parameter study to date, we
- demonstrate in this letter that SSD is likely very easily excited in
- the ISM.
+   demonstrate in this letter that SSD
+   % mm is likely very easily excited
+\mm{likely occurs easily}
+ in the ISM.
  The critical resistivity is $0.005>\eta_{\rm crit}\gtrsim0.001\kpc\kms$ for 
  supernova rate $\dot \sigma=0.2\SNr$ and increasing over the 
  range considered $\dot \sigma\in(0.2\SNr,8\SNr)$.
- SSD in the ISM saturates at about 5\% of the equipartion kinetic energy
+ \mm{The} SSD
+ % mm in the ISM
+ saturates at about 5\% of the equiparti\mm{ti}on kinetic energy
  density.
- This level is insensitive to Pm, but is higher with increasing Re.}
+ This level is insensitive to Pm, but \mm{increases} with increasing Re.}
  We find that the conventional approach from dynamo theory of categorising the 
  turbulence according to Rm based on a forcing scale $\ell$, mean random
  velocity $u_{\rm rms}$ and resistivity $\eta$ is inadequate for such a
@@ -952,23 +988,24 @@ Resistivity is $\eta=10^{-4}$.}
 
  We show that simulations with insufficient resolution can appear to
  converge to a false solution lacking dynamo activity
- (Figure\,\ref{fig:eb-res}\,b). This can occur because these simulations are not
+ (Fig.\,\ref{fig:eb-res}b). This can occur because these simulations are not
  scale independent. 
  The SN energy input and the physically motivated ISM cooling processes impose
  length and time scales that must be adequately resolved.
  \fg{We obtain convergent results for SSD with grid resolution
  $\dx\lesssim1$.}
 
- \fg{We confirm, with and without the use of an imposed magnetic field, that
- the field amplification obtained in SN-driven ISM turbulence by \citet{BKMM04}
+\fg{We confirm,
+  % mm with and without the use of
+  \mm{by comparing models with and without} an imposed magnetic field,
+ that the field amplification obtained in SN-driven ISM turbulence by \citet{BKMM04}
  was evidence of an SSD and not only due to tangling of their imposed field.}
  %FAG: trim
  %Our models with $\dx=0.5$ and $1\pc$ with $\eta=10^{-3}\kpc\kms$ show that a
  A seed field of less than 1~nG can be amplified to saturation at microgauss
  levels within about 10\,Myr (Figure\,\ref{fig:eb-res}). 
- Unlike isothermal turbulence high Mach numbers do not necessarily impede SSD
+ Unlike isothermal turbulence, high Mach numbers do not necessarily impede SSD
  in the ISM with increasing SN forcing.
-
 
  %In this Letter we demonstrate, without the use of an imposed magnetic field,
  %that the field amplification demonstrated by \citet{BKMM04} was evidence of
@@ -1039,25 +1076,30 @@ Resistivity is $\eta=10^{-4}$.}
  an SSD.
  \citet{Gent:2013a} with $\dx=4\pc$ applied $\eta\simeq10^{-3.1}\kpc\kms$,
  which would support SSD for $\dot\sigma\simeq\SNr$.
- The latter obtain an LSD with galactic angular momentum $\Omega=\OSN$, where
- $\OSN=25\kms\kpc^{-1}$ is the rate in the solar neighbourhood.
- The former require $\Omega\gtrsim4\OSN$ to excite an LSD.
- Early efforts by \citet{Korpi:1999b} were unable to detect even LSD.
+ %mm [While true, I don't see this LSD discussion as relevant to this Letter.  Do you
+ %all disagree?]
+% The latter obtain an LSD with galactic angular momentum $\Omega=\OSN$, where
+% $\OSN=25\kms\kpc^{-1}$ is the rate in the solar neighbourhood.
+% The former require $\Omega\gtrsim4\OSN$ to excite an LSD.
+% Early efforts by \citet{Korpi:1999b} were unable to detect even LSD.
  \fg{We can now construct LSD experiments to explore how SSD impacts the 
- onset of LSD, critical $\Omega$, and dependence on $\dot\sigma$ for LSD.}   
+onset of LSD, critical $\Omega$, and dependence on $\dot\sigma$%mm for
+% LSD.
+}   
 
 \acknowledgments
+% mm [rearranged to try to save words]
 \fg{We thank O. Gressel \fg{and D. Elstner} for discussions inspiring this work, and the
-  anonymous referee for comments that resulted in a substantial
+  anonymous referee for comments producing a substantial
   improvement of the presentation.}
-We acknowledge CSC – IT Center for Science, Finland, for
-computational resources under Grand Challenge GDYNS Project 2001062.
+FAG and MJK acknowledge support from the Academy of Finland
+ReSoLVE Centre of Excellence (grant 307411) and the ERC
+under the EU's Horizon 2020 research and innovation
+programme (Project UniSDyn, grant 818665) and computational
+resources from CSC–IT Center for Science, Finland, under Grand
+Challenge GDYNS Project 2001062. 
 M-MML was partly supported by US NSF grant AST18-15461.
-FAG and MJK acknowledge support of the Academy of Finland
-ReSoLVE Centre of Excellence (grant number 307411).
-This project has received funding from the European Research Council (ERC)
-under the European Union's Horizon 2020 research and innovation
-programme (Project UniSDyn, grant agreement no: 818665).
+
 \software{Pencil Code \citep{brandenburg2002,Pencil-JOSS}}
 
 \bibliographystyle{aasjournal}
