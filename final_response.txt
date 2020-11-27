@@ -1,9 +1,8 @@
+Dear Editor:
 
-%MJK We need to add an opening
-We thank the referee for the critical review of our study. The criticism
-has led to significant revisions and improvements, which we hope to
-have answered to all the concerns of the referee, as detailed below.
-%MJK
+We thank the referee for their careful, if critical, review of our study. This
+has led to substantial revisions and improvements, which we believe will 
+relieve all the concerns of the referee, as detailed below.
 
 > 1- First, I think the language used is a real issue. The style is very
 > cumbersome and impossible to follow. Just one example: On page 3, the authors
@@ -13,52 +12,46 @@ have answered to all the concerns of the referee, as detailed below.
 > one are found everywhere in the manuscript and I am sure the editor agrees
 > with me.
 
-
 We have revised the text extensively, both to respond to the details below and
 to improve readability, narrative structure, and correct use of terminology.
-%MJK Add something like this
-As is evident from the changes indicated with XXX font, a majority of
-our original text has been revised.
-%MJK
+As is evident from the changes indicated with boldface, a majority of our original 
+text has been revised.
 
 > 2- Second, I think the code used here, namely the PENCIL code, is a huge
 > problem. The PENCIL code is used routinely for subsonic turbulent problems,
 > for example in the Sun, and is a very accurate and validated tool to model
-> such phenomena. On the other hand, it is not suited for strong shocks.
-> For one, the
-> energy equation (Eq. 3) uses the entropy, which is motivated in solar physics
+> such phenomena. On the other hand, it is not suited for strong shocks. For one, 
+> the energy equation (Eq. 3) uses the entropy, which is motivated in solar physics
 > to model accurately convective motions.  But in the context of interstellar
 > supersonic turbulence driven by strong supernova shocks, this is not at all
 > the state of the art. Energy will not be conserved accurately enough.
->  Moreover,
-> the very surprising choice of the authors to turn off all viscosity terms is
-> clearly even more problematic in this context. Indeed, although the PENCIL
-> code
-> is not by far the best code to do this, it could still make a reasonable job
-> using the explicit viscosity shown in the equations.  But the authors turned
-> viscosity off, only keeping the 6-th order viscosity terms that are clearly
-> not
-> suited for strong shocks.
+>  Moreover, the very surprising choice of the authors to turn off all viscosity 
+> terms is clearly even more problematic in this context. Indeed, although the 
+> PENCIL code is not by far the best code to do this, it could still make a 
+> reasonable job using the explicit viscosity shown in the equations.  But the 
+> authors turned viscosity off, only keeping the 6-th order viscosity terms 
+> that are clearly not suited for strong shocks.
 
 We relied too heavily on reference (to Gent et al. 2020) rather than a 
 self-contained description of our method for inclusion of a shock-capturing 
 artificial viscosity, compounded by neglecting to explicitly include several 
-of the relevant terms in equations (1)-(4).  We now make the inclusion of 
-a set of shock capturing artificial diffusivities (the zeta terms) explicit 
-in the text.  We further  include the correction terms for momentum 
+of the relevant terms in equations (1)-(4).  Therefore, we now make the inclusion of 
+a set of shock capturing artificial diffusivities (the zeta terms) more prominent 
+in the text.  We further include the missing correction terms for momentum 
 and energy conservation, which are applied to compensate for artificial 
 mass diffusion.  This well-tested artificial viscosity method accurately captures 
 shock discontinuities while conserving mass, momentum, and energy appropriately 
-(as explicitly shown in Gent et al. 2020).  The sixth-order hyperdiffusion is applied 
-only to suppress instabilities at the grid scale, and is indeed unsuited to 
-resolving shocks.  We separately vary the physical (Lagrangian) resistivity eta 
-and viscosity nu to study the small scale dynamo action.
+(as explicitly shown in Gent et al. 2020).  The sixth-order hyperdiffusion is 
+applied only to suppress instabilities at the grid scale, and is indeed unsuited 
+to resolving shocks.  We separately vary the physical (Lagrangian) resistivity eta 
+and viscosity nu to study the small scale dynamo action, as we now explicitly 
+include.
 
 We further note that there was likely further confusion because we described
 the simpler isothermal model of Section 2 in the same paragraph, as well as 
 inaccurately describing it as using only Equations 2 and 4. We have separated 
 the description of the isothermal model to a new paragraph and corrected the 
-description to note that it does indeed  solve the continuity equation (Eq 1), 
+description to note that it does indeed solve the continuity equation (Eq 1), 
 though without the unnecessary shock-capturing artificial diffusion terms. 
 
 > 3- Third, section 2, although a very interesting experiment in principle, does
@@ -75,13 +68,13 @@ the community about whether Balsara's results exhibit tangling only, due to
 the imposed field in that study. For this purpose, only a simple experiment 
 is required and we relate our physically motivated experimental results to this 
 for confirmation that they are indeed produced by the action of a dynamo.
-%MJK The text from hereon is somewhat incoherent and repetitive...
-The Federrath papers are relevant, and we include them in our discussion, 
-although they do not consider tangling, which is the point of the simplified 
-model. We have emphasised in the revision this purpose.  Finally, we have 
-corrected the description to acknowledge that we do indeed solve the continuity 
-equation (Eq 1) here, but not the energy equation (Eq 3), as this experiment 
-is isothermal.
+
+The Federrath papers mentioned are relevant, and we include them in our discussion, 
+although they do not explicitly consider tangling, which is the point of the 
+simplified model. We have emphasised this purpose more strongly in our revised
+text.  Finally, we have corrected the description to acknowledge that we do 
+indeed solve the continuity equation (Eq 1) here, but not the energy equation 
+(Eq 3), as this experiment is isothermal.
 
 > 4- Fourth, in the introduction, a very important reference is missing, namely
 > the work of Rieder and Teyssier (2016, 2017) who reported a clear SSD in a
@@ -89,7 +82,7 @@ is isothermal.
 > exponential growth of the field, when the resolution was high enough,
 > addressing directly the major science goals outlined in the introduction.
 
-We have included these relevant references in the introduction in the context 
+We have included these relevant references in the introduction, in the context 
 of larger-domain but lower-resolution simulations, similar to those recently 
 published by Steinwandel et al. 
 
@@ -103,53 +96,45 @@ published by Steinwandel et al.
 
 There are two issues to consider here.  The first is whether the field growth
 we see is due to numerical artefacts.  As noted, we have indeed included 
-appropriate diffusivities to ensure numerical stability. We further note below
-that we have now included our reproduction of Balsara et al.'s work, as well
-as several runs with physical viscosity as well as resistivity included.  
-We have included the kinetic and magnetic energy spectra that specifically 
-demonstrate that the flow and magnetic field are well resolved,
-with the energy cutoff clearly occurring well away from the grid scale. 
-Therefore, we argue that there is strong evidence of the physical nature of
-our results.
+appropriate diffusivities to ensure numerical stability even in the presence
+of strong shocks. We further note below that we have now included a direct 
+reproduction of Balsara et al.'s work, as well as several runs including 
+physical viscosity as well as resistivity. We see the same qualitative
+behaviour in models with varying levels of physical viscosity. We have 
+further included kinetic and magnetic energy spectra that specifically 
+demonstrate that the flow and magnetic field are well resolved, with the 
+energy cutoff clearly occurring well above the grid scale.  Therefore, 
+we argue that there is strong evidence of the physical nature of our results.
 
-The second issue is the referee's assertion that a steady exponential growth 
-is a prerequisite for identification of a small scale dynamo. This diagnostic 
-is based on consideration of idealized experiments with uniform driving that 
-do not have the multiphase, intermittent properties of the supernova-driven ISM.
-
-.... end of Mac Low revisions ...
-Given that we do 
-not have access to the kinematic velocity fields of real galaxies, we cannot 
-be sure that there is ever any neat exponential phase for a volume averaged
-magnetic field. That said, there are certainly substantial periods of dramatic 
-exponential growth that we argue clearly demonstrate the action of a small scale 
-dynamo during those periods.
-
-We have also taken care to illiminate numerical effects, which is why we have
-implemented the hyper diffusivity in addition to the shock-dependent
-diffusivity. 
-
-Erratic behaviour can have a physical explanation, due to the evolving thermal
-properties of the ISM and low (0.2x) supernova rate, and is evident in the
-models of LSD in the ISM from both the Pencil Code and the Nirvana code, with
-SN rates comparable to the solar neighboruhood. We see the same qualitative
-behaviour in models with varying levels of physical viscosity, which we have
-added to refute the referee's diagnosis that the effects are numercial due to
-inadequate viscosity. As the SN rate increases the filling fraction of the hot
+The second issue is the referee's implied assertion that exponential growth 
+must be steady to diagnose small scale dynamo action. This intuition is based 
+on consideration of idealized experiments with uniform driving that 
+do not have the multiphase, intermittent properties of the supernova-driven 
+ISM. Erratic behaviour can have a physical explanation, because of the 
+evolving thermal properties of the ISM, particularly at low (0.2x solar 
+neighbourhood) supernova rate.  Such behaviour is evident in models of 
+LSD in the ISM from both the Pencil Code and the Nirvana code, with SN 
+rates comparable to the solar neighbourhood. In our models, there are 
+certainly substantial periods of dramatic exponential growth that we 
+argue clearly demonstrate the action of a small scale dynamo during 
+those periods. As the SN rate increases the filling fraction of the hot
 gas becomes dominant and the kinematics more spatially uniform, so that the
-energetics become more steady. Consequently the exponential growth is more
-uniform and faster.
+energetics become more steady. Consequently the exponential growth is 
+indeed both more uniform and faster, though still showing periods of 
+faster and slower growth (see, for example Figure 2c in the new version).
 
 > 6- Section 4 is very cumbersome to read. It has no structure and the message
 > is
 > a juxtaposition of random comments on the numerical results.  This is probably
 > a consequence of the spurious nature of the numerical solution.
  
-We have substantially reordered Section 4 into subsections that better 
-identify the key objectives and outcomes of the experiments. Some additional 
-remarks have been necessary to address the new models with explicit viscosity and
-comparisons to Balsara et al. We therefore have cut some of the discussion about
-Rm and Re, which we do not explicitly measure in this Letter.
+We have substantially reordered Section 4 into subsections that focus on 
+presenting the key objectives and outcomes of the experiments rather than 
+presenting general descriptive material. Some additional remarks have 
+been necessary to address the new models with explicit viscosity and
+comparisons to Balsara et al. We therefore have deferred to a later 
+publication some of the discussion about Rm and Re, which we do not 
+explicitly measure in this Letter.
  
 > 7- In the introduction and in the conclusion, the authors refer to the seminal
 > work of Balsara.  Balsara's results, although much older, appear much more
@@ -159,30 +144,33 @@ Rm and Re, which we do not explicitly measure in this Letter.
 > a nice and clear exponential growth of the magnetic energy. The fact that this
 > paper could not reproduce Balsara's results is a very serious worry.
 
-We opted to use lower supernova rates in these experiments to remain in a 
-regime which retains a typical distribution of warm and hot phase ISM. In a 
+We have now included models in which we explicitly replicate the experiments of 
+Balsara et al. These include runs with 0.78, 1.56 and 3.12 pc resolution. 
+As can be seen our models do show clear exponential growth, but
+much faster than Balsara et al. at each resolution.  This behaviour is
+explained by the improved accuracy and lower diffusivity of the sixth-order 
+Pencil Code, compared to the second-order Godunov code used by Balsara. 
+Our 3.12 pc resolution model matches closely the results of the highest 
+resolution 1.56 pc run by Balsara et al.
+
+We opted to use lower supernova rates in most of our models to remain in a 
+regime that retains a typical distribution of warm and hot phase ISM. In a 
 confined periodic box there is no escape for the over pressured gas, as in a 
 real galaxy, so the ISM is subject to thermal runaway, in which the filling 
 fraction of hot gas exceeds 90% (see Li et al. 2015 and Gatto et al. 2015, 
-both cited in the paper). 
-
-However, we now provide results in which we replicate the experiments of 
-Balsara et al. These include runs with 0.78, 1.56 and 3.12 pc resolution. 
-As can be seen our models do show clear exponential growth, but
-much faster than Balsara at each resolution. The explanation is due to the
-improved accuracy and lower diffusivity of the sixth-order Pencil Code, compared
-to Balsara's second-order Godunov code. Our 3.12 pc resolution model, matches 
-closely the results of Balsara's 1.56 pc run.
-
-The Balsara experiments used 8x the solar neighbourhood rate for SN injection.
+both cited in the paper). By comparison, the Balsara et al. models (and our
+reproductions of them) use 8x the solar neighbourhood rate for SN injection.
 This results in the rapid saturation of the simulation by hot gas and
-consequently a steadier kinetic energy profile. Compare the kinetic energy
-profiles between the Balsara replicas and the 0.2x SN rate Figure 5. 
-%FAG we can do this?
-We also provide snapshots of temperature for the 8x, 1x and 0.2x SN rate, and
-from this you will see that the characteristics of the ISM are substantially 
-altered with the former having gas mainly hotter than 10^7 K.
+consequently a steadier kinetic energy profile. This can be seen, for example,
+by comparing the kinetic energy spectra between the Balsara replicas and 
+the 0.2x SN rate in Figure 5. 
 
 > In conclusion, I think the authors should address all these very important
 > issues and substantially revise this paper.
+
+We have done so, and hope for a more positive evaluation of the revised text.
+
+Yours,
+
+Frederick Gent, for the authors
 
