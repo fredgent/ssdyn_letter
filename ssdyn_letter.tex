@@ -640,12 +640,6 @@ SSD\fg{s} commonly exhibit erratic growth.}
 %-------------------------------------------------------------------------------
 \subsection{\fg{Resolution and convergence}} \label{sec:conv}
 %-------------------------------------------------------------------------------
-%FAG: I guess I consider it easy if such high resistivity compared to real astrophysical bodies can excite SSD. However, happy with your edits
-%mm [2b shows this is not true] \fg{For all
-  % mm $\dx$
-  %\mm{resolutions}
-  %considered we find that SSD in the
-  %ISM appears to be easily excited.
  \fg{Figure~\ref{fig:eb-res} shows magnetic energy as a function of time for
  models with $\eta = 10^{-4}$ and $10^{-3}$, as well as a direct comparison of
  our technique to \BKM. We find that numerical diffusion still dominates at
@@ -685,24 +679,12 @@ SSD\fg{s} commonly exhibit erratic growth.}
 
  \fg{We can also examine the properties of the flow and magnetic field through
  their energy spectra (Figure~\ref{fig:3power}).
-%mm  \mm{\bf [MM: what does this mean? It only seems to hold in (c), not
-%   (a) or (b).]} \fag{I think it does, but I have rewritten it for clarity.}
- %Clearly there is excellent convergence in the flow for $\dx\leq1$ at all
- %scales $k\lesssim 30\kpc^{-1}$.}
- %\mm{\bf [MM: can you rephrase this sentence carefully? It is
- %  quite confusing to me.]} Interestingly, the \mm{resulting} higher dissipation in the flow at the grid scale 
- %$\dx\geq2$ is also transferred along the whole spectrum, showing that
- %the flow is losing energy even at the largest scales.
- % mm [This explanation is much clearer to me!]
- The kinetic spectra (a--c right panels) for $\dx\leq1$ \mm{agree well at} 
- all scales above the viscous cutoff, which \mm{appears, as expected,} at lower $k$ for
+ The kinetic spectra (a--c right panels) for $\dx\leq1$ agree well at 
+ all scales above the viscous cutoff, which appears, as expected, at lower $k$ for
  $\dx=1$ than $\dx=0.5$.
  By contrast the kinetic spectra for $\dx\geq2$ differ and exhibit significant
  energy losses at all scales,    
- indicating only solutions for $\dx\lesssim1$ \mm{have converged}.}
-%mm The shape of the corresponding magnetic energy spectra are also consistent 
-% for $\dx\leq1$, with variation in magnitude related to differences in
-% numerical resistivity.
+ indicating only solutions for $\dx\lesssim1$ have converged.}
 
  \fg{The addition of viscosity $\nu=10^{-3}$, indicated by the magenta curves in
  panels (b) and (c), \fg{makes little difference to the shape of the
@@ -770,55 +752,22 @@ Line styles in (a1) also apply in (a2).}
 %-------------------------------------------------------------------------------
 \subsection{\fg{Effective resistivity and Prandtl number}} \label{sec:eta}
 %-------------------------------------------------------------------------------
- %FAG: adopted all preceeding \mm edits as \fg edit except where indicated and
- %FAG: removed preceeding resolved comments
 
- \fg{To understand the role of \mm{physical} \mm{resistivity} $\nu$
-   and \mm{viscosity} $\eta$ on the
-   SSD,}
-   % mm we need to differentiate them from numerical diffusivities.}
- \mm{we need to determine the value at each resolution where they
+ \fg{To understand the role of {physical} {resistivity} $\eta$
+   and {viscosity} $\nu$ on the
+   SSD,
+ we need to determine the value at each resolution where they
    exceed numerical diffusion in strength.}
  Figure~\ref{fig:eb-nu} shows that
- % mm profiles at $\eta=10^{-5}$ are indistinguishable from $\eta=0$,
- % and so numerical resistivity still controls dynamics, even at
- % $\delta x = 0.5$. At $\eta=10^{-4}$ the dynamo diverges from
- % $\eta=0$, showing that physical resistivity is \fg{effective}, at
- % least in part of the domain.   At all $\dx$ in our study physical
- % resistivity $\eta\geq10^{-3}$ is clearly  well resolved \fg{as the
- % effective  resistivity (Figure~\ref{fig:eb-nu}\,a1-d2)}.
- \mm{a physical resistivity of $\eta=10^{-5}$ makes no impact on field
+ \fg{a physical resistivity of $\eta=10^{-5}$ makes no impact on field
    growth at $\dot\sigma = 0.2 \SNr$, while $\eta=10^{-3}$ clearly
    dominates over numerical resistivity at all resolutions.  The exact
    value of the minimum physical resistivity does seem to vary not
    just with $\dx$ but also with $\sigma$, as can be seen by
    comparison of the $\eta=10^{-4}$ and $10^{-5}$ cases. 
  }
- %FAG: true but not a significant remark
- %Models with common $\dot\sigma$ have the same schedule and location of SN,
- %but the timestep at low resolution is larger, such that actual timing and
- %explosive environment can differ between models.
- %Increased statistical noise is therefore evident, particularly in panels (e)
- %and (f).
 
- %FAG: this has now been commented in previous subsection. We could add details
- %FAG: from here to that paragraph, but not sure it is necessary.
- %Growth rates are sporadic within models, but are consistent between models.
- %For example, between 8 and 15\,Myr the strength of growth (or decay) in 
- %Figure\,\ref{fig:eb-nu}(a, b) reduces as $\eta$ increases.
- %Accelerated growth near 19\,Myr for $\eta=10^{-3}$ coincides with even higher
- %acceleration for $\eta\le10^{-4}$, consistent with theory.
- %The low $\eta$ models at $0.5\pc$ saturate already by 20\,Myr, but for $1\pc$
- %there is another epoch of lower growth rate up to 40\,Myr and then a
- %subsequent acceleration resulting in saturation for all models within
- %60\,Myr, including for $\eta=10^{-3}$.
-
- %In Figure\,\ref{fig:eb-nu}(c, d) at low resolution with $\dot\sigma=0.2\SNr$
- %profiles for $\eta=10^{-4}$ are not distinct from $\eta=0$, and there is no
- %dynamo at all for $\dx=4\pc$ with well resolved $\eta=10^{-3}$.
- %At 100\,Myr there is a period of accelerated dynamo at $\dx=2\pc$, but 
- %for $\eta=10^{-3}$ this is not sustained and subsequently diffuses away.
- \fg{When we consider $e_B$ for the models \mm{with} only numerical
+ \fg{When we consider $e_B$ for the models {with} only numerical
  viscosity
  (Fig\,\ref{fig:eb-nu} a, c, d), $\eta\geq10^{-3}$ initially appears
  sufficient to suppress SSD.
@@ -831,43 +780,20 @@ Line styles in (a1) also apply in (a2).}
  A higher $\Ms$ has been demonstrated to impede an SSD in isothermal turbulence
  \citep{Haugen:2004M}, which is contradicted here.
 
- \fg{
- %mm To resolve this contradiction, let us consider the 
-   The kinetic energy spectra in Figure\,\ref{fig:3power}} \mm{may
-   show the resolution of this contradiction. They}
- %FAG: moved here from below
- display a bottleneck effect
- \citep{Falkovich94,HBD03}, an energy cascade less efficient than $k^{-5/3}$
+ \fg{The kinetic energy spectra in Figure\,\ref{fig:3power}} may
+ show the resolution of this contradiction.
+ They display a bottleneck effect \citep{Falkovich94,HBD03}, an energy cascade
+ less efficient than $k^{-5/3}$
  leading to an accumulation of power and then rapid dissipation at high $k$.
  This bottleneck shifts to lower $k$ as $\dx$
- %mm increases.
-%\fg{Comparing the spectra in Figure\,\ref{fig:3power}\,(d2), we
-% see that the bottleneck peaks at lower scales, $k/k_1\simeq6,\,10$ and 12 for
-% $\dot\sigma=0.2,\,1$ and $8\SNr$, respectively.
- \mm{(panels a--c) and $\dot\sigma$ increase (panel d).}
+ \fg{(panels a--c) and $\dot\sigma$ increase (panel d).}
  \fg{The deeper into the magnetic energy spectrum this peak extends, the more 
- scales available for energy transfer to the magnetic field and the more
- efficient the SSD driving.
+ scales available for transfer to magnetic energy and the more
+ efficient the SSD.
  The critical resistivity above which SSD is suppressed, therefore, 
  increases with $\dot\sigma$, within the range considered. 
- Even at $\dot\sigma=0.2$, after 20 -- 40\,Myr for $\dx\leq1$ SSD occurs for
- $\eta=10^{-3}$.
-}
-
- %FAG: incorporated Ma into new para above
- %At $\dot\sigma=\SNr$ (Fig.\,\ref{fig:eb-nu}e, f) the higher forcing rate is
- %sufficient to produce SSD at $\eta\geq10^{-3}$, but not $\eta=5\cdot10^{-3}$.
- %The mean sonic Mach number $\overline\Ms=0.8$ for $\dot\sigma=\SNr$, compared
- %to $0.5$ for $0.2\SNr$.
- %A higher $\Ms$ has been demonstrated to impede an SSD in isothermal turbulence
- %\citep{Haugen:2004M}, which is contradicted here.
- %With the level of statistical noise we cannot affirm $\eta\leq10^{-4}$ exceeds
- %numerical resistivity in this model. 
- %However, $\eta\gtrsim5\cdot10^{-4}$ is resolved at $\dx=2$ (magenta, solid)
- %and at $\dx=4\pc$ the resolved limit is $2\cdot10^{-4}<\eta\lesssim10^{-3}$
- %(purple, solid and cyan, dotted lines).
- %For $\dx=2\pc$, (e), we see two phases of accelerated SSD at 90 and 110\,Myr,
- %which are not present for $\dx=4\pc$, (f).
+ Even at $\dot\sigma=0.2$, for $\eta=10^{-3}$ and $\dx\leq1$ SSD occurs after
+ 20 -- 40\,Myr.}
 
 %-------------------------------------------------------------------------------
 \begin{figure}
@@ -912,14 +838,12 @@ Resistivity is $\eta=10^{-4}$.}
 
  \fg{Plotted in panel b2, where we fix $\eta=10^{-4}$ and vary $\nu$,
  initial growth of $e_B$ is faster for 
- $\Pm=0.1$ than for higher \mm{values}.}
- This is a regime {\em less} conducive to exciting the SSD than the high $\Pm$ regime
- typical of the ISM \citep{HBD04}.
+ $\Pm=0.1$ than for higher values.}
+ This is a regime {\em less} conducive to exciting the SSD than the high $\Pm$
+ regime typical of the ISM \citep{HBD04}.
  \fg{A plausible explanation may be that the higher fluid Reynolds number, Re,
- could facilitate \mm{the} dynamo.
- We therefore %mm fix
-   \mm{set a physical viscosity}
- $\nu=10^{-3}$ and vary $\eta$. 
+ could facilitate the dynamo.
+ We therefore set a physical viscosity $\nu=10^{-3}$ and vary $\eta$. 
  Plotted in panel (b1) the growth rates mainly
  conform to our expectations, except for $\Pm=5$ between 20 and 40\,Myr.
  We confirm that $\eta\geq10^{-2.3}$ suppresses SSD at $\dot\sigma=0.2\SNr$.
@@ -934,16 +858,12 @@ Resistivity is $\eta=10^{-4}$.}
  low SN rate is $10^{-2.3}>\eta_{\rm crit}>10^{-3}$ and
  that this increases with increasing
  $\dot\sigma$ within the range considered.
- Although higher Rm and Pm \mm{generally} increase growth rate
- % mm and ease of SSD
- \mm{and saturation}
+ Although higher Rm and Pm generally increase growth rate
+ and saturation
  in line with theoretical expectations,
- %mm some anomalies in SSD pattern do not simply relate to Pm or Rm.
- % The growth rates can vary considerably over time, which we believe to be a 
- % response to variation in the multiphase ISM.
- \mm{there is considerable variation, likely due to intermittency in
+ there is considerable variation, likely due to intermittency in
    the multiphase ISM.}
- }
+ 
  
 %-------------------------------------------------------------------------------
 \subsection{\fg{Tangling of the imposed field}} \label{sec:Balsara}
@@ -951,22 +871,13 @@ Resistivity is $\eta=10^{-4}$.}
   
  SN-driven turbulence does not have a well-defined forcing scale, unlike the
  simplified model in Section\,\ref{sec:ssd-tang}, because of the
- heterogeneous ISM structure and random explosion \mm{location}s.
+ heterogeneous ISM structure and random explosion locations.
  The forcing scale will be distributed at scales
- % mm greater than about $60\pc$\citep[][Table 3]{HSSFG17}
- \mm{of roughly 60--200~pc
-   \citep{joung2006,avillez2007,HSSFG17}}, or
- %mm $k\lesssim\fg{105}$~kpc$^{-1}$ 
- % \fg{($k/2\uppi\lesssim17$~kpc$^{-1}$)}.
-\mm{ $k \sim 30$--105~kpc$^{-1}$.}
+ \fg{of roughly 60--200~pc
+   \citep{joung2006,avillez2007,HSSFG17}, or $k \sim 30$--105~kpc$^{-1}$}.
  Figure\,\ref{fig:4power}\,(a) shows the evolving compensated spectra for 
  $\dx=0.5$ between \fg{12} and 32\,Myr\fg{, and (b) for a comparison model
  with \BKM\ at $\dx=0.78$ between 4 and 21\,Myr.}
- %FAG: wording
- %We compare spectra for $\eta=10^{-4}$, (a), spanning the period of
- %dynamo growth and saturation, and for $\eta=10^{-3}$, (b) during
- %the period that the field
- %persists near seed strength.
  \fg{The period spans two epochs of SSD with distinct rates of growth 
  followed by saturation in panels (a).
  Note, that the magnitude of the kinetic energy spectra fluctuate up and down
@@ -975,6 +886,8 @@ Resistivity is $\eta=10^{-4}$.}
  on average.} 
  The Kolmogorov range extends at all times to $k\fg{\simeq600}\kpc^{-1}$ and
  mostly to $k\fg{\simeq1200}\kpc^{-1}$ (a2) or $k\fg{\simeq1000}\kpc^{-1}$ (b). 
+ %FAG: adopted all preceeding \mm edits as \fg edit except where indicated and
+ %FAG: removed preceeding resolved comments
 
  The compensated magnetic energy spectra in Figure\,\ref{fig:4power}\,(a1, b1)
  have \fg{peaks conforming to the end of the Kazantsev range.
@@ -990,11 +903,6 @@ Resistivity is $\eta=10^{-4}$.}
  and the peak energy increases as $k\rightarrow0$, a signature of tangling of
  the imposed field, similar to Figure\,\ref{fig:tangling}\,(c) (see also
  magenta curve Figure\,\ref{fig:3power}\,d1).
- %FAG: already covered implicitly by earlier discussion
- %The Kazantsev range does not extend to as high $k$ as the Kolmogorov range,
- %a consequence of the low Pm in these SN-driven models. 
- %In the high Pm ISM, where transfer from kinetic energy can occur at every
- %wavenumber in the Kolmogorov spectrum, an SSD is even easier to excite.
  However, as the magnetic field grows much larger than the imposed field,
  this signature disappears and the peak shifts to high $k$.}
  
@@ -1005,36 +913,6 @@ Resistivity is $\eta=10^{-4}$.}
  The amplification is dominated by SSD and our other models 
  confirm an imposed field is not required.
  }
- %FAG: obsolete
- %Figure\,\ref{fig:3power}(a) -- (f) shows spectra at $t=19.5$ Myr when an SSD is
- %active for the higher resolution models, and at $t=100$ Myr for the lower
- %resolution models, which shows SSD for the $\dx= 2\pc$ model, but not for the
- %$4\pc$ model. (Hydrodynamic parameters are fixed at each resolution.)
- %The kinetic energy spectrum is convergent for $\dx=0.5\pc$ and $\dx=1\pc$,
- %except for a viscous cutoff at lower $k$ for $\dx=1$.
- %The kinetic energy at all $k$ is reduced for lower resolution, not just at
- %the viscous dissipation scale, but even at the largest scales.
- %To fully resolve the kinetic energy for scales larger than $k=24\kpc^{-1}$,
- %that is $\ell\gtrsim40\pc$, therefore requires $\dx\lesssim1\pc$.
- 
- %FAG: merged with earlier paragraph
- %The kinetic energy spectra display a bottleneck effect
- %\citep{Falkovich94,HBD03}, an energy cascade less efficient than $k^{-5/3}$
- %leading to an accumulation of power and then rapid dissipation at high $k$.
- %This bottleneck shifts to lower $k$ as $\dx$ increases, but always at higher
- %$k$ than the Kazantsev range in the corresponding magnetic spectrum, due to
- %the low Pm.
-
- %Perhaps surprisingly, there is little difference in the kinetic energy
- %spectrum, Figure\,\ref{fig:3power}(h), between simulations with
- %$\dot\sigma=0.2\SNr$ and $\SNr$, despite five times as much energy being
- %applied to the forcing in the latter case.
- %For $\eta=10^{-3}$ there is more energy near the bottleneck in the high
- %$\dot\sigma$ case (cyan dotted line), so more energy can be tranferred to
- %the SSD at the smallest scales.
- %The comparison is obscured for $\eta=10^{-4}$, because the high $\dot\sigma$
- %magnetic field is already 3 or 4 orders of magnitude stronger, acquiring some
- %of the kinetic energy (red dash-dotted line).
 
 \section{Conclusions}\label{sec:conc}
 
@@ -1162,8 +1040,8 @@ under the European Union's Horizon 2020 research and innovation
 programme (Project UniSDyn, grant agreement no: 818665).
 \software{Pencil Code \citep{brandenburg2002,Pencil-JOSS}}
 
-\bibliography{refs}{}
 \bibliographystyle{aasjournal}
+\bibliography{refs}{}
 %\begin{thebibliography}{}
 %\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 %\providecommand{\url}[1]{\href{#1}{#1}}
