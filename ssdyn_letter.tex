@@ -294,25 +294,33 @@ SSD\fg{s} commonly exhibit erratic growth.}
 
  This \fg{L}etter addresses the necessary conditions and properties of a
  small-scale dynamo (SSD) in the interstellar medium (ISM).
- SSD acts at small eddy scales of the turbulence, thus driving magnetic field
+ %FAG: trim
+ %SSD acts at small eddy scales of the turbulence, thus driving magnetic field
+ SSD acts at small eddy scales of turbulence, driving magnetic field
  growth at correspondingly short \mjk{timescales}.
  \fg{The large-scale dynamo (LSD) with much longer turnover times generates
  magnetic fields ordered on \fg{kiloparsec} scales.}
- Hence, simulations capable of capturing LSD alongside the faster growing modes
- of SSD are computationally challenging.
+ %FAG: trim
+ %Hence, simulations capable of capturing LSD alongside the faster growing modes
+ %of SSD are computationally challenging.
+ Hence, capturing LSD alongside the faster growing modes
+ of SSD in simulations is computationally challenging.
  However, \fg{interaction between SSD and LSD modes likely fundamentally}
  \fg{determines the} evolution and structure of the magnetic field.
 
  Many simulations of supernova- (SN)-driven turbulence with realistic vertical
  stratification \citep[e.g.,][]{deAvillez:2005,PO07,Hill:2012a,HI14} have no
  mechanism to induce LSD, such as rotation and shear.
- The effect of strong ordered magnetic fields is modelled by
+ %FAG: trim
+ %The effect of strong ordered magnetic fields is modelled by
+ %imposition of a background, typically uniform, magnetic field.
+ Strong ordered magnetic field effects are modelled by
  imposition of a background, typically uniform, magnetic field.
  \fg{Some large-scale models do seek to include LSD 
  \citep[e.g.,][]{Korpi:1999b,Gressel:2008,HWK09,WA09,Pakmor17,
  GE20}, but show no SSD, or appear to find SSD 
- \citep[e.g.,][]{RT16,SBADMN19}, within the context of halo-disk
- scale flows, but capture no LSD.}
+ within the context of halo-disk
+ scale flows \citep[e.g.,][]{RT16,SBADMN19},  but capture no LSD.}
  %\mjk{Is Evirgen a separate model, or just using data from Gent+2013?}
  \citet{Gent:2013b} \mjk{\citep[additional analysis][]{EGSFB16} does} appear to
  include an \fg{SSD with} \fg{an} \fg{LSD}.
@@ -321,9 +329,11 @@ SSD\fg{s} commonly exhibit erratic growth.}
      
  Any magnetic noise produced by tangling \fg{of a large-scale field}
  %\mjk{not an expert on hyphens, but I think here should be one}
- will also grow exponentially due to an LSD if present.
- This noise plays an important role in quenching the LSD due to the magnetic
- $\alpha$-effect, causing saturation of large-scale fields.
+ will also grow exponentially \fg{if an LSD is} present.
+ %FAG: trim
+ %This noise plays an important role in quenching the LSD due to the magnetic
+ %$\alpha$-effect, causing saturation of large-scale fields.
+ This noise \fg{can play} an important role in quenching the LSD.
  We need to discriminate this effect from an SSD.   
 
  Previous experiments (\mjk{\citealp[e.g.,][(\BKM)]{BKMM04};
@@ -335,18 +345,28 @@ SSD\fg{s} commonly exhibit erratic growth.}
  \fg{The limited  resolution} \fg{study} \fg{of \BKM\ did not allow
  demonstration of \fg{solution} convergence.
  %\mjk{plural? Dependencies?}
- Dependencies on magnetic Reynolds (Rm) or Prandtl (Pm) numbers was not
- explored due to use of ideal magnetohydrodynamics (MHD).}
- They included a weak imposed uniform field; we shall show
- that the amplification of their field is a result
+ %FAG: trim
+ %Dependencies on magnetic Reynolds (Rm) or Prandtl (Pm) numbers was not
+ %explored due to use of ideal magnetohydrodynamics (MHD).}
+ %They included a weak imposed uniform field; we shall show
+ %that the amplification of their field is a result
+ %of SSD action and not just tangling of the field.
+ Applying a weak imposed uniform field with ideal magnetohydrodynamics (MHD),
+ dependencies on magnetic Reynolds (Rm) or Prandtl (Pm) numbers were not
+ explored.}
+ We shall show that the amplification of their field is a result
  of SSD action and not just tangling of the field.
 
  In this {\fg L}etter we \fg{first} compare the SSD to tangling in an idealized
  simulation (Sect.~\ref{sec:ssd-tang})\fg{.
- We} \fg{then describe} \fg{simulations of SN-driven turbulence, excluding any
- drivers of an LSD to} \fg{demonstrate the action} \fg{of SSD
- (Sect.~\ref{sec:model}).} 
- Our \fg{simulations} use the {\sc Pencil Code}\footnote{
+ %FAG: trim
+ %We} \fg{then describe} \fg{simulations of SN-driven turbulence, excluding any
+ %drivers of an LSD to} \fg{demonstrate the action} \fg{of SSD
+ %(Sect.~\ref{sec:model}).} 
+ %Our \fg{simulations} use the {\sc Pencil Code}\footnote{
+ We then describe our models of SN-driven turbulence for demonstrating the
+ action of SSD (Sect.~\ref{sec:model}).} 
+ \fg{Simulations} use the {\sc Pencil Code}\footnote{
  \href{https://github.com/pencil-code}{https://github.com/pencil-code}}.
  A broad resolution and parameter study allows us to \fg{show numerical}
  \fg{convergence and} \fg{determine} the critical resistivity for excitation
@@ -383,10 +403,10 @@ SSD\fg{s} commonly exhibit erratic growth.}
 %==============================================================================
 
  \fg{Previous SSD studies have examined Pm dependence with %\fg{uniform}
- \mjk{stochastic and uniform} %; uniform alone gives a weird impression...}
+ \mjk{stochastic} %; uniform alone gives a weird impression...}
  nonhelical forcing, including \fg{at} high Mach number \citep[e.g.,][]{ 
  HBD03,HBD04,Haugen:2004M,FCSBKS11,FSBS14}.} %\mjk{The above-mentioned models were equally simple, and now we make it sound like we do something even more simple, which is not true}
- \mjk{We do so here specifically t}o illustrate
+ \mjk{Here we specifically seek t}o illustrate
  differences between tangling and SSD.
  Nonhelical random forcing is applied at wavenumber $\kf/k_1=8$ to
  $256^3$ zone, $2\pi$-periodic, isothermal boxes.
