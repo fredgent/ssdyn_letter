@@ -93,8 +93,8 @@
 
 \definecolor{midblue}{rgb}{0.0,0.4,0.7}
 \definecolor{midgreen}{rgb}{0.1,0.6,0.3}
-\definecolor{mypurple}{rgb}{0.8,0.2,0.8}
-\newcommand{\fg}[1]{\textcolor{midgreen}{#1}}
+\definecolor{mypurple}{rgb}{0.7,0.3,0.8}
+\newcommand{\fg}[1]{\textcolor{mypurple}{#1}}
 \newcommand{\mm}[1]{\textcolor{mypurple}{#1}}
 \newcommand{\fag}[1]{\textcolor{midblue}{FAG: #1}}
 \newcommand{\ns}[1]{\textcolor{orange}{#1}}
@@ -279,7 +279,7 @@ the critical resistivity \fg{below} which an SSD occurs is
 $0.005>\eta_{\rm crit}>0.001{\,\rm kpc}^{-1}{\,\rm km~ s}^{-1}$, and this
 increases with the supernova rate.}
 Across the modelled range of 0.5 to 4~\fg{pc} resolution we find that for
-\fg{$\eta<\eta{\rm crit}$}, the SSD saturates at about 5\% of kinetic energy
+\fg{$\eta<\eta_{\rm crit}$}, the SSD saturates at about 5\% of kinetic energy
 equipartion, independent of growth rate.
 \fg{In the range $0.2\SNr\leq \dot\sigma\leq8\SNr$ growth rate increases
 with $\dot\sigma$, despite the negative impact expected from increased
@@ -296,15 +296,10 @@ SSD\fg{s} \fg{in the supernova-driven interstellar medium} commonly exhibit erra
 
  This \fg{L}etter addresses the necessary conditions and properties of a
  small-scale dynamo (SSD) in the interstellar medium (ISM).
- %FAG: trim
- %SSD acts at small eddy scales of the turbulence, thus driving magnetic field
  SSD acts at small eddy scales of turbulence, driving magnetic field
  growth at correspondingly short \fg{timescales}.
  \fg{The large-scale dynamo (LSD) with much longer turnover times generates
  magnetic fields ordered on \fg{kiloparsec} scales.}
- %FAG: trim
- %Hence, simulations capable of capturing LSD alongside the faster growing modes
- %of SSD are computationally challenging.
  Hence, capturing LSD alongside the faster growing modes
  of SSD in simulations is computationally challenging.
  However, \fg{interaction between SSD and LSD modes likely fundamentally}
@@ -370,8 +365,6 @@ SSD\fg{s} \fg{in the supernova-driven interstellar medium} commonly exhibit erra
  Time is normalised by eddy turnover time, $1/\kf {u_{\rm rms}}$.
  Compensated power spectra \fg{of kinetic energy $P_k$ and magnetic
  energy $P_B$} for (b) SSD and (c) tangling, at times given in the
-%FAG: trim
-% legends.  Note that the kinetic energy uses the right-hand axes.
  legends.  Kinetic energy uses the right-hand axes.
  Forcing scale, $\kf/k_1=8$: vertical dotted line.
 \label{fig:tangling}}
@@ -832,98 +825,31 @@ Resistivity is $\eta=10^{-4}$.}
 \subsection{\fg{Tangling of the imposed field}} \label{sec:Balsara}
 %-------------------------------------------------------------------------------
 
-% mm [introduce question to be studied in this section]
-\mm{We now examine whether the field growth seen in our models could
-%<<<<<<< 5e9c75fac65a177a63184cf3b0000c18af08c7bb
-%  be due to field tangling.  In Sect.~\ref{sec:ssd-tang} we argued
-%  based on our isothermal models that tangling should produce linear
-%  growth rate and that only a direct
-%  Kazantsev cascade should occur, with dissipation dominating scales
-%  below the forcing range. Conversely, an SSD leads to exponential
-%  growth and an inverse Kazantsev cascade extending below the forcing scale.}
-%
-% SN-driven turbulence does not have a \mm{single} forcing scale, unlike the
-% simplified model in Section\,\ref{sec:ssd-tang}, because of the
-% heterogeneous ISM structure and random explosion locations.
-% \mm{Instead, the} forcing scale \mm{is} distributed at scales
-%=======
-  %be due to field tangling.
+\fg{We now examine whether the field growth seen in our models could
   be due to tangling.
-  In Sect.~\ref{sec:ssd-tang} we argued
-    %FAG based on our isothermal models
-    that tangling should produce linear growth 
-    %FAG rate and that only an inverse
-    %Kazantsev cascade should occur, with dissipation dominating scales
-    rate, with dissipation dominating scales
-  below the forcing range. Conversely, an SSD leads to exponential
-  growth and a
-    %FAG direct
-    Kazantsev cascade extending below the forcing scale.}
+  In Sect.~\ref{sec:ssd-tang} we argued that tangling should produce linear
+  growth rate, with dissipation dominating scales below the forcing range.
+  Conversely, an SSD leads to exponential growth and a Kazantsev cascade
+  extending below the forcing scale.}
 
  SN-driven turbulence does not have a \fg{single} forcing scale, 
-   %FAG unlike the
-   %simplified model in Section\,\ref{sec:ssd-tang},
- %  because of the
- %heterogeneous ISM structure and random explosion locations.
-   because of \fg{explosions randomly located in} the heterogeneous ISM.
- \fg{Instead, the} forcing 
-   %FAG scale
-   \fg{is} distributed at scales
-%>>>>>>> Merging Mordecai
- \fg{of roughly 60--200~pc
+ because of \fg{explosions randomly located in} the heterogeneous ISM.
+ \fg{Instead, the} forcing \fg{is} distributed at scales \fg{of roughly 
+ 60--200~pc
    \citep{joung2006,avillez2007,HSSFG17}, or $k \sim 30$--105~kpc$^{-1}$}.
 
- % mm [I have tried to rewrite this section to focus more on results
- % rather than description.  Please check to see if it is correct]
-  %FAG Do you mean 2 and 4?
-  %\mm{In Figures~\ref{fig:3power} and~\ref{fig:4power} we indeed demonstrate
-\mm{In \fg{Figures~\ref{fig:eb-res} and~\ref{fig:eb-nu}} we indeed demonstrate
-strong exponential growth over multiple orders of magnitude
-  %FAG
-  %so long as
-  %the resistivity remains low enough, despite variation in supernova
-  \fg{for sufficiently low resistivity, at varying supernova}
-rate $\dot\sigma$, numerical resolution $\dx$, and physical viscosity
-$\nu$. 
-  \fg{Apparently l}inear growth 
-  %FAG
-  %only appears to occur
-  \fg{occurs only}
-  % in models
-  with high
-physical resistivity.}
+ \fg{In \fg{Figures~\ref{fig:eb-res} and~\ref{fig:eb-nu}} we indeed
+ demonstrate strong exponential growth over multiple orders of magnitude
+ \fg{for sufficiently low resistivity, at varying supernova} rate $\dot\sigma$,
+ numerical resolution $\dx$, and physical viscosity $\nu$. 
+ \fg{Apparently l}inear growth \fg{occurs only} with high physical resistivity.}
 
-\mm{We now turn to the power spectra. Figure\,\ref{fig:4power} shows
-  compensated spectra over time during 
-  %FAG a period
-  \fg{intervals} that}
- %mm Figure\,\ref{fig:4power}\,(a) shows the evolving compensated spectra for  $\dx=0.5$ between \fg{12} and 32\,Myr\fg{, and (b) for a comparison model to \BKM\ at $\dx=0.78$ between 4 and 21\,Myr.}
-\fg{
-  % mm The period
-  %spans two epochs of SSD with distinct rates of growth 
-  span epochs with distinct rates of SSD  growth 
-  followed by saturation.}
-  % mm in panels (a). Note, that the
-    %    \mm{The}
-    %magnitude of the kinetic energy spectra \mm{increases
-    %initially, but then saturates as the SSD saturates.} }
-    % FAG [The fluctuations are more evident in the time series for E_k. while 
-    % it does increase initially in a2, in b2 there is little change. This is 
-    % more relevant in addressing the criticism of the fluctuating growth rates
-    % because intermittency in the flow may well explain the changes, but we 
-    % adequately address the referee elsewhere, so I think we can omit this
-    % comment and save space]
-    % mm [I don't see the advertised fluctuations in the previous
-    % writeup.  Have I missed something?]
-  %mm two orders of magnitude at the lower $\dot\sigma$ (a2),  but only one order of magnitude (b2) and 1--2 orders of magnitude higher on average.} 
-%mm The Kolmogorov range extends at all times to $k\fg{\simeq600}\kpc^{-1}$ and
-% mostly to $k\fg{\simeq1200}\kpc^{-1}$ (a2) or
-% $k\fg{\simeq1000}\kpc^{-1}$ (b).
-%FAG remove para break  
-The compensated magnetic energy spectra in Figure\,\ref{fig:4power}\,(a1, b1)
+ \fg{We now turn to the power spectra. Figure\,\ref{fig:4power} shows
+ compensated spectra over time during \fg{intervals} that}
+ \fg{span epochs with distinct rates of SSD  growth followed by saturation.}
+ The compensated magnetic energy spectra in Figure\,\ref{fig:4power}\,(a1, b1)
  have \fg{peaks conforming to the end of the Kazantsev range.}
 
-%FAG para
  \fg{For $\fg{\dot\sigma=0.2\SNr}$ up to 14\,Myr this peak is at
  $k\fg{\simeq200}\kpc^{-1}$ while the
  SSD grows \fg{slowly}.
@@ -934,7 +860,6 @@ The compensated magnetic energy spectra in Figure\,\ref{fig:4power}\,(a1, b1)
  The peak contracts upon saturation to $k<\fg{200}\kpc^{-1}$, consistent with no
  \fg{further} dynamo (Fig.\,\ref{fig:tangling}c).
 
-%FAG para
  In Figure\,\ref{fig:4power}\,(b1) \fg{until 7\,Myr there is no Kazantsev range
  and the peak energy increases as $k\rightarrow0$, a signature of tangling of
  the imposed field
