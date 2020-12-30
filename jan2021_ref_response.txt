@@ -1,0 +1,56 @@
+> Reviewer's Comments:
+> I have read carefully the new version of the manuscript entitled "Small-scale
+> dynamo in supernova-driven interstellar turbulence" by Gent et al.  Although
+> the new version is significantly clearer than the original one, I still
+> recommend a rejection based on the following concerns.
+We are disappointed in the referee response. The fundamental disagreement in the
+capability of the Pencil Code to model reliably the physics presented has not 
+been justified by the referee and the previous and current criticisms of the
+Pencil Code have been misdirected. We have confirmed that the assertions of the 
+referee regarding the absence of viscosity were misplaced and have demonstrated
+in previous work that the shock handling machinery of the code can resolve 
+discontinuities with high accuracy and are numerically convergent. The confusion
+below between hyper and shock diffusion applicability demonstrates the referee's
+lack of insight with respect to the relevance of these tools. We therefore
+request a replacement referee.
+ 
+> 1- I am still not convinced that the PENCIL code is the appropriate code for
+> shock-driven turbulence simulations. Mass, momentum and energy diffusion is
+> explicitly modelled to handle shocks but for a rather obscure reason, not in
+> the vector potential equation. The hyper diffusion terms are used to damp
+> grid-scale instabilities. When shocks are present, grid-scale instabilities are
+> crucial and the authors refer to a mysterious choice of "coefficients optimal
+> for each delta x".
+> 
+> 2- The authors need to show plots with the kinetic energy versus time to see if
+> the SN-driven turbulence does reach a stationary state. If the turbulence is
+> not stationary, then results are not converged in a statistical sense. In
+> addition, a crucial parameter is mentioned only briefly in the end, namely the
+> turbulence Mach number. The discussion at the end about the role of the Mach
+> number in preventing or promoting the SSD is very obscure and mostly
+> misleading. Because the kinetic energy is not a constant, I would not use the
+> time-average value of E_K to normalise the magnetic energy but I would use
+> everywhere 10^51 erg (like in the bottom panel of Figure 2).
+> 
+> 3- The magnetic energy versus time plots should use a linear scale in time,
+> like Figure 1, not a logarithmic scale. This is how one can be convinced about
+> exponential growth.
+> 
+> 4- In the context of strong compressible, shock-driven turbulence, I am not
+> sure tangling is the main source of confusion with a proper SSD. Gas
+> compression can also lead to magnetic field amplification following the
+> classical B \propto rho^2/3 scaling. Since in the simulations presented here,
+> cooling is very important, especially for low SN explosion rates, it is
+> important to monitor the r.m.s density fluctuations, or even better the average
+> of rho^4/3 to see if that alone can explain the growth of magnetic energy. This
+> might also explain most of the erratic behaviour in the magnetic energy
+> evolution that the authors report on.
+> 
+> 5- I don't understand the mention of the "false convergence". If there is no
+> SSD, then the magnetic energy is not growing and simulations with no SSD should
+> indeed have similar results. I don't see a "false convergence" in this.
+> 
+> 6- I think the authors should explore the kinematic regime more clearly by
+> adopting in a few simulations a very low value for the initial field (like in
+> section 2). They will be able to explore properly the stationary regime of
+> their SN-driven turbulence and see a proper exponential growth of the field. 
