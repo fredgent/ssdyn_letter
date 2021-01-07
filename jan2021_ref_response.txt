@@ -45,10 +45,16 @@ request a replacement referee.
 > of rho^4/3 to see if that alone can explain the growth of magnetic energy. This
 > might also explain most of the erratic behaviour in the magnetic energy
 > evolution that the authors report on.
-> 
+>
+  The ratio (\rho_max/\rho_min)^(2/3) in the domain is at most 4.7e4 at dx=0.5
+  and 4.7e3 dx=4. 
+  The mean of rho^(4/3) fluctuates around 1.6 between 1.4 and 1.8, independent
+  of resolution. 
+  
 > 5- I don't understand the mention of the "false convergence". If there is no
 > SSD, then the magnetic energy is not growing and simulations with no SSD should
 > indeed have similar results. I don't see a "false convergence" in this.
+Mordeacai respond
 > 
 > 6- I think the authors should explore the kinematic regime more clearly by
 > adopting in a few simulations a very low value for the initial field (like in
