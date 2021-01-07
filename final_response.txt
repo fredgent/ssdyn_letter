@@ -14,7 +14,7 @@ relieve all the concerns of the referee, as detailed below.
 
 We have revised the text extensively, both to respond to the details below and
 to improve readability, narrative structure, and correct use of terminology.
-As is evident from the changes indicated with boldface, a majority of our original 
+As is evident from the changes indicated with color font, a majority of our original 
 text has been revised.
 
 > 2- Second, I think the code used here, namely the PENCIL code, is a huge

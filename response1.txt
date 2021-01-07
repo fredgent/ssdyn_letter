@@ -195,3 +195,22 @@ saturated lower as Rm increases -- due to SSD. Opposite result is Miikka.
 Traces of large scale dynamo.
 
 Figure 4  clarify legends/cpation fig a1 a2
+
+Discussion 1-Dec
+Plot delta eb v eb 2D hist
+Run high cadence on 1pc model 12 Myr and 24 Myr and 40 to 50 Myr
+Start ssd strat models - check Dynamo number and Ly extent. 
+
+h^3=D beta^2/alpha_0 
+D pronto alpha0 * G 
+G=shear 
+gamma = beta/h^2 (-1 + sqrt(D)) 
+Determine parameters to retain 1kpc box
+
+gamma sim eta_T/h^2 (sqrt(|D|)-sqrt(D_crit))
+C_omega = S h^2/\eta_T
+C_alpha = alpha_0 h/eta_T 
+D = C_omega C_alpha
+eta_T = 1/3 l v = 1/3 x 100pc x 10--50kms = 10^{26} cm^2/s
+tau = h^2/eta_T = (1.2e21 -- 3e21cm)^2/10^{26}cm/s = 1.4e16 -- 9e16 s = 5e8 - 3e9 yr
+D = h omega / v = 9(0.5 cm x 2e6 cm/s / 1e6 cm/s)
