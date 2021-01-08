@@ -3,19 +3,20 @@
 > dynamo in supernova-driven interstellar turbulence" by Gent et al.  Although
 > the new version is significantly clearer than the original one, I still
 > recommend a rejection based on the following concerns.
-We are disappointed in the referee response. The fundamental disagreement in the
-capability of the Pencil Code to model reliably the physics presented has not 
-been justified by the referee and the previous and current criticisms of the
-Pencil Code have been misdirected. We have confirmed that the assertions of the 
-referee regarding the absence of viscosity were misplaced and have demonstrated
-in previous work that the shock handling machinery of the code can resolve 
-discontinuities with high accuracy and are numerically convergent. The confusion
-below between hyper and shock diffusion applicability demonstrates the referee's
-lack of insight with respect to the relevance of these tools. We therefore
-request a replacement referee.
- 
-%MJK We could say something like this instead.
-We are somewhat disappointed by the slow convergence of opinions with the referee. Our intention, which should also be very clear from the main text itself, is *not* to claim that Pencil Code is the *optimal* tool for such modelling, but we have, in length, demonstrated in earlier publications that it is a *valid* and efficient tool for such modelling. The intention of the letter is to present novel and high-impact results from the simulations, rather than present or advertise the code itself. Our aim is to present the model and simulations to the extent that the paper can be read stand alone from the earlier publication presenting the model in detail, but still contain the essential parts for understanding the core concepts. We feel that the referee's statements of "obscure" and "mysterious" in criticising our model description are inappropriate, but yet we still have tried to improve on those descriptions to appease the referee.
+
+We are somewhat disappointed by the slow convergence of opinions with the
+referee. Our intention, which should also be very clear from the main text
+itself, is *not* to claim that Pencil Code is the *optimal* tool for such
+modelling, but we have, in length, demonstrated in earlier publications that it
+is a *valid* and efficient tool for such modelling. The intention of the letter
+is to present novel and high-impact results from the simulations, rather than
+present or advertise the code itself. Our aim is to present the model and
+simulations to the extent that the paper can be read stand alone from the
+earlier publication presenting the model in detail, but still contain the
+essential parts for understanding the core concepts. We feel that the referee's
+statements of "obscure" and "mysterious" in criticising our model description
+are inappropriate, but yet we still have tried to improve on those descriptions
+to appease the referee.
 
 > 1- I am still not convinced that the PENCIL code is the appropriate code for
 > shock-driven turbulence simulations. Mass, momentum and energy diffusion is
@@ -27,6 +28,21 @@ We are somewhat disappointed by the slow convergence of opinions with the refere
 > 
 
 %MJK We should try to make the descriptions clearer, and explain here what we have changed.
+%FAG
+Shock handling is typically applied only to the momentum equation, but due to the
+additional challenges involved with the application of cooling and the extreme
+energetics invoked by SN forcing, we have extended this machinery to the continuity
+and energy equations. It is desirable to minimise the use of this machinery and we
+have demonstrated in Gent et al 2020 that this enables the Pencil Code to model
+these shock waves to high accuracy. In practice it is not required for the induction
+equation to resolve the magnetic field in the shocks, so it is not applied. The 
+coefficients for hyper diffusion impose a mesh Reynolds number of 1, so vary with
+resolution. We have clarified this in the text. The hyper diffusion suppresses 
+high frequency numerical instabilities from growing, ensuring the fluctuations in
+the physical variables arise from the resolved physical processes sufficiently
+above the grid scale. This is distinct from the large scale physical feature of 
+a blast wave, which needs to be resolved within a minimal range of grid spaces 
+as it travels. Shocks are not resolved nor suppressed by the hyper diffusion.  
 
 > 2- The authors need to show plots with the kinetic energy versus time to see if
 > the SN-driven turbulence does reach a stationary state. If the turbulence is
@@ -38,13 +54,48 @@ We are somewhat disappointed by the slow convergence of opinions with the refere
 > time-average value of E_K to normalise the magnetic energy but I would use
 > everywhere 10^51 erg (like in the bottom panel of Figure 2).
 
-%MJK Here, the referee has already decided that the kinetic energy is not a constant - crazy. I suggest we proceed as planned: to show the kinetic energy in an additional panel to Figure 2, and possibly add the Mach number from the sims with a different axis on the right hand side.
+%MJK Here, the referee has already decided that the kinetic energy is not a
+%constant - crazy. I suggest we proceed as planned: to show the kinetic energy
+%in an additional panel to Figure 2, and possibly add the Mach number from the
+%sims with a different axis on the right hand side.
+%FAG
+We have an additional panel to Figure 2 showing the evolving kinetic energy 
+density and the rms sonic Mach number for higher resolution runs with alternate
+SN rates. The models are in HD statistical steady state, the variance lower
+with increased SN rate. This has a physical explanation, in that the more 
+sporadic forcing with lower SN rate induces higher intermittency in the 
+energetics. The sonic Mach number is of order unity during the kinematic phase
+of the SSD, reducing more rapidly with higher resolution, where the fractional
+volume of the cooler phases can be resolved in smaller filaments, and with
+higher SN rate, where the fractional volume and mean temperature of the hot gas
+is higher. During the kinematic phase the high SN models have M_s>1 and faster
+SSD, while the saturation corresponds with M_s reducing below 1 upon saturation.
+The slower SSD for low SN rate occurs with M_s near 1, and M_s again reduces 
+after the kinematic phase. The numbers for M_s in the text refer to dx=2. 
+The apparent contrast with the previous isothermal models, is that the increased
+forcing also results in higher energetics, which likely compensate the effect
+of high Mach numbers. 
+%FAG We can replace the numbers in the current text with these new nuumbers from the high resolution runs. 
 
 > 3- The magnetic energy versus time plots should use a linear scale in time,
 > like Figure 1, not a logarithmic scale. This is how one can be convinced about
 > exponential growth.
 
 %MJK Here we also had a clear plan of action, and I suggest we follow it.
+%FAG
+We have replaced the plots in Figure 4 with a log-linear scale as suggested. In
+Figure 2 we have retained the log-log scales for panels (a) and (b), where we 
+wish to illustrate the convergence with resolution. These models are also
+included in Figure 4. Figure 2 (c) has been replaced with log-linear, as they
+evolve over comparable timescales. The exponential growth is more clearly 
+demonstrated for our models than either of the Balsara models. This supports
+our assertion that the increased accuracy of the Pencil Code, alongside its
+shock handling tools, make is well suited for modelling this environment,
+even without the more exact shock treatment available to Balsara et al. 
+In Figure 4 the exponential nature of the growth is now clearly evident.
+Where growth rates do vary, each phase has a straight line, confirming 
+exponential behaviour, and overall growth for each curve can also adequately
+be fitted with a straight line.
 
 > 4- In the context of strong compressible, shock-driven turbulence, I am not
 > sure tangling is the main source of confusion with a proper SSD. Gas
@@ -56,9 +107,9 @@ We are somewhat disappointed by the slow convergence of opinions with the refere
 > might also explain most of the erratic behaviour in the magnetic energy
 > evolution that the authors report on.
 >
-  The ratio (\rho_max/\rho_min)^(2/3) in the domain is at most 4.7e4 at dx=0.5
+  The ratio (n_max/n_min)^(2/3) in the domain is at most 4.7e4 at dx=0.5
   and 4.7e3 dx=4. 
-  The mean of rho^(4/3) fluctuates around 1.6 between 1.4 and 1.8, independent
+  The mean of n^(4/3) fluctuates around 1.6 between 1.4 and 1.8, independent
   of resolution. 
   
 > 5- I don't understand the mention of the "false convergence". If there is no
@@ -71,4 +122,21 @@ Mordeacai respond
 > section 2). They will be able to explore properly the stationary regime of
 > their SN-driven turbulence and see a proper exponential growth of the field. 
 
-%MJK Here to explain that the initial seed field is already so small, that reducing it further below the floating point accuracy is not necessary. And why does he say "like in section 2"? Anyways, it sounds like for this referee the main problem is still the lack of exponential growth, which we have obviously failed to demonstrate to him convincingly. I feel it is important to make the Balsara comparison plot as convincing as possible.
+%MJK Here to explain that the initial seed field is already so small, that
+%reducing it further below the floating point accuracy is not necessary. And
+%why does he say "like in section 2"? Anyways, it sounds like for this referee
+%the main problem is still the lack of exponential growth, which we have
+%obviously failed to demonstrate to him convincingly. I feel it is important to
+%make the Balsara comparison plot as convincing as possible.
+%FAG
+The referee may have misunderstood the specification of the seed field. Only in 
+our models with SN rate 8x and resolution chosen to match Balsara et al, do we
+use a higher seed field. Even here the magnetic energy is amplified by 4 orders
+of magnitude, so we clearly have the kinematic SSD (Fig 2c and Fig 5b).
+Otherwise all models apply a unifrom random seed field of mean strength 1nG,
+which initially decays further. The magnetic energy is at least 8 orders of
+magnitude weaker than the kinetic energy before the SSD begins to evolve. The
+SSD therefore amplifies the magnetic energy over six orders of magnitude as
+evident in all panels of Figure 4, so the kinematic phase is properly 
+explored.
+
