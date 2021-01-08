@@ -20,9 +20,30 @@ reference. We address the referee's specific comments in more detail below.
 > explicitly modelled to handle shocks but for a rather obscure reason, not in
 > the vector potential equation. 
 
-The substantial advantage of using a high-order advection algorithm, even at the cost of relying on artificial diffusivity for shock capturing, is clearly demonstrated in the comparison shown in Figure 2c, where we reproduce the results of a second-order code with a Riemann solver (Balsara et al. 2004) using grid resolution a full factor of two coarser.
+The substantial advantage of using a high-order advection algorithm, even at
+the cost of relying on artificial diffusivity for shock capturing, is clearly
+demonstrated in the comparison shown in Figure 2c, where we reproduce the
+results of a second-order code with a Riemann solver (Balsara et al. 2004)
+using grid resolution a full factor of two coarser.
 
-To the general question of how shocks should be resolved, approximate Riemann solvers indeed provide good shock solutions, but are difficult to couple to high-order advection algorithms.  The historical alternative is to use some form of von Neumann & Richtmyer (1950, J. Appl. Phys.) artificial viscosity, which of course was the original method used to resolve shocks numerically, by spreading them out sufficiently for them to be solved using the standard advection algorithm.  The original von Neumann & Richtmyer algorithm only adds diffusivity proportional to the square of the negative divergence to the momentum and energy equation in order to ensure conservation across shocks.  The sixth-order Pencil code does require a small amount of mass divergence as well in order to ensure numerical stability when wall heating occurs from the interaction of strong shocks, but that is not a particularly desirable aspect of the algorithm. Although addition of numerical resistivity at shocks was used in the older paper by Gent et al. (2013), that leads to unphysical loss of flux at the shock front, and provides no improvement in numerical stability, so abandoning its use, as was done in Gent et al. (2020), improves the solution rather than harming it, as well as returning to a more traditional formulation of artificial viscosity.
+To the general question of how shocks should be resolved, approximate Riemann
+solvers indeed provide good shock solutions, but are difficult to couple to
+high-order advection algorithms.  The historical alternative is to use some
+form of von Neumann & Richtmyer (1950, J. Appl. Phys.) artificial viscosity,
+which of course was the original method used to resolve shocks numerically, by
+spreading them out sufficiently for them to be solved using the standard
+advection algorithm.  The original von Neumann & Richtmyer algorithm only adds
+diffusivity proportional to the square of the negative divergence to the
+momentum and energy equation in order to ensure conservation across shocks.
+The sixth-order Pencil code does require a small amount of mass divergence as
+well in order to ensure numerical stability when wall heating occurs from the
+interaction of strong shocks, but that is not a particularly desirable aspect
+of the algorithm. Although addition of numerical resistivity at shocks was used
+in the older paper by Gent et al. (2013), that leads to unphysical loss of flux
+at the shock front, and provides no improvement in numerical stability, so
+abandoning its use, as was done in Gent et al. (2020), improves the solution
+rather than harming it, as well as returning to a more traditional formulation
+of artificial viscosity.
 
 
 > The hyper diffusion terms are used to damp
@@ -111,20 +132,28 @@ adequately be fitted with exponentials.
 > evolution that the authors report on.
 >
 
-  The ratio (\rho_max/\rho_min)^(2/3) in the domain is at most 4.7e4 at dx=0.5
-  and 4.7e3 at dx=4.
+For eta=1e-4:
+The ratio (\rho_max/\rho_min)^(2/3) grows from order 1e3 to 1e4 between 
+8 and 20 Myr for dx=0.5, while Brms grows from about 1nG to 1uG.
+The ratio grows slightly less for dx=2 between 10 and 40 Myr with 
+similar field amplification and for low resolution runs the ratio 
+remains steady at a few hundred growing a little for dx=2 to about 1000.
+Meanwhile the field amplification is also 3 orders of magniude in both
+cases.
 
-%MM [**** compare to the change in field strength and give a clear
-indication of whether it varies in time ****]
-
-The mean of n^(4/3) remains almost constant in time, fluctuating between 1.4 and 1.8, independent of resolution or magnetic field strength. 
-  Compression does not adequately explain the field amplification. 
+The mean of n^(4/3) remains almost constant in time, fluctuating between 1.4
+and 1.8, independent of resolution or magnetic field strength.  Compression
+does not adequately explain the field amplification. 
   
 > 5- I don't understand the mention of the "false convergence". If there is no
 > SSD, then the magnetic energy is not growing and simulations with no SSD should
 > indeed have similar results. I don't see a "false convergence" in this.
 
-False convergence refers to the suppression of physical effects by numerical diffusivity over multiple resolutions.  The suppression of the dynamo seen at our lower resolutions is an example of this effect.  The supposition that there is no SSD at play is unsupported by the multiple lines of evidence we have presented.
+False convergence refers to the suppression of physical effects by numerical
+diffusivity over multiple resolutions.  The suppression of the dynamo seen at
+our lower resolutions is an example of this effect.  The supposition that there
+is no SSD at play is unsupported by the multiple lines of evidence we have
+presented.
 
 > 
 > 6- I think the authors should explore the kinematic regime more clearly by
