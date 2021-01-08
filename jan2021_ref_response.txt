@@ -14,6 +14,9 @@ below between hyper and shock diffusion applicability demonstrates the referee's
 lack of insight with respect to the relevance of these tools. We therefore
 request a replacement referee.
  
+%MJK We could say something like this instead.
+We are somewhat disappointed by the slow convergence of opinions with the referee. Our intention, which should also be very clear from the main text itself, is *not* to claim that Pencil Code is the *optimal* tool for such modelling, but we have, in length, demonstrated in earlier publications that it is a *valid* and efficient tool for such modelling. The intention of the letter is to present novel and high-impact results from the simulations, rather than present or advertise the code itself. Our aim is to present the model and simulations to the extent that the paper can be read stand alone from the earlier publication presenting the model in detail, but still contain the essential parts for understanding the core concepts. We feel that the referee's statements of "obscure" and "mysterious" in criticising our model description are inappropriate, but yet we still have tried to improve on those descriptions to appease the referee.
+
 > 1- I am still not convinced that the PENCIL code is the appropriate code for
 > shock-driven turbulence simulations. Mass, momentum and energy diffusion is
 > explicitly modelled to handle shocks but for a rather obscure reason, not in
@@ -22,6 +25,9 @@ request a replacement referee.
 > crucial and the authors refer to a mysterious choice of "coefficients optimal
 > for each delta x".
 > 
+
+%MJK We should try to make the descriptions clearer, and explain here what we have changed.
+
 > 2- The authors need to show plots with the kinetic energy versus time to see if
 > the SN-driven turbulence does reach a stationary state. If the turbulence is
 > not stationary, then results are not converged in a statistical sense. In
@@ -31,11 +37,15 @@ request a replacement referee.
 > misleading. Because the kinetic energy is not a constant, I would not use the
 > time-average value of E_K to normalise the magnetic energy but I would use
 > everywhere 10^51 erg (like in the bottom panel of Figure 2).
-> 
+
+%MJK Here, the referee has already decided that the kinetic energy is not a constant - crazy. I suggest we proceed as planned: to show the kinetic energy in an additional panel to Figure 2, and possibly add the Mach number from the sims with a different axis on the right hand side.
+
 > 3- The magnetic energy versus time plots should use a linear scale in time,
 > like Figure 1, not a logarithmic scale. This is how one can be convinced about
 > exponential growth.
-> 
+
+%MJK Here we also had a clear plan of action, and I suggest we follow it.
+
 > 4- In the context of strong compressible, shock-driven turbulence, I am not
 > sure tangling is the main source of confusion with a proper SSD. Gas
 > compression can also lead to magnetic field amplification following the
@@ -60,3 +70,5 @@ Mordeacai respond
 > adopting in a few simulations a very low value for the initial field (like in
 > section 2). They will be able to explore properly the stationary regime of
 > their SN-driven turbulence and see a proper exponential growth of the field. 
+
+%MJK Here to explain that the initial seed field is already so small, that reducing it further below the floating point accuracy is not necessary. And why does he say "like in section 2"? Anyways, it sounds like for this referee the main problem is still the lack of exponential growth, which we have obviously failed to demonstrate to him convincingly. I feel it is important to make the Balsara comparison plot as convincing as possible.
