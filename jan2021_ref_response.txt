@@ -74,8 +74,8 @@ The slower SSD for low SN rate occurs with M_s near 1, and M_s again reduces
 after the kinematic phase. The numbers for M_s in the text refer to dx=2. 
 The apparent contrast with the previous isothermal models, is that the increased
 forcing also results in higher energetics, which likely compensate the effect
-of high Mach numbers. 
-%FAG We can replace the numbers in the current text with these new nuumbers from the high resolution runs. 
+of high Mach numbers. We have revised the comments about the Mach number and
+moved it to the discussion of Figure 2.
 
 > 3- The magnetic energy versus time plots should use a linear scale in time,
 > like Figure 1, not a logarithmic scale. This is how one can be convinced about
@@ -110,7 +110,8 @@ be fitted with a straight line.
   The ratio (n_max/n_min)^(2/3) in the domain is at most 4.7e4 at dx=0.5
   and 4.7e3 dx=4. 
   The mean of n^(4/3) fluctuates around 1.6 between 1.4 and 1.8, independent
-  of resolution. 
+  of resolution.
+  Compression does not adequately explain the field amplification. 
   
 > 5- I don't understand the mention of the "false convergence". If there is no
 > SSD, then the magnetic energy is not growing and simulations with no SSD should
@@ -131,7 +132,7 @@ Mordeacai respond
 %FAG
 The referee may have misunderstood the specification of the seed field. Only in 
 our models with SN rate 8x and resolution chosen to match Balsara et al, do we
-use a higher seed field. Even here the magnetic energy is amplified by 4 orders
+use a strong seed field. Even here the magnetic energy is amplified by 4 orders
 of magnitude, so we clearly have the kinematic SSD (Fig 2c and Fig 5b).
 Otherwise all models apply a unifrom random seed field of mean strength 1nG,
 which initially decays further. The magnetic energy is at least 8 orders of
