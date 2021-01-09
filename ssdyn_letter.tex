@@ -294,7 +294,9 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
 %==============================================================================
 
 
- This {L}etter addresses the necessary conditions and properties of a
+ % mm [space] This {L}etter addresses the necessary conditions and properties
+ % of a 
+     We here study the
  small-scale dynamo (SSD) in the interstellar medium (ISM).
  SSD acts at small eddy scales of turbulence, driving magnetic field
  growth at correspondingly short {timescales}.
@@ -330,9 +332,11 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  examined the SN-driven SSD.
  {The limited  resolution} {study} {of \BKM\ did not allow
  demonstration of {solution} convergence.
- Applying a weak imposed uniform field with ideal magnetohydrodynamics (MHD),
- dependencies on magnetic Reynolds (Rm) or Prandtl (Pm) numbers were not
- explored.}
+% mm Applying a weak imposed uniform field with ideal magnetohydrodynamics (MHD),
+% dependencies on magnetic Reynolds (Rm) or Prandtl (Pm) numbers were not
+% explored.}
+      They further imposed a relatively strong initial field and
+      implemented no physical resistivity or viscosity.
  We shall show that the amplification of their field is a result
  of SSD action and not just tangling of the field.
 
@@ -381,15 +385,22 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  {Here we specifically seek t}o illustrate
  differences between tangling and SSD.
  Nonhelical random forcing is applied at wavenumber $\kf/k_1=8$ to
- $256^3$ zone, $2\pi$-periodic, isothermal boxes.
+ $256^3$ zone, $2\pi$-periodic, isothermal boxes
+ % mm [moved for clarity]
+     with viscosity $\nu=5\cdot10^{-3}$.
  The lowest wavenumber in the domain is $k_1=1$ and the largest is the Nyquist
  frequency $k/k_1 = 128$.
  The imposed uniform field has $e_B\simeq6\cdot10^{-22}~\overline{e_K}$, where
  $\overline{e_K}$ is the time-averaged kinetic energy density.
+ 
  Two simulations are distinguished by use of dimensionless
  resistivity $\eta=10^{-4}$
- and $\eta=2\cdot10^{-3}$ and viscosity $\nu=5\cdot10^{-3}$.
- These yield $\Rm=150$, with $\Pm = 50$, exciting {an} SSD, and $\Rm=7.4$
+ and $\eta=2\cdot10^{-3}$.
+ % mm and viscosity $\nu=5\cdot10^{-3}$.
+ These yield
+ % mm $\Rm=150$, with $\Pm = 50$,
+     magnetic Reynolds number $\Rm=150$, with magnetic Prandtl number $\Pm = 50$,
+ exciting {an} SSD and $\Rm=7.4$,
  with $\Pm=2.5$, inhibiting the dynamo so that amplification is limited to
  tangling of the imposed field.
 
@@ -404,8 +415,9 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  Magnetic energy spectra are compensated {for by} Kazantsev's $k^{3/2}$
  {power law} \citep{Sch02,BS14}, and kinetic energy {by} Kolmogorov's
  $k^{-5/3}$.
- The forcing scale $\kf$ is {prominent} in kinetic energy {spectra for
- both models} and the magnetic energy {spectra of the tangling}, but
+ The forcing scale $\kf$ is {prominent}
+ % mm [space, relevance] in kinetic energy {spectra for both models} and
+ the magnetic energy {spectra of the tangling} but
  {not} {in the magnetic spectra of the SSD}.
  {For SSD the range with Kazantsev power law (horizontal) extends to scales
  smaller than the forcing scale (Figure~\ref{fig:tangling}\,b), and during the
@@ -426,10 +438,15 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  $\dx=0.5$, 1, 2 or 4$\pc${, except for {our} direct comparisons with
  \BKM, { which have} domains {of} 200 pc and $\dx=0.78$, 1.56 and
  3.12$\pc$ (units henceforth assumed)}.
- {In models aiming to reproduce \BKM, we impose a uniform $10$~nG 
- background field.}
- {Otherwise we apply only a} random 1~nG seed field {to} exclude
- tangling of {the} imposed field {as} a source of magnetic amplification.
+% mm [rearrange to reduce confusion]
+ % {In models aiming to reproduce \BKM, we impose a uniform $10$~nG 
+ % background field.}
+ % {Otherwise we apply only a} random 1~nG seed field {to} exclude
+ % tangling of {the} imposed field {as} a source of magnetic amplification.
+ We apply a} random 1~nG initial field, small enough {to} exclude
+ tangling of {the} imposed field {as} a source of magnetic
+ amplification, except {in models reproducing \BKM, where we impose a uniform $10$~nG 
+ background field.} 
 
  We solve the system of non-ideal compressible MHD equations
 %-------------------------------------------------------------------------------
@@ -489,14 +506,20 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  {artificial mass diffusion applying in \eqref{eq:mass}.}
  Shock diffusion is not applied to equation~\eqref{eq:ind}{, unlike} {in}
  {\citet{Gent:2013b}.} {This avoids} {excessive magnetic dissipation in
- shocks, where compression actually enhances it.}
+   shocks, where compression actually enhances it.}
+  {Unlike past} experiments \citep{Gent:2013b,Gent:2013a,GMKSH20},
+ thermal diffusivity, $\chi$, {is omitted as} the artificial diffusivities
+ are adequate to ensure numerical stability.
+ {The} physical effects of thermal conductivity can be expected to be
+ relevant only at the unresolved or marginally resolved Field length defined
+ by \citet[][named after George Field, not the magnetic field]{BM90}.
  Terms containing $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
  to resolve grid-scale instabilities \citep[see, e.g.,][]{ABGS02,HB04}, \fg{
  %with coefficients optimal for each $\dx$}.
  with mesh Reynolds number $\simeq1$ for each $\dx$}.
 
- {The simplified isothermal model considered above
- (Sect.\,\ref{sec:ssd-tang}) solves only equations~{\eqref{eq:mass},}
+ {The simplified isothermal model considered in
+Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
  \eqref{eq:mom} and~\eqref{eq:ind}, without the shock-dependent diffusion or
  hyperdiffusion terms, and while setting
  $\vect{B}=\vect\nabla\times\vect{A}+\vect{B}_{\rm imposed}$.}
@@ -536,16 +559,12 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
 \end{figure}
 %-------------------------------------------------------------------------------
 
- {Unlike past} experiments \citep{Gent:2013b,Gent:2013a,GMKSH20},
- thermal diffusivity, $\chi$, {is omitted as} the artificial diffusivities
- are adequate to ensure numerical stability.
- {The} physical effects of thermal conductivity can be expected to be
- relevant only at the unresolved or marginally resolved Field length defined
- by \citet[][named after George Field, not the magnetic field]{BM90}.
- {For comparison to our models with physical diffusivity and understanding
- of the effects of purely numerical diffusivity, we also run an ideal MHD model
+{
+  % mm [space] For comparison to our models with physical diffusivity and
+  % understanding of
+        To understand 
+  the effects of purely numerical diffusivity, we also run an ideal MHD model
  with} $\eta=0$ {and $\nu=0$.}
-
  We determine how low a physical resistivity $\eta$ can be resolved by varying
  it from $10^{-5}$ to $10^{-3}\kpc\kms$ (units assumed henceforth).
  {We also test the effect of $\Pm=\nu/\eta$, varying $\nu$ with 
@@ -608,12 +627,14 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
 %-------------------------------------------------------------------------------
 \subsection{{Resolution and convergence}} \label{sec:conv}
 %-------------------------------------------------------------------------------
- {Figure~\ref{fig:eb-res} shows magnetic energy as a function of time for
- models with $\eta = 10^{-4}$ and $10^{-3}$, as well as a direct comparison of
- our technique to \BKM. We find that numerical diffusion still dominates at
- these resolutions for the lower resistivity, as can be seen from the
+{Figure~\ref{fig:eb-res} shows
+ % mm magnetic energy as a function of time for  models with $\eta =
+ % 10^{-4}$ and $10^{-3}$, as well as a direct comparison of our
+ % technique to \BKM. We find
+ that numerical diffusion still dominates at studied
+ resolutions for resistivity  $\eta = 10^{-4}$, as can be seen from the
  increasing speed of the SSD with resolution, but that a converged SSD solution
- emerges at the higher value for parsec resolution.}
+ emerges at  $\eta = 10^{-3}$ for parsec resolution.}
  Saturation at around 5\% of $\overline{e_K}$ appears to be a well-converged
  result.
  {The $\eta = 10^{-3}$ models show} false convergence
@@ -625,20 +646,25 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  thresholds and growth rates.
  }
 
- {\BKM\ chose a higher $\dot\sigma$ than the low value we choose for our
- fiducial runs} {to preserve multiphase {thermal} structure in {our}
- {periodic} numerical domain.
- {We did run direct comparisons at varying resolution to \BKM\
- (Figure\,\ref{fig:eb-res}\,(c))} using $\dot\sigma=8\SNr$.
+ % mm [edited for space & clarity]
+ We ran models to reproduce the results of {\BKM\. They chose a higher $\dot\sigma = 8\SNr$ than the low value of $0.5
+   \SNr$  we use in our
+   fiducial runs} {to preserve multiphase {thermal} structure.
+   % mm in {our}
+ % {periodic} numerical domain. 
+ % {We did run direct comparisons at varying resolution to \BKM\
+ % (Figure\,\ref{fig:eb-res}\,(c))} using $\dot\sigma=8\SNr$.
  {This high $\dot\sigma$ rapidly drives thermal runaway resulting in high
  temperatures $T>10^7$\,K.}
- The growth rate is faster {than in our fiducial models}, reflective of the
+ The growth rate is faster {than in our fiducial models} (Figure\,\ref{fig:eb-res}\,(c)), reflective of the
  single phase kinematics and more persistent forcing rate, yet {still}
  saturating at about 5\% of $\overline{e_K}$.
- {At equivalent resolution, the sixth-order Pencil Code has lower diffusion
+ {At equivalent resolution, the sixth-order Pencil Code has far lower diffusion
  than the second-order Godunov code used by \BKM. As a result, we find faster
- growth at equivalent resolution; we} include a lower resolution run {that}
- demonstrate{s} consistency with \BKM.} 
+ growth at equivalent resolution.
+ % mm ; we} include a lower resolution run {that} demonstrate{s}
+ % consistency with \BKM.}
+ 
  \fg{Figure\,\ref{fig:eb-res}\,(d) shows the mean sonic Mach number
  $\Ms>1$ during the kinematic stage for $\dot\sigma=8\SNr$, but
  a weaker dynamo for $0.2\SNr$ with lower $\Ms\simeq1$.}
@@ -649,9 +675,14 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  $\Ms$ reduces as the hot fractional volume increases.
  }
 
- {We can also examine the properties of the flow and magnetic field through
- their energy spectra (Figure~\ref{fig:3power}).
- The kinetic spectra (a--c right panels) for $\dx\leq1$ agree well at 
+ {We can also examine the
+   % mm [space] properties of the flow and magnetic field through
+   % their
+      kinetic and magnetic
+   energy spectra (Figure~\ref{fig:3power}).
+   The kinetic spectra
+   % mm (a--c right panels)
+   for $\dx\leq1$ agree well at 
  all scales above the viscous cutoff, which appears, as expected, at lower $k$ for
  $\dx=1$ than $\dx=0.5$.
  By contrast the kinetic spectra for $\dx\geq2$ differ and exhibit significant
