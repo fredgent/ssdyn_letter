@@ -161,11 +161,11 @@ presented.
 > section 2). They will be able to explore properly the stationary regime of
 > their SN-driven turbulence and see a proper exponential growth of the field. 
 
-The referee may have misunderstood the specification of the seed
-field. We have started our standard runs with uniform random 1 nG
-fields, which initially decays further.  Only in our models with SN
+We have clarified the use of our seed and imposed fields in the text.
+Our fiducial models use only a random seed field which is only 1uG prior
+to the onset of dynamo. Only in our models with SN
 rate 8x and resolution chosen to match Balsara et al, do we use a
-strong seed field. Even here the magnetic energy is amplified by 4
+strong seed field. Even here the magnetic energy is amplified by four
 orders of magnitude, so we clearly have a kinematic SSD (Fig 2c and
 Fig 5b). The magnetic energy is at least 8 orders of magnitude weaker
 than the kinetic energy before the SSD begins to evolve. The SSD
