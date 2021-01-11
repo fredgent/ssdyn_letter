@@ -294,8 +294,6 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
 %==============================================================================
 
 
- % mm [space] This {L}etter addresses the necessary conditions and properties
- % of a 
      \fg{We here study the}
  small-scale dynamo (SSD) in the interstellar medium (ISM).
  SSD acts at small eddy scales of turbulence, driving magnetic field
@@ -332,13 +330,10 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  examined the SN-driven SSD.
  {The limited  resolution} {study} of \BKM\ did not allow
  demonstration of {solution} convergence.
-% mm Applying a weak imposed uniform field with ideal magnetohydrodynamics (MHD),
-% dependencies on magnetic Reynolds (Rm) or Prandtl (Pm) numbers were not
-% explored.}
 %MJK I would remove "relatively strong", as it is not really strong in comparison to our initial condition.
 %      They further imposed a relatively strong initial field and
 %FAG: not only initial
-      They further imposed a uniform background field and
+      They, further, imposed a uniform background field and
       implemented no physical resistivity or viscosity.
  We shall show that the amplification of their field is a result
  of SSD action and not just tangling of the field.
@@ -389,7 +384,6 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  differences between tangling and SSD.
  Nonhelical random forcing is applied at wavenumber $\kf/k_1=8$ to
  $256^3$ zone, $2\pi$-periodic, isothermal boxes
- % mm [moved for clarity]
      \fg{with viscosity $\nu=5\cdot10^{-3}$}.
  The lowest wavenumber in the domain is $k_1=1$ and the largest is the Nyquist
  frequency $k/k_1 = 128$.
@@ -399,9 +393,7 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  Two simulations are distinguished by use of dimensionless
  resistivity $\eta=10^{-4}$
  and $\eta=2\cdot10^{-3}$.
- % mm and viscosity $\nu=5\cdot10^{-3}$.
  These yield
- % mm $\Rm=150$, with $\Pm = 50$,
      \fg{magnetic Reynolds number} $\Rm=150$, with \fg{magnetic Prandtl} number $\Pm = 50$,
  exciting {an} SSD and $\Rm=7.4$,
  with $\Pm=2.5$, inhibiting the dynamo so that amplification is limited to
@@ -419,7 +411,6 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  {power law} \citep{Sch02,BS14}, and kinetic energy {by} Kolmogorov's
  $k^{-5/3}$.
  The forcing scale $\kf$ is {prominent} in
- % mm [space, relevance] in kinetic energy {spectra for both models} and
  the magnetic energy {spectra of the tangling} but
  {not} {in the magnetic spectra of the SSD}.
  {For SSD the range with Kazantsev power law (horizontal) extends to scales
@@ -446,11 +437,13 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  % background field.}
  % {Otherwise we apply only a} random 1~nG seed field {to} exclude
  % tangling of {the} imposed field {as} a source of magnetic amplification.
- \fg{We apply a random initial field, 1~nG at the onset of dynamo,
- which excludes tangling of an imposed field as a source of magnetic
- amplification.
- Except in models reproducing \BKM\ we instead impose only a uniform
- $10$~nG background field.}
+ %FAG further clarification
+ \fg{Our fiducial models exclude tangling of an imposed field as a source
+ of magnetic amplification, by applying a random 10~nG initial field.
+ Transient dissipation delivers a turbulent seed field of
+ about 1~nG prior to onset of a dynamo.
+ Instead, for models reproducing \BKM\ this seed is substituted by
+ a uniform $10$~nG background field.}
  %We apply a random 1~nG initial field, small enough {to} exclude
  %tangling of {the} imposed field {as} a source of magnetic
  %amplification, except {in models reproducing \BKM, where we impose a uniform $10$~nG 
@@ -558,13 +551,6 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
 \caption{
  Magnetic energy density shown for resolutions $\dx$ given in the legends for
  models with resistivity (a) $\eta=10^{-4}$, and (b) $\eta=10^{-3}$, scaled by
- %MJK Energy units better kept same as in (c)
- %FAG have revised (d) 
- %FAG if we do not normalise by e_K, then the convergent result for the 
- %FAG saturation at ~5% is not so apparent as the low resolution runs have
- %FAG lower e_K for equivalent parameters.
- %FAG So far we use consistent y-axes for Fig 2 a and b and Fig 4.
- %FAG If we change, do we do so for all or only this Figure
  the time-averaged kinetic energy density $\overline{e_K}$, and (c) matching
  \BKM\, scaled by $\EST$ and viscosity $\nu$ included in the legend. 
  \fg{(d) kinetic energy density, $e_K$, (left axis) for $\dx$ and $\dot\sigma$
@@ -575,8 +561,6 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
 %-------------------------------------------------------------------------------
 
 {
-  % mm [space] For comparison to our models with physical diffusivity and
-  % understanding of
         \fg{To understand} 
   the effects of purely numerical diffusivity, we also run an ideal MHD model
  with} $\eta=0$ {and $\nu=0$.}
@@ -661,14 +645,9 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
  thresholds and growth rates.
  }
 
- % mm [edited for space & clarity]
  \fg{We ran models to reproduce the results of \BKM. They chose a higher
  $\dot\sigma = 8\SNr$ than the low value of $0.5\SNr$ we use in our
    fiducial runs} to preserve multiphase thermal structure.
-   % mm in {our}
- % {periodic} numerical domain. 
- % {We did run direct comparisons at varying resolution to \BKM\
- % (Figure\,\ref{fig:eb-res}\,(c))} using $\dot\sigma=8\SNr$.
  This high $\dot\sigma$ rapidly drives thermal runaway resulting in high
  temperatures $T>10^7$\,K.
  The growth rate is faster {than in our fiducial models} (Figure\,\ref{fig:eb-res}\,(c)), reflective of the
@@ -677,8 +656,6 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
  {At equivalent resolution, the sixth-order Pencil Code has far lower diffusion
  than the second-order Godunov code used by \BKM. As a result, we find faster
  growth at equivalent resolution.
- % mm ; we} include a lower resolution run {that} demonstrate{s}
- % consistency with \BKM.}
  
  \fg{Figure\,\ref{fig:eb-res}\,(d) shows the mean sonic Mach number
  %MJK not always larger than 1
@@ -702,12 +679,9 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
  }
 
  We can also examine the
-   % mm [space] properties of the flow and magnetic field through
-   % their
       \fg{kinetic and magnetic}
    energy spectra (Figure~\ref{fig:3power}).
    The kinetic spectra
-   % mm (a--c right panels)
    for $\dx\leq1$ agree well at 
  all scales above the viscous cutoff, which appears, as expected, at lower $k$ for
  $\dx=1$ than $\dx=0.5$.
