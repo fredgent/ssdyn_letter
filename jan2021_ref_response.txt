@@ -82,22 +82,21 @@ that they must ensure "mesh Reynolds number $\simeq1$ for each $\dx$".
 We have added a panel to Figure 2 showing the evolving kinetic energy 
 density and the rms sonic Mach number for higher resolution runs with different
 SN rates. The models are in hydrodynamical statistical steady state,
-with lower variance at increased SN rate. This has a physical explanation, in that the more 
-sporadic forcing with lower SN rate induces higher intermittency in the 
-energetics.
+with lower variance at increased SN rate. This has a physical explanation, in
+that the more sporadic forcing with lower SN rate induces higher intermittency
+in the energetics.
 
-The volume-averaged sonic Mach number M_s is of order unity during the kinematic phase
-of the SSD, reducing more rapidly with higher resolution, where the fractional
-volume of the cooler phases can be resolved into smaller clouds, and with
-higher SN rate, where the fractional volume and mean temperature of the hot gas
-is higher. During the kinematic phase, the high SN models have M_s>1 and faster
-SSD, while the saturation corresponds with M_s reducing below 1 upon saturation.
+The volume-averaged sonic Mach number M_s is of order unity during the kinematic
+phase of the SSD, reducing more rapidly with higher resolution, where the
+fractional volume of the cooler phases can be resolved into smaller clouds, and
+with higher SN rate, where the fractional volume and mean temperature of the hot
+gas is higher. During the kinematic phase, the high SN models have M_s>1 and
+faster SSD, while the saturation corresponds with M_s reducing below 1.
 The slower SSD for low SN rate occurs with M_s near 1, and M_s again reduces 
-after the kinematic phase. The numbers for M_s given in the text refer to
-the dx=2 pc model. The apparent contrast with the previous isothermal models is that the increased
-forcing also results in higher energy flows, which likely compensates for the effect
-of high Mach numbers. We have revised the comments about the Mach number and
-moved it to the discussion of Figure 2.
+after the kinematic phase. The apparent contrast with the previous isothermal
+models is that the increased forcing also results in higher energy flows, which
+likely compensates for the effect of high Mach numbers. We have revised the
+comments about the Mach number and moved it to the discussion of Figure 2.
 
 > 3- The magnetic energy versus time plots should use a linear scale in time,
 > like Figure 1, not a logarithmic scale. This is how one can be convinced about
@@ -162,18 +161,19 @@ presented.
 > their SN-driven turbulence and see a proper exponential growth of the field. 
 
 We have clarified the use of our seed and imposed fields in the text.
-Our fiducial models use only a random seed field which is only 1uG prior
+Our fiducial models use only a random seed field which is at 1uG prior
 to the onset of dynamo. Only in our models with SN
-rate 8x and resolution chosen to match Balsara et al, do we use a
-strong seed field. Even here the magnetic energy is amplified by four
-orders of magnitude, so we clearly have a kinematic SSD (Fig 2c and
-Fig 5b). The magnetic energy is at least 8 orders of magnitude weaker
-than the kinetic energy before the SSD begins to evolve. The SSD
-amplifies the magnetic energy over six orders of magnitude as evident
-in all panels of Figure 4, so the kinematic phase is properly
-explored.
+rate 8x and resolution chosen to match Balsara et al, do we use an imposed
+background field matching theirs. Even here the magnetic energy is amplified
+by four orders of magnitude, so we clearly have a kinematic SSD (Fig 2c and
+Fig 5b). The magnetic energy is at least 8 orders of magnitude weaker than the
+kinetic energy before the SSD begins to evolve. The SSD amplifies the magnetic
+energy over six orders of magnitude as evident in all panels of Figure 4, so the
+kinematic phase is properly explored. It is not reasonable to expect that 
+exploring the kinematic phase further with a yet weaker seed would yield 
+qualitatively different evolution.
 
-The deviations from pure exponential behaviour that we find are due to
+The deviations from pure exponentIal behaviour that we find are due to
 physical causes in our model, most likely the combination of discrete
 energy input from supernovae combined with strongly non-isothermal
 energetics.  We will explore this in more detail in subsequent work,
