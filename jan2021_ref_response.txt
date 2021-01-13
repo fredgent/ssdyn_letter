@@ -133,19 +133,20 @@ when the magnetic field grows most rapidly in the diffuse hot gas. The mean 1.6
 for n^(4/3) remains almost constant in time, independent of resolution or
 magnetic field strength. At 4pc resolution this fluctuates up and down between
 about 1.4 and 1.8 during the kinematic growth, but for 0.5pc it remains more
-steady near 1.6. Compression does not adequately explain the field
-amplification. 
+steady near 1.6. Compression cannot adequately explain the field amplification
+by 4 to 6 orders of magnitude. 
   
 > 5- I don't understand the mention of the "false convergence". If there is no
 > SSD, then the magnetic energy is not growing and simulations with no SSD should
 > indeed have similar results. I don't see a "false convergence" in this.
 
 False convergence refers to the suppression of physical effects by numerical
-diffusivity over multiple resolutions. The suppression of the dynamo seen at ourlower resolutions is an example of this effect. The supposition that there is no
+diffusivity over multiple resolutions. The suppression of the dynamo seen at our
+lower resolutions is an example of this effect. The supposition that there is no
 SSD at play is unsupported by the multiple lines of evidence we have presented.
 
 > 
-> 6- I think the authors should explore the kinematic regime more clearly by
+> 6- I think the authors should explore the kinematic regime more clearly bymaster
 > adopting in a few simulations a very low value for the initial field (like in
 > section 2). They will be able to explore properly the stationary regime of
 > their SN-driven turbulence and see a proper exponential growth of the field. 
