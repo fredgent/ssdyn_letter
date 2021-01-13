@@ -137,7 +137,7 @@ The ratio (\rho_max/\rho_min)^(2/3) grows from order 1e3 to 1e4 between
 The ratio grows slightly less for dx=2 between 10 and 40 Myr with 
 similar field amplification and for low resolution runs the ratio 
 remains steady at a few hundred growing a little for dx=2 to about 1000.
-Meanwhile the field amplification is also 3 orders of magniude in both
+Meanwhile the field amplification is also 3 orders of magnitude in both
 cases.
 
 The mean of n^(4/3) remains almost constant in time, fluctuating between 1.4
