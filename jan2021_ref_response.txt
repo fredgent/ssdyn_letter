@@ -134,7 +134,7 @@ for n^(4/3) remains almost constant in time, independent of resolution or
 magnetic field strength. At 4pc resolution this fluctuates up and down between
 about 1.4 and 1.8 during the kinematic growth, but for 0.5pc it remains more
 steady near 1.6. Compression cannot adequately explain the field amplification
-by 4 to 6 orders of magnitude. 
+by 4 or 6 orders of magnitude reported here. 
   
 > 5- I don't understand the mention of the "false convergence". If there is no
 > SSD, then the magnetic energy is not growing and simulations with no SSD should
