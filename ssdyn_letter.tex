@@ -282,8 +282,8 @@ Across the modelled range of 0.5 to 4~{pc} resolution we find that for
 {$\eta<\eta_{\rm crit}$}, the SSD saturates at about 5\% of kinetic energy
 equipartion, independent of growth rate.
 {In the range $0.2\SNr\leq \dot\sigma\leq8\SNr$ growth rate increases
-with $\dot\sigma$, despite the negative impact expected from increased
-Mach numbers.
+with $\dot\sigma$. %, despite the negative impact expected from increased
+%Mach numbers.
 SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic growth.}
 
 \end{abstract}
@@ -536,9 +536,9 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
 %-------------------------------------------------------------------------------
 \begin{figure}
   \centering
-  \includegraphics[trim=0.1cm 0.2cm  0.2cm 0.0cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
-  \includegraphics[trim=0.1cm 1.0cm -0.8cm 0.2cm, clip=true,width=1.05\columnwidth]{figs/eB-Bals.pdf}
-  \includegraphics[trim=0.3cm 0.5cm  0.4cm 0.2cm, clip=true,width=1.05\columnwidth]{figs/eK-Ma.pdf}
+  \includegraphics[trim=0.1cm 0.2cm  0.3cm 0.2cm, clip=true,width=\columnwidth]{figs/eB-res-4eta.pdf}
+  \includegraphics[trim=0.1cm 1.0cm  0.2cm 0.2cm, clip=true,width=\columnwidth]{figs/eB-Bals.pdf}
+  \includegraphics[trim=0.1cm 0.5cm  0.2cm 0.2cm, clip=true,width=\columnwidth]{figs/eK-Ma.pdf}
   \begin{picture}(0,0)(0,0)
     \put(-120,520){{\sf\bf{(a)}}}
     \put(-120,395){{\sf\bf{(b)}}}
@@ -548,11 +548,11 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
 \caption{
  Magnetic energy density shown for resolutions $\dx$ given in the legends for
  models with resistivity (a) $\eta=10^{-4}$, and (b) $\eta=10^{-3}$, scaled by
- the time-averaged kinetic energy density $\overline{e_K}$, and (c) matching
- \BKM\, scaled by $\EST$ and viscosity $\nu$ included in the legend. 
- \fg{(d) kinetic energy density, $e_K$, (left axis) for $\dx$, $\eta$ and
- $\dot\sigma$ given in the legend and rms sonic Mach number, $\Ms$, (right axis,
- dotted lines).}
+ the time-averaged kinetic energy density $\overline{e_K}$\fg{. 
+ Total magnetic energy, $E_B$} scaled by $\EST$, (c) matching \BKM\ \fg{for}
+ viscosity \fg{$\dx$ and} $\nu$ included in the legend and 
+ \fg{kinetic energy, $E_K$, (d) for $\dx$, $\eta$ and $\dot\sigma$ given in
+ the legend with corresponding magnetic energy (dotted).}
 \label{fig:eb-res}}
 \end{figure}
 %-------------------------------------------------------------------------------
@@ -650,14 +650,18 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
  {At equivalent resolution, the sixth-order Pencil Code has far lower diffusion
  than the second-order Godunov code used by \BKM. As a result, we find faster
  growth at equivalent resolution.
+ \fg{We show in Figure\,\ref{fig:eb-res}\,(d) how there is greater kinetic
+ energy with $\dot\sigma=8\SNr$ than $0.2\SNr$, and that the higher SN rate
+ induces less intermittency in the energy and less erratic growth in the
+ dynamo.} 
  
- \fg{Figure\,\ref{fig:eb-res}\,(d) shows mean sonic Mach number initially higher
- for $\dot\sigma=8\SNr$ than $0.2\SNr$, but a higher dynamo growth rate.}
- Higher $\Ms$ has been demonstrated to impede an SSD in isothermal turbulence
- \citep{Haugen:2004M}.
- \fg{However, consistent with the earlier study, SSD increases for $8\SNr$
- after 10\,Myr and 40\,Myr $0.2\SNr$, as $\Ms$ reduces below 1 and hot
- fractional volume increases.}
+ %\fg{Figure\,\ref{fig:eb-res}\,(d) shows mean sonic Mach number initially higher
+ %for $\dot\sigma=8\SNr$ than $0.2\SNr$, but a higher dynamo growth rate.}
+ %Higher $\Ms$ has been demonstrated to impede an SSD in isothermal turbulence
+ %\citep{Haugen:2004M}.
+ %\fg{However, consistent with the earlier study, SSD increases for $8\SNr$
+ %after 10\,Myr and 40\,Myr $0.2\SNr$, as $\Ms$ reduces below 1 and hot
+ %fractional volume increases.}
 
  We can also examine the
       \fg{kinetic and magnetic}
@@ -933,8 +937,8 @@ Resistivity is $\eta=10^{-4}$.}
  was evidence of an SSD and not only due to tangling of their imposed field.}
  A seed field of less than 1~nG can be amplified to saturation at microgauss
  levels within about 10\,Myr (Figure\,\ref{fig:eb-res}). 
- Unlike isothermal turbulence, high Mach numbers do not necessarily impede SSD
- in the ISM with increasing SN forcing.
+ %Unlike isothermal turbulence, high Mach numbers do not necessarily impede SSD
+ %in the ISM with increasing SN forcing.
 
  \citet{Gressel:2008} and \citet{GE20} have $\dx=8.3$ and $6.7\pc$,
  respectively, and $\eta\simeq10^{-2.2}\kpc\kms$, which appears to exclude

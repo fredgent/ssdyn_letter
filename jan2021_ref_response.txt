@@ -79,24 +79,21 @@ that they must ensure "mesh Reynolds number $\simeq1$ for each $\dx$".
 > time-average value of E_K to normalise the magnetic energy but I would use
 > everywhere 10^51 erg (like in the bottom panel of Figure 2).
 
-We have added a panel to Figure 2 showing the evolving kinetic energy 
-density and the rms sonic Mach number for higher resolution runs with different
-SN rates. The models are in hydrodynamical statistical steady state,
-with lower variance at increased SN rate. This has a physical explanation, in
-that the more sporadic forcing with lower SN rate induces higher intermittency
-in the energetics.
-
-The volume-averaged sonic Mach number M_s is of order unity during the kinematic
-phase of the SSD, reducing more rapidly with higher resolution, where the
-fractional volume of the cooler phases can be resolved into smaller clouds, and
-with higher SN rate, where the fractional volume and mean temperature of the hot
-gas is higher. During the kinematic phase, the high SN models have M_s>1 and
-faster SSD, while the saturation corresponds with M_s reducing below 1.
-The slower SSD for low SN rate occurs with M_s near 1, and M_s again reduces 
-after the kinematic phase. The apparent contrast with the previous isothermal
-models is that the increased forcing also results in higher energy flows, which
-likely compensates for the effect of high Mach numbers. We have revised the
-comments about the Mach number and moved it to the discussion of Figure 2.
+We agree that the relevance of Mach number is more interesting and requires a
+more thorough analysis than space permits in this letter, so we have deferred
+comment to our later publications. 
+We have added panel (d) to Figure 2 showing the evolving kinetic energy 
+by comparison to magnetic energy for some models to demonstrate the statistical
+steady kinetic environment for the dynamos, and to demonstrate that the 
+time averaged e_K used elsewhere is a suitable scaling. The models are in
+hydrodynamical statistical steady state, with lower variance at increased SN
+rate. This has a physical explanation, in that the more sporadic forcing with
+lower SN rate induces higher intermittency in the energetics.
+Other than Fig 2 (c) and (d) we have retained the scaling with time-averaged
+e_K to demonstrate the convergent result of saturation of SSD at about 5%. We
+have demonstrated that the kinetic energy density is dependent on resolution,
+due to increased numerical dissipation at low resolution. The shape of the 
+magnetic energy growth is not impacted by this choice.
 
 > 3- The magnetic energy versus time plots should use a linear scale in time,
 > like Figure 1, not a logarithmic scale. This is how one can be convinced about
@@ -105,20 +102,18 @@ comments about the Mach number and moved it to the discussion of Figure 2.
 We have replaced the plots in Figure 4 with a log-linear scale as
 suggested. In Figure 2 we have retained the log-log scales for panels
 (a) and (b), where we wish to illustrate the convergence with
-resolution of models that have drastically different growth rates
-. These models are also included in Figure 4; e.g. the aqua curve in
-2(a) corresponds to the brown dash-dot curve in 4(d1) that shows clean
-exponential growth. Figure 2 (c) has been replaced with log-linear, as
-they evolve over comparable timescales. The exponential growth is more
-clearly demonstrated for our models than either of the Balsara et al.
-models. This supports our assertion that the increased accuracy of the
-Pencil Code, alongside its shock handling tools, make it well suited
-for modelling this environment, even without the more exact shock
-treatment available to Balsara et al.  In Figure 4 the exponential
-nature of the growth is now clearly evident.  While growth rates do
-vary with time, each phase of that variation does show straight line,
-exponential behaviour, and overall growth for each curve can also
-adequately be fitted with exponentials.
+resolution of models that have drastically different growth rates. These models
+are also included in Figure 4; e.g. the aqua curve in 2(a) corresponds to the
+brown dash-dot curve in 4(d1) that shows clean exponential growth. Figure 2 (c)
+has been replaced with log-linear, as they evolve over comparable timescales.
+The exponential growth is more clearly demonstrated for our models than either
+of the Balsara et al. models. This supports our assertion that the increased
+accuracy of the Pencil Code, alongside its shock handling tools, make it well
+suited for modelling this environment, even without the more exact shock
+treatment available to Balsara et al.  In Figure 4 the exponential nature of
+the growth is now clearly evident.  While growth rates do vary with time, each
+phase of that variation does show straight line, exponential behaviour, and
+overall growth for each curve can also adequately be fitted with exponentials.
 
 > 4- In the context of strong compressible, shock-driven turbulence, I am not
 > sure tangling is the main source of confusion with a proper SSD. Gas
@@ -131,28 +126,24 @@ adequately be fitted with exponentials.
 > evolution that the authors report on.
 >
 
-For eta=1e-4:
-The ratio (\rho_max/\rho_min)^(2/3) grows from order 1e3 to 1e4 between 
-8 and 20 Myr for dx=0.5, while Brms grows from about 1nG to 1uG.
-The ratio grows slightly less for dx=2 between 10 and 40 Myr with 
-similar field amplification and for low resolution runs the ratio 
-remains steady at a few hundred growing a little for dx=2 to about 1000.
-Meanwhile the field amplification is also 3 orders of magnitude in both
-cases.
-
-The mean of n^(4/3) remains almost constant in time, fluctuating between 1.4
-and 1.8, independent of resolution or magnetic field strength.  Compression
-does not adequately explain the field amplification. 
+We have examined the e_B - n 2D histograms of the models from the evolving
+snapshots and there is very weak or no correlation between magnetic energy
+density and mass density during the kinematic growth. In fact there are phases
+when the magnetic field grows most rapidly in the diffuse hot gas. The mean 1.6
+for n^(4/3) remains almost constant in time, independent of resolution or
+magnetic field strength. At 4pc resolution this fluctuates up and down between
+about 1.4 and 1.8 during the kinematic growth, but for 0.5pc it remains more
+steady near 1.6. Compression cannot adequately explain the field amplification
+by between 4 or 6 orders of magnitude reported here. 
   
 > 5- I don't understand the mention of the "false convergence". If there is no
 > SSD, then the magnetic energy is not growing and simulations with no SSD should
 > indeed have similar results. I don't see a "false convergence" in this.
 
 False convergence refers to the suppression of physical effects by numerical
-diffusivity over multiple resolutions.  The suppression of the dynamo seen at
-our lower resolutions is an example of this effect.  The supposition that there
-is no SSD at play is unsupported by the multiple lines of evidence we have
-presented.
+diffusivity over multiple resolutions. The suppression of the dynamo seen at our
+lower resolutions is an example of this effect. The supposition that there is no
+SSD at play is unsupported by the multiple lines of evidence we have presented.
 
 > 
 > 6- I think the authors should explore the kinematic regime more clearly by
