@@ -7,7 +7,7 @@ extensive literature on the advantages of the use of the Pencil Code
 in dynamo modeling going back to Brandenburg & Sarson (2002) and
 Haugen & Brandenburg (2004).  As this is a Letter, we cannot include
 all that material in the current paper, but can only summarize and
-reference. We address the referee's specific comments in more detail below.
+reference. We do address the referee's specific concerns below.
 
 > Reviewer's Comments:
 > I have read carefully the new version of the manuscript entitled "Small-scale
@@ -31,19 +31,20 @@ solvers indeed provide good shock solutions, but are difficult to couple to
 high-order advection algorithms.  The historical alternative is to use some
 form of von Neumann & Richtmyer (1950, J. Appl. Phys.) artificial viscosity,
 which of course was the original method used to resolve shocks numerically, by
-spreading them out sufficiently for them to be solved using the standard
+spreading them out sufficiently for them to be modeled using the standard
 advection algorithm.  The original von Neumann & Richtmyer algorithm only adds
 diffusivity proportional to the square of the negative divergence to the
 momentum and energy equation in order to ensure conservation across shocks.
 The sixth-order Pencil code does require a small amount of mass divergence as
 well in order to ensure numerical stability when wall heating occurs from the
 interaction of strong shocks, but that is not a particularly desirable aspect
-of the algorithm. Although addition of numerical resistivity at shocks was used
+of the algorithm, and certainly not one we would want to extend to further 
+conservation equations. Although addition of numerical resistivity at shocks was used
 in the older paper by Gent et al. (2013), that leads to unphysical loss of flux
 at the shock front, and provides no improvement in numerical stability, so
 abandoning its use, as was done in Gent et al. (2020), improves the solution
-rather than harming it, as well as returning to a more traditional formulation
-of artificial viscosity.
+rather than harming it, as well as returning to an algorithm that better
+resembles the successful traditional formulation of artificial viscosity.
 
 
 > The hyper diffusion terms are used to damp
@@ -53,18 +54,19 @@ of artificial viscosity.
 
 We are puzzled why grid-scale numerical instability would be seen as
 crucial for shocks.  What is crucial for shocks is to conserve mass,
-momentum, and energy across as thin a discontinuity as possible.  The
-need for hyperviscosity occurs because the sixth-order advection
-formulation provides extremely low numerical viscosity, unlike typical
-lower-order algorithms, so some grid scale viscosity must be provided
+momentum, energy, and flux across as thin a discontinuity as possible.  The
+need for hyperdiffusion occurs because the sixth-order advection
+formulation provides extremely low numerical diffusion, unlike typical
+lower-order algorithms, so some grid scale diffusion must be provided
 artificially.  The hyperdiffusion suppresses high frequency numerical
-instabilities from growing, ensuring that fluctuations in the physical
-variables arise from the resolved physical processes sufficiently
-above the grid scale. This is distinct from the large scale physical
-feature of a blast wave, which needs to be resolved within a minimal
-range of grid spaces as it travels. Shocks are neith resolved nor
-suppressed by the hyper diffusion.  The coefficients for
-hyperdiffusion should impose a mesh Reynolds number of 1, so they must
+instabilities from growing, while adding infinitesimal amounts of diffusion
+at resolved scales. This ensures that fluctuations in the physical
+variables arise from resolved physical processes sufficiently
+above the grid scale. These numerical instabilities are quite distinct 
+from the large-scale physical feature of a blast wave, which needs to be 
+resolved across a minimal number of grid zones. Shocks are neither resolved nor
+suppressed by the hyperdiffusion.  The coefficients for hyperdiffusion 
+are chosen to impose a grid-scale Reynolds number of roughly unity, so they must
 vary with resolution. We have clarified this in the text by noting
 that they must ensure "mesh Reynolds number $\simeq1$ for each $\dx$".
 
@@ -79,38 +81,41 @@ that they must ensure "mesh Reynolds number $\simeq1$ for each $\dx$".
 > time-average value of E_K to normalise the magnetic energy but I would use
 > everywhere 10^51 erg (like in the bottom panel of Figure 2).
 
-We agree that the relevance of Mach number is more interesting and requires a
-more thorough analysis than space permits in this letter, so we have deferred
-comment to our later publications. 
-We have added panel (d) to Figure 2 showing the evolving kinetic energy 
-by comparison to magnetic energy for some models to demonstrate the statistical
-steady kinetic environment for the dynamos, and to demonstrate that the 
-time averaged e_K used elsewhere is a suitable scaling. The models are in
-hydrodynamical statistical steady state, with lower variance at increased SN
-rate. This has a physical explanation, in that the more sporadic forcing with
-lower SN rate induces higher intermittency in the energetics.
-Other than Fig 2 (c) and (d) we have retained the scaling with time-averaged
-e_K to demonstrate the convergent result of saturation of SSD at about 5%. We
-have demonstrated that the kinetic energy density is dependent on resolution,
+We agree that the question of the turbulent Mach number is quite interesting.  
+However, these comments make clear that it requires a more thorough analysis 
+than space permits in this letter, so we have deferred that analysis to the 
+longer paper on these models that we are preparing, and removed the comment 
+that the referee objects to as obscure and mostly misleading, as well as the 
+accompanying phrase in the abstract.
+ 
+To address the kinetic energy, we have added panel (d) to Figure 2, which shows 
+the evolving kinetic energy in comparison to magnetic energy for several of 
+our models.  This figure demonstrates the hydrodynamical statistical
+steady state of the kinetic energy in our models, showing that the 
+time averaged e_K is a suitable scaling parameter. The models show lower 
+variance at increased SN rate. This has a physical explanation, in that the 
+more sporadic forcing with lower SN rate induces higher intermittency in the 
+energetics. Other than Fig 2 (c) and (d) we have retained the scaling with time-averaged
+e_K to demonstrate the convergent result of saturation of SSD at about 5% <e_K>. We
+have further demonstrated that the kinetic energy density is dependent on resolution,
 due to increased numerical dissipation at low resolution. The shape of the 
-magnetic energy growth is not impacted by this choice.
+magnetic energy growth is not impacted by this choice, though.
 
 > 3- The magnetic energy versus time plots should use a linear scale in time,
 > like Figure 1, not a logarithmic scale. This is how one can be convinced about
 > exponential growth.
 
-We have replaced the plots in Figure 4 with a log-linear scale as
+We have replaced the plots in Figures 2(c) and Figure 4 with a log-linear scale as
 suggested. In Figure 2 we have retained the log-log scales for panels
-(a) and (b), where we wish to illustrate the convergence with
-resolution of models that have drastically different growth rates. These models
+(a) and (b), where we wish to illustrate the convergence with resolution of models 
+that have drastically different growth rates and thus time scales. These models
 are also included in Figure 4; e.g. the aqua curve in 2(a) corresponds to the
-brown dash-dot curve in 4(d1) that shows clean exponential growth. Figure 2 (c)
-has been replaced with log-linear, as they evolve over comparable timescales.
-The exponential growth is more clearly demonstrated for our models than either
+brown dash-dot curve in 4(d1) that shows clean exponential growth. 
+The exponential growth is indeed more clearly demonstrated for our models than either
 of the Balsara et al. models. This supports our assertion that the increased
 accuracy of the Pencil Code, alongside its shock handling tools, make it well
-suited for modelling this environment, even without the more exact shock
-treatment available to Balsara et al.  In Figure 4 the exponential nature of
+suited for modeling this environment, even without the more exact shock
+treatment used by Balsara et al.  In Figure 4 the exponential nature of
 the growth is now clearly evident.  While growth rates do vary with time, each
 phase of that variation does show straight line, exponential behaviour, and
 overall growth for each curve can also adequately be fitted with exponentials.
@@ -129,12 +134,13 @@ overall growth for each curve can also adequately be fitted with exponentials.
 We have examined the e_B - n 2D histograms of the models from the evolving
 snapshots and there is very weak or no correlation between magnetic energy
 density and mass density during the kinematic growth. In fact there are phases
-when the magnetic field grows most rapidly in the diffuse hot gas. The mean 1.6
-for n^(4/3) remains almost constant in time, independent of resolution or
-magnetic field strength. At 4pc resolution this fluctuates up and down between
-about 1.4 and 1.8 during the kinematic growth, but for 0.5pc it remains more
-steady near 1.6. Compression cannot adequately explain the field amplification
-by 4 or 6 orders of magnitude reported here. 
+when the magnetic field grows most rapidly in the diffuse hot gas. The mean 
+value n^(4/3) = 1.6 remains almost constant in time, independent of resolution or
+magnetic field strength, as must be true for a periodic domain. At 4 pc resolution 
+this value fluctuates up and down between about 1.4 and 1.8 during the kinematic growth
+period, but for 0.5 pc resolution it remains more steady near 1.6. Compression 
+cannot adequately explain the field amplification by 4 to 6 orders of magnitude 
+reported here. 
   
 > 5- I don't understand the mention of the "false convergence". If there is no
 > SSD, then the magnetic energy is not growing and simulations with no SSD should
@@ -142,33 +148,33 @@ by 4 or 6 orders of magnitude reported here.
 
 False convergence refers to the suppression of physical effects by numerical
 diffusivity over multiple resolutions. The suppression of the dynamo seen at our
-lower resolutions is an example of this effect. The supposition that there is no
+lower resolutions is an example of this effect. The hypothesis that there is no
 SSD at play is unsupported by the multiple lines of evidence we have presented.
 
 > 
-> 6- I think the authors should explore the kinematic regime more clearly bymaster
+> 6- I think the authors should explore the kinematic regime more clearly by
 > adopting in a few simulations a very low value for the initial field (like in
 > section 2). They will be able to explore properly the stationary regime of
 > their SN-driven turbulence and see a proper exponential growth of the field. 
 
 We have clarified the use of our seed and imposed fields in the text.
-Our fiducial models use only a random seed field which is at 1uG prior
-to the onset of dynamo. Only in our models with SN
-rate 8x and resolution chosen to match Balsara et al, do we use an imposed
+Our fiducial models use only a random seed field which is at 1 microG prior
+to the onset of the dynamo. Only in our models with SN rate 8x solar neighborhood 
+and resolution chosen to match Balsara et al, do we use an imposed
 background field matching theirs. Even here the magnetic energy is amplified
 by four orders of magnitude, so we clearly have a kinematic SSD (Fig 2c and
 Fig 5b). The magnetic energy is at least 8 orders of magnitude weaker than the
 kinetic energy before the SSD begins to evolve. The SSD amplifies the magnetic
 energy over six orders of magnitude as evident in all panels of Figure 4, so the
-kinematic phase is properly explored. It is not reasonable to expect that 
+kinematic phase is properly explored. It is quite improbable that 
 exploring the kinematic phase further with a yet weaker seed would yield 
 qualitatively different evolution.
 
-The deviations from pure exponentIal behaviour that we find are due to
+The deviations from pure exponential behaviour that we find are due to
 physical causes in our model, most likely the combination of discrete
 energy input from supernovae combined with strongly non-isothermal
 energetics.  We will explore this in more detail in subsequent work,
 but we do consider the fast but irregular field growth that we find to
-be a substantial result of this work that required low numerical
+be a substantial result of this work that required extremely low numerical
 diffusion to identify.
 

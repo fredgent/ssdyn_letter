@@ -267,9 +267,16 @@ action of a small-scale dynamo (SSD) in the interstellar medium of galaxies.
 Many studies have focused on idealized turbulent driving of the SSD. 
 Here we simulate more realistic supernova-driven turbulence to determine
 whether it can drive an SSD.
-{Magnetic field growth occurring in our models appears consistent
-  with SSD action, and inconsistent with simple tangling of magnetic fields.}
-We vary the physical resistivity, {$\eta$}, as well as the numerical
+{Magnetic field growth occurring in our models appears
+% mm [rearranged sentence now that I've added another clause]
+    inconsistent with simple tangling of magnetic fields, but
+consistent with SSD action,
+% mm [added]
+      reproducing and confirming models by Balsara et al. that did not
+      include physical resistivity $\eta$.}
+We vary
+% mm the physical resistivity,
+{$\eta$}, as well as the numerical
 resolution and supernova rate, $\dot\sigma$, to delineate the regime in which
 an SSD occurs.
 For a given $\dot\sigma$ we find convergence for SSD growth rate with
@@ -278,7 +285,7 @@ resolution {of a parsec}.
 the critical resistivity {below} which an SSD occurs is
 $0.005>\eta_{\rm crit}>0.001{\,\rm kpc}^{-1}{\,\rm km~ s}^{-1}$, and this
 increases with the supernova rate.}
-Across the modelled range of 0.5 to 4~{pc} resolution we find that for
+Across the modelled range of 0.5--4~{pc} resolution we find that for
 {$\eta<\eta_{\rm crit}$}, the SSD saturates at about 5\% of kinetic energy
 equipartion, independent of growth rate.
 {In the range $0.2\SNr\leq \dot\sigma\leq8\SNr$ growth rate increases
@@ -335,7 +342,7 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  We shall show that the amplification of their field is a result
  of SSD action and not just tangling of the field.
 
- In this { L}etter we {first} compare the SSD to tangling in an idealized
+ In this {L}etter we {first} compare the SSD to tangling in an idealized
  simulation (Sect.~\ref{sec:ssd-tang}){.
  We then describe our models of SN-driven turbulence for demonstrating the
  action of SSD (Sect.~\ref{sec:model}).} 
@@ -437,16 +444,20 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  %FAG further clarification
  \fg{Our fiducial models exclude tangling of an imposed field as a source
  of magnetic amplification, by applying a random 10~nG initial field.
- Transient dissipation delivers a turbulent seed field of
- about 1~nG prior to onset of a dynamo.
- Instead, for models reproducing \BKM\ this seed is substituted by
+ Transient dissipation
+ % mm delivers
+     prior to hydrodynamic steady state and dynamo onset yields
+a turbulent seed field of about 1~nG.
+% mm prior to onset of a dynamo. Instead,
+ For models reproducing \BKM\ this seed is substituted by
  a uniform $10$~nG background field.}
+ %MJK If we do have the space, I would add here 'following \BKM.' Otherwise it is a bit unclear why have we chosen such a value.
  %We apply a random 1~nG initial field, small enough {to} exclude
  %tangling of {the} imposed field {as} a source of magnetic
  %amplification, except {in models reproducing \BKM, where we impose a uniform $10$~nG 
  %background field.} 
 
- We solve the system of non-ideal compressible MHD equations
+ We solve the system of non-ideal, compressible, non-isothermal MHD equations
 %-------------------------------------------------------------------------------
   \begin{eqnarray}
   \label{eq:mass}
@@ -472,7 +483,7 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
   \begin{eqnarray}
   \label{eq:ent}
     \rho T\frac{D s}{Dt} &=&
-     \EST\dot\sigma +\rho\Gamma
+     \EST\dot\sigma +\rho\Gaa
     -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
     \nonumber\\
     &+&2 \rho \nu\left|{\mathbfss W}\right|^{2}
@@ -501,8 +512,8 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  strength \citep[see][for details]{GMKSH20}.
  {Equations~\eqref{eq:mom} and \eqref{eq:ent} include terms with $\zeta_D$}
  {to} {provide momentum and energy conserving corrections for} {the}
- {artificial mass diffusion applying in \eqref{eq:mass}.}
- Shock diffusion is not applied to equation~\eqref{eq:ind}{, unlike} {in}
+ {artificial mass diffusion applying in Equation~\eqref{eq:mass}.}
+ Shock diffusion is not applied to Equation~\eqref{eq:ind}{, unlike} {in}
  {\citet{Gent:2013b}.} {This avoids} {excessive magnetic dissipation in
    shocks, where compression actually enhances it.}
   {Unlike past} experiments \citep{Gent:2013b,Gent:2013a,GMKSH20},
@@ -514,10 +525,13 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  Terms containing $\nu_3,\,\chi_3$ and $\eta_3$ apply sixth-order hyperdiffusion
  to resolve grid-scale instabilities \citep[see, e.g.,][]{ABGS02,HB04}, \fg{
  %with coefficients optimal for each $\dx$}.
- with mesh Reynolds number $\simeq1$ for each $\dx$}.
+   with mesh Reynolds number
+% 
+      set to be
+$\simeq1$ for each $\dx$}.
 
  {The simplified isothermal model considered in
-Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
+Sect.\,\ref{sec:ssd-tang} solves only Equations~{\eqref{eq:mass},}
  \eqref{eq:mom} and~\eqref{eq:ind}, without the shock-dependent diffusion or
  hyperdiffusion terms, and while setting
  $\vect{B}=\vect\nabla\times\vect{A}+\vect{B}_{\rm imposed}$.}
@@ -551,7 +565,7 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
  the time-averaged kinetic energy density $\overline{e_K}$\fg{. 
  Total magnetic energy, $E_B$} scaled by $\EST$, (c) matching \BKM\ \fg{for}
  viscosity \fg{$\dx$ and} $\nu$ included in the legend and 
- \fg{kinetic energy, $E_K$, (d) for $\dx$, $\eta$ and $\dot\sigma$ given in
+ \fg{(d) kinetic energy, $E_K$, for $\dx$, $\eta$ and $\dot\sigma$ given in
  the legend with corresponding magnetic energy (dotted).}
 \label{fig:eb-res}}
 \end{figure}
@@ -640,7 +654,7 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
  }
 
  \fg{We ran models to reproduce the results of \BKM. They chose a higher
- $\dot\sigma = 8\SNr$ than the low value of $0.5\SNr$ we use in our
+ $\dot\sigma = 8\SNr$ than the low value of $0.5\SNr$ that we use in our
    fiducial runs} to preserve multiphase thermal structure.
  This high $\dot\sigma$ rapidly drives thermal runaway resulting in high
  temperatures $T>10^7$\,K.
@@ -649,10 +663,15 @@ Sect.\,\ref{sec:ssd-tang} solves only equations~{\eqref{eq:mass},}
  saturating at about 5\% of $\overline{e_K}$.
  {At equivalent resolution, the sixth-order Pencil Code has far lower diffusion
  than the second-order Godunov code used by \BKM. As a result, we find faster
- growth at equivalent resolution.
- \fg{We show in Figure\,\ref{fig:eb-res}\,(d) how there is greater kinetic
- energy with $\dot\sigma=8\SNr$ than $0.2\SNr$, and that the higher SN rate
- induces less intermittency in the energy and less erratic growth in the
+ growth at equivalent resolution.}
+\fg{
+  % mm We show in Figure~\ref{fig:eb-res}(d) how there is greater
+  % kinetic energy with $\dot\sigma=8\SNr$ than $0.2\SNr$, and that
+  % the higher SN rate induces
+         Figure~\ref{fig:eb-res}(d) shows that kinetic energy fluctuates
+         around a stationary mean in our models, with higher SN rate $\dot{\sigma}$
+         producing higher kinetic energy,
+ less intermittency in the energy, and less erratic growth in the
  dynamo.} 
  
  %\fg{Figure\,\ref{fig:eb-res}\,(d) shows mean sonic Mach number initially higher
