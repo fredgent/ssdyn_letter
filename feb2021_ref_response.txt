@@ -48,7 +48,8 @@ lower saturation level than the model without shock resistivity. We hope this
 now satisfies the referee and editor that the SSD in  our models is in fact 
 physical and not due to numerical instability due to shocks. The differences in
 the solutions are physical, entirely explained by the destruction of magnetic
-field due to reconnection under compression. This also explains the lower
+field due to reconnection under compression. We attach a slice of magnetic
+for both models at the same time and location. This also explains the lower
 saturation, where the equilibrium between dynamo growth and turbulent diffusion
 occurs at a lower energy. We also conclude that the divergence term in the
 induction equation should not be included because it creates unphyiscal effects,
