@@ -158,7 +158,7 @@ SSD at play is unsupported by the multiple lines of evidence we have presented.
 > their SN-driven turbulence and see a proper exponential growth of the field. 
 
 We have clarified the use of our seed and imposed fields in the text.
-Our fiducial models use only a random seed field which is at 1 microG prior
+Our fiducial models use only a random seed field which is at 1 nanoG prior
 to the onset of the dynamo. Only in our models with SN rate 8x solar neighborhood 
 and resolution chosen to match Balsara et al, do we use an imposed
 background field matching theirs. Even here the magnetic energy is amplified

@@ -267,15 +267,12 @@ action of a small-scale dynamo (SSD) in the interstellar medium of galaxies.
 Many studies have focused on idealized turbulent driving of the SSD. 
 Here we simulate more realistic supernova-driven turbulence to determine
 whether it can drive an SSD.
-{Magnetic field growth occurring in our models appears
-% mm [rearranged sentence now that I've added another clause]
+\fg{Magnetic field growth occurring in our models appears
     inconsistent with simple tangling of magnetic fields, but
 consistent with SSD action,
-% mm [added]
       reproducing and confirming models by Balsara et al. that did not
       include physical resistivity $\eta$.}
 We vary
-% mm the physical resistivity,
 {$\eta$}, as well as the numerical
 resolution and supernova rate, $\dot\sigma$, to delineate the regime in which
 an SSD occurs.
@@ -287,7 +284,7 @@ $0.005>\eta_{\rm crit}>0.001{\,\rm kpc}^{-1}{\,\rm km~ s}^{-1}$, and this
 increases with the supernova rate.}
 Across the modelled range of 0.5--4~{pc} resolution we find that for
 {$\eta<\eta_{\rm crit}$}, the SSD saturates at about 5\% of kinetic energy
-equipartion, independent of growth rate.
+equipartition, independent of growth rate.
 {In the range $0.2\SNr\leq \dot\sigma\leq8\SNr$ growth rate increases
 with $\dot\sigma$. %, despite the negative impact expected from increased
 %Mach numbers.
@@ -436,26 +433,13 @@ SSD{s} {in the supernova-driven interstellar medium} commonly exhibit erratic gr
  $\dx=0.5$, 1, 2 or 4$\pc${, except for {our} direct comparisons with
  \BKM, { which have} domains {of} 200 pc and $\dx=0.78$, 1.56 and
  3.12$\pc$ (units henceforth assumed)}.
-% mm [rearrange to reduce confusion]
- % {In models aiming to reproduce \BKM, we impose a uniform $10$~nG 
- % background field.}
- % {Otherwise we apply only a} random 1~nG seed field {to} exclude
- % tangling of {the} imposed field {as} a source of magnetic amplification.
- %FAG further clarification
  \fg{Our fiducial models exclude tangling of an imposed field as a source
  of magnetic amplification, by applying a random 10~nG initial field.
  Transient dissipation
- % mm delivers
      prior to hydrodynamic steady state and dynamo onset yields
 a turbulent seed field of about 1~nG.
-% mm prior to onset of a dynamo. Instead,
  For models reproducing \BKM\ this seed is substituted by
- a uniform $10$~nG background field.}
- %MJK If we do have the space, I would add here 'following \BKM.' Otherwise it is a bit unclear why have we chosen such a value.
- %We apply a random 1~nG initial field, small enough {to} exclude
- %tangling of {the} imposed field {as} a source of magnetic
- %amplification, except {in models reproducing \BKM, where we impose a uniform $10$~nG 
- %background field.} 
+ a uniform $10$~nG background field as applied by \BKM.}
 
  We solve the system of non-ideal, compressible, non-isothermal MHD equations
 %-------------------------------------------------------------------------------
@@ -483,7 +467,7 @@ a turbulent seed field of about 1~nG.
   \begin{eqnarray}
   \label{eq:ent}
     \rho T\frac{D s}{Dt} &=&
-     \EST\dot\sigma +\rho\Gaa
+     \EST\dot\sigma +\rho\Gamma
     -\rho^2\Lambda +\eta\mu_0\vect{j}^2 
     \nonumber\\
     &+&2 \rho \nu\left|{\mathbfss W}\right|^{2}
@@ -653,10 +637,10 @@ Sect.\,\ref{sec:ssd-tang} solves only Equations~{\eqref{eq:mass},}
  thresholds and growth rates.
  }
 
- \fg{We ran models to reproduce the results of \BKM. They chose a higher
- $\dot\sigma = 8\SNr$ than the low value of $0.5\SNr$ that we use in our
-   fiducial runs} to preserve multiphase thermal structure.
- This high $\dot\sigma$ rapidly drives thermal runaway resulting in high
+ \fg{We ran models to reproduce the results of \BKM, which adopt their choice
+ $\dot\sigma = 8\SNr$. In our fiducial runs we use a lower value of $0.2\SNr$} 
+ to preserve multiphase thermal structure.
+ The higher $\dot\sigma$ rapidly drives thermal runaway resulting in high
  temperatures $T>10^7$\,K.
  The growth rate is faster {than in our fiducial models} (Figure\,\ref{fig:eb-res}\,(c)), reflective of the
  single phase kinematics and more persistent forcing rate, yet {still}
@@ -665,9 +649,6 @@ Sect.\,\ref{sec:ssd-tang} solves only Equations~{\eqref{eq:mass},}
  than the second-order Godunov code used by \BKM. As a result, we find faster
  growth at equivalent resolution.}
 \fg{
-  % mm We show in Figure~\ref{fig:eb-res}(d) how there is greater
-  % kinetic energy with $\dot\sigma=8\SNr$ than $0.2\SNr$, and that
-  % the higher SN rate induces
          Figure~\ref{fig:eb-res}(d) shows that kinetic energy fluctuates
          around a stationary mean in our models, with higher SN rate $\dot{\sigma}$
          producing higher kinetic energy,
@@ -808,10 +789,10 @@ Line styles in (a1) also apply in (a2).}
   \includegraphics[trim=0.5cm 0.2cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/0_5pcPm0e-4_0kpower.pdf}
   \includegraphics[trim=0.5cm 0.5cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/bals256rkpower.pdf}
   \begin{picture}(0,0)(0,0)
-    \put(110,455){{\sf{$\delta x=0.5 $, $\dot\sigma=\frac{1}{5}\SNr$}}}
-    \put(110,330){{\sf{$\delta x=0.5 $, $\dot\sigma=\frac{1}{5}\SNr$}}}
-    \put(110,175){{\sf{$\delta x=0.78$, $\dot\sigma=          8\SNr$}}}
-    \put(110, 50){{\sf{$\delta x=0.78$, $\dot\sigma=          8\SNr$}}}
+    \put(120,455){{\sf{$\delta x=0.5 $, $\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(120,330){{\sf{$\delta x=0.5 $, $\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(120,175){{\sf{$\delta x=0.78$, $\dot\sigma=          8\SNr$}}}
+    \put(120, 50){{\sf{$\delta x=0.78$, $\dot\sigma=          8\SNr$}}}
     \put(210,540){{\sf\bf{(a1)}}}
     \put(210,415){{\sf\bf{(a2)}}}
     \put(210,260){{\sf\bf{(b1)}}}

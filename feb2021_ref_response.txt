@@ -1,0 +1,88 @@
+>Reviewer's Comments: I read the new revised version with interest. Here are my
+>main comments.
+
+>1- I still object to the strategy adopted by the authors to NOT use a
+>shock-divergence term in the vector potential equation. The authors explain
+>that "the sixth-order Pencil code does require a small amount of mass
+>divergence as well in order to ensure numerical stability when wall heating
+>occurs from the interaction of strong shocks". I totally agree with this
+>careful use of a stabilising mechanism in presence of strong shocks. I am
+>however not convinced that removing this term in the vector potential equation
+>is a wise choice, especially in the context of magnetic dynamos. Indeed, it is
+>crucial to separate a true dynamo from a spurious one seeded by a numerical
+>instability. I may be wrong, though. This is why I suggest that the authors try
+>to repeat the same numerical experiment, keeping the divergence term in the
+>vector potential equation. If the dynamo disappears completely then it is
+>probably spurious. If the dynamo effect still occurs, then why not keeping the
+>divergence term in the vector potential equation for sake of consistency and
+>stability ?
+
+The application of artificial viscosity in shocks is a necessary numerical 
+device to resolve the discontinuity in the momentum equation when using finite 
+differences and the authors have validated its application in Gent et al. 2020,
+as well as earlier work by, for example, Stone and Norman 1992. Our previously
+published tests (Gent PhD 2012, Gent et al 2013 and Gent et al 2020) to
+reproduce the Sedov Taylor and Snowplough solutions for supernova remnants have
+been considered only against these analytical solutions and our early modelling
+of SN driven turbulence in the hydrodynamic regime only, in the latter of
+which the shock diffusion in the continuity and energy equations were also found
+to be necessary for numerical stability. Inclusion, therefore, of the shock
+resistivity in Gent et al 2013 was based on the assumption that it would also be
+required for numerical stability. This was a novel experimental technique that
+was not based on any theoretical premise nor systematic trials, and we have
+subsequently determined it is not required and has the effect of speeding up
+reconnection and unphysically removing magnetic field in the remnant shells. In
+Gent et al 2013 this was insufficient to suppress the small scale dynamo and
+does not substantially affect the large scale dynamo, but may be responsible for
+the significantly weaker proportion of turbulent field obtained at saturation of
+the large scale dynamo than anticipated from observations. In our latest
+simulations of large scale dynamo, in preparation for our follow up papers, the
+turbulent field is considerably stronger in the late stages than in Gent et al
+2013.
+
+As requested by the referee we have conducted an additional experiment with 1pc
+resolution and Pm=10, but with shock resistivity included in the model. We 
+attach a copy for the editor and the referee, but not for inclusion in the
+letter, which confirms that the SSD persists, but with reduced growth rate and 
+lower saturation level than the model without shock resistivity. We hope this
+now satisfies the referee and editor that the SSD in  our models is in fact 
+physical and not due to numerical instability due to shocks. The differences in
+the solutions are physical, entirely explained by the destruction of magnetic
+field due to reconnection under compression. This also explains the lower
+saturation, where the equilibrium between dynamo growth and turbulent diffusion
+occurs at a lower energy. We also conclude that the divergence term in the
+induction equation should not be included because it creates unphyiscal effects,
+which would materially alter the turbulent properties of the magnetic field, and
+it is not necessary. Any artificial numerical devices should be avoided, where
+possible.
+
+>2- The new figure 2 shows the kinetic energy in the box. It shows variations
+>between a factor of 2 up to a factor of 10. This is far from being a true
+>stationary state. I however agree with the authors that using the kinetic
+>energy as a reference is better to illustrate the saturation level of the
+>dynamo. I would therefore not fight them further on this point.
+
+Noted.
+
+>3- I am very surprised by the answer of the authors regarding the density
+>fluctuations in their simulations. May be I misunderstood but I have the
+>impression that there is a confusion between the mean density in the box, who
+>should remain constant as mass is conserved, and the density variance or the
+>r.m.s density in the box that should scale with the Mach number (at least for
+>isothermal turbulence). For an adiabatic shock, one expect a compression of a
+>factor of 4, and much more for a radiative shock with cooling. I would
+>therefore expect in these simulations a wide range of densities.  In the
+>context of ideal MHD, the frozen-in magnetic field evolution would result in a
+>B \propto \rho^2/3 relation. I agree with the authors that it cannot explain
+>many order of magnitude field amplification but it can certainly explain factor
+>of 10, depending on the shock compression ratio. 
+
+The mean density in all models remains 1 ppcm. It is evident from our inspection
+of the snapshots that magnetic field at some times and locations is stronger in
+hot diffuse regions than in the warm denser regions. The frozen-in assumption
+therefore does not apply. Analysis and explanation of this behaviour is
+complicated and requires extensive further investigation.
+
+In addition to this written response, we have aesthetically modified the
+y-axis labels in Figure 5 to span two lines, but otherwise resubmit the letter
+trusting the evidence and arguments offered satisfy the residual doubts. 
