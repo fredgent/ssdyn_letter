@@ -752,12 +752,23 @@ Line styles in (a1) also apply in (a2).}
    dominates over numerical resistivity at all resolutions.  The exact
    value of the minimum physical resistivity does seem to vary not
    just with $\dx$ but also with $\sigma$, as can be seen by
-   comparison of the $\eta=10^{-4}$ and $10^{-5}$ cases. 
+   comparison of the $\eta=10^{-4}$ and $10^{-5}$ cases.
+   %NS: which panels we mean here?
+   %NS: c1 and c2 may be appropriate as delta x is same and only dot{sigma}
+   %NS: is different, but then no 10^-5 case in c1.
+   %NS: One possibility could be to just highlight 10^-3 and 10^-4 in
+   %NS: the last sentence above, or something else perhaps is meant?
  }
 
  {When we consider $e_B$ for the models {with} only numerical
  viscosity
- (Fig\,\ref{fig:eb-nu} a, c, d), $\eta\geq10^{-3}$ initially appears
+ %(Fig\,\ref{fig:eb-nu} a, c, d), $\eta\geq10^{-3}$ initially appears
+ %NS: I suppose we mean only a1, as a2 has finite nu; pls check
+ (Fig\,\ref{fig:eb-nu} a1, c, d), $\eta\geq10^{-3}$ initially appears
+ %NS: except in d2, all panels have eta <= 10^-3
+ %NS: should we then add something like "not shown" then? a1 and c2, it may not be obvious
+ %NS: to the reader. But certainly no need to add more curves, but just saying explicitly
+ %NS: might help
  sufficient to suppress SSD.
  At low resolution this remains so for $\dot\sigma=0.2\SNr$ (panels c1 and d1),
  apart from a transitory surge near 100\,Myr for $\dx=2$.
@@ -776,9 +787,14 @@ Line styles in (a1) also apply in (a2).}
  leading to an accumulation of power and then rapid dissipation at high $k$.
  This bottleneck shifts to lower $k$ as $\dx$
  {(panels a--c) and $\dot\sigma$ increase (panel d).}
+ %NS: to me, fig 3 suggests that bottleneck shifts to lower k when delta x increases,
+ %NS: agreeing with above, but it shifts to higher k when dot{sigma} increases, unlike
+ %NS: what is meant in the sentence above. Please check.
  {The deeper into the magnetic energy spectrum this peak extends, the more 
  scales available for transfer to magnetic energy and the more
  efficient the SSD.
+ %NS: yes, and that's why I believe we have 10^-3 dynamo in d2 but not in d1,
+ %NS: as more scales are available at larger \dot{sigma}; see comments just above
  The critical resistivity above which SSD is suppressed, therefore, 
  increases with $\dot\sigma$, within the range considered. 
  Even at $\dot\sigma=0.2$, for $\eta=10^{-3}$ and $\dx\leq1$ SSD occurs after
@@ -892,15 +908,27 @@ Resistivity is $\eta=10^{-4}$.}
 
  In Figure\,\ref{fig:4power}\,(b1) {until 7\,Myr there is no Kazantsev range
  and the peak energy increases as $k\rightarrow0$, a signature of tangling of
- the imposed field
+ %NS: b1 seems the Balsara model with imposed field. Should we indicate this
+ %NS: in Fig5 caption to meke it explicit and without increasing the word count?
+ %the imposed field
+ %NS: fullstop
+ the imposed field.
  However, as the magnetic field grows much larger than the imposed field,
- this signature disappears and the peak shifts to high $k$.}
+ %this signature disappears and the peak shifts to high $k$.}
+ %NS: added a bit in the end; pls check
+ this signature disappears and the peak shifts to high $k$, suggesting a healthy SSD.}
  
  {We have demonstrated that the magnetic field amplification in \BKM\ is
  due to SSD. 
  Tangling of the imposed field is {initially} present, but is
  dominated by SSD. {O}ur other models 
- confirm an imposed field is not required.
+ %confirm an imposed field is not required.
+ %NS: inserted "that"
+  confirm that an imposed field is not required.
+  %NS: a note: when we say that an imposed field is not required, it could
+  %NS: give an impression that no seed field is needed whatsoever.
+  %NS: instead, what we perhaps mean is that no uniform imposed field is not needed,
+  %NS: if weak magnetic noise is present.
  }
 
 \section{Conclusions}\label{sec:conc}

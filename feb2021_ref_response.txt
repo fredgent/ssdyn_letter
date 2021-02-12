@@ -55,7 +55,7 @@ the large scale dynamo than anticipated from observations.
 %MJK propose to add, as obviously Fred and Mordecai DID look at such tests at some point,
 %MJK and Fred said on Tuesday that magnetic field was artificially suppressed.
 In the context of setting up our SSD experiments, however, tests with and without
-the shock resistivity were conducted, and in the shock tests with shock resistivity,
+the shock resistivity were conducted, and in the standard shock tests with shock resistivity,
 magnetic fields showed unphysical reduction at the shocks deviating from the analytic
 solution. Without the shock resistivity, the tests passed without problems, and showed
 no signs of numerical instability. From these experiments we concluded that the
