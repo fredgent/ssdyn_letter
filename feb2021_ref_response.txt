@@ -30,6 +30,7 @@ were all purely hydrodynamical, and we showed that
 shock diffusion in the continuity and energy equations were 
 necessary for numerical stability to reproduce the Sedov Taylor and 
 Snowplough solutions for supernova remnants. 
+
 Inclusion of the shock resistivity in Gent et al 2013 was based on the
 assumption that it would also be required for numerical stability without
 systematic testing. In Gent et al 2013 this was insufficient to suppress the
