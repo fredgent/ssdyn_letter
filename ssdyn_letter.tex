@@ -548,7 +548,7 @@ Sect.\,\ref{sec:ssd-tang} solves only Equations~{\eqref{eq:mass},}
  models with resistivity (a) $\eta=10^{-4}$, and (b) $\eta=10^{-3}$, scaled by
  the time-averaged kinetic energy density $\overline{e_K}${. 
  Total magnetic energy, $E_B$} scaled by $\EST$, (c) matching \BKM\ {for}
- $\dx$ and viscosity $\nu$ included in the legend and 
+ \fg{$\dx$ and viscosity $\nu$} included in the legend and 
  {(d) kinetic energy, $E_K$, for $\dx$, $\eta$ and $\dot\sigma$ given in
  the legend with corresponding magnetic energy (dotted).}
 \label{fig:eb-res}}
@@ -655,14 +655,6 @@ Sect.\,\ref{sec:ssd-tang} solves only Equations~{\eqref{eq:mass},}
  less intermittency in the energy, and less erratic growth in the
  dynamo.} 
  
- %{Figure\,\ref{fig:eb-res}\,(d) shows mean sonic Mach number initially higher
- %for $\dot\sigma=8\SNr$ than $0.2\SNr$, but a higher dynamo growth rate.}
- %Higher $\Ms$ has been demonstrated to impede an SSD in isothermal turbulence
- %\citep{Haugen:2004M}.
- %{However, consistent with the earlier study, SSD increases for $8\SNr$
- %after 10\,Myr and 40\,Myr $0.2\SNr$, as $\Ms$ reduces below 1 and hot
- %fractional volume increases.}
-
  We can also examine the
       {kinetic and magnetic}
    energy spectra (Figure~\ref{fig:3power}).
@@ -747,54 +739,48 @@ Line styles in (a1) also apply in (a2).}
  we need to determine the value at each resolution where they
    exceed numerical diffusion in strength.}
  Figure~\ref{fig:eb-nu} shows that
- {a physical resistivity of $\eta=10^{-5}$ makes no impact on field
+ {a physical resistivity of $\eta=10^{-5}$ \fg{(panels a1, a2)}
+ makes no impact on field
    growth at $\dot\sigma = 0.2 \SNr$, while $\eta=10^{-3}$ clearly
    dominates over numerical resistivity at all resolutions.  The exact
    value of the minimum physical resistivity does seem to vary not
    just with $\dx$ but also with $\sigma$, as can be seen by
-   comparison of the $\eta=10^{-4}$ and $10^{-5}$ cases.
-   %NS: which panels we mean here?
-   %NS: c1 and c2 may be appropriate as delta x is same and only dot{sigma}
-   %NS: is different, but then no 10^-5 case in c1.
-   %NS: One possibility could be to just highlight 10^-3 and 10^-4 in
-   %NS: the last sentence above, or something else perhaps is meant?
+   comparison of the $\eta=10^{-4}$ and \fg{$10^{-3}$ cases (panels c1 to d2)}.
  }
 
  {When we consider $e_B$ for the models {with} only numerical
  viscosity
  %(Fig\,\ref{fig:eb-nu} a, c, d), $\eta\geq10^{-3}$ initially appears
  %NS: I suppose we mean only a1, as a2 has finite nu; pls check
- (Fig\,\ref{fig:eb-nu} a1, c, d), $\eta\geq10^{-3}$ initially appears
+ %FAG: a2 include 4 mods without nu
+ (Fig\,\ref{fig:eb-nu} a, c, d), $\eta\geq10^{-3}$ initially appears
  %NS: except in d2, all panels have eta <= 10^-3
  %NS: should we then add something like "not shown" then? a1 and c2, it may not be obvious
  %NS: to the reader. But certainly no need to add more curves, but just saying explicitly
  %NS: might help
+ %FAG: all include eta=1e-3 initially even at high resolution these decay. 
+ %FAG: only b1 and d2 have runs with eta>1e-3 and these definitely decay.
+ %FAG: of course when Pm geq 1 it becomes easier to excite a dynamo.
+ %FAG: we could increase viscosity to 1e-2 and find whether the dynamo can be
+ %FAG: excited for eta=5e-3? Given these high values are so much further away
+ %FAG: from the ISM parameters, perhaps it is safe to conclude the SSD is 
+ %FAG: ubiquitous in the ISM?
  sufficient to suppress SSD.
  At low resolution this remains so for $\dot\sigma=0.2\SNr$ (panels c1 and d1),
  apart from a transitory surge near 100\,Myr for $\dx=2$.
  However, for $\dot\sigma=\SNr$ within 100\,Myr SSD is evident.
  Only, $\eta=0.005$ dampens SSD (panel d2).}
- %FAG: moved up where Figure 2 discussed.
- %The mean sonic Mach number $\overline\Ms=0.8$ for $\dot\sigma=\SNr$, compared
- %to $0.5$ for $0.2\SNr$.
- %A higher $\Ms$ has been demonstrated to impede an SSD in isothermal turbulence
- %\citep{Haugen:2004M}, which is contradicted here.
 
  {The kinetic energy spectra in Figure\,\ref{fig:3power}} may
  show the resolution of this contradiction.
  They display a bottleneck effect \citep{Falkovich94,HBD03}, an energy cascade
  less efficient than $k^{-5/3}$
  leading to an accumulation of power and then rapid dissipation at high $k$.
- This bottleneck shifts to lower $k$ as $\dx$
- {(panels a--c) and $\dot\sigma$ increase (panel d).}
- %NS: to me, fig 3 suggests that bottleneck shifts to lower k when delta x increases,
- %NS: agreeing with above, but it shifts to higher k when dot{sigma} increases, unlike
- %NS: what is meant in the sentence above. Please check.
+ This bottleneck shifts to lower $k$ as $\dx$ \fg{increases}
+ {(panels a--c) \fg{or $\dot\sigma$ decreases} (panel d).}
  {The deeper into the magnetic energy spectrum this peak extends, the more 
  scales available for transfer to magnetic energy and the more
  efficient the SSD.
- %NS: yes, and that's why I believe we have 10^-3 dynamo in d2 but not in d1,
- %NS: as more scales are available at larger \dot{sigma}; see comments just above
  The critical resistivity above which SSD is suppressed, therefore, 
  increases with $\dot\sigma$, within the range considered. 
  Even at $\dot\sigma=0.2$, for $\eta=10^{-3}$ and $\dx\leq1$ SSD occurs after
@@ -805,10 +791,18 @@ Line styles in (a1) also apply in (a2).}
   \includegraphics[trim=0.5cm 0.2cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/0_5pcPm0e-4_0kpower.pdf}
   \includegraphics[trim=0.5cm 0.5cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/bals256rkpower.pdf}
   \begin{picture}(0,0)(0,0)
-    \put(120,455){{\sf{$\delta x=0.5 $, $\dot\sigma=\frac{1}{5}\SNr$}}}
-    \put(120,330){{\sf{$\delta x=0.5 $, $\dot\sigma=\frac{1}{5}\SNr$}}}
-    \put(120,175){{\sf{$\delta x=0.78$, $\dot\sigma=          8\SNr$}}}
-    \put(120, 50){{\sf{$\delta x=0.78$, $\dot\sigma=          8\SNr$}}}
+    \put(125,483){{\sf{$\delta x=0.5 $}}}
+    \put(125,468){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(125,455){{\sf{$\eta=10^{-4}$}}}
+    \put(125,366){{\sf{$\delta x=0.5 $}}}
+    \put(125,353){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(125,340){{\sf{$\eta=10^{-4}$}}}
+    \put(125,175){{\sf{\BKM, $\eta=0$}}}
+    \put(125, 50){{\sf{\BKM, $\eta=0$}}}
+    \put(125,201){{\sf{$\delta x=0.78$}}}
+    \put(125, 76){{\sf{$\delta x=0.78$}}}
+    \put(125,188){{\sf{$\dot\sigma=          8\SNr$}}}
+    \put(125, 63){{\sf{$\dot\sigma=          8\SNr$}}}
     \put(210,540){{\sf\bf{(a1)}}}
     \put(210,415){{\sf\bf{(a2)}}}
     \put(210,260){{\sf\bf{(b1)}}}
@@ -817,9 +811,8 @@ Line styles in (a1) also apply in (a2).}
 \caption{
 Compensated spectra as in Figure\,\ref{fig:3power} of magnetic (a1, b1)
 and kinetic (a2, b2) energy {at times given in the legends
-  {(combined for each pair)} for $\dx$ and 
-$\dot\sigma$ indicated.
-Resistivity is $\eta=10^{-4}$.}
+  {(combined for each pair)} for $\dx$\fg{, $\dot\sigma$ and $\eta$ indicated.
+Viscosity is $\nu=0$}.}
  \label{fig:4power}}
 \end{figure}
 %-------------------------------------------------------------------------------
@@ -908,27 +901,20 @@ Resistivity is $\eta=10^{-4}$.}
 
  In Figure\,\ref{fig:4power}\,(b1) {until 7\,Myr there is no Kazantsev range
  and the peak energy increases as $k\rightarrow0$, a signature of tangling of
- %NS: b1 seems the Balsara model with imposed field. Should we indicate this
- %NS: in Fig5 caption to meke it explicit and without increasing the word count?
- %the imposed field
- %NS: fullstop
  the imposed field.
  However, as the magnetic field grows much larger than the imposed field,
- %this signature disappears and the peak shifts to high $k$.}
- %NS: added a bit in the end; pls check
- this signature disappears and the peak shifts to high $k$, suggesting a healthy SSD.}
+ this signature disappears and the peak shifts to high $k$\fg{, suggesting a healthy SSD}.}
  
  {We have demonstrated that the magnetic field amplification in \BKM\ is
  due to SSD. 
  Tangling of the imposed field is {initially} present, but is
- dominated by SSD. {O}ur other models 
- %confirm an imposed field is not required.
- %NS: inserted "that"
-  confirm that an imposed field is not required.
+ dominated by SSD. {O}ur other models \fg{with only a weak seed field} 
+  confirm \fg{that} an imposed field is not required.
   %NS: a note: when we say that an imposed field is not required, it could
   %NS: give an impression that no seed field is needed whatsoever.
   %NS: instead, what we perhaps mean is that no uniform imposed field is not needed,
   %NS: if weak magnetic noise is present.
+  %FAG: added a qualifier 
  }
 
 \section{Conclusions}\label{sec:conc}
@@ -965,8 +951,6 @@ Resistivity is $\eta=10^{-4}$.}
  was evidence of an SSD and not only due to tangling of their imposed field.}
  A seed field of less than 1~nG can be amplified to saturation at microgauss
  levels within about 10\,Myr (Figure\,\ref{fig:eb-res}). 
- %Unlike isothermal turbulence, high Mach numbers do not necessarily impede SSD
- %in the ISM with increasing SN forcing.
 
  \citet{Gressel:2008} and \citet{GE20} have $\dx=8.3$ and $6.7\pc$,
  respectively, and $\eta\simeq10^{-2.2}\kpc\kms$, which appears to exclude
