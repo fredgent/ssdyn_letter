@@ -17,23 +17,6 @@
 >divergence term in the vector potential equation for sake of consistency and
 >stability ?
 
-%mm [I think this entire paragraph can go.  It repeats points that we made in 
-previous responses that are not being disputed in the current round.]
-%The application of artificial viscosity in shocks is a necessary numerical 
-%device to resolve the discontinuity in the momentum equation when using finite 
-%differences and the authors have validated its application in Gent et al. 2020,
-%as well as earlier work by, for example, Stone and Norman 1992. Our previously
-%published tests (Gent PhD 2012, Gent et al 2013 and Gent et al 2020) 
-%were all purely hydrodynamical, and we showed that
-%%MJK but we have dropped it out from the energy equation as well, right?
-%%MJK Is this prone to get the referee agitated again?
-%%FAG I think we just expalin why we do use them still while dropping induction
-%%FAG where we have no justification to use.
-%shock diffusion in the continuity and energy equations were 
-%necessary for numerical stability to reproduce the Sedov Taylor and 
-%Snowplough solutions for supernova remnants. 
-
-%mm [I've revised the text in this paragraph]
 Inclusion of the shock resistivity in Gent et al. (2013) was based on the
 assumption that it would be required for numerical stability, but this 
 conclusion was reached without systematic testing. In Gent et al. (2013) we did 
@@ -50,7 +33,6 @@ in the SSD experiments reported in this Letter. We are planning to include
 these MHD tests into a more extensive manuscript on the SSD characteristics 
 in the warm and hot phases.
 
-%mm [edits in this para too...]
 As requested by the referee we have conducted an additional experiment with 1 pc
 resolution and Pm = 10, but with shock resistivity included in the model. We
 attach a plot for the editor and the referee, but not for inclusion in the
@@ -99,7 +81,8 @@ therefore does not apply. Analysis and explanation of this behaviour is
 complicated and requires extensive further investigation, which we will include
 in our subsequent publication.
 
-In addition to this written response, we have modified the y-axis labels in Figure 
-5 to span two lines to improve comprehensibility, and corrected names in a few
-references, but otherwise resubmit the Letter as it stands, trusting the evidence 
+In addition to this written response, we have modified the y-axis labels in
+Figure 5 to span two lines to improve comprehensibility, corrected names in a
+few references, and made some minor edits for clarity (color font}, but
+otherwise resubmit the Letter as it stands, trusting the evidence 
 and arguments offered here satisfy the residual concerns expressed. 
