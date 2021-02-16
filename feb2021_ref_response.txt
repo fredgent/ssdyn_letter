@@ -17,52 +17,59 @@
 >divergence term in the vector potential equation for sake of consistency and
 >stability ?
 
-The application of artificial viscosity in shocks is a necessary numerical 
-device to resolve the discontinuity in the momentum equation when using finite 
-differences and the authors have validated its application in Gent et al. 2020,
-as well as earlier work by, for example, Stone and Norman 1992. Our previously
-published tests (Gent PhD 2012, Gent et al 2013 and Gent et al 2020) 
-were all purely hydrodynamical, and we showed that
-%MJK but we have dropped it out from the energy equation as well, right?
-%MJK Is this prone to get the referee agitated again?
-%FAG I think we just expalin why we do use them still while dropping induction
-%FAG where we have no justification to use.
-shock diffusion in the continuity and energy equations were 
-necessary for numerical stability to reproduce the Sedov Taylor and 
-Snowplough solutions for supernova remnants. 
+%mm [I think this entire paragraph can go.  It repeats points that we made in 
+previous responses that are not being disputed in the current round.]
+%The application of artificial viscosity in shocks is a necessary numerical 
+%device to resolve the discontinuity in the momentum equation when using finite 
+%differences and the authors have validated its application in Gent et al. 2020,
+%as well as earlier work by, for example, Stone and Norman 1992. Our previously
+%published tests (Gent PhD 2012, Gent et al 2013 and Gent et al 2020) 
+%were all purely hydrodynamical, and we showed that
+%%MJK but we have dropped it out from the energy equation as well, right?
+%%MJK Is this prone to get the referee agitated again?
+%%FAG I think we just expalin why we do use them still while dropping induction
+%%FAG where we have no justification to use.
+%shock diffusion in the continuity and energy equations were 
+%necessary for numerical stability to reproduce the Sedov Taylor and 
+%Snowplough solutions for supernova remnants. 
 
-Inclusion of the shock resistivity in Gent et al 2013 was based on the
-assumption that it would also be required for numerical stability without
-systematic testing. In Gent et al 2013 this was insufficient to suppress the
-small-scale dynamo. In the context of setting up our SSD experiments, however,
-tests with and without the shock resistivity were conducted. With shock
-resistivity magnetic fields at the shocks were substantially suppressed, while
-without shock resistivity the tests passed without problems, and showed
-no signs of numerical instability. From these experiments we concluded that the
-shock resistivity was not necessary for numerical instability, against our
-earlier expectations, and that more physical results are obtained without.
-This motivates our choice in the SSD experiments reported in this Letter. 
-We are planning to include these MHD tests into a more extensive manuscript on
-the SSD characteristics in the warm and hot phases.
+%mm [I've revised the text in this paragraph]
+Inclusion of the shock resistivity in Gent et al. (2013) was based on the
+assumption that it would be required for numerical stability, but this 
+conclusion was reached without systematic testing. In Gent et al. (2013) we did 
+find that the inclusion of the shock resistivity was insufficient to suppress the
+small-scale dynamo (SSD). In the context of setting up our current SSD 
+experiments, however, we conducted tests with and without the shock resistivity. 
+With shock resistivity, we find that magnetic fields at the shocks are 
+substantially suppressed, while without shock resistivity the tests are passed 
+without problems, and showed no signs of numerical instability. From these 
+experiments we concluded that the shock resistivity was not necessary to 
+prevent numerical instability, against our earlier expectations, and that 
+more physical results are obtained without it. This motivates our choice 
+in the SSD experiments reported in this Letter. We are planning to include 
+these MHD tests into a more extensive manuscript on the SSD characteristics 
+in the warm and hot phases.
 
-As requested by the referee we have conducted an additional experiment with 1pc
-resolution and Pm=10, but with shock resistivity included in the model. We
+%mm [edits in this para too...]
+As requested by the referee we have conducted an additional experiment with 1 pc
+resolution and Pm = 10, but with shock resistivity included in the model. We
 attach a plot for the editor and the referee, but not for inclusion in the
-letter, which confirms that the SSD persists, but with reduced growth rate and 
-lower saturation level than the model without shock resistivity. We hope this
-now satisfies the referee and editor that the SSD in our models is in fact 
-physical and not due to numerical instability due to shocks. The differences in
-the solutions can be explained by the rapid destruction of magnetic field due to 
-unnecessary enhanced shock-resistivity.
+letter, that confirms that the SSD persists, but with drastically reduced 
+growth rate and lower saturation level than the model without shock resistivity. 
+We trust that this satisfies the referee that the SSD in our models is in fact 
+physical, or at least not due to numerical instability due to shocks. The 
+differences in the solutions can be explained by the rapid destruction of 
+magnetic field due to unnecessary resistivity in the shock fronts.
 We attach a slice of magnetic energy for both models at the same time and
 location. Both models are clearly numerically resolved, and the largest 
-difference occurs at the shell of the newly exploded SN, where magnetic energy
+difference occurs in the shell of the newly exploded SN, where magnetic energy
 is reduced when shock resistivity is used. This also explains the lower
-saturation, where the equilibrium between dynamo growth and turbulent diffusion
-occurs at a lower energy. We also conclude that the divergence term in the
-induction equation should not be included because it is not necessary. 
-Any artificial numerical devices should be avoided, where possible,
-which would materially alter the turbulent properties of the magnetic field.
+saturation level, where the equilibrium between dynamo growth and turbulent 
+diffusion occurs at a lower energy. The stability of both solutions leads 
+us to conclude that the divergence term in the induction equation should 
+not be included because it is not necessary. In principle, any artificial 
+numerical devices that would materially alter the turbulent properties of 
+the magnetic field should be avoided, where possible, 
 
 >2- The new figure 2 shows the kinetic energy in the box. It shows variations
 >between a factor of 2 up to a factor of 10. This is far from being a true
@@ -85,12 +92,14 @@ Noted.
 >many order of magnitude field amplification but it can certainly explain factor
 >of 10, depending on the shock compression ratio. 
 
-The mean density in all models remains 1 ppcm. It is evident from our inspection
+The mean density in all models remains 1 cm^-3. It is evident from our inspection
 of the snapshots that magnetic field at some times and locations is stronger in
-hot diffuse regions than in the warm denser regions. The frozen-in assumption
+hot diffuse regions than in the warm, denser regions. The frozen-in assumption
 therefore does not apply. Analysis and explanation of this behaviour is
-complicated and requires extensive further investigation.
+complicated and requires extensive further investigation, which we will include
+in our subsequent publication.
 
-In addition to this written response, we have aesthetically modified the
-y-axis labels in Figure 5 to span two lines, but otherwise resubmit the letter
-trusting the evidence and arguments offered satisfy the residual doubts. 
+In addition to this written response, we have modified the y-axis labels in Figure 
+5 to span two lines to improve comprehensibility, and corrected names in a few
+references, but otherwise resubmit the Letter as it stands, trusting the evidence 
+and arguments offered here satisfy the residual concerns expressed. 
