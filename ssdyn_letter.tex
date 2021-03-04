@@ -441,6 +441,44 @@ a turbulent seed field of about 1~nG.
  For models reproducing \BKM\ this seed is substituted by
  a uniform $10$~nG background field as applied by \BKM.}
 
+%-------------------------------------------------------------------------------
+\begin{figure*}
+  \centering
+  \includegraphics[trim=0.5cm 0.5cm 0.3cm 0.3cm, clip=true,width=0.9\linewidth]{figs/eB-eta-slice.pdf}
+  \begin{picture}(0,0)(0,0)
+  %  \put(-452,544){{\sf{$\delta x=0.5$}}}
+  %  \put(-452,531){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
+  %  \put(-205,544){{\sf{$\delta x=1$}}}
+  %  \put(-205,531){{\sf{$\nu=10^{-3}$}}}
+  %  \put(-205,518){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
+  %  \put(-452,415){{\sf{$\delta x=1$}}}
+  %  \put(-452,402){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
+  %  \put(-205,415){{\sf{$\delta x=1$}}}
+  %  \put(-205,402){{\sf{$\eta=10^{-4}$}}}
+  %  \put(-205,389){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
+  %  \put(-452,260){{\sf{$\delta x=2$}}}
+  %  \put(-452,247){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
+  %  \put(-205,260){{\sf{$\delta x=4$}}}
+  %  \put(-205,247){{\sf{$\dot\sigma=\frac{1}{5}\SNr$}}}
+  %  \put(-452,133){{\sf{$\delta x=2$}}}
+  %  \put(-452,120){{\sf{$\dot\sigma=\SNr$}}}
+  %  \put(-205,133){{\sf{$\delta x=4$}}}
+  %  \put(-205,120){{\sf{$\dot\sigma=\SNr$}}}
+    \put(-405,205){{\sf\bf{(a)}}}
+    \put(-225,205){{\sf\bf{(b)}}}
+    \put(-405, 35){{\sf\bf{(c)}}}
+    \put(-225, 35){{\sf\bf{(d)}}}
+  \end{picture}
+\caption{
+\fg{2D slices
+of (a, b) magnetic energy density $e_B$ with shock dependent 
+resistivity, $\zeta_\eta$ as indicated, and (c, d) respective gas density.
+The site of the most recent SN is indicated by X (c, d).
+$\dx=1$\,pc, $\eta=10^{-4}$ and $\nu=10^{-3}\kms\kpc^{-1}$. }
+\label{fig:eb-slice}}
+\end{figure*}
+%-------------------------------------------------------------------------------
+
  We solve the system of non-ideal, compressible, non-isothermal MHD equations
 %-------------------------------------------------------------------------------
   \begin{eqnarray}
@@ -497,9 +535,25 @@ a turbulent seed field of about 1~nG.
  {Equations~\eqref{eq:mom} and \eqref{eq:ent} include terms with $\zeta_D$}
  {to} {provide momentum and energy conserving corrections for} {the}
  {artificial mass diffusion applying in Equation~\eqref{eq:mass}.}
- Shock diffusion is not applied to Equation~\eqref{eq:ind}{, unlike} {in}
- {\citet{Gent:2013b}.} {This avoids} {excessive magnetic dissipation in
-   shocks, where compression actually enhances it.}
+ \fg{In previous work \citet{Gent:2013b} we have used a formalism that
+ included artificial diffusion in vector potential at shocks.
+ %Shock diffusion is not applied to Equation~\eqref{eq:ind}{, unlike} {in}
+ %{\citet{Gent:2013b}.}
+ %This avoids {excessive magnetic dissipation in
+ %  shocks, where compression actually enhances it.}
+ In Figure\,\ref{fig:eb-slice} we show comparative slices of the magnetic
+ energy and gas density, with and without resistive shock diffusion,
+ $\zeta_\eta$.
+ With $\zeta_\eta>0$ (b) magnetic energy is reduced in the remnant shell,
+ relative to (a),} where compression actually enhances it.
+ \fg{Since the magnetic field is well resolved in either case, as shall also
+ be evident from inspection of the magnetic energy spectra, this artificial
+ enhancement is unnecessary.
+ In both models a concentration of magnetic energy is centered near 
+ $x,y=(0.8,0.2)$, which is diffuse relative to the dense boundary layers below
+ and to its right.
+ Magnetic energy is not frozen in nor its amplification bound to compression.}    
+
   {Unlike past} experiments \citep{Gent:2013b,Gent:2013a,GMKSH20},
  thermal diffusivity, $\chi$, {is omitted as} the artificial diffusivities
  are adequate to ensure numerical stability.
@@ -544,7 +598,7 @@ Sect.\,\ref{sec:ssd-tang} solves only Equations~{\eqref{eq:mass},}
  models with resistivity (a) $\eta=10^{-4}$, and (b) $\eta=10^{-3}$, scaled by
  the time-averaged kinetic energy density $\overline{e_K}${. 
  Total magnetic energy, $E_B$} scaled by $\EST$, (c) matching \BKM\ {for}
- \fg{$\dx$ and viscosity $\nu$} included in the legend and 
+ {$\dx$ and viscosity $\nu$} included in the legend and 
  {(d) kinetic energy, $E_K$, for $\dx$, $\eta$ and $\dot\sigma$ given in
  the legend with corresponding magnetic energy (dotted).}
 \label{fig:eb-res}}
@@ -680,7 +734,7 @@ Sect.\,\ref{sec:ssd-tang} solves only Equations~{\eqref{eq:mass},}
 %-------------------------------------------------------------------------------
 \begin{figure*}
   \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/1pc-eB-nu0.pdf}
-  \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/1pc-eB-nu5.pdf}\\
+  \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/1pc-eB-nu6.pdf}\\
   \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/2pc-eB-nu5.pdf}
   \includegraphics[trim=0.5cm 0.0cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/4pc-eB-nu6.pdf}
   \begin{picture}(0,0)(0,0)
@@ -719,7 +773,8 @@ Time axes {extend for $\dx\geq2$} to accommodate SSD saturation.
 {Captions indicate resistivity $\eta$, with 
 {viscosity}
 $\nu=0$, unless indicated otherwise or where $\Pm=\nu/\eta$ is varied with
-$\nu$ fixed (b1) or $\eta$ fixed (b2).
+$\nu$ fixed (b1) or $\eta$ fixed (b2). \fg{In (b1) the run with $\zeta_\eta=
+0.55$ has $\Pm=10$. All other models have $\zeta_\eta=0$.}
 Line styles in (a1) also apply in (a2).}
 \label{fig:eb-nu}}
 \end{figure*}
@@ -735,13 +790,13 @@ Line styles in (a1) also apply in (a2).}
  we need to determine the value at each resolution where they
    exceed numerical diffusion in strength.}
  Figure~\ref{fig:eb-nu} shows that
- {a physical resistivity of $\eta=10^{-5}$ \fg{(panels a1, a2)}
+ {a physical resistivity of $\eta=10^{-5}$ {(panels a1, a2)}
  makes no impact on field
    growth at $\dot\sigma = 0.2 \SNr$, while $\eta=10^{-3}$ clearly
    dominates over numerical resistivity at all resolutions.  The exact
    value of the minimum physical resistivity does seem to vary not
    just with $\dx$ but also with $\sigma$, as can be seen by
-   comparison of the $\eta=10^{-4}$ and \fg{$10^{-3}$ cases (panels c1 to d2)}.
+   comparison of the $\eta=10^{-4}$ and {$10^{-3}$ cases (panels c1 to d2)}.
  }
 
  {When we consider $e_B$ for the models {with} only numerical
@@ -758,8 +813,8 @@ Line styles in (a1) also apply in (a2).}
  They display a bottleneck effect \citep{Falkovich94,HBD03}, an energy cascade
  less efficient than $k^{-5/3}$
  leading to an accumulation of power and then rapid dissipation at high $k$.
- This bottleneck shifts to lower $k$ as $\dx$ \fg{increases}
- {(panels a--c) \fg{or $\dot\sigma$ decreases} (panel d).}
+ This bottleneck shifts to lower $k$ as $\dx$ {increases}
+ {(panels a--c) {or $\dot\sigma$ decreases} (panel d).}
  {The deeper into the magnetic energy spectrum this peak extends, the more 
  scales available for transfer to magnetic energy and the more
  efficient the SSD.
@@ -773,18 +828,18 @@ Line styles in (a1) also apply in (a2).}
   \includegraphics[trim=0.5cm 0.2cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/0_5pcPm0e-4_0kpower.pdf}
   \includegraphics[trim=0.5cm 0.5cm 0.3cm 0.0cm, clip=true,width=\columnwidth]{figs/bals256rkpower.pdf}
   \begin{picture}(0,0)(0,0)
-    \put(125,483){\sf{\fg{$\delta x=0.5 $}}}
-    \put(125,468){\sf{\fg{$\dot\sigma=\frac{1}{5}\SNr$}}}
-    \put(125,455){\sf{\fg{$\nu=0$}}}
-    \put(125,366){\sf{\fg{$\delta x=0.5 $}}}
-    \put(125,353){\sf{\fg{$\dot\sigma=\frac{1}{5}\SNr$}}}
-    \put(125,340){\sf{\fg{$\nu=0$}}}
-    \put(125,175){\sf{\fg{$\nu=10^{-3.6}$}}}
-    \put(125, 50){\sf{\fg{$\nu=10^{-3.6}$}}}
-    \put(125,201){\sf{\fg{$\delta x=0.78$}}}
-    \put(125, 76){\sf{\fg{$\delta x=0.78$}}}
-    \put(125,188){\sf{\fg{$\dot\sigma=          8\SNr$}}}
-    \put(125, 63){\sf{\fg{$\dot\sigma=          8\SNr$}}}
+    \put(125,483){\sf{{$\delta x=0.5 $}}}
+    \put(125,468){\sf{{$\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(125,455){\sf{{$\nu=0$}}}
+    \put(125,366){\sf{{$\delta x=0.5 $}}}
+    \put(125,353){\sf{{$\dot\sigma=\frac{1}{5}\SNr$}}}
+    \put(125,340){\sf{{$\nu=0$}}}
+    \put(125,175){\sf{{$\nu=10^{-3.6}$}}}
+    \put(125, 50){\sf{{$\nu=10^{-3.6}$}}}
+    \put(125,201){\sf{{$\delta x=0.78$}}}
+    \put(125, 76){\sf{{$\delta x=0.78$}}}
+    \put(125,188){\sf{{$\dot\sigma=          8\SNr$}}}
+    \put(125, 63){\sf{{$\dot\sigma=          8\SNr$}}}
     \put(210,540){{\sf\bf{(a1)}}}
     \put(210,415){{\sf\bf{(a2)}}}
     \put(210,260){{\sf\bf{(b1)}}}
@@ -793,7 +848,7 @@ Line styles in (a1) also apply in (a2).}
 \caption{
 Compensated spectra as in Figure\,\ref{fig:3power} of magnetic (a1, b1)
 and kinetic (a2, b2) energy at times given in the legends
-  (combined for each pair) for $\dx$\fg{, $\dot\sigma$ and $\eta$ indicated.
+  (combined for each pair) for $\dx${, $\dot\sigma$ and $\eta$ indicated.
 Resistivity is $\eta=10^{-4}$ with (b1,b2) a comparison to $\BKM$.}
  \label{fig:4power}}
 \end{figure}
@@ -812,6 +867,12 @@ Resistivity is $\eta=10^{-4}$ with (b1,b2) a comparison to $\BKM$.}
  We identify each model by $\Pm=\nu/\eta$, but due to the inclusion of 
  shock and hyper diffusivities, the effective Pm and, indeed, Rm vary 
  substantially across space and time.}
+ \fg{In (b1) we also include one run with shock resistivity, $\zeta_\eta\neq0$
+ (olive, dashed), which is referenced in Figure\,\ref{fig:eb-slice}.
+ The dynamo is slower and saturates lower than the comparative $\Pm=10$ model
+ (blue, solid).
+ This is consistent with more efficient dissipation of compressed field.}
+
 
  {Plotted in panel b2, where we fix $\eta=10^{-4}$ and vary $\nu$,
  initial growth of $e_B$ is faster for 
@@ -885,13 +946,13 @@ Resistivity is $\eta=10^{-4}$ with (b1,b2) a comparison to $\BKM$.}
  and the peak energy increases as $k\rightarrow0$, a signature of tangling of
  the imposed field.
  However, as the magnetic field grows much larger than the imposed field,
- this signature disappears and the peak shifts to high $k$\fg{, suggesting a healthy SSD}.}
+ this signature disappears and the peak shifts to high $k${, suggesting a healthy SSD}.}
  
  {We have demonstrated that the magnetic field amplification in \BKM\ is
  due to SSD. 
  Tangling of the imposed field is {initially} present, but is
- dominated by SSD. {O}ur other models \fg{with only a weak seed field} 
-  confirm \fg{that} an imposed field is not required.
+ dominated by SSD. {O}ur other models {with only a weak seed field} 
+  confirm {that} an imposed field is not required.
  }
 
 \section{Conclusions}\label{sec:conc}
@@ -1018,11 +1079,11 @@ onset of LSD, critical $\Omega$, and dependence on $\dot\sigma$.}
 \bibitem[{{Gatto} {et~al.}(2015){Gatto}, {Walch}, {Mac Low}, {Naab}, {Girichidis},
  {Glover}, {W{\"u}nsch}, {Klessen}, {Clark}, {Baczynski}, {Peters},
  {Ostriker}, {Ib{\'a}{\~n}ez-Mej{\'{\i}}a}, \& {Haid}}]{gatto2015}
-{Gatto}, A., {Walch}, S., \fg{Mac Low}, M.-M., {et~al.} 2015, \mnras, 449, 1057
+{Gatto}, A., {Walch}, S., {Mac Low}, M.-M., {et~al.} 2015, \mnras, 449, 1057
 
 \bibitem[{{Gent} {et~al.}(2020){Gent}, {Mac Low}, {K{\"a}pyl{\"a}}, {Sarson},
  \& {Hollins}}]{GMKSH20}
-{Gent}, F.~A., \fg{Mac Low}, M.-M., {K{\"a}pyl{\"a}}, M.~J., {Sarson}, G.~R., \&
+{Gent}, F.~A., {Mac Low}, M.-M., {K{\"a}pyl{\"a}}, M.~J., {Sarson}, G.~R., \&
  {Hollins}, J.~F. 2020, Geophysical and Astrophysical Fluid Dynamics, 114, 77
 
 \bibitem[{{Gent} {et~al.}(2013{\natexlab{a}}){Gent}, {Shukurov}, {Fletcher},
@@ -1068,7 +1129,7 @@ onset of LSD, critical $\Omega$, and dependence on $\dot\sigma$.}
 
 \bibitem[{{Hill} {et~al.}(2012){Hill}, {Joung}, {Mac Low}, {Benjamin},
  {Haffner}, {Klingenberg}, \& {Waagan}}]{Hill:2012a}
-{Hill}, A.~S., {Joung}, M.~R., \fg{Mac Low}, M.-M., {et~al.} 2012, \apj, 750, 104
+{Hill}, A.~S., {Joung}, M.~R., {Mac Low}, M.-M., {et~al.} 2012, \apj, 750, 104
 
 \bibitem[{{Hollins} {et~al.}(2017){Hollins}, {Sarson}, {Shukurov}, {Fletcher},
  \& {Gent}}]{HSSFG17}
