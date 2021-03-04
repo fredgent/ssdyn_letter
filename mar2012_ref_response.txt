@@ -1,0 +1,26 @@
+> Reviewer's Comments:
+> I have read the reply of the authors and considered the
+> extra material they have provided. I am still holding my ground on the matter
+> of the shock diffusion parameter. The sensitivity to the results wrt this
+> parameter is an important aspect of the proposed numerical methodology. I
+> would trust more the simulation results that include this shock diffusion for
+> the vector potential. Moreover, I think including the nice image the authors
+> sent me would be a plus, especially with the corresponding map of the gas
+> density. I am convinced that a map of the gas density will reveal that the
+> magnetic energy and the gas density are strongly correlated. I believe that
+> bubble one seems in the magnetic energy image is a supernova explosion. I
+> consider that the paper has improved significantly compared to the very first
+> version so I would now consider it for publication if it includes a
+> transparent discussion on the shock diffusion parameter with a comparison of
+> the results with and without it. Moreover, more emphasis should be put on the
+> correlation between magnetic energy and gas density as a comparison of the
+> two maps will certainly reveal.
+
+We have added a new Figure 2 with 2D slices of magnetic energy and gas density. As well as demonstrating the artificial dissipation of compressed magnetic
+energy, both models show the field enhancement is independent of the gas 
+density distribution and shock handling. We include the time series of the 
+model with shock resistivity in panel b1 of Figure 5. Revised text is indicated 
+in color font. We appeal to the editor for latitude to include one excess
+panel and 185 excess words to resolve the outstanding requirements of the
+referee.
+
