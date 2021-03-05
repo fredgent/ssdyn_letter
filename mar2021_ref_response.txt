@@ -22,6 +22,6 @@ energy, both models show the field enhancement is independent of the gas
 density distribution and shock handling. We include the time series of the 
 model with shock resistivity in panel b1 of Figure 5. Revised text is indicated 
 in color font. We request that the editor permit us to include one excess
-figure and 197 excess words to resolve these outstanding requests from the
+figure and 206 excess words to resolve these outstanding requests from the
 referee.
 
