@@ -20,7 +20,7 @@ We have added a new Figure 2 with 2D slices of magnetic energy and gas density. 
 energy, both models show the field enhancement is independent of the gas 
 density distribution and shock handling. We include the time series of the 
 model with shock resistivity in panel b1 of Figure 5. Revised text is indicated 
-in color font. We appeal to the editor for latitude to include one excess
-panel and 185 excess words to resolve the outstanding requirements of the
+in color font. We request that the editor permit us to include one excess
+figure and 185 excess words to resolve these outstanding requests from the
 referee.
 
