@@ -465,7 +465,7 @@ a turbulent seed field of about 1~nG.
     \put(-395, 35){{\sf\bf{(c)}}}
     \put(-225, 35){{\sf\bf{(d)}}}
   \end{picture}
-\caption{\fg{2D slices
+\caption{{2D slices
 of (a, b) magnetic energy density $e_B$ and (c, d) gas density
 with shock dependent resistivity, $\zeta_\eta$, as indicated.
 The site of the most recent SN is indicated by X (c, d).
@@ -530,7 +530,7 @@ $\dx=1$\,pc, $\eta=10^{-4}$ and $\nu=10^{-3}\kms\kpc^{-1}$. }
  {Equations~\eqref{eq:mom} and \eqref{eq:ent} include terms with $\zeta_D$}
  {to} {provide momentum and energy conserving corrections for} {the}
  {artificial mass diffusion applying in Equation~\eqref{eq:mass}.}
- \fg{In previous work \citet{Gent:2013b} we have used a formalism that
+ {In previous work \citet{Gent:2013b} we have used a formalism that
  included artificial diffusion in vector potential at shocks.
  %Shock diffusion is not applied to Equation~\eqref{eq:ind}{, unlike} {in}
  %{\citet{Gent:2013b}.}
@@ -540,18 +540,28 @@ $\dx=1$\,pc, $\eta=10^{-4}$ and $\nu=10^{-3}\kms\kpc^{-1}$. }
  energy and gas density with and without resistive shock diffusion
  $\zeta_\eta$.
  With $\zeta_\eta>0$ (Fig.~\ref{fig:eb-slice} b) magnetic energy is reduced in the remnant shell relative to Figure~\ref{fig:eb-slice} a, where compression actually enhances it.}
- \fg{Since the magnetic field is well resolved in either case, as also
+ Since the magnetic field is well resolved in either case, as also
  shown by the magnetic energy spectra below, and the simulation is
  numerically stable without it, this extra artificial
  diffusion is unnecessary.
+
  In both models a concentration of magnetic energy, marked with $+$ in
  Figure\,\ref{fig:eb-slice}, has below average gas density.
- Hence, magnetic field amplification occurs independently of shock
- compression.}    
+ \fg{This snapshot reflects the overall behaviour of the system, in which
+ magnetic field amplification also occurs independently of shock compression.
+ As Figure\,\ref{fig:eb-slice} shows, SN shock fronts do compress and amplify
+ the magnetic field, resulting in strong local and instantaneous correlation
+ of the field and density.
+ However, on global and long-term scale, this is not the dominant mechanism
+ for the dynamo, which operates just as effectively in the non-shocked, more
+ diffuse regions, as is also indicated by this figure.
+ This is based on the amplification factor due to compression being estimated
+ $\lesssim2$, taken as density fluctuations to power $4/3$, while the magnetic
+ energy is amplified by 4--6 orders of magnitude.}
 
   {Unlike past} experiments \citep{Gent:2013b,Gent:2013a,GMKSH20},
- thermal diffusivity $\chi$ is \fg{also} omitted, as the artificial diffusivities
- \fg{chosen} are adequate to ensure numerical stability.
+ thermal diffusivity $\chi$ is {also} omitted, as the artificial diffusivities
+ {chosen} are adequate to ensure numerical stability.
  {The} physical effects of thermal conductivity can be expected to be
  relevant only at the unresolved or marginally resolved Field length defined
  by \citet[][named after George Field, not the magnetic field]{BM90}.
@@ -768,7 +778,7 @@ Time axes {extend for $\dx\geq2$} to accommodate SSD saturation.
 {Captions indicate resistivity $\eta$, with 
 {viscosity}
 $\nu=0$, unless indicated otherwise or where $\Pm=\nu/\eta$ is varied with
-$\nu$ fixed (b1) or $\eta$ fixed (b2). \fg{In (b1) the run with $\zeta_\eta=
+$\nu$ fixed (b1) or $\eta$ fixed (b2). {In (b1) the run with $\zeta_\eta=
 0.55$ has $\Pm=10$. All other models have $\zeta_\eta=0$.}
 Line styles in (a1) also apply in (a2).}
 \label{fig:eb-nu}}
@@ -862,15 +872,15 @@ Resistivity is $\eta=10^{-4}$ with (b1,b2) a comparison to $\BKM$.}
  We identify each model by $\Pm=\nu/\eta$, but due to the inclusion of 
  shock and hyper diffusivities, the effective Pm and, indeed, Rm vary 
  substantially across space and time.}
- \fg{In b1 we include one run with shock resistivity, $\zeta_\eta\neq0$
+ {In b1 we include one run with shock resistivity, $\zeta_\eta\neq0$
  (olive, dashed), which is referenced in Figure\,\ref{fig:eb-slice}.
  The dynamo is slower and saturates lower than the comparative model $\Pm=10$
  (blue, solid).
  This is consistent with more efficient dissipation of compressed field.
  %FAG added line for MJK?
- While the dynamo amplifies the magnetic energy 4 to 6 orders of magnitude,
- the amplification factor due to compression is estimated $\lesssim2$, based 
- on density fluctuations to power $4/3$.
+ %While the dynamo amplifies the magnetic energy 4 to 6 orders of magnitude,
+ %the amplification factor due to compression is estimated $\lesssim2$, based 
+ %on density fluctuations to power $4/3$.
 }
 
 
