@@ -1,27 +1,15 @@
 > Reviewer's Comments:
-> I have read the reply of the authors and considered the
-> extra material they have provided. I am still holding my ground on the matter
-> of the shock diffusion parameter. The sensitivity to the results wrt this
-> parameter is an important aspect of the proposed numerical methodology. I
-> would trust more the simulation results that include this shock diffusion for
-> the vector potential. Moreover, I think including the nice image the authors
-> sent me would be a plus, especially with the corresponding map of the gas
-> density. I am convinced that a map of the gas density will reveal that the
-> magnetic energy and the gas density are strongly correlated. I believe that
-> bubble one seems in the magnetic energy image is a supernova explosion. I
-> consider that the paper has improved significantly compared to the very first
-> version so I would now consider it for publication if it includes a
-> transparent discussion on the shock diffusion parameter with a comparison of
-> the results with and without it. Moreover, more emphasis should be put on the
-> correlation between magnetic energy and gas density as a comparison of the
-> two maps will certainly reveal.
+> I think now the paper is clear and transparent about the
+> various choices in the numerical methodology. I think Figure 2 is a very
+> important addition. I am however puzzled by the statement of the authors
+> about the fact that the magnetic energy is independent of the gas density
+> distribution, although Figure 2 clearly demonstrates the opposite, namely
+> that the magnetic energy and the gas density are strongly correlated. It is
+> true that for one particular region (marked by a cross) this is not the case,
+> but for the rest of the image it is clearly the case. I think the authors
+> should rephrase their conclusions accordingly. Otherwise, I am happy I with
+> this latest version.
 
-We have added a new Figure 2 with 2D slices of magnetic energy and gas density.
-As well as demonstrating the artificial dissipation of compressed magnetic
-energy, both models show the field enhancement is independent of the gas 
-density distribution and shock handling. We include the time series of the 
-model with shock resistivity in panel b1 of Figure 5. Revised text is indicated 
-in color font. We request that the editor permit us to include one excess
-figure and 215 excess words to resolve these outstanding requests from the
-referee.
-
+We have revised the text to make clear that the correlations between magnetic
+energy and gas density due to compression exist, but that the region indicated, shows that magnetic energy also grows independently of compression, with
+dynamo action being the dominant driver in the long term.
